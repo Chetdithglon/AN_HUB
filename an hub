@@ -424,7 +424,7 @@ Section:NewButton("Auto Tele ải thỏ v4 ( lỗi đứng im )", "ButtonInfo", 
 loadstring(game:HttpGet('https://raw.githubusercontent.com/Chetdithglon/lklklkl/main/phi%20phai'))()
 end)
 
-Section:NewButton("Tele ải thỏ v4 ( bản test ae xài báo ad nhé )", "ButtonInfo", function()
+Section:NewButton("Tele ải thỏ v4 ( bản test ae xài dc báo ad nhé )", "ButtonInfo", function()
 for _,v in next, workspace:GetDescendants() do
     if v.Name == "StartPoint" then
         game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = v.CFrame
