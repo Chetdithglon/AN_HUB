@@ -155,7 +155,7 @@ end
 
 local notifLib = loadstring(game:HttpGet("https://raw.githubusercontent.com/Sw1ndlerScripts/RobloxScripts/main/Notification%20Library/main.lua"))()
 local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/asdjasdhsuhduahd213/AN_HUB/main/lib"))()
-local Window = Library.CreateLib(" Nguyễn An ( Fix lỗi tele tộc thỏ lần thứ ...... )", "BloodTheme")
+local Window = Library.CreateLib(" Nguyễn An ( Update bản tele ải thỏ v4 ai xài đc báo ad nhé )", "BloodTheme")
 game:GetService("StarterGui"):SetCore("SendNotification", { 
     Title = "Nguyễn An";
     Text = "Nhận cày Thuê Shindo + blox";
@@ -419,13 +419,12 @@ Section:NewButton("Né Bom", "ButtonInfo", function()
 print("Clicked")
     game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-20093.4961, 9954.93945, -125.194695, 0.627363682, 1.15070167e-08, 0.778726399, -8.20592732e-08, 1, 5.13325205e-08, -0.778726399, -9.61058788e-08, 0.627363682)
 end)
-local Section = Tab:NewSection("click tele ải thỏ ( lỗi đứng im )")
-Section:NewButton("Auto Tele ải thỏ v4", "ButtonInfo", function()
+local Section = Tab:NewSection("click tele ải thỏ ")
+Section:NewButton("Auto Tele ải thỏ v4 ( lỗi đứng im )", "ButtonInfo", function()
 loadstring(game:HttpGet('https://raw.githubusercontent.com/Chetdithglon/lklklkl/main/phi%20phai'))()
 end)
 
-local Section = Tab:NewSection("click tele ải thỏ ( đang thử ngiệm ae nào xài dc báo ad nhé )")
-Section:NewButton("Auto Tele ải thỏ v4", "ButtonInfo", function()
+Section:NewButton("Tele ải thỏ v4 ( bản test ae xài báo ad nhé )", "ButtonInfo", function()
 for _,v in next, workspace:GetDescendants() do
     if v.Name == "StartPoint" then
         game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = v.CFrame
