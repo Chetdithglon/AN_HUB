@@ -485,6 +485,7 @@ local args = {
 
 game:GetService("Players").LocalPlayer.Backpack.Awakening.RemoteFunction:InvokeServer(unpack(args))
 end
+end
 end)
 local Section = Tab:NewSection("Auto Buy Upgrade Race")
 Section:NewToggle("Auto Mua Update ( Reset sẽ tự động tắt )", "ToggleInfo", function(state)
