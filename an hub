@@ -427,10 +427,20 @@ Section:NewButton("Né Bom", "ButtonInfo", function()
 print("Clicked")
     game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-20093.4961, 9954.93945, -125.194695, 0.627363682, 1.15070167e-08, 0.778726399, -8.20592732e-08, 1, 5.13325205e-08, -0.778726399, -9.61058788e-08, 0.627363682)
 end)
-local Section = Tab:NewSection("click tele ải thỏ ( nếu có lỗi vui lòng ib báo ad )")
+local Section = Tab:NewSection("click tele ải thỏ ( lỗi đứng im )")
 Section:NewButton("Auto Tele ải thỏ v4", "ButtonInfo", function()
 loadstring(game:HttpGet('https://raw.githubusercontent.com/Chetdithglon/lklklkl/main/phi%20phai'))()
 end)
+
+local Section = Tab:NewSection("click tele ải thỏ ( đang thử ngiệm ae nào xài dc báo ad nhé )")
+Section:NewButton("Auto Tele ải thỏ v4", "ButtonInfo", function()
+for _,v in next, workspace:GetDescendants() do
+    if v.Name == "StartPoint" then
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = v.CFrame
+    end
+    end
+end)
+
 local Section = Tab:NewSection("Auto Bật V4")
 Section:NewToggle("Auto bật V4 ( Reset sẽ tự động tắt )", "ToggleInfo", function(state)
     if state then
