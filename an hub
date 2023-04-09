@@ -155,7 +155,7 @@ end
 
 local notifLib = loadstring(game:HttpGet("https://raw.githubusercontent.com/Sw1ndlerScripts/RobloxScripts/main/Notification%20Library/main.lua"))()
 local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/asdjasdhsuhduahd213/AN_HUB/main/lib"))()
-local Window = Library.CreateLib(" Nguyễn An ( chuẩn bị update auto teleport fruit )", "BloodTheme")
+local Window = Library.CreateLib(" Nguyễn An ( Update teleport Fruit spawn )", "BloodTheme")
 game:GetService("StarterGui"):SetCore("SendNotification", { 
     Title = "Nguyễn An";
     Text = "Nhận cày Thuê Shindo + blox";
@@ -184,9 +184,22 @@ Section:NewButton("click có hitbox", "bật rùi là ko dừng lại dc", 
  loadstring(game:HttpGet('https://raw.githubusercontent.com/asdjasdhsuhduahd213/AN_HUB/main/click%20hitbot'))()
 end)
 
-Section:NewButton("Show acc ( lỗi ) ", "Nguyễn An", function()
+Section:NewButton("click tele Fruit spawn ", "Nguyễn An", function()
     print("Clicked")
-loadstring(game:HttpGet("https://pastebin.com/raw/zcFd20tT"))()
+for _,v in next, workspace:GetDescendants() do
+if v.Name == "Handle"  then 
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = v.CFrame 
+   
+
+end
+end
+for _,v in next, workspace:GetDescendants() do
+if  v.Name == "Fruit"  then
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = v.CFrame
+   
+
+end
+end
 end)
 
 Section:NewToggle("chạy nhanh đến nổ máy", "....", function(state)
