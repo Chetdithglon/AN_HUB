@@ -156,26 +156,6 @@ end
 local notifLib = loadstring(game:HttpGet("https://raw.githubusercontent.com/Sw1ndlerScripts/RobloxScripts/main/Notification%20Library/main.lua"))()
 local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/asdjasdhsuhduahd213/AN_HUB/main/lib"))()
 local Window = Library.CreateLib(" Nguyễn An ( Update teleport Fruit spawn )", "BloodTheme")
-game:GetService("StarterGui"):SetCore("SendNotification", { 
-    Title = "Nguyễn An";
-    Text = "Nhận cày Thuê Shindo + blox";
-    Icon = "rbxthumb://type=Asset&id=11749957186&w=150&h=150"})
-    Duration = 5; 
- 
-    game:GetService("StarterGui"):SetCore("SendNotification", { 
-    Title = "Nguyễn An";
-    Text = "https://www.facebook.com/nguyenanutgr";
-    Icon = "rbxthumb://type=Asset&id=11749957186&w=150&h=150"})
-    Duration = 5; 
- 
-    game:GetService("StarterGui"):SetCore("SendNotification", { 
-    Title = "Nguyễn An";
-    Text = "Mua game pass đê ae";
-    Button1 = "Ok";
-    Button2 = "đéo";
-    Icon = "rbxthumb://type=Asset&id=11749957186&w=150&h=150"})
-    Duration = 5;
---test
 
 local Tab = Window:NewTab("Blox Fruit")
 local Section = Tab:NewSection("Hỗ trợ")
