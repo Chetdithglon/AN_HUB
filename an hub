@@ -281,6 +281,11 @@ Section:NewButton("Hack Bay 3", "nó chỉ bay dc thui nhưng xịn hơn :3", f
     loadstring(game:HttpGet('https://raw.githubusercontent.com/asdjasdhsuhduahd213/AN_HUB/main/acc1'))()
 end)
 
+Section:NewButton("lấy item trong skin", "nó chỉ bay dc thui nhưng xịn hơn :3", function()
+    print("Clicked")
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/Chetdithglon/lklklkl/main/layitemskin'))()
+end)
+
 Section:NewKeybind("ẩn hiện cho PC", "lỗi gì tự chỉnh nút nào đó trên bàn phím", Enum.KeyCode.RightAlt, function()
 	Library:ToggleUI()
 end)
