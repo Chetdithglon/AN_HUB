@@ -155,7 +155,7 @@ end
 
 local notifLib = loadstring(game:HttpGet("https://raw.githubusercontent.com/Sw1ndlerScripts/RobloxScripts/main/Notification%20Library/main.lua"))()
 local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/asdjasdhsuhduahd213/AN_HUB/main/lib"))()
-local Window = Library.CreateLib(" Nguyễn An ( sắp 𝙪𝙥𝙙𝙖𝙩𝙚 𝘽𝙖𝙮 ải tộc 𝙨𝙠𝙮 𝙑4 )" , "BloodTheme")
+local Window = Library.CreateLib(" Nguyễn An ( sắp update tộc sky v4 )" , "BloodTheme")
 
 local Tab = Window:NewTab("Blox Fruit")
 local Section = Tab:NewSection("Hỗ trợ")
