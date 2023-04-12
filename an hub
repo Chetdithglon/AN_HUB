@@ -155,7 +155,7 @@ end
 
 local notifLib = loadstring(game:HttpGet("https://raw.githubusercontent.com/Sw1ndlerScripts/RobloxScripts/main/Notification%20Library/main.lua"))()
 local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/asdjasdhsuhduahd213/AN_HUB/main/lib"))()
-local Window = Library.CreateLib(" Nguyễn An ( Update lấy item trong skin + show item blox )" , "BloodTheme")
+local Window = Library.CreateLib(" Nguyễn An ( Update fly ải sky v4 )" , "BloodTheme")
 
 local Tab = Window:NewTab("Blox Fruit")
 local Section = Tab:NewSection("Hỗ trợ")
@@ -286,6 +286,11 @@ Section:NewButton(" Hack Bay 2", "nó chỉ bay dc thui nhưng xịn hơn :3", 
     loadstring(game:HttpGet('https://raw.githubusercontent.com/Chetdithglon/lklklkl/main/bAY%202'))()
 end)
 
+Section:NewButton(" Hack Bay 1", "nó chỉ bay dc thui nhưng xịn hơn :3", function()
+    print("Clicked")
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/Chetdithglon/lklklkl/main/bay1'))()
+end)
+
 Section:NewButton("lấy item trong skin", "nó chỉ bay dc thui nhưng xịn hơn :3", function()
     print("Clicked")
     loadstring(game:HttpGet('https://raw.githubusercontent.com/Chetdithglon/lklklkl/main/layitemskin'))()
@@ -389,7 +394,7 @@ Section:NewButton("Tele cổng Thiên thần + Bay để đi ải ", "ButtonI
 print("Clicked")
 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(28286.3555, 14896.5352, 102.624695, 0, 0, 1, 0, 1, 0, -1, 0, 0)
 two(CFrame.new(28962.1758, 14919.2812, 236.689529, 0.0245016906, -1.02372431e-08, -0.999699771, 6.26366514e-08, 1, -8.70515215e-09, 0.999699771, -6.24045597e-08, 0.0245016906))
-    loadstring(game:HttpGet('https://pastebin.com/raw/fVhrud1Q'))()
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/Chetdithglon/lklklkl/main/bay1'))()
     end)
 
 Section:NewButton("Tele Quỷ + click hitbot", "ButtonInfo", function()
