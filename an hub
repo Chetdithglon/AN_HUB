@@ -155,7 +155,7 @@ end
 
 local notifLib = loadstring(game:HttpGet("https://raw.githubusercontent.com/Sw1ndlerScripts/RobloxScripts/main/Notification%20Library/main.lua"))()
 local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/asdjasdhsuhduahd213/AN_HUB/main/lib"))()
-local Window = Library.CreateLib(" Nguyễn An ( Update lấy item trong skin )" , "BloodTheme")
+local Window = Library.CreateLib(" Nguyễn An ( Update lấy item trong skin + show item blox )" , "BloodTheme")
 
 local Tab = Window:NewTab("Blox Fruit")
 local Section = Tab:NewSection("Hỗ trợ")
@@ -164,9 +164,9 @@ Section:NewButton("click có hitbox", "bật rùi là ko dừng lại dc", 
 loadstring(game:HttpGet('https://raw.githubusercontent.com/asdjasdhsuhduahd213/AN_HUB/main/click%20hitbot'))()
 end)
 
-Section:NewButton("ko có j đâu ( đừng tò mò ) ", "Nguyễn An", function()
+Section:NewButton("Show item acc", "Nguyễn An", function()
     print("Clicked")
-loadstring(game:HttpGet('https://raw.githubusercontent.com/Chetdithglon/lklklkl/main/bayacc'))()
+loadstring(game:HttpGet('https://raw.githubusercontent.com/Chetdithglon/lklklkl/main/showitem'))()
 end)
 
 Section:NewToggle("chạy nhanh đến nổ máy", "....", function(state)
