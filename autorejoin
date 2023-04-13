@@ -1,0 +1,12 @@
+while wait() do
+game:GetService("CoreGui").RobloxPromptGui.promptOverlay.ChildAdded:Connect(
+                            function(a3)
+                                if
+                                    a3.Name == "ErrorPrompt" and a3:FindFirstChild("MessageArea") and
+                                        a3.MessageArea:FindFirstChild("ErrorFrame")
+                                 then
+                                    game:GetService("TeleportService"):Teleport(game.PlaceId, game:GetService("Players").LocalPlayer)
+                                 end
+                            end)
+                            end
+                
