@@ -160,9 +160,8 @@ local Window = Library.CreateLib(" Nguyễn An (Update auto chest vip)" , "Blood
 local Tab = Window:NewTab("Blox Fruit")
 local Section = Tab:NewSection("Hỗ trợ")
 
-Section:NewButton("Chest vip pro", "", function()
+Section:NewButton("Tp Chest đảo bí ẩn", "", function()
 loadstring(game:HttpGet('https://raw.githubusercontent.com/Chetdithglon/AN_HUB/main/autochestvip'))()
-loadstring(game:HttpGet('https://raw.githubusercontent.com/Chetdithglon/AN_HUB/main/autorejoin'))()
 end)
 
 Section:NewButton("click có hitbox", "bật rùi là ko dừng lại dc", function()
