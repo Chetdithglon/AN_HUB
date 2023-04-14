@@ -164,7 +164,7 @@ Section:NewButton("Tp Chest đảo bí ẩn", "", function()
 loadstring(game:HttpGet('https://raw.githubusercontent.com/Chetdithglon/AN_HUB/main/autochestvip'))()
 game:GetService("StarterGui"):SetCore("SendNotification", { 
     Title = "Nguyễn An";
-    Text = "Sever Có Đảo Ko Tp";
+    Text = "Sever Có Đảo Ko Mà Tp";
     Button1 = " có cc";
     Icon = "rbxthumb://type=Asset&id=11749957186&w=150&h=150"})
     Duration = 5;
@@ -206,19 +206,7 @@ spawn(function()
             wait(5)
             
             end end) end end)
-Section:NewButton("click có hitbox", "bật rùi là ko dừng lại dc", function()
-loadstring(game:HttpGet('https://raw.githubusercontent.com/asdjasdhsuhduahd213/AN_HUB/main/click%20hitbot'))()
-end)
-Section:NewButton("Rejoin sever", "Nguyễn An", function()
-    print("Clicked")
- game:GetService("TeleportService"):Teleport(game.PlaceId, game:GetService("Players").LocalPlayer)
-end)
-Section:NewButton("Show item acc", "Nguyễn An", function()
-    print("Clicked")
-loadstring(game:HttpGet('https://raw.githubusercontent.com/Chetdithglon/lklklkl/main/showitem'))()
-end)
-
-Section:NewToggle("chạy nhanh đến nổ máy", "....", function(state)
+	    Section:NewToggle("chạy nhanh đến nổ máy", "....", function(state)
  if state then
           InfAbility = state
         if state == false then
@@ -235,6 +223,19 @@ end)
             end
         end
     end)
+Section:NewButton("click có hitbox", "bật rùi là ko dừng lại dc", function()
+loadstring(game:HttpGet('https://raw.githubusercontent.com/asdjasdhsuhduahd213/AN_HUB/main/click%20hitbot'))()
+end)
+
+Section:NewButton("Show item acc", "Nguyễn An", function()
+    print("Clicked")
+loadstring(game:HttpGet('https://raw.githubusercontent.com/Chetdithglon/lklklkl/main/showitem'))()
+end)
+Section:NewButton("Rejoin sever", "Nguyễn An", function()
+    print("Clicked")
+ game:GetService("TeleportService"):Teleport(game.PlaceId, game:GetService("Players").LocalPlayer)
+end)
+
     local Section = Tab:NewSection("Script No Key")
     Section:NewButton("Ghost Lord  : Pc và Pe ( Vip vãi ) ", "Nguyễn An", function()
     print("Clicked")
