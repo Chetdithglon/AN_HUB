@@ -162,6 +162,12 @@ local Section = Tab:NewSection("Hỗ trợ")
 
 Section:NewButton("Tp Chest đảo bí ẩn", "", function()
 loadstring(game:HttpGet('https://raw.githubusercontent.com/Chetdithglon/AN_HUB/main/autochestvip'))()
+game:GetService("StarterGui"):SetCore("SendNotification", { 
+    Title = "Nguyễn An";
+    Text = "Sever Có Đảo Ko Tp";
+    Button1 = " có cc";
+    Icon = "rbxthumb://type=Asset&id=11749957186&w=150&h=150"})
+    Duration = 5;
 end)
 Section:NewToggle("Tp Chest Thường", "ToggleInfo", function(state)
     if state then
