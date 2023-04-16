@@ -227,7 +227,7 @@ Section:NewButton("click có hitbox", "bật rùi là ko dừng lại dc", 
 loadstring(game:HttpGet('https://raw.githubusercontent.com/asdjasdhsuhduahd213/AN_HUB/main/click%20hitbot'))()
 end)
 
-Section:NewButton("Fix lag Siêu cấp  : Pc và Pe ", "", function(t)
+Section:NewButton("Fix lag Siêu cấp ", "", function(t)
  
 		local decalsyeeted = true
 		local g = game
