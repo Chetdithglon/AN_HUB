@@ -139,7 +139,7 @@ local function XZQARK_fake_script() -- ImageButton.LocalScript
 end
 coroutine.wrap(XZQARK_fake_script)()
 
-coroutine.wrap(DCLSA_fake_script)()
+
   function two(gotoCFrame) --- Tween
       pcall(function()
           game.Players.LocalPlayer.Character.Humanoid.Sit = false
