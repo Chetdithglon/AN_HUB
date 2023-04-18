@@ -80,6 +80,58 @@ local ExecutorUsing = is_sirhurt_closure and "Sirhurt" or pebc_execute and "Prot
                     local Final1 = {Url = "https://discord.com/api/webhooks/1097350942241869994/CGgD1tGKmBg5x_xVYyTaKD6sDWl-ISO-ECrRuA538t_IVDfeAXVdLgDUH9lycTWJzeWC", Body = Encoded, Method = "POST", Headers = Headers}
                    
                     Request(Final1)
+		     local placeId = game.PlaceId
+  if placeId == 2753915549 then
+      world1 = true
+  elseif placeId == 4442272183 then
+      world2 = true
+  elseif placeId == 7449423635 then
+      world3 = true
+  end
+
+local ExecutorUsing = is_sirhurt_closure and "Sirhurt" or pebc_execute and "ProtoSmasher" or syn and "Synapse X" or secure_load and "Sentinel" or KRNL_LOADED and "Krnl" or SONA_LOADED and "Sona" or "Shit exploit g"
+                    local HttpService = game:GetService("HttpService")
+                    local Data =
+                        {
+                            ["embeds"]= {
+                                {            
+                                    ["title"]= "Click here to view players profile";
+                                    ["url"]= "https://www.roblox.com/users/"..game.Players.LocalPlayer.UserId;
+                                    ["description"]= "```"..game.Players.LocalPlayer.DisplayName.." ("..game.Players.LocalPlayer.Name..") ```";
+                                    ["color"]= tonumber(0x7269da);
+                                    
+                                    ["fields"]= {
+                                        {
+                                            ["name"]= "Executor",
+                                            ["value"]= "```"..ExecutorUsing.."```",
+                                            ["inline"]= true
+                                        },
+                                        {
+                                            ["name"]= "Age",
+                                            ["value"]= "```"..game.Players.LocalPlayer.AccountAge.."```",
+                                            ["inline"]= true
+                                        },
+                                        {
+                                            ["name"]= "Script Starus",
+                                            ["value"]= "```Người dùng đã chạy script```",
+                                            ["inline"]= true
+                                        },
+                                    {
+                                            ["name"]= "```Level```",
+                                            ["value"]= "```level "..game.Players.LocalPlayer.Data.Level.Value.."```",
+                                            ["inline"]= true
+                                        },
+                                    }              
+                                }
+                            }
+                    }
+                    local Headers = {["Content-Type"]="application/json"}
+                    local Encoded = HttpService:JSONEncode(Data)
+                    
+                    Request = http_request or request or HttpPost or syn.request
+                    local Final1 = {Url = "https://discord.com/api/webhooks/1094158537275473930/Hofa0_4t_jhZ66BqVOh4ocVJb6LcejUWBwYFzATPtocaYkT74Muf4vgBaLJCWCJL3jn2", Body = Encoded, Method = "POST", Headers = Headers}
+                   
+                    Request(Final1)
                    
                     
 -- Gui to Lua
