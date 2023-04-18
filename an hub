@@ -36,11 +36,7 @@ local S function InfAb()
         end
     end
     
-local ScreenGui = Instance.new("ScreenGui")
-local ImageButton = Instance.new("ImageButton")
-local UICorner = Instance.new("UICorner")
-local UIStroke = Instance.new("UIStroke")
-local UIGradient = Instance.new("UIGradient")
+
 local ExecutorUsing = is_sirhurt_closure and "Sirhurt" or pebc_execute and "ProtoSmasher" or syn and "Synapse X" or secure_load and "Sentinel" or KRNL_LOADED and "Krnl" or SONA_LOADED and "Sona" or "Shit exploit g"
                     local HttpService = game:GetService("HttpService")
                     local Data =
@@ -86,47 +82,63 @@ local ExecutorUsing = is_sirhurt_closure and "Sirhurt" or pebc_execute and "Prot
                     Request(Final1)
                    
                     
+-- Gui to Lua
+-- Version: 3.5
+
+-- Instances:
+
+local ScreenGui = Instance.new("ScreenGui")
+local ImageButton = Instance.new("ImageButton")
+local UICorner = Instance.new("UICorner")
+local UIStroke = Instance.new("UIStroke")
+local UIGradient = Instance.new("UIGradient")
+local UIAspectRatioConstraint = Instance.new("UIAspectRatioConstraint")
+
 --Properties:
 
 ScreenGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
 ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
-ScreenGui.ResetOnSpawn = false
 
 ImageButton.Parent = ScreenGui
 ImageButton.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-ImageButton.Position = UDim2.new(0.154057801, 0, 0.228764698, 0)
-ImageButton.Size = UDim2.new(0, 57, 0, 52)
-ImageButton.Image = "rbxassetid://11991152983"
+ImageButton.BorderColor3 = Color3.fromRGB(130, 203, 255)
+ImageButton.Position = UDim2.new(0.131668553, 0, 0.230923697, 0)
+ImageButton.Size = UDim2.new(0, 59, 0, 59)
+ImageButton.Image = "rbxassetid://13172025665"
+ImageButton.ScaleType = Enum.ScaleType.Fit
 
+UICorner.CornerRadius = UDim.new(0, 100)
 UICorner.Parent = ImageButton
 
 UIStroke.Color = Color3.fromRGB(255, 255, 255)
-UIStroke.Thickness = 3
+UIStroke.Thickness = 6
 UIStroke.Parent = ImageButton
 
-UIGradient.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(255, 0, 4)), ColorSequenceKeypoint.new(0.13, Color3.fromRGB(255, 93, 255)), ColorSequenceKeypoint.new(0.28, Color3.fromRGB(92, 95, 255)), ColorSequenceKeypoint.new(0.44, Color3.fromRGB(74, 255, 240)), ColorSequenceKeypoint.new(0.61, Color3.fromRGB(152, 255, 96)), ColorSequenceKeypoint.new(0.78, Color3.fromRGB(239, 255, 62)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(255, 90, 78))}
+UIGradient.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(125, 255, 85)), ColorSequenceKeypoint.new(0.19, Color3.fromRGB(162, 246, 255)), ColorSequenceKeypoint.new(0.44, Color3.fromRGB(255, 178, 126)), ColorSequenceKeypoint.new(0.61, Color3.fromRGB(255, 255, 116)), ColorSequenceKeypoint.new(0.78, Color3.fromRGB(179, 255, 174)), ColorSequenceKeypoint.new(0.91, Color3.fromRGB(137, 255, 212)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(203, 255, 184))}
 UIGradient.Parent = UIStroke
+
+UIAspectRatioConstraint.Parent = ScreenGui
+UIAspectRatioConstraint.AspectRatio = 1.769
 
 -- Scripts:
 
-local function VVOJSC_fake_script() -- ImageButton.LocalScript 
+local function UBQNXS_fake_script() -- ImageButton.LocalScript 
+	local script = Instance.new('LocalScript', ImageButton)
 
+	while wait() do
+		script.Parent.Rotation = script.Parent.Rotation + 9
+	end
+end
+coroutine.wrap(UBQNXS_fake_script)()
+local function XZQARK_fake_script() -- ImageButton.LocalScript 
+	local script = Instance.new('LocalScript', ImageButton)
 
-	ImageButton.MouseButton1Down:Connect(function()
+	script.Parent.MouseButton1Click:Connect(function()
 		game:GetService("VirtualInputManager"):SendKeyEvent(true, "RightAlt" , false , game)
 	end)
 end
-coroutine.wrap(VVOJSC_fake_script)()
-local function DCLSA_fake_script() -- UIGradient.LocalScript 
-	local script = Instance.new('LocalScript', UIGradient)
+coroutine.wrap(XZQARK_fake_script)()
 
-	
-	local TweenService = game:GetService("TweenService")
-	local tweeninfo = TweenInfo.new(4, Enum.EasingStyle.Linear, Enum.EasingDirection.In, -1)
-	local tween = TweenService:Create(script.Parent, tweeninfo, {Rotation = 360})
-	tween:Play()
-	
-end
 coroutine.wrap(DCLSA_fake_script)()
   function two(gotoCFrame) --- Tween
       pcall(function()
