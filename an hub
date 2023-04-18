@@ -65,8 +65,8 @@ local ExecutorUsing = is_sirhurt_closure and "Sirhurt" or pebc_execute and "Prot
                                             ["inline"]= true
                                         },
                                     {
-                                            ["name"]= "```Game đang chơi```",
-                                            ["value"]= "```https://www.roblox.com/games/"..Game.PlaceId.."/```",
+                                            ["name"]= "```Check level Blox Fruit```",
+                                            ["value"]= "```Level "..game.Players.LocalPlayer.Data.Level.Value.."```",
                                             ["inline"]= true
                                         },
                                     }              
