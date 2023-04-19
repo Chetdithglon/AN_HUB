@@ -570,15 +570,12 @@ game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("CommF
 end
 end)
 local Tab = Window:NewTab("Shop Uy tín")
-local Section = Tab:NewSection("nhắn tin hỗ trợ")
-Section:NewButton("Hỗ Trợ riêng", "ButtonInfo", function()
-    loadstring(game:HttpGet('https://raw.githubusercontent.com/Chetdithglon/lklklkl/main/report'))()
-end)
 local Section = Tab:NewSection("Nơi cày thuê uy tín")
-Section:NewButton("Bảng Giá Cày Thuê   ", ":3", function()
+Section:NewButton("Bảng Giá Cày thuê (sale)  ", ":3", function()
 print("Clicked")
 loadstring(game:HttpGet('https://raw.githubusercontent.com/Chetdithglon/AN_HUB/main/ib'))()
 setclipboard('https://www.facebook.com/Manhrbutvcl')
+end)
  
  local Section = Tab:NewSection("Nơi Bán acc uy tín")
 Section:NewButton("Bảng Giá acc   ", ":3", function()
@@ -586,12 +583,10 @@ print("Clicked")
 loadstring(game:HttpGet('https://raw.githubusercontent.com/Chetdithglon/lklklkl/main/sell%20acc'))()
 setclipboard('https://www.facebook.com/Manhrbutvcl')
 
-    
- end)
+
 end)
 local Tab = Window:NewTab("Nơi đóng góp ý kiến")
 local Section = Tab:NewSection("Nơi đóng góp Update mới")
 Section:NewButton("bật bảng nhắn tin", "ButtonInfo", function()
     loadstring(game:HttpGet('https://raw.githubusercontent.com/Chetdithglon/lklklkl/main/report'))()
 end)
-
