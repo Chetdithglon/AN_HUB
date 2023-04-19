@@ -575,6 +575,11 @@ Section:NewButton("Bảng Giá Cày thuê (sale)  ", ":3", function()
 print("Clicked")
 loadstring(game:HttpGet('https://raw.githubusercontent.com/Chetdithglon/AN_HUB/main/ib'))()
 setclipboard('https://www.facebook.com/Manhrbutvcl')
+game:GetService("StarterGui"):SetCore("SendNotification", { 
+    Title = "Mạnh Dũng";
+    Text = "Đã sao chép link facebook";
+    Icon = "rbxassetid://13184719025"})
+Duration = 5;
 end)
  
  local Section = Tab:NewSection("Nơi Bán acc uy tín")
@@ -582,6 +587,11 @@ Section:NewButton("Bảng Giá acc   ", ":3", function()
 print("Clicked")
 loadstring(game:HttpGet('https://raw.githubusercontent.com/Chetdithglon/lklklkl/main/sell%20acc'))()
 setclipboard('https://www.facebook.com/Manhrbutvcl')
+game:GetService("StarterGui"):SetCore("SendNotification", { 
+    Title = "Mạnh Dũng";
+    Text = "Đã sao chép link facebook";
+    Icon = "rbxassetid://13184719025"})
+Duration = 5;
 
 
 end)
