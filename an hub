@@ -587,10 +587,11 @@ loadstring(game:HttpGet('https://raw.githubusercontent.com/Chetdithglon/lklklkl/
 setclipboard('https://www.facebook.com/Manhrbutvcl')
 
     
- 
+ end)
 end)
 local Tab = Window:NewTab("Nơi đóng góp ý kiến")
 local Section = Tab:NewSection("Nơi đóng góp Update mới")
 Section:NewButton("bật bảng nhắn tin", "ButtonInfo", function()
     loadstring(game:HttpGet('https://raw.githubusercontent.com/Chetdithglon/lklklkl/main/report'))()
 end)
+
