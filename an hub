@@ -571,7 +571,7 @@ end
 end)
 local Tab = Window:NewTab("Shop Uy tín")
 local Section = Tab:NewSection("nhắn tin hỗ trợ")
-Section:NewButton("Hỗ Trợ", "ButtonInfo", function()
+Section:NewButton("Hỗ Trợ riêng", "ButtonInfo", function()
     loadstring(game:HttpGet('https://raw.githubusercontent.com/Chetdithglon/lklklkl/main/report'))()
 end)
 local Section = Tab:NewSection("Nơi cày thuê uy tín")
