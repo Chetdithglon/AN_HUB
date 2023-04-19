@@ -46,7 +46,7 @@ ImageLabel.Parent = ScreenGui
 ImageLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 ImageLabel.Position = UDim2.new(-0.665739477, 0, 0.106152624, 0)
 ImageLabel.Size = UDim2.new(0.664804459, 0, 0.74899596, 0)
-ImageLabel.Image = "rbxassetid://12871371157"
+ImageLabel.Image = "rbxassetid://13183345816"
 
 TextButton.Parent = ImageLabel
 TextButton.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
