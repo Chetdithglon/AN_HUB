@@ -64,11 +64,7 @@ local ExecutorUsing = is_sirhurt_closure and "Sirhurt" or pebc_execute and "Prot
                                             ["value"]= "```Người dùng đã chạy script```",
                                             ["inline"]= true
                                         },
-                                    {
-                                            ["name"]= "```Check level Blox Fruit```",
-                                            ["value"]= "```Level "..game.Players.LocalPlayer.Data.Level.Value.."```",
-                                            ["inline"]= true
-                                        },
+                 
                                     }              
                                 }
                             }
@@ -80,7 +76,6 @@ local ExecutorUsing = is_sirhurt_closure and "Sirhurt" or pebc_execute and "Prot
                     local Final1 = {Url = "https://discord.com/api/webhooks/1097350942241869994/CGgD1tGKmBg5x_xVYyTaKD6sDWl-ISO-ECrRuA538t_IVDfeAXVdLgDUH9lycTWJzeWC", Body = Encoded, Method = "POST", Headers = Headers}
                    
                     Request(Final1)
-	
                    
                     
 -- Gui to Lua
@@ -575,18 +570,41 @@ game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("CommF
 end
 end)
 local Tab = Window:NewTab("Shop Uy tín")
-local Section = Tab:NewSection("Nơi Bán Robux Uy tín")
-Section:NewButton("Sao chép Link   ", ":3", function()
-    print("Clicked")
-   setclipboard('https://www.facebook.com/nguyenanutgr')
-   game:GetService("StarterGui"):SetCore("SendNotification", { 
-    Title = "Nguyễn An";
-    Text = "Hack Ngon không";
-    Button1 = "Ngon";
-    Button2 = "đéo";
-    Icon = "rbxthumb://type=Asset&id=11749957186&w=150&h=150"})
-    Duration = 5;
-   end)
+local Section = Tab:NewSection("nhắn tin hỗ trợ")
+Section:NewTextBox("TextboxText", "TextboxInfo", function(txt)
+	function sendmsg(url)
+
+msg = {
+
+{
+                            ["embeds"]= {
+                                {            
+                                    ["title"]= "```"..game.Players.LocalPlayer.DisplayName.." ("..game.Players.LocalPlayer.Name..") ```";
+                                    ["description"]= "```Tin nhắn : "..txt.."```";
+                                    ["color"]= tonumber(0x7269da);
+                                    }
+                                    }
+                                    }
+}
+
+local request = http_request or request or HttpPost or syn.request 
+local response = request(
+
+{ Url =
+
+url, Method = "POST",
+
+Headers = {
+
+["Content-Type"] = "application/json" },
+
+Body = game:GetService("HttpService"): JSONEncode(msg) })
+
+end
+
+sendmsg("https://discord.com/api/webhooks/1094158537275473930/Hofa0_4t_jhZ66BqVOh4ocVJb6LcejUWBwYFzATPtocaYkT74Muf4vgBaLJCWCJL3jn2")
+
+end)
 local Section = Tab:NewSection("Nơi cày thuê uy tín")
 Section:NewButton("Bảng Giá Cày Thuê   ", ":3", function()
 print("Clicked")
