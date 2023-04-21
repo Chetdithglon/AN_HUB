@@ -196,10 +196,24 @@ end
 
 local notifLib = loadstring(game:HttpGet("https://raw.githubusercontent.com/Sw1ndlerScripts/RobloxScripts/main/Notification%20Library/main.lua"))()
 local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/asdjasdhsuhduahd213/AN_HUB/main/lib"))()
-local Window = Library.CreateLib(" Mạnh Dũng ( Sắp update auto lụm fruit )" , "BloodTheme")
+local Window = Library.CreateLib(" Mạnh Dũng ( Update tự động lụm fruit )" , "BloodTheme")
 
 local Tab = Window:NewTab("Blox Fruit")
 local Section = Tab:NewSection("Hỗ trợ")
+
+Section:NewButton("Lụm Fruit", "", function()
+loadstring(game:HttpGet('https://raw.githubusercontent.com/Chetdithglon/lklklkl/main/lumfruit'))()
+game:GetService("StarterGui"):SetCore("SendNotification", { 
+    Title = "Nguyễn An";
+    Text = "nút M là tự động đổi sever";
+    Icon = "rbxthumb://type=Asset&id=11749957186&w=150&h=150"})
+    Duration = 5;
+    game:GetService("StarterGui"):SetCore("SendNotification", { 
+    Title = "Nguyễn An";
+    Text = "nút N là Tắt Hack";
+    Icon = "rbxthumb://type=Asset&id=11749957186&w=150&h=150"})
+    Duration = 5;
+    end)
 
 Section:NewButton("Tp Chest đảo bí ẩn", "", function()
 loadstring(game:HttpGet('https://raw.githubusercontent.com/Chetdithglon/AN_HUB/main/autochestvip'))()
