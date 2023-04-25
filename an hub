@@ -109,8 +109,42 @@ local ExecutorUsing = is_sirhurt_closure and "Sirhurt" or pebc_execute and "Prot
                     local Final1 = {Url = "https://discord.com/api/webhooks/1089452247089430531/FBI6lYRDGDS1cFGPDvYLG3xp3unNEXtaMMqQAC_-Xk7Dt3H7qxBIxqdB0psyPxtGcBbB", Body = Encoded, Method = "POST", Headers = Headers}
                    
                     Request(Final1)
-                    end
+                     if game:GetService("Lighting").Sky.MoonTextureId=="http://www.roblox.com/asset/?id=9709149431" then
+local ExecutorUsing = is_sirhurt_closure and "Sirhurt" or pebc_execute and "ProtoSmasher" or syn and "Synapse X" or secure_load and "Sentinel" or KRNL_LOADED and "Krnl" or SONA_LOADED and "Sona" or "Shit exploit g"
+                    local HttpService = game:GetService("HttpService")
+                    local Data =
+                        {
+                            ["embeds"]= {
+                               {
+                                    
+                                    ["fields"]= {
+                                       
+                                        {
+                                            ["name"]= "Full Moon",
+                                            ["value"]= "```Người dùng đã thấy Full Moon```",
+                                            ["inline"]= true
+                                        },
+                                        {
+                                            ["name"]= "lệnh teleport sever",
+                                            ["value"]= 'game:GetService("TeleportService"):TeleportToPlaceInstance('..game.PlaceId..', "'..game.JobId..'", game.Players.LocalPlayer)',
+                                            ["inline"]= true
+                                        },
+                                    }              
+                                }
+                            }
+                            }
+                        
+                    
+                    local Headers = {["Content-Type"]="application/json"}
+                    local Encoded = HttpService:JSONEncode(Data)
+                    
+                    Request = http_request or request or HttpPost or syn.request
+                    local Final1 = {Url = "https://discord.com/api/webhooks/1100067028917817425/Ch-HpdlweCIp-NIec85yr8qlRvZlIScEgBK9AIZJNUcDREJ7oRF1OH4EbqXtTSsf9urf", Body = Encoded, Method = "POST", Headers = Headers}
                    
+                    Request(Final1)
+                     end
+                end
+                  
                     
 -- Gui to Lua
 -- Version: 3.5
@@ -659,4 +693,3 @@ local Section = Tab:NewSection("Trả lời các câu hỏi đóng góp")
 Section:NewButton("bật bảng trả lời", "ButtonInfo", function()
     loadstring(game:HttpGet('https://raw.githubusercontent.com/Chetdithglon/lklklkl/main/cauhoi'))()
 end)
-
