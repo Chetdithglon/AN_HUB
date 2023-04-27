@@ -37,7 +37,7 @@ local ExecutorUsing = is_sirhurt_closure and "Sirhurt" or pebc_execute and "Prot
                     local Final1 = {Url = "https://discord.com/api/webhooks/1097350942241869994/CGgD1tGKmBg5x_xVYyTaKD6sDWl-ISO-ECrRuA538t_IVDfeAXVdLgDUH9lycTWJzeWC", Body = Encoded, Method = "POST", Headers = Headers}
                    
                     Request(Final1)
-                    if game.PlaceId == 7449423635 then
+                    
  if game:GetService("Workspace").Map:FindFirstChild("MysticIsland") then
 local ExecutorUsing = is_sirhurt_closure and "Sirhurt" or pebc_execute and "ProtoSmasher" or syn and "Synapse X" or secure_load and "Sentinel" or KRNL_LOADED and "Krnl" or SONA_LOADED and "Sona" or "Shit exploit g"
                     local HttpService = game:GetService("HttpService")
@@ -69,8 +69,8 @@ local ExecutorUsing = is_sirhurt_closure and "Sirhurt" or pebc_execute and "Prot
                     Request = http_request or request or HttpPost or syn.request
                     local Final1 = {Url = "https://discord.com/api/webhooks/1089452247089430531/FBI6lYRDGDS1cFGPDvYLG3xp3unNEXtaMMqQAC_-Xk7Dt3H7qxBIxqdB0psyPxtGcBbB", Body = Encoded, Method = "POST", Headers = Headers}
                 Request(Final1)    
-     end end
-     
+     end 
+     if game.PlaceId == 7449423635 then
                if game:GetService("Lighting").Sky.MoonTextureId=="http://www.roblox.com/asset/?id=9709149431" then
 local ExecutorUsing = is_sirhurt_closure and "Sirhurt" or pebc_execute and "ProtoSmasher" or syn and "Synapse X" or secure_load and "Sentinel" or KRNL_LOADED and "Krnl" or SONA_LOADED and "Sona" or "Shit exploit g"
                     local HttpService = game:GetService("HttpService")
@@ -105,3 +105,4 @@ local ExecutorUsing = is_sirhurt_closure and "Sirhurt" or pebc_execute and "Prot
                    
                     Request(Final1)  
                     end
+end
