@@ -256,10 +256,6 @@ Section:NewButton("Show item acc", "Mạnh Dũng", function()
 loadstring(game:HttpGet('https://raw.githubusercontent.com/Chetdithglon/lklklkl/main/showitem'))()
 end)
 
-Section:NewButton("Show item ( Dành cho admin )", "Mạnh Dũng", function()
-    print("Clicked")
-loadstring(game:HttpGet('https://raw.githubusercontent.com/Chetdithglon/lklklkl/main/showwa'))()
-end)
 
 Section:NewButton("Rejoin sever", "Mạnh Dũng", function()
     print("Clicked")
