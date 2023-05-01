@@ -85,7 +85,7 @@ end
 
 local notifLib = loadstring(game:HttpGet("https://raw.githubusercontent.com/Sw1ndlerScripts/RobloxScripts/main/Notification%20Library/main.lua"))()
 local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/asdjasdhsuhduahd213/AN_HUB/main/lib"))()
-local Window = Library.CreateLib(" Mạnh Dũng (Fix lỗi k bật đc ở sea1 và sea2)" , "BloodTheme")
+local Window = Library.CreateLib(" Mạnh Dũng (Fix lỗi Auto chạy nhanh)" , "BloodTheme")
 
 local Tab = Window:NewTab("Blox Fruit")
 local Section = Tab:NewSection("Hỗ trợ")
