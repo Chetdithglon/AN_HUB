@@ -298,6 +298,11 @@ end)
     print("Clicked")
 loadstring(game:HttpGet('https://raw.githubusercontent.com/GGhostVN/GhostLord/main/Main'))()
 end)
+Section:NewButton(" Nexuz Hub : Pc và Pe ( Vip ) ", "Mạnh Dũng", function()
+    print("Clicked")
+loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/NexuzHub/Main-/main/Script"))()
+end)
+
 
 Section:NewButton("Blck Hub  : Pc và Pe  ", "Mạnh Dũng", function()
     print("Clicked")
