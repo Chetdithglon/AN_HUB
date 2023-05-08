@@ -304,6 +304,11 @@ Section:NewButton("Neva Hub : Pc và Pe ( Vip )", "Mạnh Dũng", function()
 loadstring(game:HttpGet('https://raw.githubusercontent.com/VEZ2/NEVAHUB/main/2'))()
 end)
 
+Section:NewButton("Ntt Hub : Pc và Pe ( ... )", "Mạnh Dũng", function()
+    print("Clicked")
+loadstring(game:HttpGet('https://raw.githubusercontent.com/Nttvlog112/ntt/main/NTT%20B.l.o.x.f..r.u.i.t'))()
+end)
+
 Section:NewButton("Blck Hub  : Pc và Pe  ", "Mạnh Dũng", function()
     print("Clicked")
 loadstring(game:HttpGet("https://raw.githubusercontent.com/1f0yt/community/main/BLCK"))()
