@@ -422,7 +422,7 @@ Section:NewKeybind("ẩn hiện cho PC", "lỗi gì tự chỉnh nút nà
 	Library:ToggleUI()
 end)
 Section:NewButton("Lệnh ", " hi", function()
-    loadstring(game:HttpGet('https://raw.githubusercontent.com/asdjasdhsuhduahd213/AN_HUB/main/drop_hat'))()
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/Chetdithglon/lklklkl/main/infinti%20yelf'))()
 end)
 Section:NewButton("vứt mũ", " Vứt Mũ Ra Chỗ Khác", function()
 
