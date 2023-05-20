@@ -441,6 +441,14 @@ end)
 local Tab = Window:NewTab("RaceV4 ( Update )")
 local Section = Tab:NewSection("tp check")
 
+Section:NewButton("Tele Chỗ Gắn gear", "ButtonInfo", function()
+   for _,v in next, workspace:GetDescendants() do
+    if v.Name == "Prompt" then
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = v.CFrame
+    end
+    end
+end)
+
 Section:NewButton("Tele Tảng Đá", "ButtonInfo", function()
     two(CFrame.new(-5355.62256, 313.715485, -2495.17383, 0.447177857, 6.1724144e-08, 0.894445062, 3.27962084e-08, 1, -8.54047784e-08, -0.894445062, 6.75255336e-08, 0.447177857))
 end)
