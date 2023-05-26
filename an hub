@@ -450,13 +450,6 @@ Section:NewButton("Tele Chỗ Gắn gear", "ButtonInfo", function()
     end
 end)
 
-Section:NewButton("Tele Gaer ở đảo bí ẩn", "ButtonInfo", function()
-   for _,v in next, workspace:GetDescendants() do
-    if v.Name == "PluginGrass" then
-        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = v.CFrame
-    end
-    end
-end)
 
 Section:NewButton("Tele Tảng Đá", "ButtonInfo", function()
     two(CFrame.new(-5355.62256, 313.715485, -2495.17383, 0.447177857, 6.1724144e-08, 0.894445062, 3.27962084e-08, 1, -8.54047784e-08, -0.894445062, 6.75255336e-08, 0.447177857))
@@ -581,12 +574,7 @@ game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("CommF
         end  
 end
 end)
-Section:NewButton("tele gear (đảo bí ẩn)", "Mạnh Dũng", function()
- for i,v in pairs(game.Workspace.Map.MysticIsland.Model:GetChildren()) do
-     if v.Name = "PluginGrass" then 
-     game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = v.CFrame-- this will print every value below Workspace without checking the values or indexes below the printed value (because we're using GetChildren and not GetDescendants (check number 3))
-end
-end)
+
 local Tab = Window:NewTab("Shop Uy tín")
 local Section = Tab:NewSection("Nơi cày thuê uy tín")
 Section:NewButton("Bảng Giá Cày thuê (sale)  ", ":3", function()
