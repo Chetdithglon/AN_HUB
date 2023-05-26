@@ -116,7 +116,7 @@ end
 
 local notifLib = loadstring(game:HttpGet("https://raw.githubusercontent.com/Sw1ndlerScripts/RobloxScripts/main/Notification%20Library/main.lua"))()
 local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/asdjasdhsuhduahd213/AN_HUB/main/lib"))()
-local Window = Library.CreateLib(" Mạnh Dũng ( CINIM_VN : Tui sẽ up tele gear vào ngày k xa nhé )" , "BloodTheme")
+local Window = Library.CreateLib(" Mạnh Dũng ( Update tele gear : có lỗi báo cho ad nhé )" , "BloodTheme")
 
 local Tab = Window:NewTab("Blox Fruit")
 local Section = Tab:NewSection("Hỗ trợ")
@@ -444,6 +444,14 @@ local Section = Tab:NewSection("tp check")
 Section:NewButton("Tele Chỗ Gắn gear", "ButtonInfo", function()
    for _,v in next, workspace:GetDescendants() do
     if v.Name == "Prompt" then
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = v.CFrame
+    end
+    end
+end)
+
+Section:NewButton("Tele Gaer ở đảo bí ẩn", "ButtonInfo", function()
+   for _,v in next, workspace:GetDescendants() do
+    if v.Name == "PluginGrass" then
         game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = v.CFrame
     end
     end
