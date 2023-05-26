@@ -441,6 +441,14 @@ end)
 
 local Tab = Window:NewTab("RaceV4 ( Update )")
 local Section = Tab:NewSection("tp check")
+Section:NewButton("Tele gear ( Đảo bí ẩn )", "ButtonInfo", function()
+   local sus = game.Workspace.Map.MysticIsland.Model
+for i,v in pairs(sus) do
+    if v.Name == "PluginGrass" then
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = v.CFrame
+    end
+    end
+end)
 
 Section:NewButton("Tele Chỗ Gắn gear", "ButtonInfo", function()
    for _,v in next, workspace:GetDescendants() do
