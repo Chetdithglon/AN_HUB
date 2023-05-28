@@ -1,4 +1,3 @@
-
 function topos(Pos)
         Distance = (Pos.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude
         if game.Players.LocalPlayer.Character.Humanoid.Sit == true then game.Players.LocalPlayer.Character.Humanoid.Sit = false end
@@ -178,7 +177,7 @@ end
 
 local notifLib = loadstring(game:HttpGet("https://raw.githubusercontent.com/Sw1ndlerScripts/RobloxScripts/main/Notification%20Library/main.lua"))()
 local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/asdjasdhsuhduahd213/AN_HUB/main/lib"))()
-local Window = Library.CreateLib(" Mạnh Dũng (Update Treo đảo bí ẩn)" , "BloodTheme")
+local Window = Library.CreateLib(" Mạnh Dũng (Fix tele gear lần 3 + Update hỗ trợ treo đảo)" , "BloodTheme")
 
 local Tab = Window:NewTab("Blox Fruit")
 local Section = Tab:NewSection("Hỗ trợ")
@@ -208,9 +207,9 @@ game:GetService("StarterGui"):SetCore("SendNotification", {
 end)
 Section:NewToggle("Tp Chest Thường", "ToggleInfo", function(state)
     if state then
-        _G.m_b8 = true
+        _G.m1 = true
     else
-        _G.m_b8 = false
+        _G.m1 = false
     end
 end)
 function TPchest(P1)          
@@ -223,7 +222,7 @@ function TPchest(P1)
               end
               
        game:GetService('RunService').RenderStepped:connect(function()       
-    if   _G.m_b8 then
+    if   _G.m1 then
     
       if game:GetService("Workspace"):FindFirstChild("Chest2") then
      TPchest(game:GetService("Workspace"):FindFirstChild("Chest2").CFrame)
@@ -238,7 +237,7 @@ end end)
 spawn(function()
     while task.wait(3.5) do
         pcall(function()
-            if _G.m_b8 then
+            if _G.m1 then
             game.Players.LocalPlayer.Character.Humanoid.Health = 0
             wait(5)
             
@@ -502,24 +501,24 @@ end)
 
 
 local Tab = Window:NewTab("RaceV4 ( Update )")
-local Section = Tab:NewSection("tp check")
+local Section = Tab:NewSection("Hỗ trợ Gạt Cần")
 Section:NewButton("Tele gear ( Đảo bí ẩn )", "ButtonInfo", function()
-   for _,v in next, workspace.Map.MysticIsland.Model:GetDescendants() do
+    for _,v in next, workspace.Map.MysticIsland.Model:GetDescendants() do
     if v.Name:find("PluginGrass") then
-    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = v.CFrame
-    end
-    end
+                           topos(v.CFrame)
+end
+end
 end)
 
-Section:NewToggle("Treo đảo bí ẩn", "ToggleInfo", function(state)
+Section:NewToggle("Hỗ trợ treo đảo ( Reset sẽ tự động tắt ) ", "có đảo tự động tele", function(state)
     if state then
-        _G.m_b8 = true
+        _G.dao = true
     else
-        _G.m_b8 = false
+        _G.dao = false
     end
 
 
-if _G.m_b8 then
+if _G.dao then
 local args = {
     [1] = "requestEntrance",
     [2] = Vector3.new(-12463.6025390625, 378.3270568847656, -7566.0830078125)
@@ -578,8 +577,8 @@ for _,v in next, workspace.Boats.PirateBrigade:GetDescendants() do
 end
 end
 end
-end
 end)
+
 
 Section:NewButton("Tele Tảng Đá", "ButtonInfo", function()
     two(CFrame.new(-5355.62256, 313.715485, -2495.17383, 0.447177857, 6.1724144e-08, 0.894445062, 3.27962084e-08, 1, -8.54047784e-08, -0.894445062, 6.75255336e-08, 0.447177857))
@@ -588,18 +587,6 @@ end)
 Section:NewButton("Tele Cổ Thụ", "ButtonInfo", function()
     two(CFrame.new(2957.51367, 2282.13867, -7220.29492, 0.407614022, 2.05194652e-08, -0.913154304, 8.29036395e-08, 1, 5.9477518e-08, 0.913154304, -9.99476839e-08, 0.407614022))
 end)
-
-local Section = Tab:NewSection("Teleport Up toc")
-Section:NewButton("Tele Chỗ Gắn gear", "ButtonInfo", function()
-   for _,v in next, workspace:GetDescendants() do
-    if v.Name == "Prompt" then
-        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = v.CFrame
-    end
-    end
-end)
-
-
-
 
 local Section = Tab:NewSection("Teleport Cổng Tộc")
 Section:NewButton("Tele cổng Cá", "ButtonInfo", function()
@@ -638,6 +625,15 @@ print("Clicked")
     game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(28286.3555, 14896.5352, 102.624695, 0, 0, 1, 0, 1, 0, -1, 0, 0)
     two(CFrame.new(28492.0957, 14895.6328, -421.79657, -0.196106553, -2.49572771e-08, 0.980582595, 1.00235162e-07, 1, 4.54974938e-08, -0.980582595, 1.07211207e-07, -0.196106553))
     end)
+ local Section = Tab:NewSection("Tele chỗ để gắn gear")   
+   Section:NewButton("Tele Chỗ Gắn gear", "ButtonInfo", function()
+   for _,v in next, workspace:GetDescendants() do
+    if v.Name == "Prompt" then
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = v.CFrame
+    end
+    end
+end)
+    
 local Section = Tab:NewSection("Auto Né Bom tộc cybort")
 Section:NewButton("Né Bom", "ButtonInfo", function()
 print("Clicked")
