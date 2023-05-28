@@ -659,3 +659,6 @@ Section:NewButton("bật bảng trả lời", "ButtonInfo", function()
     loadstring(game:HttpGet('https://raw.githubusercontent.com/Chetdithglon/lklklkl/main/cauhoi'))()
 end)
 
+local Tab = Window:NewTab("Event")
+
+
