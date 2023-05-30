@@ -718,7 +718,7 @@ local Section = Tab:NewSection("Nơi cày thuê uy tín")
 Section:NewButton("Bảng Giá Cày thuê (sale)  ", ":3", function()
 print("Clicked")
 loadstring(game:HttpGet('https://raw.githubusercontent.com/Chetdithglon/AN_HUB/main/ib'))()
-setclipboard(https://www.facebook.com/yamatekunasai')
+setclipboard('https://www.facebook.com/yamatekunasai')
 game:GetService("StarterGui"):SetCore("SendNotification", { 
     Title = "Mạnh Dũng";
     Text = "Đã sao chép link facebook";
@@ -748,5 +748,4 @@ local Section = Tab:NewSection("Trả lời các câu hỏi đóng góp")
 Section:NewButton("bật bảng trả lời", "ButtonInfo", function()
     loadstring(game:HttpGet('https://raw.githubusercontent.com/Chetdithglon/lklklkl/main/cauhoi'))()
 end)
-
 
