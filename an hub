@@ -384,7 +384,14 @@ end)
 
 Section:NewButton("Show item acc", "Mạnh Dũng", function()
     print("Clicked")
-loadstring(game:HttpGet('https://raw.githubusercontent.com/Chetdithglon/lklklkl/main/showitem'))()
+local UserInputService = game:GetService("UserInputService")
+
+if UserInputService.TouchEnabled and not UserInputService.KeyboardEnabled and not UserInputService.MouseEnabled then
+loadstring(game:HttpGet('https://raw.githubusercontent.com/Chetdithglon/AN_HUB/main/showitempe'))()
+elseif not UserInputService.TouchEnabled and UserInputService.KeyboardEnabled and UserInputService.MouseEnabled then
+loadstring(game:HttpGet('https://raw.githubusercontent.com/Chetdithglon/AN_HUB/main/showitempc'))()
+end
+
 end)
 
 
