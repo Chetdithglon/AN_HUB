@@ -794,4 +794,21 @@ local Section = Tab:NewSection("Trả lời các câu hỏi đóng góp")
 Section:NewButton("bật bảng trả lời", "ButtonInfo", function()
     loadstring(game:HttpGet('https://raw.githubusercontent.com/Chetdithglon/lklklkl/main/cauhoi'))()
 end)
-
+Section:NewButton("link Facebook", ":3", function()
+print("Clicked")
+setclipboard('https://www.facebook.com/yamatekunasai')
+game:GetService("StarterGui"):SetCore("SendNotification", { 
+    Title = "Mạnh Dũng";
+    Text = "Đã sao chép link facebook";
+    Icon = "rbxassetid://13184719025"})
+Duration = 5;
+end)
+Section:NewButton("Link Zalo", ":3", function()
+print("Clicked")
+setclipboard('https://zalo.me/g/bdogtc074')
+game:GetService("StarterGui"):SetCore("SendNotification", { 
+    Title = "Mạnh Dũng";
+    Text = "Đã sao chép link Zalo";
+    Icon = "rbxassetid://13184719025"})
+Duration = 5;
+end)
