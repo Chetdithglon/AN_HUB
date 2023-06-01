@@ -55,9 +55,8 @@ game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("SetTeam","Mari
 local cac = require(game:GetService("Players").LocalPlayer.PlayerGui.Main.UIController.Inventory)
 local Inventory = game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("getInventory")
 local Items = {}
-local RaityLevel = {"Mythical","Legendary","Rare","Uncommon","Common"}
+local RaityLevel = {"Mythical","Legendary","Rare","Uncommon",}
 local RaityColor =  {
-    ["Common"] = Color3.fromRGB(179, 179, 179),
     ["Uncommon"] = Color3.fromRGB(92, 140, 211),
     ["Rare"] =  Color3.fromRGB(140, 82, 255),
     ["Legendary"] = Color3.fromRGB(213, 43, 228) ,
