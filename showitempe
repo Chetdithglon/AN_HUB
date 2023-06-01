@@ -286,11 +286,10 @@ pcall(function()
     --game:GetService("Players").LocalPlayer.PlayerGui.Main.Energy:Destroy()
 end)
 
-game:GetService("Players").LocalPlayer.PlayerGui.Main.Beli.Position = UDim2.new(0, 500, 0.697999954, 0)
-game:GetService("Players").LocalPlayer.PlayerGui.Main.Fragments.Position = UDim2.new(0, 500, 0.8, 0)
+game:GetService("Players").LocalPlayer.PlayerGui.Main.Beli.Position = UDim2.new(0.254, 0,0.012, 0)
+game:GetService("Players").LocalPlayer.PlayerGui.Main.Fragments.Position = UDim2.new(0.253, 0,0.078, 0)
 local fragment = game:GetService("Players").LocalPlayer.Data.Fragments.Value
 game:GetService("Players").LocalPlayer.PlayerGui.Main.Fragments.Text = "ƒ"..fragment
-
 
 
 
