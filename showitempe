@@ -78,9 +78,11 @@ local allitem = {}
 local total2 = 0
 while total2<total do 
     local i = 0
-    while i < 25000 and total2<total do 
+    while i < 25000 and total2<total do
         game:GetService("Players").LocalPlayer.PlayerGui.Main.InventoryContainer.Right.Content.ScrollingFrame.CanvasPosition = Vector2.new(0,i)
+
         for k,v in pairs(game:GetService("Players").LocalPlayer.PlayerGui.Main.InventoryContainer.Right.Content.ScrollingFrame.Frame:GetChildren()) do 
+            
             if v:IsA("Frame") and not rac[v.ItemName.Text] and v.ItemName.Visible==true then 
                 local vaihuhu = GetRaity(v.Background.BackgroundColor3)
                 if vaihuhu then
@@ -241,7 +243,7 @@ game:GetService("Players").LocalPlayer.PlayerGui.Main.AwakeningToggler.Visible =
 repeat wait() until game:GetService("Players").LocalPlayer.PlayerGui.Main.AwakeningToggler.TopContainer.Frame:FindFirstChild("Z")
 local rac = game:GetService("Players").LocalPlayer.PlayerGui.Main.AwakeningToggler:Clone()
 rac.LayoutOrder = 101
-game:GetService("Players").LocalPlayer.PlayerGui.Main.AwakeningToggler.Visible = false
+game:GetService("Players").LocalPlayer.PlayerGui.Main.AwakeningToggler.Visible = true
 
 rac.Parent = Right
 rac.Size = UDim2.new(1,0,0.3,0)
@@ -276,19 +278,24 @@ pcall(function()
 end)
 
 
-pcall(function() 
-    game:GetService("Players").LocalPlayer.PlayerGui.Main.Beli.Visible = true
-    --game:GetService("Players").LocalPlayer.PlayerGui.Main.Energy:Destroy()
-end)
-pcall(function() 
-    game:GetService("Players").LocalPlayer.PlayerGui.Main.Fragments.Visible = true
-    --game:GetService("Players").LocalPlayer.PlayerGui.Main.Energy:Destroy()
-end)
 
-game:GetService("Players").LocalPlayer.PlayerGui.Main.Beli.Position = UDim2.new(0.254, 0,0.012, 0)
-game:GetService("Players").LocalPlayer.PlayerGui.Main.Fragments.Position = UDim2.new(0.253, 0,0.078, 0)
-local fragment = game:GetService("Players").LocalPlayer.Data.Fragments.Value
-game:GetService("Players").LocalPlayer.PlayerGui.Main.Fragments.Text = "ƒ"..fragment
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
