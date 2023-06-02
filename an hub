@@ -393,10 +393,33 @@ end)
 Section:NewButton("Show item acc ( Điện thoại )", "Mạnh Dũng", function()
 
     print("Clicked")
+    game:GetService("Players").LocalPlayer.PlayerGui.Main.Settings:Destroy()
+game:GetService("Players").LocalPlayer.PlayerGui.Main.Mute:Destroy()
+game:GetService("Players").LocalPlayer.PlayerGui.Main.HomeButton:Destroy()
+game:GetService("Players").LocalPlayer.PlayerGui.Main.CrewButton:Destroy()
+game:GetService("Players").LocalPlayer.PlayerGui.Main.Code:Destroy()
+game:GetService("Players").LocalPlayer.PlayerGui.Main.AlliesButton:Destroy()
+game:GetService("Players").LocalPlayer.PlayerGui.Main.MenuButton:Destroy()
+game:GetService("Players").LocalPlayer.PlayerGui.Main.HP:Destroy()
+game:GetService("Players").LocalPlayer.PlayerGui.Main.Energy:Destroy()
+
+game:GetService("Players").LocalPlayer.PlayerGui.Main.Level.Position = UDim2.new(0.378, 0,0.826, 0)
+game:GetService("Players").LocalPlayer.PlayerGui.Main.RaceEnergy.Position = UDim2.new(0.378, 0,0.934, 0)
 game:GetService("Players").LocalPlayer.PlayerGui.Main.Beli.Position = UDim2.new(0.406, 0,-0.03, 0)
 game:GetService("Players").LocalPlayer.PlayerGui.Main.Fragments.Position = UDim2.new(0.405, 0,0.034, 0)
 local fragment = game:GetService("Players").LocalPlayer.Data.Fragments.Value
 game:GetService("Players").LocalPlayer.PlayerGui.Main.Fragments.Text = "ƒ"..fragment
+
+pcall(function() 
+game:GetService("Players").LocalPlayer.PlayerGui.Main.RaceEnergy.Visible = true
+    --game:GetService("Players").LocalPlayer.PlayerGui.Main.Energy:Destroy()
+end)
+game:GetService("Players").LocalPlayer.PlayerGui.Main.Level.Visible = true
+game:GetService("Players").LocalPlayer.PlayerGui.Backpack.Hotbar:Destroy()
+
+
+
+game:GetService("Players").LocalPlayer.PlayerGui.Main.Compass:Destroy() 
 pcall(function() 
 game:GetService("Players").LocalPlayer.PlayerGui.Main.Beli.Visible = true
     --game:GetService("Players").LocalPlayer.PlayerGui.Main.Energy:Destroy()
