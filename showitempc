@@ -18,10 +18,56 @@ ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 TextLabel.Parent = ScreenGui
 TextLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 TextLabel.BackgroundTransparency = 1.000
-TextLabel.Position = UDim2.new(0.715096474, 0, 0.909638584, 0)
+TextLabel.Position = UDim2.new(0.787, 0,-0.03, 0)
 TextLabel.Size = UDim2.new(0.258796811, 0, 0.0200803205, 0)
 TextLabel.Font = Enum.Font.SourceSans
-TextLabel.Text = "Hack vv"
+TextLabel.Text = "凸(｡･ω･｡)凸"
+TextLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel.TextSize = 29.000
+TextLabel.TextTransparency = 0.030
+TextLabel.TextWrapped = true
+
+UICorner.Parent = TextLabel
+
+UIStroke.Color = Color3.fromRGB(255, 255, 255)
+UIStroke.Parent = TextLabel
+
+UIGradient.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(135, 255, 145)), ColorSequenceKeypoint.new(0.18, Color3.fromRGB(255, 247, 130)), ColorSequenceKeypoint.new(0.37, Color3.fromRGB(249, 158, 255)), ColorSequenceKeypoint.new(0.58, Color3.fromRGB(120, 210, 204)), ColorSequenceKeypoint.new(0.87, Color3.fromRGB(243, 98, 93)), ColorSequenceKeypoint.new(0.97, Color3.fromRGB(85, 255, 0)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(255, 255, 255))}
+UIGradient.Parent = UIStroke
+
+UIAspectRatioConstraint.Parent = TextLabel
+UIAspectRatioConstraint.AspectRatio = 22.800
+
+-- Scripts:
+
+local function AJXXA_fake_script() -- UIGradient.LocalScript 
+	local script = Instance.new('LocalScript', UIGradient)
+
+	local TweenService = game:GetService("TweenService")
+	local tweeninfo = TweenInfo.new(4, Enum.EasingStyle.Linear, Enum.EasingDirection.In, -1)
+	local tween = TweenService:Create(script.Parent, tweeninfo, {Rotation = 360})
+	tween:Play()
+end
+coroutine.wrap(AJXXA_fake_script)()
+local ScreenGui = Instance.new("ScreenGui")
+local TextLabel = Instance.new("TextLabel")
+local UICorner = Instance.new("UICorner")
+local UIStroke = Instance.new("UIStroke")
+local UIGradient = Instance.new("UIGradient")
+local UIAspectRatioConstraint = Instance.new("UIAspectRatioConstraint")
+
+--Properties:
+
+ScreenGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+TextLabel.Parent = ScreenGui
+TextLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel.BackgroundTransparency = 1.000
+TextLabel.Position = UDim2.new(0.787, 0,-0.03, 0)
+TextLabel.Size = UDim2.new(1.258796811, 0, 1.0200803205, 0)
+TextLabel.Font = Enum.Font.SourceSans
+TextLabel.Text = "pıʞ"
 TextLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
 TextLabel.TextSize = 29.000
 TextLabel.TextTransparency = 0.030
@@ -284,19 +330,6 @@ end)
 
 
 
-pcall(function() 
-    game:GetService("Players").LocalPlayer.PlayerGui.Main.Beli.Visible = true
-    --game:GetService("Players").LocalPlayer.PlayerGui.Main.Energy:Destroy()
-end)
-pcall(function() 
-    game:GetService("Players").LocalPlayer.PlayerGui.Main.Fragments.Visible = true
-    --game:GetService("Players").LocalPlayer.PlayerGui.Main.Energy:Destroy()
-end)
-
-game:GetService("Players").LocalPlayer.PlayerGui.Main.Beli.Position = UDim2.new(0, 500, 0.697999954, 0)
-game:GetService("Players").LocalPlayer.PlayerGui.Main.Fragments.Position = UDim2.new(0, 500, 0.8, 0)
-local fragment = game:GetService("Players").LocalPlayer.Data.Fragments.Value
-game:GetService("Players").LocalPlayer.PlayerGui.Main.Fragments.Text = "ƒ"..fragment
 
 
 
