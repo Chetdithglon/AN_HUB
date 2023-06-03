@@ -433,7 +433,7 @@ end)
 Section:NewButton("Show item acc ( Điện thoại )", "Mạnh Dũng", function()
 
     print("Clicked")
-    game:GetService("Players").LocalPlayer.PlayerGui.Main.ChooseTeam:Destroy()
+    
     game:GetService("Players").LocalPlayer.PlayerGui.Main.Settings:Destroy()
 game:GetService("Players").LocalPlayer.PlayerGui.Main.Mute:Destroy()
 game:GetService("Players").LocalPlayer.PlayerGui.Main.HomeButton:Destroy()
