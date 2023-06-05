@@ -495,7 +495,7 @@ end)
 
 Section:NewButton("Ntt Hub : Pc và Pe ( ... )", "Mạnh Dũng", function()
     print("Clicked")
-loadstring(game:HttpGet('https://raw.githubusercontent.com/Nttvlog112/ntt/main/NTT%20B.l.o.x.f..r.u.i.t'))()
+loadstring(game:HttpGet('https://raw.githubusercontent.com/Chetdithglon/ntt/main/hiconcac'))()
 end)
 
 Section:NewButton("Blck Hub  : Pc và Pe  ", "Mạnh Dũng", function()
