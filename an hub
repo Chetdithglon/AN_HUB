@@ -442,13 +442,7 @@ Section:NewButton("Show item acc ( Điện thoại )", "Mạnh Dũng", function(
 
     print("Clicked")
     
-    game:GetService("Players").LocalPlayer.PlayerGui.Main.Settings:Destroy()
-game:GetService("Players").LocalPlayer.PlayerGui.Main.Mute:Destroy()
-game:GetService("Players").LocalPlayer.PlayerGui.Main.HomeButton:Destroy()
-game:GetService("Players").LocalPlayer.PlayerGui.Main.CrewButton:Destroy()
-game:GetService("Players").LocalPlayer.PlayerGui.Main.Code:Destroy()
-game:GetService("Players").LocalPlayer.PlayerGui.Main.AlliesButton:Destroy()
-game:GetService("Players").LocalPlayer.PlayerGui.Main.MenuButton:Destroy()
+    
 game:GetService("Players").LocalPlayer.PlayerGui.Main.HP:Destroy()
 game:GetService("Players").LocalPlayer.PlayerGui.Main.Energy:Destroy()
 
