@@ -561,38 +561,6 @@ Section:NewButton("CFrame Hub : Pc và Pe  ", "Mạnh Dũng", function()
 loadstring(game:HttpGet("https://raw.githubusercontent.com/CFrame3310/CFrameHub/main/BloxFruitV2.lua"))()
 end)
 
---shindo
-local Tab = Window:NewTab("Shindo Life")
-local Section = Tab:NewSection("Mạnh Dũng")
-Section:NewButton("V.G Hub", "Mạnh Dũng", function()
-    print("Clicked")
-loadstring(game:HttpGet('https://raw.githubusercontent.com/1201for/V.G-Hub/main/V.Ghub'))()
-end)
-Section:NewButton("Premier lite Mobile 1", "Mạnh Dũng", function()
-    print("Clicked")
-loadstring(game:HttpGet("https://raw.githubusercontent.com/SxnwDev/Premier/main/Free-Premier.lua", true))()
-end)
-
-Section:NewButton("Platinium : Pc và Pe (vip)", "Mạnh Dũng", function()
-    print("Clicked")
-loadstring(game:HttpGet("https://raw.githubusercontent.com/ZaRdoOx/Platinium/main/Loader"))()
-end)
-
-Section:NewButton("Muhamma Mobile 2", "Mạnh Dũng", function()
-    print("Clicked")
-getgenv().key = "projectWBIsAwesomemrcrapcrappypattt"
-loadstring(game:HttpGet("https://raw.githubusercontent.com/Muhammad6196/Project-WD/main/Main.lua"))()
-end)
-Section:NewButton("Platinium (Vip)", "Mạnh Dũng", function()
-    print("Clicked")
-loadstring(game:HttpGet("https://raw.githubusercontent.com/ZaRdoOx/Platinium/main/Loader"))()
-end)
-Section:NewButton("Paid Vip K Bán : Bản 1", "Mạnh Dũng", function()
-    print("Clicked")
-loadstring(game:HttpGet("https://raw.githubusercontent.com/Chetdithglon/lklklkl/main/shindo%202", true))()
- end)
-
---other
 local Tab = Window:NewTab("Những điều thú vị")
 local Section = Tab:NewSection("Mạnh Dũng")
 Section:NewButton("Hack Bay 3", "nó chỉ bay dc thui nhưng xịn hơn :3", function()
