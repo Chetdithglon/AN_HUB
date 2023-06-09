@@ -204,8 +204,8 @@ function topos(Pos)
 
 DiscordLib:Notification("Đang chạy script" , "vui lòng đợi trong giây lát" , 3)
 DiscordLib:Notification("Update" , "Đã Nâng cấp lụm fruit + Xóa Xương" , 7)
-DiscordLib:Notification("Update" , "Đã Thêm Cô ca Hub" , 7)
-DiscordLib:Notification("Thông báo" , "Sắp Sếp Lại Diện Hack" , 15)
+DiscordLib:Notification("Thông báo" , "Ae Muốn Thêm Hack Thì Gửi Script Cho Tui Nhé " , 7)
+DiscordLib:Notification("Thông báo" , "Fix Lỗi kick Tp fruit" , 7)
 
 loadstring(game:HttpGet('https://raw.githubusercontent.com/asffsacsacac/asffsacsacac/main/1ndas'))()
 
