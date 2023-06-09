@@ -405,18 +405,15 @@ local Section = Tab:NewSection("Hỗ trợ")
 
 Section:NewButton("Lụm Fruit", "", function()
 loadstring(game:HttpGet('https://raw.githubusercontent.com/Chetdithglon/lklklkl/main/lumfruit'))()
-game:GetService("StarterGui"):SetCore("SendNotification", { 
-    Title = "Nguyễn An";
-    Text = "nút M là tự động đổi sever";
-    Icon = "rbxthumb://type=Asset&id=11749957186&w=150&h=150"})
-    Duration = 5;
-    game:GetService("StarterGui"):SetCore("SendNotification", { 
-    Title = "Nguyễn An";
-    Text = "nút N là Tắt Hack";
-    Icon = "rbxthumb://type=Asset&id=11749957186&w=150&h=150"})
-    Duration = 5;
+   DiscordLib:Notification("đã bật Hack" , "vui lòng đợi Fruit swpam" , 3)
+   DiscordLib:Notification("Thông báo" , "nút M là tự động đổi sever" , 3)
+   DiscordLib:Notification("Thông báo" , "nút N là Tắt Hack" , 3)
     end)
 
+Section:NewButton("Lụm Fruit V2", "", function()
+loadstring(game:HttpGet('https://paste.xyzo.space/rblxhub/bloxfruits/ff.lua'))()
+DiscordLib:Notification("đã bật Hack" , "vui lòng đợi Fruit swpam" , 3)
+    end)
 Section:NewButton("Tp Chest đảo bí ẩn", "", function()
 loadstring(game:HttpGet('https://raw.githubusercontent.com/Chetdithglon/AN_HUB/main/autochestvip'))()
 game:GetService("StarterGui"):SetCore("SendNotification", { 
