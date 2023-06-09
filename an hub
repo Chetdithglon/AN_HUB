@@ -1,7 +1,19 @@
 if game.PlaceId == 2753915549 then
-elseif game.PlaceId == 4442272183 then
-elseif game.PlaceId == 7449423635 then
-game:GetService("Players").LocalPlayer.PlayerGui.Main.Version.Text = "Mạnh Dũng"
+game:GetService("Players").LocalPlayer.PlayerGui.Main.Version.Text = "Onichan ( Sea 1 )"
+game:GetService("Players").LocalPlayer.PlayerGui.Main.Version.TextColor3 = Color3.fromRGB(137, 255, 101)
+game:GetService("Players").LocalPlayer.PlayerGui.Main.Version.TextSize = (19.000)
+end
+
+
+if game.PlaceId == 4442272183 then
+game:GetService("Players").LocalPlayer.PlayerGui.Main.Version.Text = "Onichan ( Sea 2 )"
+game:GetService("Players").LocalPlayer.PlayerGui.Main.Version.TextColor3 = Color3.fromRGB(137, 255, 101)
+game:GetService("Players").LocalPlayer.PlayerGui.Main.Version.TextSize = (19.000)
+end
+
+
+if game.PlaceId == 7449423635 then
+game:GetService("Players").LocalPlayer.PlayerGui.Main.Version.Text = "Onichan ( Sea 3 )"
 game:GetService("Players").LocalPlayer.PlayerGui.Main.Version.TextColor3 = Color3.fromRGB(137, 255, 101)
 game:GetService("Players").LocalPlayer.PlayerGui.Main.Version.TextSize = (19.000)
 end
