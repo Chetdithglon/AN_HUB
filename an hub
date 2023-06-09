@@ -398,7 +398,7 @@ end
 
 local notifLib = loadstring(game:HttpGet("https://raw.githubusercontent.com/Sw1ndlerScripts/RobloxScripts/main/Notification%20Library/main.lua"))()
 local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/asdjasdhsuhduahd213/AN_HUB/main/lib"))()
-local Window = Library.CreateLib(" Mạnh Dũng (Đã Nâng cấp lụm fruit ae nhé)" , "BloodTheme")
+local Window = Library.CreateLib(" Mạnh Dũng (Đã Nâng cấp lụm fruit ae nhé + update xóa xương)" , "BloodTheme")
 
 local Tab = Window:NewTab("Blox Fruit")
 local Section = Tab:NewSection("Hỗ trợ")
@@ -773,7 +773,9 @@ Section:NewButton("Tele gear ( Đảo bí ẩn )", "ButtonInfo", function()
 end
 end
 end)
-
+Section:NewButton("Xóa xương mù ( Đảo bí ẩn )", "ButtonInfo", function()
+    game:GetService("Lighting").BaseAtmosphere:Destroy()
+end)
 Section:NewToggle("Hỗ trợ treo đảo ( Reset sẽ tự động tắt ) ", "có đảo tự động tele", function(state)
     if state then
         _G.dao = true
