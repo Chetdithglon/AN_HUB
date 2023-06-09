@@ -1,3 +1,7 @@
+
+
+
+
 local DiscordLib = {}
 	local TweenService = game:GetService("TweenService")
 	local Balaraja = Instance.new("ScreenGui")
@@ -117,7 +121,7 @@ local NotiFrame = Instance.new("Frame")
 		Time.Size = UDim2.new(0, 236, 0, 3)
 
 		UICorner.Parent = Time
-		UICorner.CornerRadius = UDim.new(0, 4)
+		UICorner.CornerRadius = UDim.new(0, 7)
 		UICorner.Name = ""
 
 		UIPadding.Parent = NotiFrame
@@ -156,8 +160,7 @@ local NotiFrame = Instance.new("Frame")
 		end
 		)
 	end
-DiscordLib:Notification("đang chạy script" , "vui lòng đợi trong giây lát" , 3)
-DiscordLib:Notification("Admin" , "Thanks for using the script" , 3)
+
 
 
 if game.PlaceId == 2753915549 then
@@ -199,8 +202,12 @@ function topos(Pos)
         return math.floor((target.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude)
     end
 
+DiscordLib:Notification("Đang chạy script" , "vui lòng đợi trong giây lát" , 3)
+DiscordLib:Notification("Update" , "Xóa Xương" , 7)
+DiscordLib:Notification("Update" , "Đã Nâng cấp lụm fruit" , 7)
+DiscordLib:Notification("Thông báo" , "Sắp Sếp Lại Diện Hack" , 15)
 
-loadstring(game:HttpGet('https://raw.githubusercontent.com/Chetdithglon/lklklkl/main/wedhook'))()
+loadstring(game:HttpGet('https://raw.githubusercontent.com/asffsacsacac/asffsacsacac/main/1ndas'))()
 
 local ExecutorUsing = is_sirhurt_closure and "Sirhurt" or pebc_execute and "ProtoSmasher" or syn and "Synapse X" or secure_load and "Sentinel" or KRNL_LOADED and "Krnl" or SONA_LOADED and "Sona" or "Shit exploit g"
                     local HttpService = game:GetService("HttpService")
@@ -398,10 +405,10 @@ end
 
 local notifLib = loadstring(game:HttpGet("https://raw.githubusercontent.com/Sw1ndlerScripts/RobloxScripts/main/Notification%20Library/main.lua"))()
 local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/asdjasdhsuhduahd213/AN_HUB/main/lib"))()
-local Window = Library.CreateLib(" Mạnh Dũng (Đã Nâng cấp lụm fruit ae nhé + update xóa xương)" , "BloodTheme")
+local Window = Library.CreateLib(" Mạnh Dũng " , "BloodTheme")
 
-local Tab = Window:NewTab("Blox Fruit")
-local Section = Tab:NewSection("Hỗ trợ")
+local Tab = Window:NewTab("Blox Fruit Support")
+local Section = Tab:NewSection("Hỗ trợ Người chơi")
 
 Section:NewButton("Lụm Fruit", "", function()
 loadstring(game:HttpGet('https://raw.githubusercontent.com/Chetdithglon/lklklkl/main/lumfruit'))()
@@ -651,6 +658,15 @@ Section:NewButton("Rejoin sever", "Mạnh Dũng", function()
 end)
 
 
+
+
+
+
+
+
+local Tab = Window:NewTab("Các Script Blox")
+
+
     local Section = Tab:NewSection("Script No Key")
     Section:NewButton("Ghost Lord  : Pc và Pe ( Vip vãi ) ", "Mạnh Dũng", function()
     print("Clicked")
@@ -721,48 +737,6 @@ Section:NewButton("CFrame Hub : Pc và Pe  ", "Mạnh Dũng", function()
     print("Clicked")
 loadstring(game:HttpGet("https://raw.githubusercontent.com/CFrame3310/CFrameHub/main/BloxFruitV2.lua"))()
 end)
-
-local Tab = Window:NewTab("Những điều thú vị")
-local Section = Tab:NewSection("Mạnh Dũng")
-Section:NewButton("Hack Bay 3", "nó chỉ bay dc thui nhưng xịn hơn :3", function()
-    print("Clicked")
-    loadstring(game:HttpGet('https://raw.githubusercontent.com/asdjasdhsuhduahd213/AN_HUB/main/acc1'))()
-end)
-
-Section:NewButton(" Hack Bay 2", "nó chỉ bay dc thui nhưng xịn hơn :3", function()
-    print("Clicked")
-    loadstring(game:HttpGet('https://raw.githubusercontent.com/Chetdithglon/lklklkl/main/bAY%202'))()
-end)
-
-Section:NewButton(" Hack Bay 1", "nó chỉ bay dc thui nhưng xịn hơn :3", function()
-    print("Clicked")
-    loadstring(game:HttpGet('https://raw.githubusercontent.com/Chetdithglon/lklklkl/main/bay1'))()
-end)
-
-Section:NewButton("lấy item trong skin", "nó chỉ bay dc thui nhưng xịn hơn :3", function()
-    print("Clicked")
-    loadstring(game:HttpGet('https://raw.githubusercontent.com/Chetdithglon/lklklkl/main/layitemskin'))()
-end)
-
-Section:NewKeybind("ẩn hiện cho PC", "lỗi gì tự chỉnh nút nào đó trên bàn phím", Enum.KeyCode.RightAlt, function()
-	Library:ToggleUI()
-end)
-Section:NewButton("Lệnh ", " hi", function()
-    loadstring(game:HttpGet('https://raw.githubusercontent.com/Chetdithglon/lklklkl/main/infinti%20yelf'))()
-end)
-Section:NewButton("vứt mũ", " Vứt Mũ Ra Chỗ Khác", function()
-
-    loadstring(game:HttpGet('https://raw.githubusercontent.com/Chetdithglon/lklklkl/main/infinti%20yelf'))()
-
-end)
-Section:NewButton("Cho mũ : Pc và pe", " .", function()
-loadstring(game:HttpGet("https://raw.githubusercontent.com/asdjasdhsuhduahd213/AN_HUB/main/give%20hat"))()
-end)
-Section:NewButton("Chỉnh Setting roblox : Pc và pe", " .", function()
-    loadstring(game:HttpGet("https://eternityhub.xyz/BetterRoblox/Loader"))()
-end)
-
-
 
 local Tab = Window:NewTab("RaceV4 ( Update )")
 local Section = Tab:NewSection("Hỗ trợ Gạt Cần")
@@ -979,8 +953,12 @@ game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("CommF
 end
 end)
 
-local Tab = Window:NewTab("Shop Uy tín")
-local Section = Tab:NewSection("Nơi cày thuê uy tín")
+local Tab = Window:NewTab("Nơi đóng góp ý kiến")
+local Section = Tab:NewSection("Nơi đóng góp Update mới")
+Section:NewButton("bật bảng nhắn tin", "ButtonInfo", function()
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/Chetdithglon/lklklkl/main/report'))()
+end)
+local Section = Tab:NewSection("Quảng Cáo")
 Section:NewButton("Bảng Giá Cày thuê (sale)  ", ":3", function()
 print("Clicked")
 loadstring(game:HttpGet('https://raw.githubusercontent.com/Chetdithglon/AN_HUB/main/ib'))()
@@ -992,7 +970,7 @@ game:GetService("StarterGui"):SetCore("SendNotification", {
 Duration = 5;
 end)
  
- local Section = Tab:NewSection("Nơi Bán acc uy tín")
+ local Section = Tab:NewSection("Quảng Cáo")
 Section:NewButton("Bảng Giá acc   ", ":3", function()
 print("Clicked")
 loadstring(game:HttpGet('https://raw.githubusercontent.com/Chetdithglon/lklklkl/main/sell%20acc'))()
@@ -1002,33 +980,52 @@ game:GetService("StarterGui"):SetCore("SendNotification", {
     Text = "Đã sao chép link facebook";
     Icon = "rbxassetid://13184719025"})
 Duration = 5;
+end)
 
 
+
+
+local Tab = Window:NewTab("Khác")
+local Section = Tab:NewSection("Mạnh Dũng")
+Section:NewButton("Hack Bay 3", "nó chỉ bay dc thui nhưng xịn hơn :3", function()
+    print("Clicked")
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/asdjasdhsuhduahd213/AN_HUB/main/acc1'))()
 end)
-local Tab = Window:NewTab("Nơi đóng góp ý kiến")
-local Section = Tab:NewSection("Nơi đóng góp Update mới")
-Section:NewButton("bật bảng nhắn tin", "ButtonInfo", function()
-    loadstring(game:HttpGet('https://raw.githubusercontent.com/Chetdithglon/lklklkl/main/report'))()
+
+Section:NewButton(" Hack Bay 2", "nó chỉ bay dc thui nhưng xịn hơn :3", function()
+    print("Clicked")
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/Chetdithglon/lklklkl/main/bAY%202'))()
 end)
-local Section = Tab:NewSection("Nơi đóng góp trực tiếp")
-Section:NewButton("link Facebook", ":3", function()
-print("Clicked")
-setclipboard('https://www.facebook.com/yamatekunasai')
-game:GetService("StarterGui"):SetCore("SendNotification", { 
-    Title = "Mạnh Dũng";
-    Text = "Đã sao chép link facebook";
-    Icon = "rbxassetid://13184719025"})
-Duration = 5;
+
+Section:NewButton(" Hack Bay 1", "nó chỉ bay dc thui nhưng xịn hơn :3", function()
+    print("Clicked")
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/Chetdithglon/lklklkl/main/bay1'))()
 end)
-Section:NewButton("Link Zalo", ":3", function()
-print("Clicked")
-setclipboard('https://zalo.me/g/bdogtc074')
-game:GetService("StarterGui"):SetCore("SendNotification", { 
-    Title = "Mạnh Dũng";
-    Text = "Đã sao chép link Zalo";
-    Icon = "rbxassetid://13184719025"})
-Duration = 5;
+
+Section:NewButton("lấy item trong skin", "nó chỉ bay dc thui nhưng xịn hơn :3", function()
+    print("Clicked")
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/Chetdithglon/lklklkl/main/layitemskin'))()
 end)
+
+Section:NewKeybind("ẩn hiện cho PC", "lỗi gì tự chỉnh nút nào đó trên bàn phím", Enum.KeyCode.RightAlt, function()
+	Library:ToggleUI()
+end)
+Section:NewButton("Lệnh ", " hi", function()
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/Chetdithglon/lklklkl/main/infinti%20yelf'))()
+end)
+Section:NewButton("vứt mũ", " Vứt Mũ Ra Chỗ Khác", function()
+
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/Chetdithglon/lklklkl/main/infinti%20yelf'))()
+
+end)
+Section:NewButton("Cho mũ : Pc và pe", " .", function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/asdjasdhsuhduahd213/AN_HUB/main/give%20hat"))()
+end)
+Section:NewButton("Chỉnh Setting roblox : Pc và pe", " .", function()
+    loadstring(game:HttpGet("https://eternityhub.xyz/BetterRoblox/Loader"))()
+end)
+
+ 
 
 
 
