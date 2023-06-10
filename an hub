@@ -203,7 +203,7 @@ function topos(Pos)
     end
 
 DiscordLib:Notification("Đang chạy script" , "vui lòng đợi trong giây lát" , 3)
-DiscordLib:Notification("Update" , "Đã Thêm Chiba Hub" , 10)
+DiscordLib:Notification("Update" , "Đã Thêm SonicTuru Hub" , 10)
 DiscordLib:Notification("Thông báo" , "Ae Muốn Thêm Hack Thì Gửi Script Cho Tui Nhé " , 7)
 DiscordLib:Notification("Thông báo" , "Fix Lỗi kick Tp fruit" , 7)
 
@@ -682,6 +682,11 @@ end)
 Section:NewButton("Ntt Hub : Pc và Pe ( ... )", "Mạnh Dũng", function()
     print("Clicked")
 loadstring(game:HttpGet('https://raw.githubusercontent.com/Chetdithglon/ntt/main/hiconcac'))()
+end)
+
+Section:NewButton("SonicTuru Hub: Pc và Pe ", "Mạnh Dũng", function()
+    print("Clicked")
+loadstring(game:HttpGet("https://raw.githubusercontent.com/NickelHUBB/SonicTuru/main/Protected-25.lua"))()
 end)
 
 Section:NewButton("Chiba Hub: Pc và Pe", "Mạnh Dũng", function()
