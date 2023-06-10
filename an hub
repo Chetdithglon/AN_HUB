@@ -686,7 +686,7 @@ end)
 
 Section:NewButton("Chiba Hub: Pc và Pe", "Mạnh Dũng", function()
     print("Clicked")
-loadstring(game:HttpGet('https://raw.githubusercontent.com/VEZ2/NEVAHUB/main/2'))()
+loadstring(game:HttpGet('https://raw.githubusercontent.com/KindIhave/ChibaHuB/main/Chiba-BF.txt'))()
 end)
 
 
