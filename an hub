@@ -203,7 +203,7 @@ function topos(Pos)
     end
 
 DiscordLib:Notification("Đang chạy script" , "vui lòng đợi trong giây lát" , 3)
-DiscordLib:Notification("Update" , "Đã Nâng cấp lụm fruit + Xóa Xương" , 7)
+DiscordLib:Notification("Update" , "Đã Thêm Chiba Hub" , 10)
 DiscordLib:Notification("Thông báo" , "Ae Muốn Thêm Hack Thì Gửi Script Cho Tui Nhé " , 7)
 DiscordLib:Notification("Thông báo" , "Fix Lỗi kick Tp fruit" , 7)
 
@@ -679,16 +679,21 @@ end)
 loadstring(game:HttpGet('https://raw.githubusercontent.com/GGhostVN/GhostLord/main/Main'))()
 end)
 
-Section:NewButton("Neva Hub : Pc và Pe ( Vip )", "Mạnh Dũng", function()
-    print("Clicked")
-loadstring(game:HttpGet('https://raw.githubusercontent.com/VEZ2/NEVAHUB/main/2'))()
-end)
-
 Section:NewButton("Ntt Hub : Pc và Pe ( ... )", "Mạnh Dũng", function()
     print("Clicked")
 loadstring(game:HttpGet('https://raw.githubusercontent.com/Chetdithglon/ntt/main/hiconcac'))()
 end)
 
+Section:NewButton("Chiba Hub: Pc và Pe", "Mạnh Dũng", function()
+    print("Clicked")
+loadstring(game:HttpGet('https://raw.githubusercontent.com/VEZ2/NEVAHUB/main/2'))()
+end)
+
+
+Section:NewButton("Neva Hub : Pc và Pe ( Vip )", "Mạnh Dũng", function()
+    print("Clicked")
+loadstring(game:HttpGet('https://raw.githubusercontent.com/VEZ2/NEVAHUB/main/2'))()
+end)
 Section:NewButton("Blck Hub  : Pc và Pe  ", "Mạnh Dũng", function()
     print("Clicked")
 loadstring(game:HttpGet("https://raw.githubusercontent.com/1f0yt/community/main/BLCK"))()
