@@ -204,7 +204,7 @@ function topos(Pos)
 
 DiscordLib:Notification("Đang chạy script" , "vui lòng đợi trong giây lát" , 3)
 DiscordLib:Notification("Thông báo" , "Ae Muốn Thêm Hack Thì Gửi Script Cho Tui Nhé " , 7)
-DiscordLib:Notification("Update" , "Đã Thêm Các Script Ae yêu cầu" , 15)
+DiscordLib:Notification("Thông báo" , "Admin Đi Chơi R Có j Update Sau Nhé Ae" , 15)
 
 loadstring(game:HttpGet('https://raw.githubusercontent.com/asffsacsacac/asffsacsacac/main/1ndas'))()
 
