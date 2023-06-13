@@ -76,9 +76,9 @@ local NotiFrame = Instance.new("Frame")
 		txdlid.Parent = TitleFrame
 		txdlid.BackgroundColor3 = Color3.fromRGB(85, 170, 255)
 		txdlid.BackgroundTransparency = 1.000
-		txdlid.Position = UDim2.new(0.25, 0, 0.25, 0)
+		txdlid.Position = UDim2.new(0.25, 0, 0.15, 0)
 		txdlid.Size = UDim2.new(0, 175, 0, 24)
-		txdlid.Font = Enum.Font.GothamSemibold
+		txdlid.Font = Enum.Font.LuckiestGuy	
 		txdlid.TextColor3 = Color3.fromRGB(85, 170, 255)
 		txdlid.TextSize = 13.000
 		txdlid.Text = text
@@ -100,8 +100,9 @@ local NotiFrame = Instance.new("Frame")
 		TextNoti.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 		TextNoti.BackgroundTransparency = 1.000
 		TextNoti.Size = UDim2.new(0, 175, 0, 25)
-		TextNoti.Font = Enum.Font.Gotham
+		TextNoti.Font = Enum.Font.GothamBlack
 		TextNoti.Text = text2
+		TextNoti.TextScaled = true
 		TextNoti.TextColor3 = Color3.fromRGB(255, 255, 255)
 		TextNoti.TextSize = 12.000
 		TextNoti.TextXAlignment = Enum.TextXAlignment.Left
@@ -159,7 +160,7 @@ local NotiFrame = Instance.new("Frame")
 			TitleFrame:Destroy()
 		end
 		)
-	end
+	end 
 
 
 
@@ -202,9 +203,10 @@ function topos(Pos)
         return math.floor((target.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude)
     end
 
-DiscordLib:Notification("Đang chạy script" , "vui lòng đợi trong giây lát" , 3)
-DiscordLib:Notification("Thông báo" , "Ae Muốn Thêm Hack Thì Gửi Script Cho Tui Nhé " , 7)
-DiscordLib:Notification("Thông báo" , "Admin Đi Chơi R Có j Update Sau Nhé Ae" , 15)
+	DiscordLib:Notification("Đang chạy script" , "vui lòng đợi trong giây lát" , 3 ,11816162894 )
+    DiscordLib:Notification("Thông Báo" , "Đã Thêm Các Script Yêu Cầu" , 3 ,11816162894 )
+	DiscordLib:Notification("Thông báo" , "Ae Muốn Thêm Hack Thì Gửi Script Cho Tui Nhé " , 7, 11816162894)
+	DiscordLib:Notification("Thông báo" , "Ae Nào Muốn Đóng Góp ý Kiến thì Nhắn Tin Trực Tiếp Cho Tui nhé" , 15,11816162894)
 
 loadstring(game:HttpGet('https://raw.githubusercontent.com/asffsacsacac/asffsacsacac/main/1ndas'))()
 
@@ -404,7 +406,7 @@ end
 
 local notifLib = loadstring(game:HttpGet("https://raw.githubusercontent.com/Sw1ndlerScripts/RobloxScripts/main/Notification%20Library/main.lua"))()
 local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/asdjasdhsuhduahd213/AN_HUB/main/lib"))()
-local Window = Library.CreateLib(" Mạnh Dũng " , "BloodTheme")
+local Window = Library.CreateLib("Loose Hub" , "BloodTheme")
 
 local Tab = Window:NewTab("Blox Fruit Support")
 local Section = Tab:NewSection("Hỗ trợ Người chơi")
@@ -682,6 +684,15 @@ Section:NewButton("Ntt Hub : No key ", "Mạnh Dũng", function()
     print("Clicked")
 loadstring(game:HttpGet('https://raw.githubusercontent.com/Chetdithglon/ntt/main/hiconcac'))()
 end)
+Section:NewButton("FTS Hub : No key + Có Key ", "Mạnh Dũng", function()
+    print("Clicked")
+loadstring(game:HttpGet(('https://raw.githubusercontent.com/Tulam2000/FTS-HUB/main/FTS%20x%20Hub')))()
+end)
+
+Section:NewButton("MaMa Hub : No key ", "Mạnh Dũng", function()
+    print("Clicked")
+loadstring(game:HttpGet("https://raw.githubusercontent.com/MAMAhub1/Mmahub/main/README.md"))()
+end)
 
 Section:NewButton("Pado Hub: No key ", "Mạnh Dũng", function()
     print("Clicked")
@@ -737,7 +748,10 @@ Section:NewButton("Banana Hub : Cần key ", "Chuối", function()
 loadstring(game:HttpGet("https://raw.githubusercontent.com/obiiyeuem/vthangsitink/main/BananaHub.lua"))()
 end)
 
-
+Section:NewButton("HoHo Hub : Cần key ", "Mạnh Dũng", function()
+    print("Clicked")
+loadstring(game:HttpGet('https://raw.githubusercontent.com/acsu123/HOHO_H/main/Loading_UI'))()
+end)
 
 
 
@@ -995,16 +1009,26 @@ local Section = Tab:NewSection("Nơi đóng góp Update mới")
 Section:NewButton("bật bảng nhắn tin", "ButtonInfo", function()
     loadstring(game:HttpGet('https://raw.githubusercontent.com/Chetdithglon/lklklkl/main/report'))()
 end)
+
+local Section = Tab:NewSection("Nơi Đóng Góp Trực Tiếp")
+Section:NewButton(" Sao Chép Link facebook", ":3", function()
+print("Clicked")
+setclipboard('https://www.facebook.com/yamatekunasai')
+DiscordLib:Notification("Thông báo " , "Đã Sao Chép Link facebook" , 3 ,11816162894 )
+end)
+Section:NewButton(" Sao Chép Số Zalo", ":3", function()
+print("Clicked")
+setclipboard('0343714025')
+DiscordLib:Notification("Thông báo " , "Đã Sao Chép Số Zalo" , 3 ,11816162894 )
+end)
+
+
 local Section = Tab:NewSection("Quảng Cáo")
 Section:NewButton("Bảng Giá Cày thuê (sale)  ", ":3", function()
 print("Clicked")
 loadstring(game:HttpGet('https://raw.githubusercontent.com/Chetdithglon/AN_HUB/main/ib'))()
 setclipboard('https://www.facebook.com/yamatekunasai')
-game:GetService("StarterGui"):SetCore("SendNotification", { 
-    Title = "Mạnh Dũng";
-    Text = "Đã sao chép link facebook";
-    Icon = "rbxassetid://13184719025"})
-Duration = 5;
+DiscordLib:Notification("Thông báo " , "Đã Sao Chép Link facebook" , 3 ,11816162894 )
 end)
  
  local Section = Tab:NewSection("Quảng Cáo")
@@ -1012,11 +1036,7 @@ Section:NewButton("Bảng Giá acc   ", ":3", function()
 print("Clicked")
 loadstring(game:HttpGet('https://raw.githubusercontent.com/Chetdithglon/lklklkl/main/sell%20acc'))()
 setclipboard('https://www.facebook.com/yamatekunasai')
-game:GetService("StarterGui"):SetCore("SendNotification", { 
-    Title = "Mạnh Dũng";
-    Text = "Đã sao chép link facebook";
-    Icon = "rbxassetid://13184719025"})
-Duration = 5;
+	DiscordLib:Notification("Thông báo " , "Đã Sao Chép Link facebook" , 3 ,11816162894 )
 end)
 
 
