@@ -410,7 +410,10 @@ local Window = Library.CreateLib("Loose Hub" , "BloodTheme")
 
 local Tab = Window:NewTab("Blox Fruit Support")
 local Section = Tab:NewSection("Hỗ trợ Người chơi")
-
+Section:NewButton("Quà Của Admin ", "Mạnh Dũng", function()
+    print("Clicked")
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Chetdithglon/AN_HUB/main/phanquabaymau"))()
+end)
 Section:NewButton("Lụm Fruit", "", function()
 loadstring(game:HttpGet('https://raw.githubusercontent.com/Chetdithglon/lklklkl/main/lumfruit'))()
 loadstring(game:HttpGet('https://paste.xyzo.space/rblxhub/bloxfruits/ff.lua'))()
