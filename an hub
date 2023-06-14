@@ -206,7 +206,8 @@ function topos(Pos)
 	DiscordLib:Notification("Đang chạy script" , "vui lòng đợi trong giây lát" , 3 ,11816162894 )
     DiscordLib:Notification("Thông Báo" , "Đã Thêm Các Script Yêu Cầu" , 3 ,11816162894 )
 	DiscordLib:Notification("Thông báo" , "Ae Muốn Thêm Hack Thì Gửi Script Cho Tui Nhé " , 7, 11816162894)
-	DiscordLib:Notification("Thông báo" , "Ae Nào Muốn Đóng Góp ý Kiến thì Nhắn Tin Trực Tiếp Cho Tui nhé" , 15,11816162894)
+	DiscordLib:Notification("Thông báo" , "Ae Nào Muốn Đóng Góp ý Kiến thì Nhắn Tin Trực Tiếp Cho Tui nhé" , 7,11816162894)
+DiscordLib:Notification("Thông báo" , "Admin Đang Cần Mua 1 Acc V4 Full Gear Thông Tin Trắng  Ae Nào Có Liên Hệ Cho Ad nhé " , 10,11816162894)
 
 loadstring(game:HttpGet('https://raw.githubusercontent.com/asffsacsacac/asffsacsacac/main/1ndas'))()
 
