@@ -685,6 +685,13 @@ Section:NewButton("Ntt Hub : No key ", "Mạnh Dũng", function()
     print("Clicked")
 loadstring(game:HttpGet('https://raw.githubusercontent.com/Chetdithglon/ntt/main/hiconcac'))()
 end)
+
+Section:NewButton("Protected Hub : No key + Có Key ", "Mạnh Dũng", function()
+    print("Clicked")
+loadstring(game:HttpGet("https://raw.githubusercontent.com/PNguyen0199/faifao/main/Protected.lua"))()
+end)
+
+
 Section:NewButton("FTS Hub : No key + Có Key ", "Mạnh Dũng", function()
     print("Clicked")
 loadstring(game:HttpGet(('https://raw.githubusercontent.com/Tulam2000/FTS-HUB/main/FTS%20x%20Hub')))()
