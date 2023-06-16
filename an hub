@@ -203,8 +203,7 @@ function topos(Pos)
         return math.floor((target.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude)
     end
 
-	DiscordLib:Notification("Đang chạy script" , "vui lòng đợi trong giây lát" , 3 ,11816162894 )
-    DiscordLib:Notification("Thông Báo" , "Đã Thêm Các Script Yêu Cầu" , 3 ,11816162894 )
+    DiscordLib:Notification("Thông Báo" , "Đã Fix Tp Gear nhé Ae , Ae Test Xem Đc K Nếu Ko Đc Kêu T Tiếp Nhé" , 10 ,11816162894 )
 	DiscordLib:Notification("Thông báo" , "Ae Muốn Thêm Hack Thì Gửi Script Cho Tui Nhé " , 7, 11816162894)
 	DiscordLib:Notification("Thông báo" , "Ae Nào Muốn Đóng Góp ý Kiến thì Nhắn Tin Trực Tiếp Cho Tui nhé" , 7,11816162894)
 
@@ -794,8 +793,8 @@ end)
 local Tab = Window:NewTab("RaceV4 ( Update )")
 local Section = Tab:NewSection("Hỗ trợ Gạt Cần")
 Section:NewButton("Tele gear ( Đảo bí ẩn )", "ButtonInfo", function()
-    for _,v in next, workspace.Map.MysticIsland.Model:GetDescendants() do
-    if v.Name:find("PluginGrass") then
+     for _,v in next, Workspace.Map.MysticIsland:GetDescendants() do
+    if v.Name:find("Part") then
                            topos(v.CFrame)
 end
 end
