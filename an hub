@@ -1097,8 +1097,11 @@ end)
 Section:NewButton("Chỉnh Setting roblox : Pc và pe", " .", function()
     loadstring(game:HttpGet("https://eternityhub.xyz/BetterRoblox/Loader"))()
 end)
-
- 
+local Tab = Window:NewTab("bản gui test")
+local Section = Tab:NewSection("bản gui test")
+ Section:NewButton("bản gui test : Pc và pe", "pe bấm hơi khó", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/Chetdithglon/AN_HUB/main/test%20gui%20sieu%20dep"))()
+end)
 
 
 
