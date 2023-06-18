@@ -1032,19 +1032,11 @@ end)
 
 
 local Section = Tab:NewSection("Quảng Cáo")
-Section:NewButton("Bảng Giá Cày thuê (sale)  ", ":3", function()
+Section:NewButton("Nhận Cày Gear Giá Rẻ  ", ":3", function()
 print("Clicked")
 loadstring(game:HttpGet('https://raw.githubusercontent.com/Chetdithglon/AN_HUB/main/ib'))()
 setclipboard('https://www.facebook.com/yamatekunasai')
 DiscordLib:Notification("Thông báo " , "Đã Sao Chép Link facebook" , 3 ,11816162894 )
-end)
- 
- local Section = Tab:NewSection("Quảng Cáo")
-Section:NewButton("Bảng Giá acc   ", ":3", function()
-print("Clicked")
-loadstring(game:HttpGet('https://raw.githubusercontent.com/Chetdithglon/lklklkl/main/sell%20acc'))()
-setclipboard('https://www.facebook.com/yamatekunasai')
-	DiscordLib:Notification("Thông báo " , "Đã Sao Chép Link facebook" , 3 ,11816162894 )
 end)
 
 
