@@ -203,8 +203,8 @@ function topos(Pos)
         return math.floor((target.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude)
     end
 
-    DiscordLib:Notification("Thông Báo" , "Đã Fix Tp Gear nhé Ae , Ae Test Xem Đc K Nếu Ko Đc Kêu T Tiếp Nhé" , 10 ,11816162894 )
-	DiscordLib:Notification("Thông báo" , "Ae Muốn Thêm Hack Thì Gửi Script Cho Tui Nhé " , 7, 11816162894)
+    DiscordLib:Notification("Thông Báo" , "Update Cày gear giá rẻ" , 10 ,11816162894 )
+	DiscordLib:Notification("Thông báo" , "Quà của admin là troll nhé xin lỗi ae" , 7, 11816162894)
 	DiscordLib:Notification("Thông báo" , "Ae Nào Muốn Đóng Góp ý Kiến thì Nhắn Tin Trực Tiếp Cho Tui nhé" , 7,11816162894)
 
 
@@ -684,6 +684,22 @@ end)
 Section:NewButton("Ntt Hub : No key ", "Mạnh Dũng", function()
     print("Clicked")
 loadstring(game:HttpGet('https://raw.githubusercontent.com/Chetdithglon/ntt/main/hiconcac'))()
+end)
+
+Section:NewButton("X1 Hub : No key ", "Mạnh Dũng", function()
+    print("Clicked")
+loadstring(game:HttpGet("https://github.com/R12XHUB/X1HUB/files/8783467/Protected.lua.txt"))()
+end)
+
+Section:NewButton("Speed Hub : No key ", "Mạnh Dũng", function()
+    print("Clicked")
+loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/ahmadsgamer2/Speed-Hub-X/main/SpeedHubX"))()
+end)
+
+
+Section:NewButton("pixel Hub : No key ", "Mạnh Dũng", function()
+    print("Clicked")
+loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/nhhai07/pixelhub/main/PixelHub"))()
 end)
 
 Section:NewButton("Protected Hub : No key + Có Key ", "Mạnh Dũng", function()
