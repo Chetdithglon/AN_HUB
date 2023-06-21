@@ -896,7 +896,7 @@ end)
 
 
 Section:NewButton("Tele Tảng Đá", "ButtonInfo", function()
-    two(CFrame.new(-5355.62256, 313.715485, -2495.17383, 0.447177857, 6.1724144e-08, 0.894445062, 3.27962084e-08, 1, -8.54047784e-08, -0.894445062, 6.75255336e-08, 0.447177857))
+  loadstring(game:HttpGet('https://raw.githubusercontent.com/Chetdithglon/AN_HUB/main/tpda'))()
 end)
 
 Section:NewButton("Tele Cổ Thụ", "ButtonInfo", function()
