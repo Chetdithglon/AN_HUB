@@ -204,7 +204,7 @@ function topos(Pos)
     end
 
     DiscordLib:Notification("Thông Báo" , "Update Cày gear giá rẻ" , 10 ,11816162894 )
-	DiscordLib:Notification("Thông báo" , "Quà của admin là troll nhé xin lỗi ae" , 7, 11816162894)
+	DiscordLib:Notification("Thông báo" , "9h Sáng ngày 23 tháng 6 ai nhắn tin đầu tiên qua facebook nhận ngay leo rương " , 15, 11816162894)
 	DiscordLib:Notification("Thông báo" , "Ae Nào Muốn Đóng Góp ý Kiến thì Nhắn Tin Trực Tiếp Cho Tui nhé" , 7,11816162894)
 
 
