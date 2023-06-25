@@ -5798,7 +5798,6 @@ spawn(function()
 									MainMonBone1 = v.HumanoidRootPart.CFrame
 									BoneMagnet1 = true
 								until Auto_Bone1 == false or not v.Parent or v.Humanoid.Health <= 0
-								TP2(CFrame.new(-1927.90393, 35.0206757, -12840.4453, 0.951068401, -0, -0.308980465, 0, 1, -0, 0.308980465, 0, 0.951068401))
 							end
 						end
 					end
