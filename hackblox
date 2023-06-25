@@ -2870,7 +2870,7 @@ end)
 dit = AutoFarm:Label("")
 spawn(function()
 		while true do
-			local TotalElite = tostring(game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("CakePrinceSpawner"))
+			local TotalElite = (game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("CakePrinceSpawner"))
 			dit:Refresh("Total mob kata Progress : "..TotalElite)
 			game:GetService("RunService").Heartbeat:wait()
 		end
@@ -5781,8 +5781,9 @@ spawn(function()
 end)
 
 spawn(function()
+	while wait(.1) do
+
 		pcall(function()
-		        while wait(.1) do
 			if Auto_Bone1 then
 				if game:GetService("Workspace").Enemies:FindFirstChild("Baking Staff [Lv. 2250]") or game:GetService("Workspace").Enemies:FindFirstChild("Cake Guard [Lv. 2225]") or game:GetService("Workspace").Enemies:FindFirstChild("Head Baker [Lv. 2275]") or game:GetService("Workspace").Enemies:FindFirstChild("Cookie Crafter [Lv. 2200]") then
 					for i,v in pairs(game:GetService("Workspace").Enemies:GetChildren()) do
@@ -5803,13 +5804,12 @@ spawn(function()
 					end
 				else
 					BoneMagnet1 = false
-					TP2(CFrame.new(-1927.90393, 35.0206757, -12840.4453, 0.951068401, -0, -0.308980465, 0, 1, -0, 0.308980465, 0, 0.951068401))
 				end
 			end
-		        end
-		
-		    end)
-	
+			
+	end)
+	                                       end
+	                                   
 end)
 
 spawn(function()
@@ -7655,7 +7655,7 @@ spawn(function()
 						sethiddenproperty(game.Players.LocalPlayer, "SimulationRadius", math.huge)
 					end
 					elseif Auto_Bone1 and BoneMagnet1 and Magnet then
-					if (v.Name == "Head Baker [Lv. 2275]" or v.Name == "Baking Staff [Lv. 2250]" or v.Name == "Cake Guard [Lv. 2225]" or v.Name == "Cookie Crafter [Lv. 2200]") and (v.HumanoidRootPart.Position - MainMonBone1.Position).Magnitude <= 3 then
+					if (v.Name == "Head Baker [Lv. 2275]" or v.Name == "Baking Staff [Lv. 2250]" or v.Name == "Cake Guard [Lv. 2225]" or v.Name == "Cookie Crafter [Lv. 2200]") and (v.HumanoidRootPart.Position - MainMonBone1.Position).Magnitude <= 300 then
 						v.Head.CanCollide = false
 						v.HumanoidRootPart.CanCollide = false
 						v.HumanoidRootPart.Size = Vector3.new(60, 60, 60)
