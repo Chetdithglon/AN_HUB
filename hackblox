@@ -2867,16 +2867,10 @@ spawn(function()
 	end
 end)
 
-dit = AutoFarm:Label("")
-spawn(function()
-		while true do
-			local TotalElite = (game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("CakePrinceSpawner"))
-			dit:Refresh("Total mob kata Progress : "..TotalElite)
-			game:GetService("RunService").Heartbeat:wait()
-		end
-	end)
+
 AutoFarm:Toggle("Auto Farm Katakuri", false, function(vu)
 		Auto_Bone1 = vu
+		noclip = vu
 		if vu == false then
 			wait(.1)
 			TP(game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame)
@@ -5781,13 +5775,12 @@ spawn(function()
 end)
 
 spawn(function()
-	while wait(.1) do
-
+	while wait(0.1) do
 		pcall(function()
 			if Auto_Bone1 then
-				if game:GetService("Workspace").Enemies:FindFirstChild("Baking Staff [Lv. 2250]") or game:GetService("Workspace").Enemies:FindFirstChild("Cake Guard [Lv. 2225]") or game:GetService("Workspace").Enemies:FindFirstChild("Head Baker [Lv. 2275]") or game:GetService("Workspace").Enemies:FindFirstChild("Cookie Crafter [Lv. 2200]") then
+				if game:GetService("Workspace").Enemies:FindFirstChild("Head Baker [Lv. 2275]") or game:GetService("Workspace").Enemies:FindFirstChild("Cake Guard [Lv. 2225]") or game:GetService("Workspace").Enemies:FindFirstChild("Baking Staff [Lv. 2250]") or game:GetService("Workspace").Enemies:FindFirstChild("Cookie Crafter [Lv. 2200]") then
 					for i,v in pairs(game:GetService("Workspace").Enemies:GetChildren()) do
-						if v.Name == "Baking Staff [Lv. 2250]" or v.Name == "Cake Guard [Lv. 2225]" or v.Name == "Head Baker [Lv. 2275]" or v.Name == "Cookie Crafter [Lv. 2200]" then
+						if v.Name == "Head Baker [Lv. 2275]" or v.Name == "Cake Guard [Lv. 2225]" or v.Name == "Baking Staff [Lv. 2250]" or v.Name == "Cookie Crafter [Lv. 2200]" then
 							if v:WaitForChild("Humanoid").Health > 0 then
 								repeat game:GetService("RunService").Heartbeat:wait()
 									EquipWeapon(EventWeapon)
@@ -5802,14 +5795,15 @@ spawn(function()
 							end
 						end
 					end
+					TP2(CFrame.new(-2137.66699, 70.8312531, -12326.2383, -0.965929747, 0, -0.258804798, 0, 1, 0, 0.258804798, 0, -0.965929747))
 				else
-					BoneMagnet1 = false
+					BoneMagnet1 = true
+					TP2(CFrame.new(-2137.66699, 70.8312531, -12326.2383, -0.965929747, 0, -0.258804798, 0, 1, 0, 0.258804798, 0, -0.965929747))
 				end
-			end
-			
-	end)
-	                                       end
-	                                   
+			    end
+			   
+		end)
+    end
 end)
 
 spawn(function()
