@@ -6075,7 +6075,7 @@ spawn(function()
  end
  end)
 
-Main:Button("Check Bone", function()
+Main:Button("Bones Đang Có", function()
  game.StarterGui:SetCore("SendNotification", {
   Title = "Checking Bone",
   Text = ("Your Bone : "..(game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("Bones","Check")))
@@ -6090,16 +6090,16 @@ local ObservationLevel = Main:Label("")
 
 spawn(function()
 	while game:GetService("RunService").Heartbeat:wait() do
-		if game.Players.LocalPlayer.VisionRadius.Value == 3000 then
-			value = "Max"
+		if game.Players.LocalPlayer.VisionRadius.Value == 5000 then
+			value = "5k Max"
 		else
 			value = math.round(game.Players.LocalPlayer.VisionRadius.value)
 		end
-		ObservationLevel:Set("Observation Haki Level : "..tostring(value))
+		ObservationLevel:Set("Số Lần Né : "..tostring(value))
 	end
 end)
     
-       Main:Toggle("Auto Farm Observation",_G.AutoObservation,function(value)
+       Main:Toggle("Tự Động Cày Haki",_G.AutoObservation,function(value)
         _G.AutoObservation = value
         StopTween(_G.AutoObservation)
     end)
@@ -6121,7 +6121,7 @@ end)
         end
     end)
     
-    Main:Toggle("Auto Farm Observation Hop",_G.AutoObservation_Hop,function(value)
+    Main:Toggle("Đổi Sever Cày Haki",_G.AutoObservation_Hop,function(value)
         _G.AutoObservation_Hop = value
     end)
     
@@ -6129,12 +6129,12 @@ end)
         pcall(function()
             while wait() do
                 if _G.AutoObservation then
-                    if game:GetService("Players").LocalPlayer.VisionRadius.Value >= 3000 then
+                    if game:GetService("Players").LocalPlayer.VisionRadius.Value >= 5000 then
 local NotificationHolder = loadstring(game:HttpGet("https://raw.githubusercontent.com/BocusLuke/UI/main/STX/Module.Lua"))()
 local Notification = loadstring(game:HttpGet("https://raw.githubusercontent.com/BocusLuke/UI/main/STX/Client.Lua"))()
 wait(1)
 Notification:Notify(
-   {Title = "BLCK HUB", Description = "You Have Max Observation"},
+   {Title = "BLCK HUB", Description = "Max Haki rồi cày j nữa ba"},
    {OutlineColor = Color3.fromRGB(80, 80, 80),Time = 5, Type = "option"},
    {Image = "http://www.roblox.com/asset/?id=6023426923", ImageColor = Color3.fromRGB(255, 84, 84), Callback = function(State) print(tostring(State)) end}
 )
@@ -6576,7 +6576,7 @@ end)
 
 Weapon:Seperator(" Soul Guitar ")
 
-Weapon:Toggle("Auto Soul Guitar",_G.AutoNevaSoulGuitar,function(value)
+Weapon:Toggle("Lấy Soul Guitar",_G.AutoNevaSoulGuitar,function(value)
   _G.AutoNevaSoulGuitar = value    
  			StopTween(_G.AutoNevaSoulGuitar)
  end)
@@ -6701,13 +6701,13 @@ end
 		end
 end)
 
-Weapon:Toggle("Auto Soul Guitar + Hop",false,function(value)
+Weapon:Toggle("Đổi Sever Lấy Soul Guitar",false,function(value)
   _G.soulGuitarhop = value    
  end)
 
-Weapon:Seperator(" Dual Curse Katana ")
+Weapon:Seperator(" Song Kiếm ")
 
-Weapon:Toggle("Auto CDK Quest(Not Working)",_G.AutoCdk,function(value)
+Weapon:Toggle("Auto Lấy Song Kiếm ( Chưa update Xong )",_G.AutoCdk,function(value)
  _G.AutoCdk = value
 end)
 
@@ -7793,13 +7793,13 @@ elseif World3 then
 
 	Weapon:Seperator(" Soul Reaper ")
 
-Weapon:Toggle("Auto Soul Reaper",_G.Auto_Soul_Reaper,function(value)
+Weapon:Toggle("Quay Xương ( Tự Triệu Hồi Và Đánh Boss )",_G.Auto_Soul_Reaper,function(value)
  _G.Auto_Soul_Reaper = value
 StopTween(_G.Auto_Soul_Reaper)
 end)
 
 
-Weapon:Toggle("Auto Soul Reaper Hop",_G.Auto_Soul_Reaper_Hop,function(value)
+Weapon:Toggle("Qua Sever Khác Quay Xương",_G.Auto_Soul_Reaper_Hop,function(value)
  _G.Auto_Soul_Reaper_Hop = value
 StopTween(_G.Auto_Soul_Reaper_Hop)
 end)
@@ -7954,7 +7954,7 @@ end)
 	
 		Weapon:Seperator(" Yama ")
 	
-	Weapon:Toggle("Auto Yama",_G.Auto_Yama,function(value)
+	Weapon:Toggle("Tự Động Lấy Yama",_G.Auto_Yama,function(value)
 	 _G.Auto_Yama = value
  	StopTween(_G.Auto_Yama)
 end)
@@ -8612,9 +8612,9 @@ Weapon:Toggle("Auto Observation Haki V2",_G.AutoObservationHakiV2,function(x)
 
 if World3 then
 
-Weapon:Seperator(" Musketeer Hat ")
+Weapon:Seperator(" Mũ Phi Công ")
 
-Weapon:Toggle("Auto Musketeer Hat",_G.Auto_Musketeer_Hat,function(value)
+Weapon:Toggle("Lấy Mũ Phi Công",_G.Auto_Musketeer_Hat,function(value)
  _G.Auto_Musketeer_Hat = value
 StopTween(_G.Auto_Musketeer_Hat)
 end)
@@ -8940,9 +8940,9 @@ spawn(function()
 	end
 end)
 
-Weapon:Seperator(" Sharkman Karate ")
+Weapon:Seperator("Sharkman Karate ")
 
-Weapon:Toggle("Auto Sharkman Karate",_G.Auto_SharkMan_Karate,function(value)
+Weapon:Toggle("Tự Động Lấy Sharkman Karate",_G.Auto_SharkMan_Karate,function(value)
  _G.Auto_SharkMan_Karate = value
 StopTween(_G.Auto_SharkMan_Karate)
 end)
@@ -9030,7 +9030,7 @@ if World3 then
 
 Weapon:Seperator(" Electric Claw ")
 
-Weapon:Toggle("Auto Electric Claw",_G.Auto_Electric_Claw,function(value)
+Weapon:Toggle("Tự Động Lấy Electric Claw",_G.Auto_Electric_Claw,function(value)
  _G.Auto_Electric_Claw = value
 end)
 
@@ -9057,9 +9057,9 @@ spawn(function()
 	end
 end)
 
-Weapon:Seperator(" Dragon Talon ")
+Weapon:Seperator("Dragon Talon ")
 
-Weapon:Toggle("Auto Dragon Talon",_G.Auto_Dragon_Talon,function(value)
+Weapon:Toggle("Tự Động Lấy Dragon Talon",_G.Auto_Dragon_Talon,function(value)
  _G.Auto_Dragon_Talon = value
 end)
 
@@ -9088,7 +9088,7 @@ end)
 
 Weapon:Seperator(" God Human ")
 
-Weapon:Toggle("Auto_God_Human",_G.Auto_God_Human,function(value)
+Weapon:Toggle("Tự Động Lấy God Human",_G.Auto_God_Human,function(value)
  _G.Auto_God_Human = value
 end)
 end
