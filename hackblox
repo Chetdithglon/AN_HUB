@@ -3637,7 +3637,7 @@ end
 spawn(function()
 	pcall(function()
 		game:GetService("RunService").Stepped:Connect(function()
-		  	if _G.Auto_Farm_Level or _G.Auto_New_World or _G.AutoFarmFruitMastery or _G.AutoFarmGunMastery or _G.Auto_Third_World or _G.Auto_Farm_Chest or _G.TeleportIsland or _G.Auto_Farm_Boss or _G.Autotushita or _G.Auto_Elite_Hunter or _G.Auto_Cake_Prince or _G.Auto_Farm_All_Boss or _G.Auto_Saber or _G.Auto_Pole or _G.Auto_Farm_Scrap_and_Leather or _G.Auto_Farm_Angel_Wing or _G.Auto_Factory_Farm or _G.Auto_Farm_Ectoplasm or _G.Auto_Bartilo_Quest or _G.Auto_Rengoku or _G.Auto_Farm_Radioactive or _G.Auto_Farm_Vampire_Fang or _G.Auto_Farm_Mystic_Droplet or _G.Auto_Farm_GunPowder or _G.Auto_Farm_Dragon_Scales or _G.Auto_Evo_Race_V2 or _G.Auto_Swan_Glasses or _G.Auto_Dragon_Trident or _G.Auto_Soul_Reaper or _G.Auto_Farm_Fish_Tail or _G.Auto_Farm_Mini_Tusk or _G.Auto_Farm_Magma_Ore or _G.Auto_Farm_Bone or _G.Auto_Farm_Conjured_Cocoa or _G.Auto_Open_Dough_Dungeon or _G.Auto_Rainbow_Haki or _G.Auto_Musketeer_Hat or _G.Auto_Holy_Torch or _G.Auto_Canvander or _G.d or _G.Auto_Twin_Hook or _G.Auto_Serpent_Bow or _G.AutoFarmMaterial or _G.Auto_Fully_Death_Step or _G.Auto_Fully_SharkMan_Karate or _G.Teleport_to_Player or _G.Auto_Kill_Player_Melee or _G.Auto_Kill_Player_Gun or _G.Start_Tween_Island or _G.Auto_Next_Island or _G.autoraid or AutoNextIsland or _G.Auto_Farm_Sword or _G.MeleeFarm or _G.AutoFarmSelectMonster or _G.AutoFarmKenHakivor or _G.AutoObservationHakiV2 or _G.GunMastery or _G.AutoFactory or _G.Mastery or _G.Auto_Kill_Law then
+		  	if _G.Auto_Farm_Level or _G.Auto_New_World or _G.AutoFarmFruitMastery or _G.AutoFarmGunMastery or _G.Auto_Third_World or _G.Auto_Farm_Chest or _G.TeleportIsland or _G.Auto_Farm_Boss or _G.Autotushita or _G.Auto_Elite_Hunter or _G.Auto_Cake_Prince or _G.Auto_Farm_All_Boss or _G.Auto_Saber or _G.Auto_Pole or _G.Auto_Farm_Scrap_and_Leather or _G.Auto_Farm_Angel_Wing or _G.Auto_Factory_Farm or _G.Auto_Farm_Ectoplasm or _G.Auto_Bartilo_Quest or _G.Auto_Rengoku or _G.Auto_Farm_Radioactive or _G.Auto_Farm_Vampire_Fang or _G.Auto_Farm_Mystic_Droplet or _G.Auto_Farm_GunPowder or _G.Auto_Farm_Dragon_Scales or _G.Auto_Evo_Race_V2 or _G.Auto_Swan_Glasses or _G.Auto_Dragon_Trident or _G.Auto_Soul_Reaper or _G.Auto_Farm_Fish_Tail or _G.Auto_Farm_Mini_Tusk or _G.Auto_Farm_Magma_Ore or _G.Auto_Farm_Bone or _G.Auto_Farm_Bone1 or _G.Auto_Farm_Conjured_Cocoa or _G.Auto_Open_Dough_Dungeon or _G.Auto_Rainbow_Haki or _G.Auto_Musketeer_Hat or _G.Auto_Holy_Torch or _G.Auto_Canvander or _G.d or _G.Auto_Twin_Hook or _G.Auto_Serpent_Bow or _G.AutoFarmMaterial or _G.Auto_Fully_Death_Step or _G.Auto_Fully_SharkMan_Karate or _G.Teleport_to_Player or _G.Auto_Kill_Player_Melee or _G.Auto_Kill_Player_Gun or _G.Start_Tween_Island or _G.Auto_Next_Island or _G.autoraid or AutoNextIsland or _G.Auto_Farm_Sword or _G.MeleeFarm or _G.AutoFarmSelectMonster or _G.AutoFarmKenHakivor or _G.AutoObservationHakiV2 or _G.GunMastery or _G.AutoFactory or _G.Mastery or _G.Auto_Kill_Law then
 			 	if not game.Players.LocalPlayer.Character.HumanoidRootPart:FindFirstChild("BodyClip") then
 					local Noclip = Instance.new("BodyVelocity")
 					Noclip.Name = "BodyClip"
@@ -3657,7 +3657,7 @@ end)
 spawn(function()
 	pcall(function()
 		game:GetService("RunService").Stepped:Connect(function()
-			if _G.Auto_Farm_Level or _G.Auto_New_World or _G.TeleportIsland or _G.Auto_Third_World or _G.Auto_Farm_Chest or _G.Auto_Farm_Boss or _G.GunMastery or _G.Mastery or _G.AutoFarmFruitMastery or _G.AutoFarmGunMastery or _G.Auto_Elite_Hunter or _G.AutoFarmKenHaki or _G.AutoFactory or _G.AutoFarmSelectMonster or _G.Auto_Cake_Prince or _G.Auto_Farm_All_Boss or _G.Auto_Saber or _G.Auto_Pole or _G.Auto_Farm_Scrap_and_Leather or _G.Auto_Farm_Angel_Wing or _G.Auto_Factory_Farm or _G.Auto_Farm_Ectoplasm or _G.Auto_Bartilo_Quest or _G.d or _G.Auto_Rengoku or _G.Autotushita or _G.Auto_Farm_Radioactive or _G.Auto_Farm_Vampire_Fang or _G.Auto_Farm_Mystic_Droplet or _G.Auto_Farm_GunPowder or _G.Auto_Farm_Dragon_Scales or _G.Auto_Evo_Race_V2 or _G.Auto_Swan_Glasses or _G.Auto_Dragon_Trident or _G.Auto_Soul_Reaper or _G.Auto_Farm_Fish_Tail or _G.Auto_Farm_Mini_Tusk or _G.Auto_Farm_Magma_Ore or _G.Auto_Farm_Bone or _G.Auto_Farm_Conjured_Cocoa or _G.Auto_Open_Dough_Dungeon or _G.Auto_Rainbow_Haki or _G.Auto_Musketeer_Hat or _G.Auto_Holy_Torch or _G.Auto_Canvander or _G.AutoFarmMaterial or _G.autoraid or _G.Auto_Twin_Hook or AutoNextIsland or _G.Auto_Serpent_Bow or _G.Auto_Fully_Death_Step or _G.Auto_Fully_SharkMan_Karate or _G.Teleport_to_Player or _G.Auto_Kill_Player_Melee or _G.Auto_Kill_Player_Gun or _G.Start_Tween_Island or _G.AutoObservationHakiV2 or _G.d or _G.Auto_Next_Island or _G.Auto_Farm_Sword or _G.MeleeFarm or _G.Auto_Kill_Law then
+			if _G.Auto_Farm_Level or _G.Auto_New_World or _G.TeleportIsland or _G.Auto_Third_World or _G.Auto_Farm_Chest or _G.Auto_Farm_Boss or _G.GunMastery or _G.Mastery or _G.AutoFarmFruitMastery or _G.AutoFarmGunMastery or _G.Auto_Elite_Hunter or _G.AutoFarmKenHaki or _G.AutoFactory or _G.AutoFarmSelectMonster or _G.Auto_Cake_Prince or _G.Auto_Farm_All_Boss or _G.Auto_Saber or _G.Auto_Pole or _G.Auto_Farm_Scrap_and_Leather or _G.Auto_Farm_Angel_Wing or _G.Auto_Factory_Farm or _G.Auto_Farm_Ectoplasm or _G.Auto_Bartilo_Quest or _G.d or _G.Auto_Rengoku or _G.Autotushita or _G.Auto_Farm_Radioactive or _G.Auto_Farm_Vampire_Fang or _G.Auto_Farm_Mystic_Droplet or _G.Auto_Farm_GunPowder or _G.Auto_Farm_Dragon_Scales or _G.Auto_Evo_Race_V2 or _G.Auto_Swan_Glasses or _G.Auto_Dragon_Trident or _G.Auto_Soul_Reaper or _G.Auto_Farm_Fish_Tail or _G.Auto_Farm_Mini_Tusk or _G.Auto_Farm_Magma_Ore or _G.Auto_Farm_Bone or _G.Auto_Farm_Bone1 or _G.Auto_Farm_Conjured_Cocoa or _G.Auto_Open_Dough_Dungeon or _G.Auto_Rainbow_Haki or _G.Auto_Musketeer_Hat or _G.Auto_Holy_Torch or _G.Auto_Canvander or _G.AutoFarmMaterial or _G.autoraid or _G.Auto_Twin_Hook or AutoNextIsland or _G.Auto_Serpent_Bow or _G.Auto_Fully_Death_Step or _G.Auto_Fully_SharkMan_Karate or _G.Teleport_to_Player or _G.Auto_Kill_Player_Melee or _G.Auto_Kill_Player_Gun or _G.Start_Tween_Island or _G.AutoObservationHakiV2 or _G.d or _G.Auto_Next_Island or _G.Auto_Farm_Sword or _G.MeleeFarm or _G.Auto_Kill_Law then
 				for _, v in pairs(game.Players.LocalPlayer.Character:GetDescendants()) do
 					if v:IsA("BasePart") then
 						v.CanCollide = false    
@@ -3873,7 +3873,72 @@ spawn(function()
    end
    end)
   end)
+end)
+
+
+
+spawn(function()
+ game:GetService("RunService").Heartbeat:Connect(function()
+  pcall(function()
+   for i,v in pairs(game:GetService("Workspace").Enemies:GetChildren()) do
+   if _G.Auto_Farm_Bone1 and StartMagnetBoneMon1 and (v.Name == "Flame Master [Lv. 1100]" or v.Name == "Rumble Master [Lv. 1100]" or v.Name == "Light Master [Lv. 1100]" or v.Name == "Darkness Master [Lv. 1100]" ) and (v.HumanoidRootPart.Position - PosMonBone.Position).magnitude <= 350 then
+   v.HumanoidRootPart.CFrame = PosMonBone
+   v.HumanoidRootPart.CanCollide = false
+   v.HumanoidRootPart.Size = Vector3.new(50,50,50)
+   if v.Humanoid:FindFirstChild("Animator") then
+   v.Humanoid.Animator:Destroy()
+   end
+   sethiddenproperty(game.Players.LocalPlayer, "SimulationRadius", math.huge)
+   end
+   end
+   end)
+  end)
  end)
+
+
+spawn(function()
+ while wait() do
+ if _G.Auto_Farm_Bone1 and World3 then
+ pcall(function()
+  if game:GetService("Workspace").Enemies:FindFirstChild("Flame Master [Lv. 1100]") or game:GetService("Workspace").Enemies:FindFirstChild("Rumble Master [Lv. 1100]") or game:GetService("Workspace").Enemies:FindFirstChild("Light Master [Lv. 1100]") or game:GetService("Workspace").Enemies:FindFirstChild("Darkness Master [Lv. 1100]") then
+  for i,v in pairs(game:GetService("Workspace").Enemies:GetChildren()) do
+  if v.Name == "Flame Master [Lv. 1100]" or v.Name == "Rumble Master [Lv. 1100]" or v.Name == "Light Master [Lv. 1100]" or v.Name == "Darkness Master [Lv. 1100]" then
+  if v.Humanoid.Health > 0 then
+  repeat wait()
+  AutoHaki()
+  EquipWeapon(_G.Select_Weapon)
+  StartMagnetBoneMon1 = true
+  v.HumanoidRootPart.CanCollide = false
+  v.HumanoidRootPart.Size = Vector3.new(60, 60, 60)
+  PosMonBone = v.HumanoidRootPart.CFrame
+  topos(v.HumanoidRootPart.CFrame * MethodFarm)
+  game:GetService'VirtualUser':CaptureController()
+  game:GetService'VirtualUser':Button1Down(Vector2.new(1280, 672))
+  until _G.Auto_Farm_Bone1 == false or not v.Parent or v.Humanoid.Health <= 0
+  end
+  end
+  end
+  else
+   StartMagnetBoneMon1 = false
+  for i,v in pairs(game:GetService("ReplicatedStorage"):GetChildren()) do
+  if v.Name == "Flame Master [Lv. 1100]" then
+  topos(v.HumanoidRootPart.CFrame * MethodFarm)
+  elseif v.Name == "Rumble Master [Lv. 1100]" then
+  topos(v.HumanoidRootPart.CFrame * MethodFarm)
+  elseif v.Name == "Light Master [Lv. 1100]" then
+  topos(v.HumanoidRootPart.CFrame * MethodFarm)
+  elseif v.Name == "Darkness Master [Lv. 1100]" then
+  topos(v.HumanoidRootPart.CFrame * MethodFarm)
+  end
+  end
+  end
+  end)
+ end
+ end
+ end)
+
+
+
 
 spawn(function()
  while wait() do
@@ -4730,10 +4795,10 @@ spawn(function()
     end)
 end)
 
-Main:Button("Stop Teleport",function()
-  topos(game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame)
-  _G.Clip = false
-  end)
+--Main:Button("Stop Teleport",function()
+ -- topos(game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame)
+  --_G.Clip = false
+ -- end)
 
 Main:Seperator(" Main ")
 
@@ -4775,23 +4840,23 @@ end
 
 if World2 then
 
-Main:Seperator("Auto New Sea")
+--Main:Seperator("Auto New Sea")
 
-Main:Toggle("Auto Third Sea",_G.Auto_Third_World,function(value)
- _G.Auto_Third_World = value
- StopTween(_G.Auto_Third_World)
- end)
+--Main:Toggle("Auto Third Sea",_G.Auto_Third_World,function(value)
+ --_G.Auto_Third_World = value
+-- StopTween(_G.Auto_Third_World)
+-- end)
 
-Main:Seperator("Ectoplasm")
+Main:Seperator("Chất Kì Dị")
 
-Main:Toggle("Auto Farm Ectoplasm",_G.Auto_Farm_Ectoplasm,function(value)
+Main:Toggle("Auto Farm Chất Kì Dị ",_G.Auto_Farm_Ectoplasm,function(value)
  _G.Auto_Farm_Ectoplasm = value
  StopTween(_G.Auto_Farm_Ectoplasm)
  end)
 
-Main:Seperator("Factory")
+Main:Seperator("Nhà Máy")
 
-Main:Toggle("Auto Farm Factory",_G.AutoFactory,function(value)
+Main:Toggle("Auto Farm Nhà Máy",_G.AutoFactory,function(value)
  _G.AutoFactory = value
  StopTween(_G.AutoFactory)
  end)
@@ -4844,13 +4909,13 @@ tableMon = {
 }
 end
 
-Main:Seperator(" Other ")
+Main:Seperator(" Farm theo mục ")
 
-Main:Dropdown("Select Monster", tableMon, function(vu)
+Main:Dropdown("Chọn Quái Farm", tableMon, function(vu)
  SelectMonster = vu
  end)
 
-Main:Toggle("Farm Selected Monster",_G.AutoFarmSelectMonster,function(vu)
+Main:Toggle("Farm Quái Được Chọn",_G.AutoFarmSelectMonster,function(vu)
  _G.AutoFarmSelectMonster = vu
 end)
 
@@ -4894,9 +4959,9 @@ spawn(function()
  end
 end)
 
-Main:Seperator(" Mastery ")
+Main:Seperator(" Thông Thạo ")
  
-Main:Toggle("Auto BF Mastery",_G.AutoFarmFruitMastery,function(value)
+Main:Toggle("Auto Farm Thông Thạo Fruit",_G.AutoFarmFruitMastery,function(value)
   _G.AutoFarmFruitMastery = value
   StopTween(_G.AutoFarmFruitMastery)
   if _G.AutoFarmFruitMastery == false then
@@ -5152,7 +5217,7 @@ Main:Toggle("Auto BF Mastery",_G.AutoFarmFruitMastery,function(value)
    end)
   end)
  
- Main:Toggle("Auto Gun Mastery",_G.AutoFarmGunMastery,function(value)
+ Main:Toggle("Auto Farm Thông Thạo Súng",_G.AutoFarmGunMastery,function(value)
   _G.AutoFarmGunMastery = value
   StopTween(_G.AutoFarmGunMastery)
   end)
@@ -5237,7 +5302,7 @@ Main:Toggle("Auto BF Mastery",_G.AutoFarmFruitMastery,function(value)
  end)
 
  
-Main:Seperator(" Bosses ")
+Main:Seperator(" Boss ")
 
 local Boss = {}
     
@@ -5250,11 +5315,11 @@ local Boss = {}
         end
     end
     
-    local BossName = Main:Dropdown("Select Boss",Boss,function(value)
+    local BossName = Main:Dropdown("Chọn Boss Farm",Boss,function(value)
        _G.Select_Boss = value
     end)
     
-    Main:Button("Refresh Boss",function()
+    Main:Button("Làm Mới Boss",function()
         BossName:Clear()
             for i, v in pairs(game:GetService("ReplicatedStorage"):GetChildren()) do
             if string.find(v.Name, "Boss") then
@@ -5263,11 +5328,11 @@ local Boss = {}
         end
     end)
 
-Main:Toggle("Auto Farm Boss",_G.Auto_Farm_Boss,function(value)
+Main:Toggle("Farm Boss Đã Chọn",_G.Auto_Farm_Boss,function(value)
  _G.Auto_Farm_Boss = value
  end)
 
-Main:Toggle("Auto Quest Boss",true,function(value)
+Main:Toggle("Nhận Nhiệm Vụ Boss",true,function(value)
  _G.Auto_Quest_Boss = value
 end)
 
@@ -5354,7 +5419,7 @@ spawn(function()
 	end
 end)
 
-Main:Toggle("Auto Farm All Boss",_G.Auto_Farm_All_Boss,function(value)
+Main:Toggle("Càng Quét Tất Cả Boss ",_G.Auto_Farm_All_Boss,function(value)
  _G.Auto_Farm_All_Boss = value
 StopTween(_G.Auto_Farm_All_Boss)
 end)
@@ -5508,13 +5573,13 @@ MaterialMethod = {
  end
 
  
-Main:Seperator(" Farm Nguyên Liệu ")
+Main:Seperator("Nguyên Liệu")
  
- local SelectMaterial = Main:Dropdown("Select Material",MaterialMethod,function(value)
+ local SelectMaterial = Main:Dropdown("Chọn Nguyên Liệu",MaterialMethod,function(value)
  _G.SelectMaterial = value
 end)
 
-Main:Toggle("Farm Selected Material",_G.AutoFarmMaterial,function(t)
+Main:Toggle("Farm Nguyên Liệu Đã Chọn",_G.AutoFarmMaterial,function(t)
 			_G.AutoFarmMaterial = t
 			StopTween(_G.AutoFarmMaterial)
 end)
@@ -5654,9 +5719,9 @@ spawn(function()
 			end
 end)
 
-Main:Seperator(" Mirage Island ")
+Main:Seperator(" Đảo Bí Ẩn ")
 
-Main:Toggle("Auto Mirage Island",false,function(value)
+Main:Toggle("Bay Vô Khi Có Đảo",false,function(value)
  if game:GetService("Workspace").Map:FindFirstChild("MysticIsland") then
                            topos(game:GetService("Workspace").Map:FindFirstChild("MysticIsland").HumanoidRootPart.CFrame * CFrame.new(0,500,-100))
                     else
@@ -8852,116 +8917,88 @@ if World1 or World2 then
 end
 
 if World3 then
-Race:Seperator("Race V4")
+Race:Seperator("Tộc V4")
     
-    Race:Button("Teleport To Timple Of Time",function()
+    Race:Button("Dịch Chuyển Vào Timple Of Time",function()
+  Game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(28286.35546875, 14895.3017578125, 102.62469482421875)
   Game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(28286.35546875, 14895.3017578125, 102.62469482421875)
     end)
     
-Race:Button("Teleport To Lever Pull",function()
-  topos(CFrame.new(28575.181640625, 14936.6279296875, 72.31636810302734))
-end)
 
-Race:Button("Teleport To Acient One (Must Be in Temple Of Time!)",function()
+Race:Button("Dịch Chuyển Đến Npc Mua Train",function()
+    Game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(28286.35546875, 14895.3017578125, 102.62469482421875)
+  Game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(28286.35546875, 14895.3017578125, 102.62469482421875)
+  wait(0.3)
   topos(CFrame.new(28981.552734375, 14888.4267578125, -120.245849609375))
 end)
    
-   Race:Button("Unlock Lever.", function()
-venyx:Notify("Unlocked")
-if game:GetService("Workspace").Map["Temple of Time"].Lever.Prompt:FindFirstChild("ProximityPrompt") then
-    game:GetService("Workspace").Map["Temple of Time"].Lever.Prompt:FindFirstChild("ProximityPrompt"):Remove()
-else
---[[]]
-end
-wait(0.1)
-local ProximityPrompt = Instance.new("ProximityPrompt")
-ProximityPrompt.Parent = game:GetService("Workspace").Map["Temple of Time"].Lever.Prompt
-ProximityPrompt.MaxActivationDistance = 10
-ProximityPrompt.ActionText = "Secrets Beholds Inside"
-ProximityPrompt.ObjectText = "An unknown lever of time"
+  Race:Line()
 
-function onProximity()
-local part = game:GetService("Workspace").Map["Temple of Time"].MainDoor1
-local TweenService = game:GetService("TweenService")
-
-local startPosition = part.Position
-local endPosition = startPosition + Vector3.new(0, -50, 0)
-
-local tweenInfo = TweenInfo.new(10, Enum.EasingStyle.Linear, Enum.EasingDirection.Out)
-local tween = TweenService:Create(part, tweenInfo, {Position = endPosition})
-
-tween:Play()
-
-local partnew = game:GetService("Workspace").Map["Temple of Time"].MainDoor2
-local TweenService = game:GetService("TweenService")
-
-local startPosition = partnew.Position
-local endPosition = startPosition + Vector3.new(0, -50, 0)
-
-local tweenInfo = TweenInfo.new(10, Enum.EasingStyle.Linear, Enum.EasingDirection.Out)
-local tween = TweenService:Create(partnew, tweenInfo, {Position = endPosition})
-
-tween:Play()
-
-local SoundSFX = Instance.new("Sound")
-SoundSFX.Parent = workspace
-SoundSFX.SoundId = "rbxassetid://1904813041"
-SoundSFX:Play()
-SoundSFX.Name = "POwfpxzxzfFfFF"
-game:GetService("Workspace").Map["Temple of Time"].Lever.Prompt:FindFirstChild("ProximityPrompt"):Remove()
-wait(5)
-workspace:FindFirstChild("POwfpxzxzfFfFF"):Remove()
-game:GetService("Workspace").Map["Temple of Time"].NoGlitching:Remove()
-game:GetService("Workspace").Map["Temple of Time"].NoGlitching:Remove()
-game:GetService("Workspace").Map["Temple of Time"].NoGlitching:Remove()
-end
-
-ProximityPrompt.Triggered:Connect(onProximity)
-end)
-
-Race:Button("Clock Acces.", function()
-    game:GetService("Workspace").Map["Temple of Time"].DoNotEnter:Remove()
-    game:GetService("Workspace").Map["Temple of Time"].ClockRoomExit:Remove()
-end)
-
-Race:Toggle("Disabled Inf Stairs", nil, function(value)
-	game.Players.LocalPlayer.Character.InfiniteStairs.Disabled = value
-end)
-   Race:Line()
  
-  Race:Button("Teleport Cyborg Door (Must Be in Temple Of Time!)",function()
+  Race:Button("Tele Cổng Người Máy",function()
+  Game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(28286.35546875, 14895.3017578125, 102.62469482421875)
+  wait(0.2)
   topos(CFrame.new(28492.4140625, 14894.4267578125, -422.1100158691406))
   end)
   
-  Race:Button("Teleport Fish Door (Must Be in Temple Of Time!)",function()
+  Race:Button("Tele cổng Cá",function()
+  Game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(28286.35546875, 14895.3017578125, 102.62469482421875)
+  wait(0.2)
   topos(CFrame.new(28224.056640625, 14889.4267578125, -210.5872039794922))
   end)
   
-  Race:Button("Teleport Ghoul Door (Must Be in Temple Of Time!)",function()
+  Race:Button("Tele Cổng Qủy",function()
+  Game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(28286.35546875, 14895.3017578125, 102.62469482421875)
+  wait(0.2)
   topos(CFrame.new(28672.720703125, 14889.1279296875, 454.5961608886719))
   end)
   
-  Race:Button("Teleport Human Door (Must Be in Temple Of Time!)",function()
+  Race:Button("Tele cổng Con người",function()
+  Game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(28286.35546875, 14895.3017578125, 102.62469482421875)
+  wait(0.2)
   topos(CFrame.new(29237.294921875, 14889.4267578125, -206.94955444335938))
   end)
   
-  Race:Button("Teleport Mink Door (Must Be in Temple Of Time!)",function()
+  Race:Button("Tele cổng Thỏ",function()
+  Game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(28286.35546875, 14895.3017578125, 102.62469482421875)
+  wait(0.2)
   topos(CFrame.new(29020.66015625, 14889.4267578125, -379.2682800292969))
   end)
   
-  Race:Button("Teleport Sky Door (Must Be in Temple Of Time!)",function()
+  Race:Button("Tele cổng Thiên Thần",function()
+  Game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(28286.35546875, 14895.3017578125, 102.62469482421875)
+  wait(0.2)
   topos(CFrame.new(28967.408203125, 14918.0751953125, 234.31198120117188))
   end)
   
   Race:Line()
-  
-  Race:Button("Teleport To Safe Zone When Pvp (Must Be in Temple Of Time!)",function()
-  topos(CFrame.new(28273.0859375, 14896.5078125, 157.42063903808594))
+  Race:Seperator("Auto Đi Ải V4")
+  Race:Button("Auto Win Ải Người Máy",function()
+  Game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame =  CFrame.new(-20093.4961, 9954.93945, -125.194695, 0.627363682, 1.15070167e-08, 0.778726399, -8.20592732e-08, 1, 5.13325205e-08, -0.778726399, -9.61058788e-08, 0.627363682)
   end)
   
-  Race:Button("Teleport Pvp Zone (Must Be in Temple Of Time!)",function()
-  topos(CFrame.new(28766.681640625, 14967.1455078125, -164.13290405273438))
+  
+  Race:Button("Auto Win Ải Thỏ",function()
+      for _,v in next, workspace:GetDescendants() do
+    if v.Name == "StartPoint" then
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = v.CFrame
+    end
+      end
   end)
+  
+  Race:Button("Auto Win Ải Thiên Thần",function()
+  for _,v in next, workspace:GetDescendants() do
+    if v.Name == "FinishPart" then
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = v.CFrame
+    end
+  end
+end)
+  
+  Race:Toggle("Auto Farm Bone",_G.Auto_Farm_Bone1,function(value)
+ _G.Auto_Farm_Bone1 = value
+ StopTween(_G.Auto_Farm_Bone1)
+ end)
+  
   end
 
 Stats:Seperator(" Auto Stats ")
