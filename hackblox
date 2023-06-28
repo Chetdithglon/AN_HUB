@@ -9375,46 +9375,48 @@ Race:Seperator("Tộc V4")
 Race:Button("Dịch Chuyển Đến Npc Mua Train",function()
     Game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(28286.35546875, 14895.3017578125, 102.62469482421875)
   Game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(28286.35546875, 14895.3017578125, 102.62469482421875)
-  wait(0.3)
   topos(CFrame.new(28981.552734375, 14888.4267578125, -120.245849609375))
 end)
+   
+   Race:Button("Dịch Chuyển Đến Chỗ Gắn Gear",function()
+for _,v in next, workspace:GetDescendants() do
+    if v.Name == "Prompt" then
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = v.CFrame
+    end
+    end
+end)
+   
    
   Race:Line()
 
  
   Race:Button("Tele Cổng Người Máy",function()
   Game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(28286.35546875, 14895.3017578125, 102.62469482421875)
-  wait(0.2)
   topos(CFrame.new(28492.4140625, 14894.4267578125, -422.1100158691406))
   end)
   
   Race:Button("Tele cổng Cá",function()
   Game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(28286.35546875, 14895.3017578125, 102.62469482421875)
-  wait(0.2)
   topos(CFrame.new(28224.056640625, 14889.4267578125, -210.5872039794922))
   end)
   
   Race:Button("Tele Cổng Qủy",function()
   Game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(28286.35546875, 14895.3017578125, 102.62469482421875)
-  wait(0.2)
   topos(CFrame.new(28672.720703125, 14889.1279296875, 454.5961608886719))
   end)
   
   Race:Button("Tele cổng Con người",function()
   Game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(28286.35546875, 14895.3017578125, 102.62469482421875)
-  wait(0.2)
   topos(CFrame.new(29237.294921875, 14889.4267578125, -206.94955444335938))
   end)
   
   Race:Button("Tele cổng Thỏ",function()
   Game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(28286.35546875, 14895.3017578125, 102.62469482421875)
-  wait(0.2)
   topos(CFrame.new(29020.66015625, 14889.4267578125, -379.2682800292969))
   end)
   
   Race:Button("Tele cổng Thiên Thần",function()
   Game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(28286.35546875, 14895.3017578125, 102.62469482421875)
-  wait(0.2)
   topos(CFrame.new(28967.408203125, 14918.0751953125, 234.31198120117188))
   end)
   
