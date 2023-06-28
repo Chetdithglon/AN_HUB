@@ -1,4 +1,27 @@
-
+function two(gotoCFrame) --- Tween
+      pcall(function()
+          game.Players.LocalPlayer.Character.Humanoid.Sit = false
+          game.Players.LocalPlayer.Character.HumanoidRootPart.Anchored = false
+      end)
+      if (game:GetService("Players")["LocalPlayer"].Character.HumanoidRootPart.Position - gotoCFrame.Position).Magnitude <= 200 then
+          pcall(function() 
+              tweenz:Cancel()
+          end)
+          game:GetService("Players")["LocalPlayer"].Character.HumanoidRootPart.CFrame = gotoCFrame
+      else
+          local tween_s = game:service"TweenService"
+          local info = TweenInfo.new((game:GetService("Players")["LocalPlayer"].Character.HumanoidRootPart.Position - gotoCFrame.Position).Magnitude/325, Enum.EasingStyle.Linear)
+           tween, err = pcall(function()
+              tweenz = tween_s:Create(game.Players.LocalPlayer.Character["HumanoidRootPart"], info, {CFrame = gotoCFrame})
+              tweenz:Play()
+          end)
+          if not tween then return err end
+      end
+      function _TweenCanCle()
+          tweenz:Cancel()
+      end
+  
+end
 
 local DiscordLib = {}
 	local TweenService = game:GetService("TweenService")
@@ -6392,180 +6415,7 @@ Notification:Notify(
         end)
     end)
 
-Main:Seperator(" Fake Race V4 ")
 
-
-Main:Button("Mink Fake Transform",function()
- require(game:GetService("ReplicatedStorage").Notification).new("Mink V4!"):Display();
- wait()
- setthreadcontext(5)
-
- local ReplicatedStorage = game:GetService("ReplicatedStorage")
-
- local Player = game:GetService("Players").LocalPlayer
-
- local ArgsTransform = {
-  Character = game.Players.LocalPlayer.Character,
-  CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame,
-  Color1 = Color3.fromRGB(102, 255, 153),
-  Color2 = Color3.fromRGB(102, 255, 153),
-  Color3 = Color3.fromRGB(102, 255, 153),
- }
-
- Player.Character.Humanoid:LoadAnimation(ReplicatedStorage.Util.Anims.Storage["2"].RaceTransform):Play()
-
- delay(1, function()
-  pcall(function() require(ReplicatedStorage.Effect.Container.RaceTransformation.Main)(ArgsTransform) end)
-  end)
-
- end)
-Main:Button("Fishman Fake Transform",function()
- require(game:GetService("ReplicatedStorage").Notification).new("Fishman V4!"):Display();
- wait()
- setthreadcontext(5)
-
- local ReplicatedStorage = game:GetService("ReplicatedStorage")
-
- local Player = game:GetService("Players").LocalPlayer
-
- local ArgsTransform = {
-  Character = game.Players.LocalPlayer.Character,
-  CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame,
-  Color1 = Color3.fromRGB(5, 115, 166),
-  Color2 = Color3.fromRGB(5, 115, 166),
-  Color3 = Color3.fromRGB(5, 115, 166),
- }
-
- Player.Character.Humanoid:LoadAnimation(ReplicatedStorage.Util.Anims.Storage["2"].RaceTransform):Play()
-
- delay(1, function()
-  pcall(function() require(ReplicatedStorage.Effect.Container.RaceTransformation.Main)(ArgsTransform) end)
-  end)
-
- end)
-Main:Button("Skypeian Fake Transform",function()
- require(game:GetService("ReplicatedStorage").Notification).new("Skypeian V4!"):Display();
- wait()
- setthreadcontext(5)
-
- local ReplicatedStorage = game:GetService("ReplicatedStorage")
-
- local Player = game:GetService("Players").LocalPlayer
-
- local ArgsTransform = {
-  Character = game.Players.LocalPlayer.Character,
-  CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame,
-  Color1 = Color3.fromRGB(222, 222, 0),
-  Color2 = Color3.fromRGB(222, 222, 0),
-  Color3 = Color3.fromRGB(222, 222, 0),
- }
-
- Player.Character.Humanoid:LoadAnimation(ReplicatedStorage.Util.Anims.Storage["2"].RaceTransform):Play()
-
- delay(1, function()
-  pcall(function() require(ReplicatedStorage.Effect.Container.RaceTransformation.Main)(ArgsTransform) end)
-  end)
-
- end)
-Main:Button("Ghoul Fake Transform",function()
- require(game:GetService("ReplicatedStorage").Notification).new("Ghoul V4!"):Display();
- wait()
- setthreadcontext(5)
-
- local ReplicatedStorage = game:GetService("ReplicatedStorage")
-
- local Player = game:GetService("Players").LocalPlayer
-
- local ArgsTransform = {
-  Character = game.Players.LocalPlayer.Character,
-  CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame,
-  Color1 = Color3.fromRGB(155, 155, 155),
-  Color2 = Color3.fromRGB(0, 0, 0),
-  Color3 = Color3.fromRGB(155, 155, 155),
- }
-
- Player.Character.Humanoid:LoadAnimation(ReplicatedStorage.Util.Anims.Storage["2"].RaceTransform):Play()
-
- delay(1, function()
-  pcall(function() require(ReplicatedStorage.Effect.Container.RaceTransformation.Main)(ArgsTransform) end)
-  end)
-
-
- end)
-Main:Button("Cyborg Fake Transform",function()
- require(game:GetService("ReplicatedStorage").Notification).new("Cyborg V4!"):Display();
- wait()
- setthreadcontext(5)
-
- local ReplicatedStorage = game:GetService("ReplicatedStorage")
-
- local Player = game:GetService("Players").LocalPlayer
-
- local ArgsTransform = {
-  Character = game.Players.LocalPlayer.Character,
-  CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame,
-  Color1 = Color3.fromRGB(166, 0, 111),
-  Color2 = Color3.fromRGB(166, 0, 111),
-  Color3 = Color3.fromRGB(166, 0, 111),
- }
-
- Player.Character.Humanoid:LoadAnimation(ReplicatedStorage.Util.Anims.Storage["2"].RaceTransform):Play()
-
- delay(1, function()
-  pcall(function() require(ReplicatedStorage.Effect.Container.RaceTransformation.Main)(ArgsTransform) end)
-  end)
-
- end)
-Main:Button("Human Fake Transform",function()
- require(game:GetService("ReplicatedStorage").Notification).new("Human V4!"):Display();
- wait()
- setthreadcontext(5)
-
- local ReplicatedStorage = game:GetService("ReplicatedStorage")
-
- local Player = game:GetService("Players").LocalPlayer
-
- local ArgsTransform = {
-  Character = game.Players.LocalPlayer.Character,
-  CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame,
-  Color1 = Color3.fromRGB(166, 0, 0),
-  Color2 = Color3.fromRGB(166, 0, 0),
-  Color3 = Color3.fromRGB(166, 0, 0),
- }
-
- Player.Character.Humanoid:LoadAnimation(ReplicatedStorage.Util.Anims.Storage["2"].RaceTransform):Play()
-
- delay(1, function()
-  pcall(function() require(ReplicatedStorage.Effect.Container.RaceTransformation.Main)(ArgsTransform) end)
-  end)
-
- end)
-
-Main:Button("Fake Mink Dash Animation",function()
- local ReplicatedStorage = game:GetService("ReplicatedStorage")
-
- local Player = game:GetService("Players").LocalPlayer
-
- local ArgsDash = {
-  Character = Player.Character,
-  Duration = .25,
-  CFrame = Player.Character.HumanoidRootPart.CFrame,
- }
-
- local old; old = hookmetamethod(game, "__namecall", newcclosure(function(self, ...)
-  if self.Name == "CommE" then
-  local args = {
-   ...
-  }
-
-  if args[1] == "Dodge" then
-  coroutine.wrap(function() require(ReplicatedStorage.Effect.Container.Shared.Lightningtopos)(ArgsDash) end)()
-  end
-  end
-
-  return old(self, ...)
-  end))
-end)
  
  if World3 then
 
@@ -9372,6 +9222,97 @@ if World1 or World2 then
 end
 
 if World3 then
+    Race:Seperator("Hỗ Trợ Gạt Cần")
+    Race:Toggle("",_G.dao,function(state)
+    if state then
+        _G.dao = true
+    else
+        _G.dao = false
+    end
+
+
+if _G.dao then
+local args = {
+    [1] = "requestEntrance",
+    [2] = Vector3.new(-12463.6025390625, 378.3270568847656, -7566.0830078125)
+}
+
+game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+wait(1)
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-5411.22021, 778.609863, -2682.27759, 0.927179396, 0, 0.374617696, 0, 1, 0, -0.374617696, 0, 0.927179396)
+wait(0)
+-- Script generated by SimpleSpy - credits to exx#9394
+
+local args = {
+    [1] = "BuyBoat",
+    [2] = "PirateBrigade"
+}
+
+game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+
+function two(gotoCFrame) --- Tween
+      pcall(function()
+          game.Players.LocalPlayer.Character.Humanoid.Sit = false
+          game.Players.LocalPlayer.Character.HumanoidRootPart.Anchored = false
+      end)
+      if (game:GetService("Players")["LocalPlayer"].Character.HumanoidRootPart.Position - gotoCFrame.Position).Magnitude <= 200 then
+          pcall(function() 
+              tweenz:Cancel()
+          end)
+          game:GetService("Players")["LocalPlayer"].Character.HumanoidRootPart.CFrame = gotoCFrame
+      else
+          local tween_s = game:service"TweenService"
+          local info = TweenInfo.new((game:GetService("Players")["LocalPlayer"].Character.HumanoidRootPart.Position - gotoCFrame.Position).Magnitude/325, Enum.EasingStyle.Linear)
+           tween, err = pcall(function()
+              tweenz = tween_s:Create(game.Players.LocalPlayer.Character["HumanoidRootPart"], info, {CFrame = gotoCFrame})
+              tweenz:Play()
+          end)
+          if not tween then return err end
+      end
+      function _TweenCanCle()
+          tweenz:Cancel()
+      end
+  
+end
+two(CFrame.new(-5100.7085, 29.968586, -6792.45459, -0.33648631, -0.0396691673, 0.940852463, -6.40461678e-07, 0.999112308, 0.0421253517, -0.941688359, 0.0141740013, -0.336187631))
+
+wait(13)
+for _,v in next, workspace.Boats.PirateBrigade:GetDescendants() do
+    if v.Name:find("VehicleSeat") then
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = v.CFrame
+     if game:GetService("Workspace").Map:FindFirstChild("MysticIsland") then
+                           topos(game:GetService("Workspace").Map:FindFirstChild("MysticIsland").HumanoidRootPart.CFrame * CFrame.new(0,500,-100))
+   
+    end
+    end
+end
+end
+end) 
+
+        Race:Button("Lụm Chest Đảo Bí Ẩn",function()
+        loadstring(game:HttpGet('https://raw.githubusercontent.com/Chetdithglon/AN_HUB/main/autochestvip'))()
+        end)
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    Race:Button("Xóa Sương Mù",function()
+    game:GetService("Lighting").BaseAtmosphere:Destroy()
+    end)
+    
+    
+    
+    
+    
+    
+    
+    
+    
 Race:Seperator("Tộc V4")
     
     Race:Button("Dịch Chuyển Vào Timple Of Time",function()
