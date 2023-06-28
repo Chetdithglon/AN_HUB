@@ -4041,65 +4041,7 @@ end)
 
 
 
-spawn(function()
- game:GetService("RunService").Heartbeat:Connect(function()
-  pcall(function()
-   for i,v in pairs(game:GetService("Workspace").Enemies:GetChildren()) do
-   if _G.Auto_Farm_Bone1 and StartMagnetBoneMon1 and (v.Name == "Flame Master [Lv. 1100]" or v.Name == "Rumble Master [Lv. 1100]" or v.Name == "Light Master [Lv. 1100]" or v.Name == "Darkness Master [Lv. 1100]" ) and (v.HumanoidRootPart.Position - PosMonBone.Position).magnitude <= 350 then
-   v.HumanoidRootPart.CFrame = PosMonBone
-   v.HumanoidRootPart.CanCollide = false
-   v.HumanoidRootPart.Size = Vector3.new(50,50,50)
-   if v.Humanoid:FindFirstChild("Animator") then
-   v.Humanoid.Animator:Destroy()
-   end
-   sethiddenproperty(game.Players.LocalPlayer, "SimulationRadius", math.huge)
-   end
-   end
-   end)
-  end)
- end)
 
-
-spawn(function()
- while wait() do
- if _G.Auto_Farm_Bone1 and World3 then
- pcall(function()
-  if game:GetService("Workspace").Enemies:FindFirstChild("Flame Master [Lv. 1100]") or game:GetService("Workspace").Enemies:FindFirstChild("Rumble Master [Lv. 1100]") or game:GetService("Workspace").Enemies:FindFirstChild("Light Master [Lv. 1100]") or game:GetService("Workspace").Enemies:FindFirstChild("Darkness Master [Lv. 1100]") then
-  for i,v in pairs(game:GetService("Workspace").Enemies:GetChildren()) do
-  if v.Name == "Flame Master [Lv. 1100]" or v.Name == "Rumble Master [Lv. 1100]" or v.Name == "Light Master [Lv. 1100]" or v.Name == "Darkness Master [Lv. 1100]" then
-  if v.Humanoid.Health > 0 then
-  repeat wait()
-  AutoHaki()
-  EquipWeapon(_G.Select_Weapon)
-  StartMagnetBoneMon1 = true
-  v.HumanoidRootPart.CanCollide = false
-  v.HumanoidRootPart.Size = Vector3.new(60, 60, 60)
-  PosMonBone = v.HumanoidRootPart.CFrame
-  topos(v.HumanoidRootPart.CFrame * MethodFarm)
-  game:GetService'VirtualUser':CaptureController()
-  game:GetService'VirtualUser':Button1Down(Vector2.new(1280, 672))
-  until _G.Auto_Farm_Bone1 == false or not v.Parent or v.Humanoid.Health <= 0
-  end
-  end
-  end
-  else
-   StartMagnetBoneMon1 = false
-  for i,v in pairs(game:GetService("ReplicatedStorage"):GetChildren()) do
-  if v.Name == "Flame Master [Lv. 1100]" then
-  topos(v.HumanoidRootPart.CFrame * MethodFarm)
-  elseif v.Name == "Rumble Master [Lv. 1100]" then
-  topos(v.HumanoidRootPart.CFrame * MethodFarm)
-  elseif v.Name == "Light Master [Lv. 1100]" then
-  topos(v.HumanoidRootPart.CFrame * MethodFarm)
-  elseif v.Name == "Darkness Master [Lv. 1100]" then
-  topos(v.HumanoidRootPart.CFrame * MethodFarm)
-  end
-  end
-  end
-  end)
- end
- end
- end)
 
 
 
@@ -4158,7 +4100,7 @@ spawn(function()
  game:GetService("RunService").Heartbeat:Connect(function()
   pcall(function()
    for i,v in pairs(game:GetService("Workspace").Enemies:GetChildren()) do
-   if _G.Auto_Farm_Bone2 and StartMagnetBoneMon1 and (v.Name == "Flame Master [Lv. 1100]" or v.Name == "Rumble Master [Lv. 1100]" or v.Name == "Light Master [Lv. 1100]" or v.Name == "Darkness Master [Lv. 1100]" ) and (v.HumanoidRootPart.Position - PosMonBone.Position).magnitude <= 350 then
+   if _G.Auto_Farm_Bone2 and StartMagnetBoneMon2 and (v.Name == "Ancient Zombie [Lv. 2000]" ) and (v.HumanoidRootPart.Position - PosMonBone.Position).magnitude <= 350 then
    v.HumanoidRootPart.CFrame = PosMonBone
    v.HumanoidRootPart.CanCollide = false
    v.HumanoidRootPart.Size = Vector3.new(50,50,50)
@@ -4214,6 +4156,128 @@ spawn(function()
 
 
 
+spawn(function()
+ game:GetService("RunService").Heartbeat:Connect(function()
+  pcall(function()
+   for i,v in pairs(game:GetService("Workspace").Enemies:GetChildren()) do
+   if _G.Auto_Farm_Bone1 and StartMagnetBoneMon2 and (v.Name == "Flame Master [Lv. 1100]" ) and (v.HumanoidRootPart.Position - PosMonBone.Position).magnitude <= 350 then
+   v.HumanoidRootPart.CFrame = PosMonBone
+   v.HumanoidRootPart.CanCollide = false
+   v.HumanoidRootPart.Size = Vector3.new(50,50,50)
+   if v.Humanoid:FindFirstChild("Animator") then
+   v.Humanoid.Animator:Destroy()
+   end
+   sethiddenproperty(game.Players.LocalPlayer, "SimulationRadius", math.huge)
+   end
+   end
+   end)
+  end)
+ end)
+
+
+spawn(function()
+ while wait() do
+ if _G.Auto_Farm_Bone1 and World3 then
+ pcall(function()
+  if game:GetService("Workspace").Enemies:FindFirstChild("Flame Master [Lv. 1100]")  then
+  for i,v in pairs(game:GetService("Workspace").Enemies:GetChildren()) do
+  if v.Name == "Flame Master [Lv. 1100]"  then
+  if v.Humanoid.Health > 0 then
+  repeat wait()
+  AutoHaki()
+  EquipWeapon(_G.Select_Weapon)
+  StartMagnetBoneMon1 = true
+  v.HumanoidRootPart.CanCollide = false
+  v.HumanoidRootPart.Size = Vector3.new(60, 60, 60)
+  PosMonBone = v.HumanoidRootPart.CFrame
+  topos(v.HumanoidRootPart.CFrame * MethodFarm)
+  game:GetService'VirtualUser':CaptureController()
+  game:GetService'VirtualUser':Button1Down(Vector2.new(1280, 672))
+  until _G.Auto_Farm_Bone1 == false or not v.Parent or v.Humanoid.Health <= 0
+  end
+  end
+  end
+  else
+   StartMagnetBoneMon1 = false
+  for i,v in pairs(game:GetService("ReplicatedStorage"):GetChildren()) do
+  if v.Name == "Flame Master [Lv. 1100]" then
+  topos(v.HumanoidRootPart.CFrame * MethodFarm)
+ 
+  end 
+  end
+  end
+  end)
+ end
+ end
+ end)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+spawn(function()
+ game:GetService("RunService").Heartbeat:Connect(function()
+  pcall(function()
+   for i,v in pairs(game:GetService("Workspace").Enemies:GetChildren()) do
+   if _G.Auto_Farm_Bone1 and StartMagnetBoneMon2 and (v.Name == "Rumble Master [Lv. 1100]" ) and (v.HumanoidRootPart.Position - PosMonBone.Position).magnitude <= 350 then
+   v.HumanoidRootPart.CFrame = PosMonBone
+   v.HumanoidRootPart.CanCollide = false
+   v.HumanoidRootPart.Size = Vector3.new(50,50,50)
+   if v.Humanoid:FindFirstChild("Animator") then
+   v.Humanoid.Animator:Destroy()
+   end
+   sethiddenproperty(game.Players.LocalPlayer, "SimulationRadius", math.huge)
+   end
+   end
+   end)
+  end)
+ end)
+
+
+spawn(function()
+ while wait() do
+ if _G.Auto_Farm_Bone1 and World3 then
+ pcall(function()
+  if game:GetService("Workspace").Enemies:FindFirstChild("Rumble Master [Lv. 1100]")  then
+  for i,v in pairs(game:GetService("Workspace").Enemies:GetChildren()) do
+  if v.Name == "Rumble Master [Lv. 1100]"  then
+  if v.Humanoid.Health > 0 then
+  repeat wait()
+  AutoHaki()
+  EquipWeapon(_G.Select_Weapon)
+  StartMagnetBoneMon1 = true
+  v.HumanoidRootPart.CanCollide = false
+  v.HumanoidRootPart.Size = Vector3.new(60, 60, 60)
+  PosMonBone = v.HumanoidRootPart.CFrame
+  topos(v.HumanoidRootPart.CFrame * MethodFarm)
+  game:GetService'VirtualUser':CaptureController()
+  game:GetService'VirtualUser':Button1Down(Vector2.new(1280, 672))
+  until _G.Auto_Farm_Bone1 == false or not v.Parent or v.Humanoid.Health <= 0
+  end
+  end
+  end
+  else
+   StartMagnetBoneMon1 = false
+  for i,v in pairs(game:GetService("ReplicatedStorage"):GetChildren()) do
+  if v.Name == "Rumble Master [Lv. 1100]" then
+  topos(v.HumanoidRootPart.CFrame * MethodFarm)
+ 
+  end 
+  end
+  end
+  end)
+ end
+ end
+ end)
 
 
 
@@ -4230,8 +4294,128 @@ spawn(function()
 
 
 
+spawn(function()
+ game:GetService("RunService").Heartbeat:Connect(function()
+  pcall(function()
+   for i,v in pairs(game:GetService("Workspace").Enemies:GetChildren()) do
+   if _G.Auto_Farm_Bone1 and StartMagnetBoneMon2 and (v.Name == "Light Master [Lv. 1100]" ) and (v.HumanoidRootPart.Position - PosMonBone.Position).magnitude <= 350 then
+   v.HumanoidRootPart.CFrame = PosMonBone
+   v.HumanoidRootPart.CanCollide = false
+   v.HumanoidRootPart.Size = Vector3.new(50,50,50)
+   if v.Humanoid:FindFirstChild("Animator") then
+   v.Humanoid.Animator:Destroy()
+   end
+   sethiddenproperty(game.Players.LocalPlayer, "SimulationRadius", math.huge)
+   end
+   end
+   end)
+  end)
+ end)
 
 
+spawn(function()
+ while wait() do
+ if _G.Auto_Farm_Bone1 and World3 then
+ pcall(function()
+  if game:GetService("Workspace").Enemies:FindFirstChild("Light Master [Lv. 1100]")  then
+  for i,v in pairs(game:GetService("Workspace").Enemies:GetChildren()) do
+  if v.Name == "Light Master [Lv. 1100]"  then
+  if v.Humanoid.Health > 0 then
+  repeat wait()
+  AutoHaki()
+  EquipWeapon(_G.Select_Weapon)
+  StartMagnetBoneMon1 = true
+  v.HumanoidRootPart.CanCollide = false
+  v.HumanoidRootPart.Size = Vector3.new(60, 60, 60)
+  PosMonBone = v.HumanoidRootPart.CFrame
+  topos(v.HumanoidRootPart.CFrame * MethodFarm)
+  game:GetService'VirtualUser':CaptureController()
+  game:GetService'VirtualUser':Button1Down(Vector2.new(1280, 672))
+  until _G.Auto_Farm_Bone1 == false or not v.Parent or v.Humanoid.Health <= 0
+  end
+  end
+  end
+  else
+   StartMagnetBoneMon1 = false
+  for i,v in pairs(game:GetService("ReplicatedStorage"):GetChildren()) do
+  if v.Name == "Light Master [Lv. 1100]" then
+  topos(v.HumanoidRootPart.CFrame * MethodFarm)
+ 
+  end 
+  end
+  end
+  end)
+ end
+ end
+ end)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+spawn(function()
+ game:GetService("RunService").Heartbeat:Connect(function()
+  pcall(function()
+   for i,v in pairs(game:GetService("Workspace").Enemies:GetChildren()) do
+   if _G.Auto_Farm_Bone1 and StartMagnetBoneMon2 and (v.Name == "Darkness Master [Lv. 1100]" ) and (v.HumanoidRootPart.Position - PosMonBone.Position).magnitude <= 350 then
+   v.HumanoidRootPart.CFrame = PosMonBone
+   v.HumanoidRootPart.CanCollide = false
+   v.HumanoidRootPart.Size = Vector3.new(50,50,50)
+   if v.Humanoid:FindFirstChild("Animator") then
+   v.Humanoid.Animator:Destroy()
+   end
+   sethiddenproperty(game.Players.LocalPlayer, "SimulationRadius", math.huge)
+   end
+   end
+   end)
+  end)
+ end)
+
+
+spawn(function()
+ while wait() do
+ if _G.Auto_Farm_Bone1 and World3 then
+ pcall(function()
+  if game:GetService("Workspace").Enemies:FindFirstChild("Darkness Master [Lv. 1100]")  then
+  for i,v in pairs(game:GetService("Workspace").Enemies:GetChildren()) do
+  if v.Name == "Darkness Master [Lv. 1100]"  then
+  if v.Humanoid.Health > 0 then
+  repeat wait()
+  AutoHaki()
+  EquipWeapon(_G.Select_Weapon)
+  StartMagnetBoneMon1 = true
+  v.HumanoidRootPart.CanCollide = false
+  v.HumanoidRootPart.Size = Vector3.new(60, 60, 60)
+  PosMonBone = v.HumanoidRootPart.CFrame
+  topos(v.HumanoidRootPart.CFrame * MethodFarm)
+  game:GetService'VirtualUser':CaptureController()
+  game:GetService'VirtualUser':Button1Down(Vector2.new(1280, 672))
+  until _G.Auto_Farm_Bone1 == false or not v.Parent or v.Humanoid.Health <= 0
+  end
+  end
+  end
+  else
+   StartMagnetBoneMon1 = false
+  for i,v in pairs(game:GetService("ReplicatedStorage"):GetChildren()) do
+  if v.Name == "Darkness Master [Lv. 1100]" then
+  topos(v.HumanoidRootPart.CFrame * MethodFarm)
+ 
+  end 
+  end
+  end
+  end)
+ end
+ end
+ end)
 
 
 
