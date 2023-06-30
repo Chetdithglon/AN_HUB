@@ -4972,7 +4972,7 @@ spawn(function()
 		pcall(function()
 			if _G.BringNormal then
 				for i,v in pairs(game:GetService("Workspace").Enemies:GetChildren()) do
-					if _G.Auto_Farm_Level and StartMagnet and v.Name == Ms and (v.HumanoidRootPart.Position - PosMon.Position).magnitude <= 350 then
+					if _G.Auto_Farm_Level and StartMagnet and v.Name == Ms and (v.HumanoidRootPart.Position - PosMon.Position).magnitude <= 300 then
 						v.HumanoidRootPart.CFrame = PosMon
 						v.HumanoidRootPart.CanCollide = false
 						v.HumanoidRootPart.Size = Vector3.new(50,50,50)
