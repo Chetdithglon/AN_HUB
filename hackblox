@@ -9361,6 +9361,31 @@ spawn(function()
 	end
 end)
 
+
+local FullMoon = Race:Label("1")
+
+spawn(function()
+    while task.wait() do
+        pcall(function()
+             if game:GetService("Lighting").Sky.MoonTextureId=="http://www.roblox.com/asset/?id=9709149431" then
+                        FullMoon:Set("🌑 : Full Moon 100%")
+                    elseif game:GetService("Lighting").Sky.MoonTextureId=="http://www.roblox.com/asset/?id=9709149052" then
+                        FullMoon:Set("🌒 : Full Moon 75%")
+                    elseif game:GetService("Lighting").Sky.MoonTextureId=="http://www.roblox.com/asset/?id=9709143733" then
+                        FullMoon:Set("🌓 : Full Moon 50%")
+                    elseif game:GetService("Lighting").Sky.MoonTextureId=="http://www.roblox.com/asset/?id=9709150401" then
+                        FullMoon:Set("🌗 : Full Moon 25%")
+                    elseif game:GetService("Lighting").Sky.MoonTextureId=="http://www.roblox.com/asset/?id=9709149680" then
+                        FullMoon:Set("🌖 : Full Moon 15%")
+                    else
+                        FullMoon:Set("🌚 : Full Moon 0%")
+                    end
+                end)
+            end
+end)
+
+
+
 if World1 or World2 then
     Race:Label("Qua Sea 3 Mới Bật Được Dcm")
 end
