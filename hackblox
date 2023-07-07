@@ -1,3 +1,87 @@
+-- Gui to Lua
+-- Version: 3.5
+
+-- Instances:
+
+local ScreenGui = Instance.new("ScreenGui")
+local ImageButton = Instance.new("ImageButton")
+local UICorner = Instance.new("UICorner")
+local UIGradient = Instance.new("UIGradient")
+local UIAspectRatioConstraint = Instance.new("UIAspectRatioConstraint")
+
+--Properties:
+
+ScreenGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+ImageButton.Parent = ScreenGui
+ImageButton.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+ImageButton.Position = UDim2.new(0.111237228, 0, 0.161538467, 0)
+ImageButton.Size = UDim2.new(0.0567536876, 0, 0.0961538479, 0)
+ImageButton.Image = "rbxassetid://13736151843"
+
+UICorner.Parent = ImageButton
+
+UIGradient.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(255, 231, 253)), ColorSequenceKeypoint.new(0.26, Color3.fromRGB(213, 232, 255)), ColorSequenceKeypoint.new(0.53, Color3.fromRGB(219, 242, 255)), ColorSequenceKeypoint.new(0.74, Color3.fromRGB(222, 252, 228)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(255, 213, 162))}
+UIGradient.Parent = ImageButton
+
+UIAspectRatioConstraint.Parent = ImageButton
+
+-- Scripts:
+
+local function HHKLHI_fake_script() -- UIGradient.LocalScript 
+	local script = Instance.new('LocalScript', UIGradient)
+
+	local TweenService = game:GetService("TweenService")
+	local tweeninfo = TweenInfo.new(4, Enum.EasingStyle.Linear, Enum.EasingDirection.In, -1)
+	local tween = TweenService:Create(script.Parent, tweeninfo, {Rotation = 360})
+	tween:Play()
+end
+coroutine.wrap(HHKLHI_fake_script)()
+local function VNKF_fake_script() -- ImageButton.LocalScript 
+	local script = Instance.new('LocalScript', ImageButton)
+
+	local UIS = game:GetService('UserInputService')
+	local frame = script.Parent
+	local dragToggle = nil
+	local dragSpeed = 0.25
+	local dragStart = nil
+	local startPos = nil
+	
+	local function updateInput(input)
+		local delta = input.Position - dragStart
+		local position = UDim2.new(startPos.X.Scale, startPos.X.Offset + delta.X,
+			startPos.Y.Scale, startPos.Y.Offset + delta.Y)
+		game:GetService('TweenService'):Create(frame, TweenInfo.new(dragSpeed), {Position = position}):Play()
+	end
+	
+	frame.InputBegan:Connect(function(input)
+		if (input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch) then 
+			dragToggle = true
+			dragStart = input.Position
+			startPos = frame.Position
+			input.Changed:Connect(function()
+				if input.UserInputState == Enum.UserInputState.End then
+					dragToggle = false
+				end
+			end)
+		end
+	end)
+	
+	UIS.InputChanged:Connect(function(input)
+		if input.UserInputType == Enum.UserInputType.MouseMovement or input.UserInputType == Enum.UserInputType.Touch then
+			if dragToggle then
+				updateInput(input)
+			end
+		end
+	end)
+	script.Parent.MouseButton1Click:Connect(function()
+		game:GetService("VirtualInputManager"):SendKeyEvent(true,Enum.KeyCode.RightControl,false,game)
+	end)
+	
+end
+coroutine.wrap(VNKF_fake_script)()
+
 
 
 
@@ -310,49 +394,6 @@ local NotiFrame = Instance.new("Frame")
 		)
 	end 
 DiscordLib:Notification("Thông Báo" , "Update Toàn Giao Diện" , 10 ,11816162894 )
-
-
-local openshit = Instance.new("ScreenGui")
-local mainopen = Instance.new("TextButton")
-local mainopens = Instance.new("UICorner")
-local loki = Instance.new("ImageLabel")
-local posto = Instance.new("UIStroke")
-
-openshit.Name = "openshit"
-openshit.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
-openshit.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
-
-mainopen.Name = "mainopen"
-mainopen.Parent = openshit
-mainopen.BackgroundColor3 = Color3.fromRGB(35, 35, 35)
-mainopen.Position = UDim2.new(0.101969875, 0, 0.110441767, 0)
-mainopen.Size = UDim2.new(0, 64, 0, 42)
-mainopen.Text = ""
-mainopen.Visible = true
-mainopen.MouseButton1Click:Connect(function()
-	game:GetService("VirtualInputManager"):SendKeyEvent(true,305,false,game)
-	game:GetService("VirtualInputManager"):SendKeyEvent(false,305,false,game)
-end)
-
-mainopens.Parent = mainopen
- 
- loki.Name = "loki"
- loki.Parent = mainopen
- loki.BackgroundColor3 = Color3.fromRGB(224,224,224)
- loki.BackgroundTransparency = 1.000
- loki.Position = UDim2.new(0.102806047, 0, 0.149358988, 0)
- loki.Size = UDim2.new(0.0765489414, 0, 0.135551661, 0)
- loki.Image = "rbxassetid://13877270357"
- 
- posto.Name = "posto"
- posto.Parent = mainopen
- posto.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
- posto.Color = Color3.fromRGB(224,224,224)
- posto.LineJoinMode = Enum.LineJoinMode.Round
- posto.Thickness = 1
- posto.Transparency = 0
- posto.Enabled = true
- posto.Archivable = true
  
  
  local UserInputService = game:GetService("UserInputService")
@@ -9887,19 +9928,32 @@ Race:Toggle("Đánh Quái Ải Qủy",_G.Auto_Farm_Bone2,function(value)
   
   Race:Toggle("Tự Động Bật V4 ( Chết Phải tắt đi bật lại )",_G.Auto_Farm_Bone3,function(value)
  _G.Auto_Farm_Bone3 = value
-    while _G.Auto_Farm_Bone3 do 
+ StopTween(_G.Auto_Farm_Bone3)
+ spawn(function()
+    pcall(function()
+    while wait(0.1) do 
+    if _G.Auto_Farm_Bone3  then
 local args = {
     [1] = true
 }
-
 game:GetService("Players").LocalPlayer.Backpack.Awakening.RemoteFunction:InvokeServer(unpack(args))
 
-StopTween(_G.Auto_Farm_Bone3)
- end
-  end)
-Race:Toggle("Tự Động Mua Train ( Chết Phải tắt đi bật lại )",_G.Auto_Farm_Bone4,function(value)
+end
+end
+end)
+end)
+  end) 
+end
+  
+
+Race:Toggle("Tự Động Mua Train",_G.Auto_Farm_Bone4,function(value)
  _G.Auto_Farm_Bone4 = value
-    while _G.Auto_Farm_Bone4 do 
+ StopTween(_G.Auto_Farm_Bone4)
+end)
+spawn(function()
+    pcall(function()
+        while wait(0.1) do
+            if _G.Auto_Farm_Bone4 then
     local args = {
     [1] = true
 }
@@ -9910,12 +9964,12 @@ local args = {
 }
 
 game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("CommF_"):InvokeServer(unpack(args))
-StopTween(_G.Auto_Farm_Bone4)
- end
- end)
+            end
+end 
+end)  
+end)
+
   
-  
-end
 
 
 
