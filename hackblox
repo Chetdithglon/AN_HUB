@@ -14,10 +14,13 @@ local UIAspectRatioConstraint = Instance.new("UIAspectRatioConstraint")
 ScreenGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
 ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 
+ImageButton.Archivable = false
 ImageButton.Parent = ScreenGui
+ImageButton.Active = false
 ImageButton.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-ImageButton.Position = UDim2.new(0.111237228, 0, 0.161538467, 0)
-ImageButton.Size = UDim2.new(0.0567536876, 0, 0.0961538479, 0)
+ImageButton.Position = UDim2.new(0.104535319, 0, 0.188461557, 0)
+ImageButton.Size = UDim2.new(0.0617724769, 0, 0.10465683, 0)
+ImageButton.AutoButtonColor = false
 ImageButton.Image = "rbxassetid://13736151843"
 
 UICorner.Parent = ImageButton
@@ -29,7 +32,7 @@ UIAspectRatioConstraint.Parent = ImageButton
 
 -- Scripts:
 
-local function HHKLHI_fake_script() -- UIGradient.LocalScript 
+local function WDAG_fake_script() -- UIGradient.LocalScript 
 	local script = Instance.new('LocalScript', UIGradient)
 
 	local TweenService = game:GetService("TweenService")
@@ -37,8 +40,8 @@ local function HHKLHI_fake_script() -- UIGradient.LocalScript
 	local tween = TweenService:Create(script.Parent, tweeninfo, {Rotation = 360})
 	tween:Play()
 end
-coroutine.wrap(HHKLHI_fake_script)()
-local function VNKF_fake_script() -- ImageButton.LocalScript 
+coroutine.wrap(WDAG_fake_script)()
+local function GIVHTO_fake_script() -- ImageButton.LocalScript 
 	local script = Instance.new('LocalScript', ImageButton)
 
 	local UIS = game:GetService('UserInputService')
@@ -80,7 +83,8 @@ local function VNKF_fake_script() -- ImageButton.LocalScript
 	end)
 	
 end
-coroutine.wrap(VNKF_fake_script)()
+coroutine.wrap(GIVHTO_fake_script)()
+
 
 
 
