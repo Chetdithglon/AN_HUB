@@ -5291,7 +5291,7 @@ while cac() do
 end
 
     end)
-Setting:Toggle("Auto Click",false,function(value)
+Main:Toggle("Auto Click",false,function(value)
  _G.click = value
 end)
     
@@ -10224,22 +10224,22 @@ end)
 --return "Point : " .. tostring(value)
 --end)
 
-P:Seperator(" Combats ")
+--P:Seperator(" Combats ")
 
-P:Slider("Select Size Fov",1,1000,200,function(value)
-_G.Select_Size_Fov = value
-return "Size Fov : " .. tostring(value)
-end)
+--P:Slider("Select Size Fov",1,1000,200,function(value)
+--_G.Select_Size_Fov = value
+--return "Size Fov : " .. tostring(value)
+--end)
 
-P:Toggle("Show Fov",_G.Show_Fov,function(value)
- _G.Show_Fov = value
-end)
+--P:Toggle("Show Fov",_G.Show_Fov,function(value)
+-- _G.Show_Fov = value
+--end)
 
-P:Toggle("Aimbot Skill Fov",_G.Aimbot_Skill_Fov,function(value)
- _G.Aimbot_Skill_Fov = value
-end)
+--P:Toggle("Aimbot Skill Fov",_G.Aimbot_Skill_Fov,function(value)
+-- _G.Aimbot_Skill_Fov = value
+--end)
 
-P:Seperator(" Kill Player ")
+P:Seperator("Player")
 
 
 Playerslist = {}
@@ -10248,11 +10248,11 @@ Playerslist = {}
         table.insert(Playerslist,v.Name)
     end
     
-    local SelectedPly = P:Dropdown("Select Players",Playerslist,function(value)
+    local SelectedPly = P:Dropdown("Chọn Người Chơi",Playerslist,function(value)
         _G.Select_Player = value
     end)
     
-    P:Button("Refresh Player",function()
+    P:Button("Đặt Lại Player Đã Chọn",function()
         Playerslist = {}
         SelectedPly:Clear()
         for i,v in pairs(game:GetService("Players"):GetChildren()) do  
@@ -10260,7 +10260,7 @@ Playerslist = {}
         end
     end)
 
-P:Toggle("Spectate Player",_G.Spectate_Player,function(value)
+P:Toggle("Theo Dõi Player",_G.Spectate_Player,function(value)
  _G.Spectate_Player = value
 end)
 
@@ -10279,7 +10279,7 @@ spawn(function()
 	end
 end)
 
-P:Toggle("Teleport to Player",_G.Teleport_to_Player,function(value)
+P:Toggle("Bay đến Player",_G.Teleport_to_Player,function(value)
  _G.Teleport_to_Player = value
 StopTween(_G.Teleport_to_Player)
 end)
@@ -10297,7 +10297,7 @@ spawn(function()
 	end
 end)
 
-P:Toggle("Auto Kill Player [Melee]",_G.Auto_Kill_Player_Melee,function(value)
+P:Toggle("Kill Người Chơi = Mele",_G.Auto_Kill_Player_Melee,function(value)
  _G.Auto_Kill_Player_Melee = value
 StopTween(_G.Auto_Kill_Player_Melee)
 end)
@@ -10329,7 +10329,7 @@ spawn(function()
 	end
 end)
 
-P:Toggle("Auto Kill Player [Gun]",_G.Auto_Kill_Player_Gun,function(value)
+P:Toggle("Kill Người Chơi = Súng",_G.Auto_Kill_Player_Gun,function(value)
  _G.Auto_Kill_Player_Gun = value
 StopTween(_G.Auto_Kill_Player_Gun)
 end)
