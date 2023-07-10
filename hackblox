@@ -4126,7 +4126,7 @@ end)
 
  
 --------------------------------------------------------------------
-local Library = Update:Window("Nam Tula Hack ","")
+local Library = Update:Window("BLCK HUB ","")
 ------------------------------------------
 
 spawn(function()
@@ -6864,10 +6864,10 @@ spawn(function()
 							end
 							game:GetService("VirtualInputManager"):SendKeyEvent(true,122,false,game.Players.LocalPlayer.Character.HumanoidRootPart)
 							game:GetService("VirtualInputManager"):SendKeyEvent(false,122,false,game.Players.LocalPlayer.Character.HumanoidRootPart)
-							wait(0.1)
+							wait(0.3)
 							game:GetService("VirtualInputManager"):SendKeyEvent(true,120,false,game.Players.LocalPlayer.Character.HumanoidRootPart)
 							game:GetService("VirtualInputManager"):SendKeyEvent(false,120,false,game.Players.LocalPlayer.Character.HumanoidRootPart)
-							wait(0.1)
+							wait(0.3)
 							game:GetService("VirtualInputManager"):SendKeyEvent(true,99,false,game.Players.LocalPlayer.Character.HumanoidRootPart)
 							game:GetService("VirtualInputManager"):SendKeyEvent(false,99,false,game.Players.LocalPlayer.Character.HumanoidRootPart)
 							for i,v in pairs(game.Players.LocalPlayer.Backpack:GetChildren()) do
@@ -6879,14 +6879,14 @@ spawn(function()
 							end
 							game:GetService("VirtualInputManager"):SendKeyEvent(true,122,false,game.Players.LocalPlayer.Character.HumanoidRootPart)
 							game:GetService("VirtualInputManager"):SendKeyEvent(false,122,false,game.Players.LocalPlayer.Character.HumanoidRootPart)
-							wait(.1)
+							wait(.3)
 							game:GetService("VirtualInputManager"):SendKeyEvent(true,120,false,game.Players.LocalPlayer.Character.HumanoidRootPart)
 							game:GetService("VirtualInputManager"):SendKeyEvent(false,120,false,game.Players.LocalPlayer.Character.HumanoidRootPart)
-							wait(.1)
+							wait(.3)
 							game:GetService("VirtualInputManager"):SendKeyEvent(true,99,false,game.Players.LocalPlayer.Character.HumanoidRootPart)
 							game:GetService("VirtualInputManager"):SendKeyEvent(false,99,false,game.Players.LocalPlayer.Character.HumanoidRootPart)
 					
-							wait(0.1)
+							wait(0.3)
 							for i,v in pairs(game.Players.LocalPlayer.Backpack:GetChildren()) do
 								if v:IsA("Tool") then
 									if v.ToolTip == "Sword" then -- "Blox Fruit" , "Sword" , "Wear" , "Agility"
@@ -6896,13 +6896,13 @@ spawn(function()
 							end
 							game:GetService("VirtualInputManager"):SendKeyEvent(true,122,false,game.Players.LocalPlayer.Character.HumanoidRootPart)
 							game:GetService("VirtualInputManager"):SendKeyEvent(false,122,false,game.Players.LocalPlayer.Character.HumanoidRootPart)
-							wait(.1)
+							wait(.3)
 							game:GetService("VirtualInputManager"):SendKeyEvent(true,120,false,game.Players.LocalPlayer.Character.HumanoidRootPart)
 							game:GetService("VirtualInputManager"):SendKeyEvent(false,120,false,game.Players.LocalPlayer.Character.HumanoidRootPart)
-							wait(.1)
+							wait(.3)
 							game:GetService("VirtualInputManager"):SendKeyEvent(true,99,false,game.Players.LocalPlayer.Character.HumanoidRootPart)
 							game:GetService("VirtualInputManager"):SendKeyEvent(false,99,false,game.Players.LocalPlayer.Character.HumanoidRootPart)
-							wait(0.1)
+							wait(0.3)
 							for i,v in pairs(game.Players.LocalPlayer.Backpack:GetChildren()) do
 								if v:IsA("Tool") then
 									if v.ToolTip == "Gun" then -- "Blox Fruit" , "Sword" , "Wear" , "Agility"
@@ -6912,10 +6912,10 @@ spawn(function()
 							end
 							game:GetService("VirtualInputManager"):SendKeyEvent(true,122,false,game.Players.LocalPlayer.Character.HumanoidRootPart)
 							game:GetService("VirtualInputManager"):SendKeyEvent(false,122,false,game.Players.LocalPlayer.Character.HumanoidRootPart)
-							wait(.1)
+							wait(.3)
 							game:GetService("VirtualInputManager"):SendKeyEvent(true,120,false,game.Players.LocalPlayer.Character.HumanoidRootPart)
 							game:GetService("VirtualInputManager"):SendKeyEvent(false,120,false,game.Players.LocalPlayer.Character.HumanoidRootPart)
-							wait(.1)
+							wait(.3)
 							game:GetService("VirtualInputManager"):SendKeyEvent(true,99,false,game.Players.LocalPlayer.Character.HumanoidRootPart)
 							game:GetService("VirtualInputManager"):SendKeyEvent(false,99,false,game.Players.LocalPlayer.Character.HumanoidRootPart)
 						
@@ -10042,7 +10042,7 @@ end)
   end)
   
   Race:Line()
-  Race:Seperator("Auto Đi Ải V4")
+  Race:Seperator("Auto Win Ải V4")
   Race:Button("Auto Win Ải Người Máy",function()
   Game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame =  CFrame.new(-20093.4961, 9954.93945, -125.194695, 0.627363682, 1.15070167e-08, 0.778726399, -8.20592732e-08, 1, 5.13325205e-08, -0.778726399, -9.61058788e-08, 0.627363682)
   end)
@@ -10065,16 +10065,45 @@ end)
 end)
   
   Race:Toggle("Đánh Boss Ải Human",_G.Auto_Farm_Bone1,function(value)
- _G.Auto_Farm_Bone1 = value
- StopTween(_G.Auto_Farm_Bone1)
+ _G.Kill_Aura1 = value
+ StopTween(_G.Kill_Aura1)
   end)
+  spawn(function()
+    while wait() do
+        if _G.Kill_Aura1 then
+            for i,v in pairs(game.Workspace.Enemies:GetDescendants()) do
+                if v:FindFirstChild("Humanoid") and v:FindFirstChild("HumanoidRootPart") and v.Humanoid.Health > 0 then
+                    pcall(function()
+                        repeat wait(.001)
+                            v.Humanoid.Health = 0
+                            v.HumanoidRootPart.CanCollide = false
+							sethiddenproperty(game.Players.LocalPlayer, "SimulationRadius", math.huge)
+                        until not _G.Kill_Aura1  or not v.Parent or v.Humanoid.Health <= 0
+                    end)
+                end
+            end
+        end
+    end
+end)
+  
+  
+  
 
 Race:Toggle("Đánh Quái Ải Qủy",_G.Auto_Farm_Bone2,function(value)
- _G.Auto_Farm_Bone2 = value
- StopTween(_G.Auto_Farm_Bone2)
- end)
+ _G.Kill_Aura1 = value
+ StopTween(_G.Kill_Aura1)
+end)
+
+Race:Toggle("Đánh Sea Beasts Tộc Cá",_G.SeaBeasts1,function(value)
+ _G.SeaBeasts1 = value
+ StopTween(_G.SeaBeasts1)
+end)
+ 
+Race:Seperator("Buy + Bật Tộc") 
+ 
+ 
   
-  Race:Toggle("Tự Động Bật V4 ( Chết Phải tắt đi bật lại )",_G.Auto_Farm_Bone3,function(value)
+  Race:Toggle("Tự Động Bật V4",_G.Auto_Farm_Bone3,function(value)
  _G.Auto_Farm_Bone3 = value
  StopTween(_G.Auto_Farm_Bone3)
  spawn(function()
