@@ -9943,8 +9943,111 @@ end)
     
     
     
-Race:Seperator("Tộc V4")
+Race:Seperator("Teleport Tộc V4")
 
+Race:Button("Dịch Chuyển Đến Cổng Tộc Của Bản Thân",function()
+    Game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(28286.35546875, 14895.3017578125, 102.62469482421875)
+    wait()
+				if game:GetService("Players").LocalPlayer.Data.Race.Value == "Human" then
+                two(CFrame.new(29221.822265625, 14890.9755859375, -205.99114990234375))
+				elseif game:GetService("Players").LocalPlayer.Data.Race.Value == "Skypiea" then
+                two(CFrame.new(28960.158203125, 14919.6240234375, 235.03948974609375))
+				elseif game:GetService("Players").LocalPlayer.Data.Race.Value == "Fishman" then
+                two(CFrame.new(28231.17578125, 14890.9755859375, -211.64173889160156))
+				elseif game:GetService("Players").LocalPlayer.Data.Race.Value == "Cyborg" then
+                two(CFrame.new(28502.681640625, 14895.9755859375, -423.7279357910156))
+				elseif game:GetService("Players").LocalPlayer.Data.Race.Value == "Ghoul" then
+                two(CFrame.new(28674.244140625, 14890.6767578125, 445.4310607910156))
+				elseif game:GetService("Players").LocalPlayer.Data.Race.Value == "Mink" then
+                two(CFrame.new(29012.341796875, 14890.9755859375, -380.1492614746094))
+                          end
+			   	end)
+
+					  	
+
+
+
+
+
+
+
+
+
+
+
+
+ Race:Button("Dịch Chuyển Đến Chỗ Gắn Gear",function()
+for _,v in next, workspace:GetDescendants() do
+    if v.Name == "Prompt" then
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = v.CFrame
+    end
+    end
+end)
+ 
+ 
+  
+  Race:Seperator("Auto Win Ải V4")
+  Race:Toggle("Win Ải All Tộc ( No Cá )",_G.winv4,function(value)
+ _G.winv4 = value
+ StopTween(_G.winv4)
+end)
+spawn(function()
+    pcall(function()
+        while wait() do
+            if _G.winv4 then
+				if game:GetService("Players").LocalPlayer.Data.Race.Value == "Human" then
+					for i,v in pairs(game.Workspace.Enemies:GetDescendants()) do
+						if v:FindFirstChild("Humanoid") and v:FindFirstChild("HumanoidRootPart") and v.Humanoid.Health > 0 then
+							pcall(function()
+								repeat wait(.1)
+									v.Humanoid.Health = 0
+									v.HumanoidRootPart.CanCollide = false
+									sethiddenproperty(game.Players.LocalPlayer, "SimulationRadius", math.huge)
+								until not _G.winv4 or not v.Parent or v.Humanoid.Health <= 0
+							end)
+						end
+					end
+				elseif game:GetService("Players").LocalPlayer.Data.Race.Value == "Skypiea" then
+				for _,v in next, workspace:GetDescendants() do
+                     if v.Name == "FinishPart" then
+                  game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = v.CFrame
+                     end
+                     end
+
+				elseif game:GetService("Players").LocalPlayer.Data.Race.Value == "Cyborg" then
+				Game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame =  CFrame.new(-20093.4961, 9954.93945, -125.194695, 0.627363682, 1.15070167e-08, 0.778726399, -8.20592732e-08, 1, 5.13325205e-08, -0.778726399, -9.61058788e-08, 0.627363682)
+					
+				elseif game:GetService("Players").LocalPlayer.Data.Race.Value == "Ghoul" then
+					for i,v in pairs(game.Workspace.Enemies:GetDescendants()) do
+						if v:FindFirstChild("Humanoid") and v:FindFirstChild("HumanoidRootPart") and v.Humanoid.Health > 0 then
+							pcall(function()
+								repeat wait(.1)
+									v.Humanoid.Health = 0
+									v.HumanoidRootPart.CanCollide = false
+									sethiddenproperty(game.Players.LocalPlayer, "SimulationRadius", math.huge)
+								until not _G.winv4 or not v.Parent or v.Humanoid.Health <= 0
+							end)
+						end
+					end
+				elseif game:GetService("Players").LocalPlayer.Data.Race.Value == "Mink" then
+					for _,v in next, workspace:GetDescendants() do
+                     if v.Name == "StartPoint" then
+                  game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = v.CFrame
+                end
+               end
+				end
+			end
+        end
+    end)
+end)  
+  
+  
+ 
+
+Race:Toggle("Đánh Sea Beasts Tộc Cá",_G.SeaBeasts1,function(value)
+ _G.SeaBeasts1 = value
+ StopTween(_G.SeaBeasts1)
+end)
 
 
 Race:Toggle("Kill Người Chơi ( Có Thể Bị Kick )",nil,function(value)
@@ -10021,118 +10124,6 @@ while cac() do
 end
 
     end)
-    
-    Race:Button("Dịch Chuyển Vào Timple Of Time",function()
-  Game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(28286.35546875, 14895.3017578125, 102.62469482421875)
-  Game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(28286.35546875, 14895.3017578125, 102.62469482421875)
-    end)
-    
-
-Race:Button("Dịch Chuyển Đến Npc Mua Train",function()
-    Game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(28286.35546875, 14895.3017578125, 102.62469482421875)
-  Game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(28286.35546875, 14895.3017578125, 102.62469482421875)
-  topos(CFrame.new(28981.552734375, 14888.4267578125, -120.245849609375))
-end)
-   
-   Race:Button("Dịch Chuyển Đến Chỗ Gắn Gear",function()
-for _,v in next, workspace:GetDescendants() do
-    if v.Name == "Prompt" then
-        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = v.CFrame
-    end
-    end
-end)
-   
-   
-  Race:Line()
-
- 
-  Race:Button("Tele Cổng Người Máy",function()
-  Game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(28286.35546875, 14895.3017578125, 102.62469482421875)
-  topos(CFrame.new(28492.4140625, 14894.4267578125, -422.1100158691406))
-  end)
-  
-  Race:Button("Tele cổng Cá",function()
-  Game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(28286.35546875, 14895.3017578125, 102.62469482421875)
-  topos(CFrame.new(28224.056640625, 14889.4267578125, -210.5872039794922))
-  end)
-  
-  Race:Button("Tele Cổng Qủy",function()
-  Game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(28286.35546875, 14895.3017578125, 102.62469482421875)
-  topos(CFrame.new(28672.720703125, 14889.1279296875, 454.5961608886719))
-  end)
-  
-  Race:Button("Tele cổng Con người",function()
-  Game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(28286.35546875, 14895.3017578125, 102.62469482421875)
-  topos(CFrame.new(29237.294921875, 14889.4267578125, -206.94955444335938))
-  end)
-  
-  Race:Button("Tele cổng Thỏ",function()
-  Game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(28286.35546875, 14895.3017578125, 102.62469482421875)
-  topos(CFrame.new(29020.66015625, 14889.4267578125, -379.2682800292969))
-  end)
-  
-  Race:Button("Tele cổng Thiên Thần",function()
-  Game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(28286.35546875, 14895.3017578125, 102.62469482421875)
-  topos(CFrame.new(28967.408203125, 14918.0751953125, 234.31198120117188))
-  end)
-  
-  Race:Line()
-  Race:Seperator("Auto Win Ải V4")
-  Race:Button("Auto Win Ải Người Máy",function()
-  Game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame =  CFrame.new(-20093.4961, 9954.93945, -125.194695, 0.627363682, 1.15070167e-08, 0.778726399, -8.20592732e-08, 1, 5.13325205e-08, -0.778726399, -9.61058788e-08, 0.627363682)
-  end)
-  
-  
-  Race:Button("Auto Win Ải Thỏ",function()
-      for _,v in next, workspace:GetDescendants() do
-    if v.Name == "StartPoint" then
-        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = v.CFrame
-    end
-      end
-  end)
-  
-  Race:Button("Auto Win Ải Thiên Thần",function()
-  for _,v in next, workspace:GetDescendants() do
-    if v.Name == "FinishPart" then
-        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = v.CFrame
-    end
-  end
-end)
-  
-  Race:Toggle("Đánh Boss Ải Human",_G.Auto_Farm_Bone1,function(value)
- _G.Kill_Aura1 = value
- StopTween(_G.Kill_Aura1)
-  end)
-  spawn(function()
-    while wait() do
-        if _G.Kill_Aura1 then
-            for i,v in pairs(game.Workspace.Enemies:GetDescendants()) do
-                if v:FindFirstChild("Humanoid") and v:FindFirstChild("HumanoidRootPart") and v.Humanoid.Health > 0 then
-                    pcall(function()
-                        repeat wait(.001)
-                            v.Humanoid.Health = 0
-                            v.HumanoidRootPart.CanCollide = false
-							sethiddenproperty(game.Players.LocalPlayer, "SimulationRadius", math.huge)
-                        until not _G.Kill_Aura1  or not v.Parent or v.Humanoid.Health <= 0
-                    end)
-                end
-            end
-        end
-    end
-end)
-  
-  
-  
-
-Race:Toggle("Đánh Quái Ải Qủy",_G.Auto_Farm_Bone2,function(value)
- _G.Kill_Aura1 = value
- StopTween(_G.Kill_Aura1)
-end)
-
-Race:Toggle("Đánh Sea Beasts Tộc Cá",_G.SeaBeasts1,function(value)
- _G.SeaBeasts1 = value
- StopTween(_G.SeaBeasts1)
-end)
  
 Race:Seperator("Buy + Bật Tộc") 
  
@@ -10179,6 +10170,11 @@ game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("CommF
             end
 end 
 end)  
+end)
+Race:Button("Dịch Chuyển Đến Npc Mua Train",function()
+    Game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(28286.35546875, 14895.3017578125, 102.62469482421875)
+  Game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(28286.35546875, 14895.3017578125, 102.62469482421875)
+  topos(CFrame.new(28981.552734375, 14888.4267578125, -120.245849609375))
 end)
 
   
@@ -12004,45 +12000,57 @@ if World2 then
  -- end)
  
  --Shop:Seperator(" Fighting Style ")
- 
- Shop:Button("Buy Black Leg",function()
+ Shop:Button("Đổi Tộc ( 3K F )",function()
+  -- Script generated by SimpleSpy - credits to exx#9394
+
+local args = {
+    [1] = "BlackbeardReward",
+    [2] = "Reroll",
+    [3] = "2"
+}
+
+game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+
+ end)
+
+ Shop:Button("Mua Black Leg",function()
   game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("BuyBlackLeg")
   end)
  
- Shop:Button("Buy Electro",function()
+ Shop:Button("Mua Electro",function()
   game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("BuyElectro")
   end)
  
- Shop:Button("Buy Fishman Karate",function()
+ Shop:Button("Mua Fishman Karate",function()
   game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("BuyFishmanKarate")
   end)
  
- Shop:Button("Buy Dragon Claw",function()
+ Shop:Button("Mua Dragon Claw",function()
   game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("BlackbeardReward","DragonClaw","1")
   game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("BlackbeardReward","DragonClaw","2")
   end)
  
- Shop:Button("Buy Superhuman",function()
+ Shop:Button("Mua Superhuman",function()
   game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("BuySuperhuman")
   end)
  
- Shop:Button("Buy Death Step",function()
+ Shop:Button("Mua Death Step",function()
   game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("BuyDeathStep")
   end)
  
- Shop:Button("Buy Sharkman Karate",function()
+ Shop:Button("Mua Sharkman Karate",function()
   game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("BuySharkmanKarate",true)
   game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("BuySharkmanKarate")
   end)
  
- Shop:Button("Buy Electric Claw",function()
+ Shop:Button("Mua Electric Claw",function()
   game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("BuyElectricClaw")
   end)
  
- Shop:Button("Buy Dragon Talon",function()
+ Shop:Button("Mua Dragon Talon",function()
   game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("BuyDragonTalon")
   end)
- Shop:Button("Buy GodHuman",function()
+ Shop:Button("Mua GodHuman",function()
   game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("BuyGodhuman")
   end)
  -----Shop----------------
