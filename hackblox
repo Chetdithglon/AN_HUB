@@ -400,7 +400,7 @@ local NotiFrame = Instance.new("Frame")
 		end
 		)
 	end 
-DiscordLib:Notification("Thông Báo" , "1+1=3" , 10 ,11816162894 )
+DiscordLib:Notification("Thông Báo" , "Xài Hack ít thôi bay acc đấy" , 10 ,11816162894 )
  
  
  local UserInputService = game:GetService("UserInputService")
