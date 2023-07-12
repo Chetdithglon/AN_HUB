@@ -400,7 +400,7 @@ local NotiFrame = Instance.new("Frame")
 		end
 		)
 	end 
-DiscordLib:Notification("Thông Báo" , "Xài Hack ít thôi bay acc đấy" , 10 ,11816162894 )
+DiscordLib:Notification("Thông Báo" , "Hack Nhìu Lên Ko Bay Acc Đâu :>" , 10 ,11816162894 )
  
  
  local UserInputService = game:GetService("UserInputService")
@@ -679,7 +679,7 @@ DiscordLib:Notification("Thông Báo" , "Xài Hack ít thôi bay acc đấy" 
  Name.Size = UDim2.new(0, 61, 0, 27)
  Name.Font = Enum.Font.Code
  Name.Text = text
- Name.TextColor3 = Color3.fromRGB(255, 255, 255)
+ Name.TextColor3 = Color3.fromRGB(116, 255, 192)
  Name.TextSize = 14.000
  
  local Hub = Instance.new("TextLabel")
@@ -12780,7 +12780,6 @@ spawn(function()
         end)
     end
 end)
-
 
 
 
