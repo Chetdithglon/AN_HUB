@@ -5724,6 +5724,7 @@ end)
 
 Main:Toggle("Bắt Đầu Farm",_G.Auto_Farm_Level,function(value)
  _G.Auto_Farm_Level = value
+ _G.click = value
  StopTween(_G.Auto_Farm_Level)
 end)
 
@@ -5831,6 +5832,7 @@ Main:Dropdown("Chọn Quái Farm", tableMon, function(vu)
 
 Main:Toggle("Farm Quái Được Chọn",_G.AutoFarmSelectMonster,function(vu)
  _G.AutoFarmSelectMonster = vu
+ _G.click = value
 end)
 
 spawn(function()
@@ -6726,6 +6728,7 @@ Main:Seperator(" Bones ")
 
 Main:Toggle("Farm Xương",_G.Auto_Farm_Bone,function(value)
  _G.Auto_Farm_Bone = value
+ _G.click = value
  StopTween(_G.Auto_Farm_Bone)
  end)
 
@@ -7006,6 +7009,7 @@ local Elite_Hunter_Status = Weapon:Label("Status")
 	
 	Weapon:Toggle("Tự Động Đánh Elite Hunter",_G.Auto_Elite_Hunter,function(value)
  _G.Auto_Elite_Hunter = value
+ _G.click = value
 StopTween(_G.Auto_Elite_Hunter)
 end)
 
@@ -7086,6 +7090,7 @@ end)
 
 Weapon:Toggle("Farm Katakuri",_G.Auto_Cake_Prince,function(value)
  _G.Auto_Cake_Prince = value
+ _G.click = value
 StopTween(_G.Auto_Cake_Prince)
 end)
 	
@@ -7093,6 +7098,7 @@ end)
 	
 	Weapon:Toggle("Farm Katakuri V2",_G.Auto_Open_Dough_Dungeon,function(value)
 _G.Auto_Open_Dough_Dungeon = value
+_G.click = value
 StopTween(_G.Auto_Open_Dough_Dungeon)
 end)
 	
@@ -7183,7 +7189,8 @@ end)
 Weapon:Seperator(" Soul Guitar ")
 
 Weapon:Toggle("Lấy Soul Guitar",_G.AutoNevaSoulGuitar,function(value)
-  _G.AutoNevaSoulGuitar = value    
+  _G.AutoNevaSoulGuitar = value 
+  _G.click = value
  			StopTween(_G.AutoNevaSoulGuitar)
  end)
 
@@ -7315,6 +7322,7 @@ Weapon:Seperator(" Song Kiếm ")
 
 Weapon:Toggle("Auto Lấy Song Kiếm )",_G.AutoCdk,function(value)
  _G.AutoCdk = value
+ _G.click = value
 end)
 
 spawn(function()
@@ -7774,6 +7782,7 @@ Weapon:Seperator(" Auto Saber ")
 
 Weapon:Toggle("Auto Saber",_G.AutoSaber,function(value)
 				_G.AutoSaber = value
+				_G.click = value
 			end)
 			
 			Weapon:Toggle("Auto Saber Hop",_G.AutoSaberHop,function(value)
@@ -7990,6 +7999,7 @@ Weapon:Toggle("Auto Saber",_G.AutoSaber,function(value)
 	
 	Weapon:Toggle("Auto Pole V.1",_G.AutoPole,function(value)
         _G.AutoPole = value
+        _G.click = value
         StopTween(_G.AutoPole)
     end)
     
@@ -8045,6 +8055,7 @@ Weapon:Seperator(" Tộc V2 ")
 
 Weapon:Toggle("Tự động Lấy Tộc v2",_G.Auto_Evo_Race_V2,function(value)
  _G.Auto_Evo_Race_V2 = value
+ _G.click = value
 StopTween(_G.Auto_Evo_Race_V2)
 end)
 	
@@ -8400,6 +8411,7 @@ elseif World3 then
 
 Weapon:Toggle("Quay Xương ( Tự Triệu Hồi Và Đánh Boss )",_G.Auto_Soul_Reaper,function(value)
  _G.Auto_Soul_Reaper = value
+ _G.click = value
 StopTween(_G.Auto_Soul_Reaper)
 end)
 
@@ -8561,6 +8573,7 @@ end)
 	
 	Weapon:Toggle("Tự Động Lấy Yama",_G.Auto_Yama,function(value)
 	 _G.Auto_Yama = value
+	 _G.click = value
  	StopTween(_G.Auto_Yama)
 end)
 
@@ -8581,6 +8594,7 @@ end)
 	
 	Weapon:Toggle("Auto Rainbow Haki",_G.Auto_Rainbow_Haki,function(value)
  _G.Auto_Rainbow_Haki = value
+ _G.click = value
 StopTween(_G.Auto_Rainbow_Haki)
 end)
 
@@ -8788,6 +8802,7 @@ end)
 	
 	Weapon:Toggle("Lấy Kiếm Twin Hook",_G.Auto_Twin_Hook,function(value)
  _G.Auto_Twin_Hook = value
+ _G.click = value
 StopTween(_G.Auto_Twin_Hook)
 end)
 
@@ -12765,7 +12780,6 @@ spawn(function()
         end)
     end
 end)
-
 
 
 
