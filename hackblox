@@ -7061,11 +7061,14 @@ end)
 	end)
 	
 	Weapon:Seperator(" Katakuri Boss ")
-
-local Mob_Kill_Cake_Prince = Weapon:Label("Total")
-
+local  Mob_Kill_Cake_Prince  = Weapon:Label("Total")
+Weapon:Toggle( "Spawm Katakuri + Check Katakuri" ,_G.Auto_Cake_Pr1ince,function(value)
+ _G.Auto_Cake_Prince1 = value
+StopTween(_G.Auto_Cake_Prince1)
+end)
 	spawn(function()
 		while wait() do
+  if _G.Auto_Cake_Prince1 then
 			pcall(function()
 				if string.len(game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("CakePrinceSpawner")) == 88 then
 					Mob_Kill_Cake_Prince:Set("Killed : "..string.sub(game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("CakePrinceSpawner"),39,41).." : Kill More")
@@ -7077,23 +7080,24 @@ local Mob_Kill_Cake_Prince = Weapon:Label("Total")
 					Mob_Kill_Cake_Prince:Set("Boss Đã Được Triệu Hồi")
 				end
 			end)
-		end
-	end)
+   end
+	end
+		end)
 
-Weapon:Toggle("Farm và Triệu Hồi Katakuri Thường",_G.Auto_Cake_Prince,function(value)
+Weapon:Toggle("Farm Katakuri",_G.Auto_Cake_Prince,function(value)
  _G.Auto_Cake_Prince = value
 StopTween(_G.Auto_Cake_Prince)
 end)
 	
 	
 	
-	Weapon:Toggle("Farm và Triệu Hồi Katakuri V2",_G.Auto_Open_Dough_Dungeon,function(value)
- _G.Auto_Open_Dough_Dungeon = value
-StopTween(_G.Auto_Open_Dough_Dungeon)
-end)
+--	Weapon:Toggle("Farm và Triệu Hồi Katakuri V2",_G.Auto_Open_Dough_Dungeon,function(value)
+-- _G.Auto_Open_Dough_Dungeon = value
+--StopTween(_G.Auto_Open_Dough_Dungeon)
+--end)
 	
 	spawn(function()
-		game:GetService("RunService").Heartbeat:Connect(function()
+	game:GetService("RunService").Heartbeat:Connect(function()
 			pcall(function()
 				for i,v in pairs(game:GetService("Workspace").Enemies:GetChildren()) do
 					if _G.Auto_Open_Dough_Dungeon and StartCakeStartMagnet and (v.Name == "Cookie Crafter [Lv. 2200]" or v.Name == "Cake Guard [Lv. 2225]" or v.Name == "Baking Staff [Lv. 2250]" or v.Name == "Head Baker [Lv. 2275]") and (v.HumanoidRootPart.Position - POSCAKE.Position).magnitude <= 350 then
@@ -12761,7 +12765,6 @@ spawn(function()
         end)
     end
 end)
-
 
 
 
