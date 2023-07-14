@@ -715,10 +715,6 @@ end)
 loadstring(game:HttpGet('https://raw.githubusercontent.com/GGhostVN/GhostLord/main/Main'))()
 end)
 
-Section:NewButton("Ntt Hub : No key ", "Mạnh Dũng", function()
-    print("Clicked")
-loadstring(game:HttpGet('https://raw.githubusercontent.com/Chetdithglon/ntt/main/hiconcac'))()
-end)
 
 Section:NewButton("X1 Hub : No key ", "Mạnh Dũng", function()
     print("Clicked")
