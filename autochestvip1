@@ -535,21 +535,3 @@ if (_G.Team == "Pirates" or _G.Team == "Marines") and not join then
     game:GetService("Players").LocalPlayer.PlayerGui.Main.ChooseTeam.Visible = false
 end
 
-function auto()
-    if aut == true then
-    task.spawn(function()
-if game.Players.LocalPlayer.Backpack:FindFirstChild("Fist of Darkness") then 
-    DiscordLib:Notification("Thông Báo" , "Đã Ra Key" , 5 ,11816162894)
-    aut = false
-    if game.Players.LocalPlayer.Backpack:FindFirstChild("God's Chalice") then 
-DiscordLib:Notification("Thông Báo" , "Đã Ra Chén Thánh" , 5 ,11816162894 )
-aut = false
-end
-end
-    end)
-end
- end
- 
-
- 
- 
