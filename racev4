@@ -13,7 +13,7 @@ end
 
 
 if game.PlaceId == 7449423635 then
-game:GetService("Players").LocalPlayer.PlayerGui.Main.Version.Text = "An"
+game:GetService("Players").LocalPlayer.PlayerGui.Main.Version.Text = "Asuka Kenshiro"
 game:GetService("Players").LocalPlayer.PlayerGui.Main.Version.TextColor3 = Color3.fromRGB(137, 255, 101)
 game:GetService("Players").LocalPlayer.PlayerGui.Main.Version.TextSize = (19.000)
 end
@@ -3005,6 +3005,7 @@ spawn(function()
 --------------------------
 local Main = Library:Tab("Farm","rbxassetid://11446859498")
 local Race = Library:Tab("Race V4","rbxassetid://11446920523")
+local Dungeon = Library:Tab("Raid","rbxassetid://11446957539")
 local Setting = Library:Tab("Settings","rbxassetid://11446835336")
 --------------------------------------------------------------------
 
@@ -3609,7 +3610,7 @@ spawn(function()
 end)
 
 
-Main:Toggle("Bãi 1 ( Bone )",_G.Auto_Farm_Bone,function(value)
+Main:Toggle("Bãi 1 ( Bone ) Ngon",_G.Auto_Farm_Bone,function(value)
  _G.Auto_Farm_Bone = value
  _G.click = value
  _G.Auto_Farm_Bone4 = value
@@ -3633,7 +3634,7 @@ Main:Toggle("Bãi 1 ( Bone )",_G.Auto_Farm_Bone,function(value)
 	
 	
 	
-Main:Toggle("Bãi 2 ( Katakuri )",_G.Auto_Cake_Prince,function(value)
+Main:Toggle("Bãi 2 ( Katakuri ) Ngon",_G.Auto_Cake_Prince,function(value)
  _G.Auto_Cake_Prince = value
  _G.click = value
  _G.Auto_Farm_Bone4 = value
@@ -3728,7 +3729,7 @@ end)
 		end
 	end)
 
-Main:Toggle("Bãi 3 ( 2400-2425 )",_G.farm3,function(value)
+Main:Toggle("Bãi 3 ( 2400-2425 ) Tạm Đc",_G.farm3,function(value)
  _G.farm3 = value
  _G.click = value
  _G.Auto_Farm_Bone4 = value
@@ -3806,7 +3807,7 @@ spawn(function()
 
 
 
-Main:Toggle("Bãi 4 ( 2300-2375 )",_G.farm4,function(value)
+Main:Toggle("Bãi 4 ( 2300-2375 ) Tạm Đc",_G.farm4,function(value)
  _G.farm4 = value
  _G.click = value
  _G.Auto_Farm_Bone4 = value
@@ -3875,7 +3876,161 @@ spawn(function()
   end)
  end
  end
+end)
+
+
+
+
+Main:Toggle("Bãi 5 ( 2125-2150 )  Tạm Đc",_G.farm5,function(value)
+ _G.farm5 = value
+ _G.click = value
+ StopTween(_G.farm5)
  end)
+
+	spawn(function()
+ game:GetService("RunService").Heartbeat:Connect(function()
+  pcall(function()
+   for i,v in pairs(game:GetService("Workspace").Enemies:GetChildren()) do
+   if _G.farm5 and StartMagnetBoneMon and (v.Name == "Ice Cream Chef [Lv. 2125]" or v.Name == "Ice Cream Commander [Lv. 2150]") and (v.HumanoidRootPart.Position - PosMonBone.Position).magnitude <= 300 then
+   v.HumanoidRootPart.CFrame = PosMonBone
+   v.HumanoidRootPart.CanCollide = false
+   v.HumanoidRootPart.Size = Vector3.new(50,50,50)
+   if v.Humanoid:FindFirstChild("Animator") then
+   v.Humanoid.Animator:Destroy()
+   end
+   sethiddenproperty(game.Players.LocalPlayer, "SimulationRadius", math.huge)
+   end
+   end
+   end)
+  end)
+end)
+
+
+
+
+
+
+
+
+spawn(function()
+ while wait() do
+ if _G.farm5 and World3 then
+ pcall(function()
+  if game:GetService("Workspace").Enemies:FindFirstChild("Ice Cream Commander [Lv. 2150]") or game:GetService("Workspace").Enemies:FindFirstChild("Ice Cream Chef [Lv. 2125]")  then
+  for i,v in pairs(game:GetService("Workspace").Enemies:GetChildren()) do
+  if v.Name == "Ice Cream Commander [Lv. 2150]" or v.Name == "Ice Cream Chef [Lv. 2125]"  then
+  if v.Humanoid.Health > 0 then
+  repeat wait()
+  AutoHaki()
+  EquipWeapon(_G.Select_Weapon)
+  StartMagnetBoneMon = true
+  v.HumanoidRootPart.CanCollide = false
+  v.HumanoidRootPart.Size = Vector3.new(60, 60, 60)
+  PosMonBone = v.HumanoidRootPart.CFrame
+  topos(v.HumanoidRootPart.CFrame * MethodFarm)
+  game:GetService'VirtualUser':CaptureController()
+  game:GetService'VirtualUser':Button1Down(Vector2.new(1280, 672))
+  until _G.farm5 == false or not v.Parent or v.Humanoid.Health <= 0
+  end
+  end
+  end
+  else
+   StartMagnetBoneMon = false
+  for i,v in pairs(game:GetService("ReplicatedStorage"):GetChildren()) do
+  if v.Name == "Ice Cream Commander [Lv. 2150]" then
+  topos(v.HumanoidRootPart.CFrame * MethodFarm)
+  elseif v.Name == "Ice Cream Chef [Lv. 2125]" then
+  topos(v.HumanoidRootPart.CFrame * MethodFarm)
+  end
+  end
+  topos(CFrame.new(-568.242432, 126.436852, -11120.3252, 0.714386225, 0.0550739393, -0.697580934, 0.0623825677, 0.987916172, 0.141881272, 0.696965277, -0.144874915, 0.702317953))
+  end
+  end)
+ end
+ end
+ end)
+
+
+
+
+
+
+Main:Toggle("Bãi 6 ( 2075-2100 )  Tạm Đc",_G.farm6,function(value)
+ _G.farm6 = value
+ _G.click = value
+ StopTween(_G.farm6)
+ end)
+
+	spawn(function()
+ game:GetService("RunService").Heartbeat:Connect(function()
+  pcall(function()
+   for i,v in pairs(game:GetService("Workspace").Enemies:GetChildren()) do
+   if _G.farm6 and StartMagnetBoneMon and (v.Name == "Peanut Scout [Lv. 2075]" or v.Name == "Peanut President [Lv. 2100]") and (v.HumanoidRootPart.Position - PosMonBone.Position).magnitude <= 300 then
+   v.HumanoidRootPart.CFrame = PosMonBone
+   v.HumanoidRootPart.CanCollide = false
+   v.HumanoidRootPart.Size = Vector3.new(50,50,50)
+   if v.Humanoid:FindFirstChild("Animator") then
+   v.Humanoid.Animator:Destroy()
+   end
+   sethiddenproperty(game.Players.LocalPlayer, "SimulationRadius", math.huge)
+   end
+   end
+   end)
+  end)
+end)
+
+
+
+
+
+
+
+
+spawn(function()
+ while wait() do
+ if _G.farm6 and World3 then
+ pcall(function()
+  if game:GetService("Workspace").Enemies:FindFirstChild("Peanut Scout [Lv. 2075]") or game:GetService("Workspace").Enemies:FindFirstChild("Peanut President [Lv. 2100]")  then
+  for i,v in pairs(game:GetService("Workspace").Enemies:GetChildren()) do
+  if v.Name == "Peanut Scout [Lv. 2075]" or v.Name == "Peanut President [Lv. 2100]"  then
+  if v.Humanoid.Health > 0 then
+  repeat wait()
+  AutoHaki()
+  EquipWeapon(_G.Select_Weapon)
+  StartMagnetBoneMon = true
+  v.HumanoidRootPart.CanCollide = false
+  v.HumanoidRootPart.Size = Vector3.new(60, 60, 60)
+  PosMonBone = v.HumanoidRootPart.CFrame
+  topos(v.HumanoidRootPart.CFrame * MethodFarm)
+  game:GetService'VirtualUser':CaptureController()
+  game:GetService'VirtualUser':Button1Down(Vector2.new(1280, 672))
+  until _G.farm6 == false or not v.Parent or v.Humanoid.Health <= 0
+  end
+  end
+  end
+  else
+   StartMagnetBoneMon = false
+  for i,v in pairs(game:GetService("ReplicatedStorage"):GetChildren()) do
+  if v.Name == "Peanut President [Lv. 2100]" then
+  topos(v.HumanoidRootPart.CFrame * MethodFarm)
+  elseif v.Name == "Peanut Scout [Lv. 2075]" then
+  topos(v.HumanoidRootPart.CFrame * MethodFarm)
+  end
+  end
+  topos(CFrame.new(-2134.28198, 70.2586365, -10351.7373, -0.465537071, 0.537135005, 0.703392625, -0.495871872, 0.5, -0.710007787, -0.73306632, -0.679327667, 0.0335815549))
+  end
+  end)
+ end
+ end
+ end)
+
+
+
+
+
+
+
+
 
 
 
@@ -4057,3 +4212,318 @@ Main:Button("Dịch Chuyển Đến Npc Mua Train",function()
   Game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(28286.35546875, 14895.3017578125, 102.62469482421875)
   topos(CFrame.new(28981.552734375, 14888.4267578125, -120.245849609375))
 end)
+
+
+
+if World2 or World3 then
+Dungeon:Seperator("Use in Dungeon Only!")
+
+chip = {
+	"Flame", 
+	"Ice", 
+	"Quake", 
+	"Light",
+	"Dark",
+	"String",
+	"Rumble",
+	"Magma",
+	"Human: Buddha",
+	"Sand",
+	"Bird: Phoenix"
+}
+
+Dungeon:Dropdown("Chip Cần Mua",chip,function(value)
+ _G.Select_Dungeon = value
+end)
+
+Dungeon:Toggle("Mua Chip Đã Chọn",_G.Auto_Buy_Chips_Dungeon,function(value)
+ _G.Auto_Buy_Chips_Dungeon = value
+end)
+
+
+spawn(function()
+    while wait() do
+		if _G.Auto_Buy_Chips_Dungeon then
+			pcall(function()
+				local args = {
+					[1] = "RaidsNpc",
+					[2] = "Select",
+					[3] = _G.Select_Dungeon
+				}
+				
+				game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+			end)
+		end
+    end
+end)
+
+
+
+
+Dungeon:Toggle("Auto Lấy Fruit Dưới 1M",_G.Autofruit,function(value)
+ _G.Autofruit = value
+end)
+spawn(function()
+    while wait(10) do
+        pcall(function()
+     if _G.Autofruit then
+         -- Script generated by SimpleSpy - credits to exx#9394
+
+local args = {
+    [1] = "LoadFruit",
+    [2] = "Kilo-Kilo"
+}
+
+game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+-- Script generated by SimpleSpy - credits to exx#9394
+
+-- Script generated by SimpleSpy - credits to exx#9394
+local args = {
+    [1] = "LoadFruit",
+    [2] = "Spin-Spin"
+}
+
+game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+-- Script generated by SimpleSpy - credits to exx#9394
+
+local args = {
+    [1] = "LoadFruit",
+    [2] = "Chop-Chop"
+}
+
+game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+
+-- Script generated by SimpleSpy - credits to exx#9394
+
+-- Script generated by SimpleSpy - credits to exx#9394
+
+local args = {
+    [1] = "LoadFruit",
+    [2] = "Spring-Spring"
+}
+
+game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+-- Script generated by SimpleSpy - credits to exx#9394
+
+local args = {
+    [1] = "LoadFruit",
+    [2] = "Bomb-Bomb"
+}
+
+game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+-- Script generated by SimpleSpy - credits to exx#9394
+
+local args = {
+    [1] = "LoadFruit",
+    [2] = "Smoke-Smoke"
+}
+
+game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+-- Script generated by SimpleSpy - credits to exx#9394
+
+local args = {
+    [1] = "LoadFruit",
+    [2] = "Spike-Spike"
+}
+
+game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+-- Script generated by SimpleSpy - credits to exx#9394
+
+local args = {
+    [1] = "LoadFruit",
+    [2] = "Flame-Flame"
+}
+
+game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+-- Script generated by SimpleSpy - credits to exx#9394
+
+local args = {
+    [1] = "LoadFruit",
+    [2] = "Falcon-Falcon"
+}
+
+game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+-- Script generated by SimpleSpy - credits to exx#9394
+
+local args = {
+    [1] = "LoadFruit",
+    [2] = "Ice-Ice"
+}
+
+game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+-- Script generated by SimpleSpy - credits to exx#9394
+
+local args = {
+    [1] = "LoadFruit",
+    [2] = "Sand-Sand"
+}
+
+game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+-- Script generated by SimpleSpy - credits to exx#9394
+
+local args = {
+    [1] = "LoadFruit",
+    [2] = "Dark-Dark"
+}
+
+game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+-- Script generated by SimpleSpy - credits to exx#9394
+
+local args = {
+    [1] = "LoadFruit",
+    [2] = "Revive-Revive"
+}
+
+game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+-- Script generated by SimpleSpy - credits to exx#9394
+
+local args = {
+    [1] = "LoadFruit",
+    [2] = "Diamond-Diamond"
+}
+
+game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+-- Script generated by SimpleSpy - credits to exx#9394
+
+local args = {
+    [1] = "LoadFruit",
+    [2] = "Light-Light"
+}
+
+game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+-- Script generated by SimpleSpy - credits to exx#9394
+
+local args = {
+    [1] = "LoadFruit",
+    [2] = "Rubber-Rubber"
+}
+
+game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+-- Script generated by SimpleSpy - credits to exx#9394
+
+local args = {
+    [1] = "LoadFruit",
+    [2] = "Barrier-Barrier"
+}
+
+game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+end
+end)
+end
+end)
+
+
+
+
+
+
+
+
+
+
+Dungeon:Toggle("Tự Động Vào Và Win Raid",_G.Auto_StartRaid,function(value)
+ _G.Auto_StartRaid = value
+ _G.Kill_Aura = value
+end)
+
+spawn(function()
+    while wait(.1) do
+        pcall(function()
+            if _G.Auto_StartRaid  then
+                if game:GetService("Players")["LocalPlayer"].PlayerGui.Main.Timer.Visible == false then
+                    if not game:GetService("Workspace")["_WorldOrigin"].Locations:FindFirstChild("Island 1") and game:GetService("Players").LocalPlayer.Backpack:FindFirstChild("Special Microchip") or game:GetService("Players").LocalPlayer.Character:FindFirstChild("Special Microchip") then
+                        if World2 then
+                            fireclickdetector(game:GetService("Workspace").Map.CircleIsland.RaidSummon2.Button.Main.ClickDetector)
+                        elseif World3 then
+                            fireclickdetector(game:GetService("Workspace").Map["Boat Castle"].RaidSummon2.Button.Main.ClickDetector)
+                        end
+                    end
+                end
+            end
+        end)
+    end
+    end)
+
+Dungeon:Toggle("Tự Động Đến Đảo Tiếp Theo",_G.Auto_Next_Island,function(value)
+ _G.Auto_Next_Island = value
+end)
+
+spawn(function()
+    while wait() do
+        if _G.Auto_Next_Island then
+			if not game.Players.LocalPlayer.PlayerGui.Main.Timer.Visible == false then
+				if game:GetService("Workspace")["_WorldOrigin"].Locations:FindFirstChild("Island 5") then
+					topos(game:GetService("Workspace")["_WorldOrigin"].Locations:FindFirstChild("Island 5").CFrame * CFrame.new(0,70,100))
+				elseif game:GetService("Workspace")["_WorldOrigin"].Locations:FindFirstChild("Island 4") then
+					topos(game:GetService("Workspace")["_WorldOrigin"].Locations:FindFirstChild("Island 4").CFrame * CFrame.new(0,70,100))
+				elseif game:GetService("Workspace")["_WorldOrigin"].Locations:FindFirstChild("Island 3") then
+					topos(game:GetService("Workspace")["_WorldOrigin"].Locations:FindFirstChild("Island 3").CFrame * CFrame.new(0,70,100))
+				elseif game:GetService("Workspace")["_WorldOrigin"].Locations:FindFirstChild("Island 2") then
+					topos(game:GetService("Workspace")["_WorldOrigin"].Locations:FindFirstChild("Island 2").CFrame * CFrame.new(0,70,100))
+				elseif game:GetService("Workspace")["_WorldOrigin"].Locations:FindFirstChild("Island 1") then
+					topos(game:GetService("Workspace")["_WorldOrigin"].Locations:FindFirstChild("Island 1").CFrame * CFrame.new(0,70,100))
+				end
+			end
+        end
+    end
+end)
+
+
+Dungeon:Toggle("Tự Động Thức Tỉnh",_G.Auto_Awake,function(value)
+ _G.Auto_Awake = value 
+end)
+
+
+spawn(function()
+	while wait(.1) do
+		if _G.Auto_Awake then
+			pcall(function()
+				local args = {
+					[1] = "Awakener",
+					[2] = "Check"
+				}
+				
+				game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+				local args = {
+					[1] = "Awakener",
+					[2] = "Awaken"
+				}
+				game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+			end)
+		end
+	end
+end)
+
+  
+  spawn(function()
+    while wait() do
+        if _G.Kill_Aura then
+            for i,v in pairs(game.Workspace.Enemies:GetDescendants()) do
+                if v:FindFirstChild("Humanoid") and v:FindFirstChild("HumanoidRootPart") and v.Humanoid.Health > 0 then
+                    pcall(function()
+                        repeat wait(.001)
+                            v.Humanoid.Health = 0
+                            v.HumanoidRootPart.CanCollide = false
+							sethiddenproperty(game.Players.LocalPlayer, "SimulationRadius", math.huge)
+                        until not _G.Kill_Aura  or not v.Parent or v.Humanoid.Health <= 0
+                    end)
+                end
+            end
+        end
+    end
+end)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+end
