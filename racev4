@@ -3651,6 +3651,7 @@ end)
 Main:Toggle("Bãi 1 ( Bone ) Ngon",_G.Auto_Farm_Bone,function(value)
  _G.Auto_Farm_Bone = value
  _G.click = value
+ _G.nv2 = value
  StopTween(_G.Auto_Farm_Bone)
  end)
 
