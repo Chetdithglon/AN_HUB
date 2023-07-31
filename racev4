@@ -18,14 +18,7 @@ game:GetService("Players").LocalPlayer.PlayerGui.Main.Version.TextColor3 = Color
 game:GetService("Players").LocalPlayer.PlayerGui.Main.Version.TextSize = (19.000)
 end
 
-Setting:AddToggle({
-	Name = "Fast Attack (With Mastery)",
-	Default = false,
-	Callback = function(Value)
-		 _G.FastAttack = Value
-	end    
-})
-	   
+
 	
 
 
