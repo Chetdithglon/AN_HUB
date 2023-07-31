@@ -3236,7 +3236,7 @@ if game:GetService("ReplicatedStorage").Effect.Container:FindFirstChild("Respawn
 	game:GetService("ReplicatedStorage").Effect.Container.Respawn:Destroy()
 end
 
-Setting:Toggle("Bring Mob [Normal]",false,function(value)
+Setting:Toggle("Bring Mob [Normal]",true,function(value)
  _G.BringNormal = value
 end)
 
@@ -3260,7 +3260,7 @@ spawn(function()
     end)
 	end)
 	
-Setting:Toggle("Bring Mob [Extra+Lag]",true,function(value)
+Setting:Toggle("Bring Mob [Extra+Lag]",false,function(value)
  _G.BringExtra = value
 end)
 
