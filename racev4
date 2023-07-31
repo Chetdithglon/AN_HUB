@@ -20,41 +20,16 @@ end
 
 
 
-
-function AttackFunction()
-	local ac = CombatFrameworkR.activeController
-	if ac and ac.equipped then
-		for indexincrement = 1, 1 do
-			local bladehit = getAllBladeHits(1)
-			if #bladehit > 0 then
-				local AcAttack8 = debug.getupvalue(ac.attack, 5)
-				local AcAttack9 = debug.getupvalue(ac.attack, 6)
-				local AcAttack7 = debug.getupvalue(ac.attack, 4)
-				local AcAttack10 = debug.getupvalue(ac.attack, 7)
-				local NumberAc12 = (AcAttack8 * 798405 + AcAttack7 * 727595) % AcAttack9
-				local NumberAc13 = AcAttack7 * 798405
-				(function()
-					NumberAc12 = (NumberAc12 * AcAttack9 + NumberAc13) % 1099511627776
-					AcAttack8 = math.floor(NumberAc12 / AcAttack9)
-					AcAttack7 = NumberAc12 - AcAttack8 * AcAttack9
-				end)()
-				AcAttack10 = AcAttack10 + 1
-				debug.setupvalue(ac.attack, 5, AcAttack8)
-				debug.setupvalue(ac.attack, 6, AcAttack9)
-				debug.setupvalue(ac.attack, 4, AcAttack7)
-				debug.setupvalue(ac.attack, 7, AcAttack10)
-				for k, v in pairs(ac.animator.anims.basic) do
-					v:Play(0.01,0.01,0.01)
-				end                 
-				if game.Players.LocalPlayer.Character:FindFirstChildOfClass("Tool") and ac.blades and ac.blades[1] then 
-					game:GetService("ReplicatedStorage").RigControllerEvent:FireServer("weaponChange",tostring(CurrentWeapon()))
-					game.ReplicatedStorage.Remotes.Validator:FireServer(math.floor(NumberAc12 / 1099511627776 * 16777215), AcAttack10)
-					game:GetService("ReplicatedStorage").RigControllerEvent:FireServer("hit", bladehit,  indexincrement, "") 
-				end
-			end
-		end
-	end
-end
+spawn(function()
+    game:GetService("RunService").RenderStepped:Connect(function()
+        if _G.click then
+             pcall(function()
+                game:GetService'VirtualUser':CaptureController()
+			    game:GetService'VirtualUser':Button1Down(Vector2.new(0,1,0,1))
+            end)
+        end
+    end)
+end)
 
 
 
@@ -3153,44 +3128,7 @@ spawn(function()
 	end
 end)
 
-spawn(function()
-	while task.wait() do
-		pcall(function()
-			if _G.Auto_Farm_Level and _G.Select_Mode_Farm == "Farm Gần nhất" then
-				for i,v in pairs(game.Workspace.Enemies:GetChildren()) do
-					if v.Name == Ms and (v.HumanoidRootPart.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude <= 350 then
-						v.Humanoid.WalkSpeed = 0
-						v.Humanoid.JumpPower = 0
-						v.HumanoidRootPart.Size = Vector3.new(60,60,60)
-						v.HumanoidRootPart.CanCollide = false
-						v.Head.CanCollide = false
-						v.HumanoidRootPart.CFrame = FarmPos
-						if v.Humanoid:FindFirstChild('Animator') then
-							v.Humanoid.Animator:Destroy()
-						end
-						v.Humanoid:ChangeState(11)
-						v.Humanoid:ChangeState(14)
-						sethiddenproperty(game.Players.LocalPlayer,"SimulationRadius",math.huge)
-					end
-				end
-			end
-		end)
-	end
-end)
 
-spawn(function()
-	while task.wait() do
-		pcall(function()
-			if StartMagnet then
-				for i,v in pairs(game.Workspace.Enemies:GetDescendants()) do
-					if v:IsA('Part') and v:IsA('MeshPart') then
-						v.Transparency = 1
-					end
-				end
-			end
-		end)
-	end
-end)
 
 if game:GetService("ReplicatedStorage").Effect.Container:FindFirstChild("Death") then
 	game:GetService("ReplicatedStorage").Effect.Container.Death:Destroy()
@@ -3247,18 +3185,10 @@ spawn(function()
    end)
 end)
 
-
-		spawn(function()
-			while task.wait() do
-				pcall(function()
-					if _G.DisableDamage then
-						game:GetService("ReplicatedStorage").Assets.GUI.DamageCounter.Enabled = false
-					else
-						game:GetService("ReplicatedStorage").Assets.GUI.DamageCounter.Enabled = true
-					end
-				end)
-			end
-		end)
+Setting:Toggle("Auto Click",false,function(value)
+ _G.click = value
+end)
+		
 
 Setting:Toggle("Fast Attack [New]",true,function(value)
  _G.FastAttack = value
@@ -3297,26 +3227,151 @@ spawn(function()
         end
     end)
 end)
+require(game.ReplicatedStorage.Util.CameraShaker):Stop()
 
+xShadowFastAttackx = require(game:GetService("Players").LocalPlayer.PlayerScripts.CombatFramework)
 
+xShadowx = debug.getupvalues(xShadowFastAttackx)[2]
 
-
+spawn(function()
+    game:GetService("RunService").RenderStepped:Connect(function()
+        if _G.FastAttack then
+            if typeof(xShadowx) == "table" then
+                pcall(function()
+                    xShadowx.activeController.timeToNextAttack = (math.huge^math.huge^math.huge)
+                    xShadowx.activeController.timeToNextAttack = 0
+                    xShadowx.activeController.hitboxMagnitude = 200
+                    xShadowx.activeController.active = false
+                    xShadowx.activeController.timeToNextBlock = 0
+                    xShadowx.activeController.focusStart = 0
+                    xShadowx.activeController.increment = 4
+                    xShadowx.activeController.blocking = false
+                    xShadowx.activeController.attacking = false
+                    xShadowx.activeController.humanoid.AutoRotate = 50
+                end)
+            end
+        end
+    end)
+end)
 
 
     
     
-    
-
-
-
---Setting:Toggle("Disabled Damage Text",_G.DisableDamage,function(value)
- --_G.DisableDamage = value
---end)
-
  
+local  Mob_Kill_Cake_Prince  = Setting:Label("Total")
+Setting:Toggle( "Spawm Katakuri + Check Katakuri" ,_G.Auto_Cake_Pr1ince,function(value)
+ _G.Auto_Cake_Prince1 = value
+StopTween(_G.Auto_Cake_Prince1)
+end)
+	spawn(function()
+		while wait() do
+  if _G.Auto_Cake_Prince1 then
+			pcall(function()
+				if string.len(game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("CakePrinceSpawner")) == 88 then
+					Mob_Kill_Cake_Prince:Set("Killed : "..string.sub(game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("CakePrinceSpawner"),39,41).." : Kill More")
+				elseif string.len(game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("CakePrinceSpawner")) == 87 then
+					Mob_Kill_Cake_Prince:Set("Kill : "..string.sub(game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("CakePrinceSpawner"),39,40).." : Kill More")
+				elseif string.len(game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("CakePrinceSpawner")) == 86 then
+					Mob_Kill_Cake_Prince:Set("Kill : "..string.sub(game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("CakePrinceSpawner"),39,39).." : More")
+				else
+					Mob_Kill_Cake_Prince:Set("Boss Đã Được Triệu Hồi")
+				end
+			end)
+   end
+	end
+end)
 
+Setting:Toggle("Màn Hình Treo Farm [ Mượt Hơn ]",_G.WhiteScreen,function(value)
+ _G.WhiteScreen = value
 
+ if _G.WhiteScreen == true then
+ game:GetService("RunService"):Set3dRenderingEnabled(false)
+ elseif _G.WhiteScreen == false then
+ game:GetService("RunService"):Set3dRenderingEnabled(true)
+ end
+end)
 
+ Setting:Button("Giảm Lag",function()
+     DiscordLib:Notification("Thông Báo" , "Bật Xong Sẽ Bị Đứng Máy 5-10 Giây" , 10 ,11816162894 )
+      wait(3)
+         local decalsyeeted = true
+		local g = game
+		local w = g.Workspace
+		local l = g.Lighting
+		local t = w.Terrain
+		t.WaterWaveSize = 0
+		t.WaterWaveSpeed = 0
+		t.WaterReflectance = 0
+		t.WaterTransparency = 0
+		l.GlobalShadows = false
+		l.FogEnd = 9e9
+		l.Brightness = 0
+		settings().Rendering.QualityLevel = "Level01"
+		for i, v in pairs(g:GetDescendants()) do
+			if v:IsA("Part") or v:IsA("Union") or v:IsA("CornerWedgePart") or v:IsA("TrussPart") then 
+				v.Material = "Plastic"
+				v.Reflectance = 0
+			elseif v:IsA("Decal") or v:IsA("Texture") and decalsyeeted then
+				v.Transparency = 1
+			elseif v:IsA("ParticleEmitter") or v:IsA("Trail") then
+				v.Lifetime = NumberRange.new(0)
+			elseif v:IsA("Explosion") then
+				v.BlastPressure = 1
+				v.BlastRadius = 1
+			elseif v:IsA("Fire") or v:IsA("SpotLight") or v:IsA("Smoke") or v:IsA("Sparkles") then
+				v.Enabled = false
+			elseif v:IsA("MeshPart") then
+				v.Material = "Plastic"
+				v.Reflectance = 0
+				v.TextureID = 10385902758728957
+			end
+		end
+		for i, e in pairs(l:GetChildren()) do
+			if e:IsA("BlurEffect") or e:IsA("SunRaysEffect") or e:IsA("ColorCorrectionEffect") or e:IsA("BloomEffect") or e:IsA("DepthOfFieldEffect") then
+				e.Enabled = false
+			end
+		end
+
+		local decalsyeeted = true
+		local g = game
+		local w = g.Workspace
+		local l = g.Lighting
+		local t = w.Terrain
+		t.WaterWaveSize = 0
+		t.WaterWaveSpeed = 0
+		t.WaterReflectance = 0
+		t.WaterTransparency = 0
+		l.GlobalShadows = false
+		l.FogEnd = 9e9
+		l.Brightness = 0
+		settings().Rendering.QualityLevel = "Level01"
+		for i, v in pairs(g:GetDescendants()) do
+			if v:IsA("Part") or v:IsA("Union") or v:IsA("CornerWedgePart") or v:IsA("TrussPart") then 
+				v.Material = "Plastic"
+				v.Reflectance = 0
+			elseif v:IsA("Decal") or v:IsA("Texture") and decalsyeeted then
+				v.Transparency = 1
+			elseif v:IsA("ParticleEmitter") or v:IsA("Trail") then
+				v.Lifetime = NumberRange.new(0)
+			elseif v:IsA("Explosion") then
+				v.BlastPressure = 1
+				v.BlastRadius = 1
+			elseif v:IsA("Fire") or v:IsA("SpotLight") or v:IsA("Smoke") or v:IsA("Sparkles") then
+				v.Enabled = false
+			elseif v:IsA("MeshPart") then
+				v.Material = "Plastic"
+				v.Reflectance = 0
+				v.TextureID = 10385902758728957
+			end
+		end
+		for i, e in pairs(l:GetChildren()) do
+			if e:IsA("BlurEffect") or e:IsA("SunRaysEffect") or e:IsA("ColorCorrectionEffect") or e:IsA("BloomEffect") or e:IsA("DepthOfFieldEffect") then
+				e.Enabled = false
+				
+			end
+		end
+	
+end)
        
 	Notilistlayout.Name = "Notilistlayout"
 	Notilistlayout.Parent = NotiFrame
@@ -3640,8 +3695,6 @@ Main:Toggle("Bãi 1 ( Bone ) Ngon",_G.Auto_Farm_Bone,function(value)
 Main:Toggle("Bãi 2 ( Katakuri ) Ngon",_G.Auto_Cake_Prince,function(value)
  _G.Auto_Cake_Prince = value
  _G.click = value
- _G.Auto_Farm_Bone4 = value
- _G.Auto_Farm_Bone3 = value
 StopTween(_G.Auto_Cake_Prince)
 end)
 	
@@ -3697,7 +3750,7 @@ end)
 										EquipWeapon(_G.Select_Weapon)
 										v.HumanoidRootPart.Size = Vector3.new(60, 60, 60)
 										v.HumanoidRootPart.CanCollide = false
-										topos(v.HumanoidRootPart.CFrame * MethodFarm)
+										topos(v.HumanoidRootPart.CFrame * CFrame.new(0,0,60))
 										game:GetService'VirtualUser':CaptureController()
 										game:GetService'VirtualUser':Button1Down(Vector2.new(1280, 672))
 									until _G.Auto_Cake_Prince == false or not v.Parent or v.Humanoid.Health <= 0
@@ -3735,8 +3788,6 @@ end)
 Main:Toggle("Bãi 3 ( 2400-2425 ) Tạm Đc",_G.farm3,function(value)
  _G.farm3 = value
  _G.click = value
- _G.Auto_Farm_Bone4 = value
- _G.Auto_Farm_Bone3 = value
  StopTween(_G.farm3)
  end)
 
@@ -3813,8 +3864,6 @@ spawn(function()
 Main:Toggle("Bãi 4 ( 2300-2375 ) Tạm Đc",_G.farm4,function(value)
  _G.farm4 = value
  _G.click = value
- _G.Auto_Farm_Bone4 = value
- _G.Auto_Farm_Bone3 = value
  StopTween(_G.farm4)
  end)
 
