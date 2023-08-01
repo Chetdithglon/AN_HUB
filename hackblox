@@ -832,7 +832,7 @@ DiscordLib:Notification("Thông Báo" , "Nhận Cày Thuê" , 10 ,11816162894 
  Name.Size = UDim2.new(0, 61, 0, 27)
  Name.Font = Enum.Font.Code
  Name.Text = text
- Name.TextColor3 = Color3.fromRGB(116, 255, 192)
+ Name.TextColor3 = Color3.fromRGB(255, 11, 84)
  Name.TextSize = 14.000
  
  local Hub = Instance.new("TextLabel")
@@ -843,7 +843,7 @@ DiscordLib:Notification("Thông Báo" , "Nhận Cày Thuê" , 10 ,11816162894 
  Hub.Position = UDim2.new(0, 110, 0, 0)
  Hub.Size = UDim2.new(0, 81, 0, 27)
  Hub.Font = Enum.Font.Code
- Hub.Text = "V2"
+ Hub.Text = "Hub"
  Hub.TextColor3 = Color3.fromRGB(93, 255, 223)
  Hub.TextSize = 16.000
  Hub.TextXAlignment = Enum.TextXAlignment.Left
@@ -4314,7 +4314,7 @@ end)
 
  
 --------------------------------------------------------------------
-local Library = Update:Window("BLCK HUB ","")
+local Library = Update:Window("Master","")
 ------------------------------------------
 
 spawn(function()
