@@ -10024,36 +10024,33 @@ Race:Seperator("Buy + Bật Tộc")
  
  
   
-  Race:Toggle("Tự Động Bật V4",_G.Auto_Farm_Bone3,function(value)
-      while wait() do
+   Race:Toggle("Tự Động Bật V4",_G.Auto_Farm_Bone3,function(value)
  _G.Auto_Farm_Bone3 = value
  StopTween(_G.Auto_Farm_Bone3)
  spawn(function()
     pcall(function()
-        repeat wait()
+    while wait(0.1) do 
+    if _G.Auto_Farm_Bone3  then
 local args = {
     [1] = true
 }
-while wait() do
-if _G.Auto_Farm_Bone3 then
 game:GetService("Players").LocalPlayer.Backpack.Awakening.RemoteFunction:InvokeServer(unpack(args))
+
 end
 end
-until  game.Players.LocalPlayer.Character.Humanoid.Health <= 0 
 end)
 end)
-end
-end)
-end
+  end) 
   
 
 Race:Toggle("Tự Động Mua Train",_G.Auto_Farm_Bone4,function(value)
-    while wait() do
  _G.Auto_Farm_Bone4 = value
  StopTween(_G.Auto_Farm_Bone4)
+end)
 spawn(function()
     pcall(function()
-        repeat wait()
+        while wait(0.1) do
+            if _G.Auto_Farm_Bone4 then
     local args = {
     [1] = true
 }
@@ -10062,15 +10059,11 @@ local args = {
     [1] = "UpgradeRace",
     [2] = "Buy"
 }
-while wait() do
-if _G.Auto_Farm_Bone4 then
+
 game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("CommF_"):InvokeServer(unpack(args))
-end
-end
-until  game.Players.LocalPlayer.Character.Humanoid.Health <= 0
-end)
-end)
-end
+            end
+end 
+end)  
 end)
 
 
@@ -12841,7 +12834,6 @@ spawn(function()
         end)
     end
 end)
-
 
 
 
