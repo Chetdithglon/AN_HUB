@@ -10040,7 +10040,8 @@ end
 end
 end)
 end)
-  end) 
+   end) 
+end
   
 
 Race:Toggle("Tự Động Mua Train",_G.Auto_Farm_Bone4,function(value)
@@ -12834,7 +12835,6 @@ spawn(function()
         end)
     end
 end)
-
 
 
 
