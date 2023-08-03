@@ -4378,6 +4378,7 @@ end)
    Main:Seperator("Buy + Bật Tộc")
   
   Main:Toggle("Tự Động Bật V4",_G.Auto_Farm_Bone3,function(value)
+      while wait(0.1) do 
  _G.Auto_Farm_Bone3 = value
  StopTween(_G.Auto_Farm_Bone3)
  spawn(function()
@@ -4391,9 +4392,11 @@ game:GetService("Players").LocalPlayer.Backpack.Awakening.RemoteFunction:InvokeS
 
 end
 end
+
 end)
 end)
-  end) 
+      end
+end)
   
 
 Main:Toggle("Tự Động Mua Train",_G.Auto_Farm_Bone4,function(value)
