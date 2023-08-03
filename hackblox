@@ -5342,16 +5342,14 @@ end)
 
 
 
-Setting:Toggle("Slow Attack",true,function(value)
+Setting:Toggle("Slow Attack",false,function(value)
  _G.FastAttack1 = value
  if value then
      Attack1Function()
      end
 end)
 
-Setting:Toggle("Fast Attack",false,function(value)
- _G.FastAttack = value
- end)
+
 
 -- [[ Fast Attack Fixed / Shadow Hub / Dont edit , or ur will be messed up! ]]
 
@@ -5384,19 +5382,6 @@ spawn(function()
     end)
 end)
 
-Setting:Toggle("Auto Ken Haki",_G.Auto_Ken,function(vu)
-	_G.Auto_Ken = vu
-end)
-spawn(function()
-	while wait(2) do
-		pcall(function()
-			if _G.Auto_Ken then
-				game:GetService("ReplicatedStorage").Remotes.CommE:FireServer("Ken",true)
-				wait(7)
-			end
-		end)
-	end
-end)
 
 
 Setting:Toggle("Click 0 Giây",nil,function(value)
@@ -5473,8 +5458,15 @@ while cac() do
 	AttackNoCD()
 end
 
-    end)
-Main:Toggle("Auto Click",false,function(value)
+end)
+
+
+Main:Toggle("Fast Attack",true,function(value)
+ _G.FastAttack = value
+ end)
+
+
+Setting:Toggle("Auto Click",false,function(value)
  _G.click = value
 end)
     
@@ -6794,65 +6786,6 @@ end)
 
 
 
-
-
-
-
-
---Main:Toggle("Auto Mirage Island Hop",false,function(value)
- --_G.Mystichop = value
---end)
-
-Main:Seperator(" Rương ")
-
-Main:Toggle("Nhặt Rương Nhanh",false,function(vu)
-	_G.ChestBypass = vu
-end)
-
-spawn(function()
-while wait() do
-if _G.ChestBypass then
-pcall(function()
-for i,v in pairs(game:GetService("Workspace"):GetChildren()) do
-      if string.find(v.Name, "Chest") then
-          print(v.Name)
-          game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = v.CFrame
-          wait(.15)
-      end
-  end
-  game.Players.LocalPlayer.Character.Head:Destroy()
-  for _,v in pairs(game:GetService("Workspace"):GetDescendants()) do
-   if string.find(v.Name, "Chest") and v:IsA("TouchTransmitter") then
-   firetouchinterest(game.Players.LocalPlayer.Character.HumanoidRootPart, v.Parent, 0) --0 is touch
-   wait()
-   firetouchinterest(game.Players.LocalPlayer.Character.HumanoidRootPart, v.Parent, 1) -- 1 is untouch
-   end
-   end
-  end)
-    end
-  end
-end)
-
-spawn(function()
-while task.wait() do
-if _G.ChestBypass then
-        local ohString1 = "SetTeam"
-        local ohString2 = "Pirates"
-        game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(ohString1, ohString2)
-     end
-end
-end)
-
-Main:Toggle("Nhặt Rương Chậm",_G.Grab_Chest,function(vu)
-	Grab_Chest = vu
-    StopTween(Grab_Chest)
-	_G.Grab_Chest = vu
-end)
-
-Main:Button("Nhặt Rương Siêu Nhanh ( Rủi Ro )",function()
- loadstring(game:HttpGet("https://raw.githubusercontent.com/scriptpastebin/raw/main/Chest_onoff"))()
- end)
-
 if World3 then
 Main:Seperator(" Bones ")
 
@@ -6890,121 +6823,7 @@ Main:Button("Bones Đang Có", function()
 end)
 end
 
-Main:Seperator(" Observation ")
-	
-local ObservationLevel = Main:Label("")
 
-spawn(function()
-	while game:GetService("RunService").Heartbeat:wait() do
-		if game.Players.LocalPlayer.VisionRadius.Value == 5000 then
-			value = "5k Max"
-		else
-			value = math.round(game.Players.LocalPlayer.VisionRadius.value)
-		end
-		ObservationLevel:Set("Số Lần Né : "..tostring(value))
-	end
-end)
-    
-       Main:Toggle("Tự Động Cày Haki",_G.AutoObservation,function(value)
-        _G.AutoObservation = value
-        StopTween(_G.AutoObservation)
-    end)
-    
-    spawn(function()
-        while wait() do
-            pcall(function()
-                if _G.AutoObservation then
-                    repeat task.wait()
-                        if not game:GetService("Players").LocalPlayer.PlayerGui.ScreenGui:FindFirstChild("ImageLabel") then
-                            game:GetService('VirtualUser'):CaptureController()
-                            game:GetService('VirtualUser'):SetKeyDown('0x65')
-                            wait(2)
-                            game:GetService('VirtualUser'):SetKeyUp('0x65')
-                        end
-                    until game:GetService("Players").LocalPlayer.PlayerGui.ScreenGui:FindFirstChild("ImageLabel") or not _G.AutoObservation
-                end
-            end)
-        end
-    end)
-    
-    Main:Toggle("Đổi Sever Cày Haki",_G.AutoObservation_Hop,function(value)
-        _G.AutoObservation_Hop = value
-    end)
-    
-    spawn(function()
-        pcall(function()
-            while wait() do
-                if _G.AutoObservation then
-                    if game:GetService("Players").LocalPlayer.VisionRadius.Value >= 5000 then
-local NotificationHolder = loadstring(game:HttpGet("https://raw.githubusercontent.com/BocusLuke/UI/main/STX/Module.Lua"))()
-local Notification = loadstring(game:HttpGet("https://raw.githubusercontent.com/BocusLuke/UI/main/STX/Client.Lua"))()
-wait(1)
-Notification:Notify(
-   {Title = "BLCK HUB", Description = "Max Haki rồi cày j nữa ba"},
-   {OutlineColor = Color3.fromRGB(80, 80, 80),Time = 5, Type = "option"},
-   {Image = "http://www.roblox.com/asset/?id=6023426923", ImageColor = Color3.fromRGB(255, 84, 84), Callback = function(State) print(tostring(State)) end}
-)
-                    else
-                        if World2 then
-                            if game:GetService("Workspace").Enemies:FindFirstChild("Water Fighter [Lv. 1450]") then
-                                if game:GetService("Players").LocalPlayer.PlayerGui.ScreenGui:FindFirstChild("ImageLabel") then
-                                    repeat task.wait()
-                                        game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame = game:GetService("Workspace").Enemies:FindFirstChild("Water Fighter [Lv. 1450]").HumanoidRootPart.CFrame * CFrame.new(3,0,0)
-                                    until _G.AutoObservation == false or not game:GetService("Players").LocalPlayer.PlayerGui.ScreenGui:FindFirstChild("ImageLabel")
-                                else
-                                    repeat task.wait()
-                                        game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame = game:GetService("Workspace").Enemies:FindFirstChild("Water Fighter [Lv. 1450]").HumanoidRootPart.CFrame * CFrame.new(0,50,0)+
-                                            wait(1)
-                                        if not game:GetService("Players").LocalPlayer.PlayerGui.ScreenGui:FindFirstChild("ImageLabel") and _G.AutoObservation_Hop == true then
-                                           game:GetService("TeleportService"):Teleport(game.PlaceId, game:GetService("Players").LocalPlayer)
-                                        end
-                                    until _G.AutoObservation == false or game:GetService("Players").LocalPlayer.PlayerGui.ScreenGui:FindFirstChild("ImageLabel")
-                                end
-                            else
-                                topos(CFrame.new(-3184.662353515625, 58.35300064086914, -9662.85546875))
-                            end
-                        elseif World1 then
-                            if game:GetService("Workspace").Enemies:FindFirstChild("Galley Captain [Lv. 650]") then
-                                if game:GetService("Players").LocalPlayer.PlayerGui.ScreenGui:FindFirstChild("ImageLabel") then
-                                    repeat task.wait()
-                                        game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame = game:GetService("Workspace").Enemies:FindFirstChild("Galley Captain [Lv. 650]").HumanoidRootPart.CFrame * CFrame.new(3,0,0)
-                                    until _G.AutoObservation == false or not game:GetService("Players").LocalPlayer.PlayerGui.ScreenGui:FindFirstChild("ImageLabel")
-                                else
-                                    repeat task.wait()
-                                        game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame = game:GetService("Workspace").Enemies:FindFirstChild("Galley Captain [Lv. 650]").HumanoidRootPart.CFrame * CFrame.new(0,50,0)
-                                        wait(1)
-                                        if not game:GetService("Players").LocalPlayer.PlayerGui.ScreenGui:FindFirstChild("ImageLabel") and _G.AutoObservation_Hop == true then
-                                            game:GetService("TeleportService"):Teleport(game.PlaceId,game:GetService("Players").LocalPlayer)
-                                        end
-                                    until _G.AutoObservation == false or game:GetService("Players").LocalPlayer.PlayerGui.ScreenGui:FindFirstChild("ImageLabel")
-                                end
-                            else
-                                topos(CFrame.new(5533.29785, 88.1079102, 4852.3916))
-                            end
-                        elseif World3 then
-                            if game:GetService("Workspace").Enemies:FindFirstChild("Giant Islander [Lv. 1650]") then
-                                if game:GetService("Players").LocalPlayer.PlayerGui.ScreenGui:FindFirstChild("ImageLabel") then
-                                    repeat task.wait()
-                                        game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame = game:GetService("Workspace").Enemies:FindFirstChild("Giant Islander [Lv. 1650]").HumanoidRootPart.CFrame * CFrame.new(3,0,0)
-                                    until _G.AutoObservation == false or not game:GetService("Players").LocalPlayer.PlayerGui.ScreenGui:FindFirstChild("ImageLabel")
-                                else
-                                    repeat task.wait()
-                                        game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame = game:GetService("Workspace").Enemies:FindFirstChild("Giant Islander [Lv. 1650]").HumanoidRootPart.CFrame * CFrame.new(0,50,0)
-                                        wait(1)
-                                        if not game:GetService("Players").LocalPlayer.PlayerGui.ScreenGui:FindFirstChild("ImageLabel") and _G.AutoObservation_Hop == true then
-                                            game:GetService("TeleportService"):Teleport(game.PlaceId,game:GetService("Players").LocalPlayer)
-                                        end
-                                    until _G.AutoObservation == false or game:GetService("Players").LocalPlayer.PlayerGui.ScreenGui:FindFirstChild("ImageLabel")
-                                end
-                            else
-                                topos(CFrame.new(4530.3540039063, 656.75695800781, -131.60952758789))
-                            end
-                        end
-                    end
-                end
-            end
-        end)
-    end)
 
 Weapon:Seperator("SeaBeasts")
 Weapon:Toggle("Tự Động Đánh Sea Beasts",_G.SeaBeasts1,function(value)
@@ -10206,33 +10025,35 @@ Race:Seperator("Buy + Bật Tộc")
  
   
   Race:Toggle("Tự Động Bật V4",_G.Auto_Farm_Bone3,function(value)
+      while wait() do
  _G.Auto_Farm_Bone3 = value
  StopTween(_G.Auto_Farm_Bone3)
  spawn(function()
     pcall(function()
-    while wait(0.1) do 
-    if _G.Auto_Farm_Bone3  then
+        repeat wait()
 local args = {
     [1] = true
 }
+while wait() do
+if _G.Auto_Farm_Bone3 then
 game:GetService("Players").LocalPlayer.Backpack.Awakening.RemoteFunction:InvokeServer(unpack(args))
-
 end
 end
+until  game.Players.LocalPlayer.Character.Humanoid.Health <= 0 
 end)
 end)
-  end) 
+end
+end)
 end
   
 
 Race:Toggle("Tự Động Mua Train",_G.Auto_Farm_Bone4,function(value)
+    while wait() do
  _G.Auto_Farm_Bone4 = value
  StopTween(_G.Auto_Farm_Bone4)
-end)
 spawn(function()
     pcall(function()
-        while wait(0.1) do
-            if _G.Auto_Farm_Bone4 then
+        repeat wait()
     local args = {
     [1] = true
 }
@@ -10241,12 +10062,28 @@ local args = {
     [1] = "UpgradeRace",
     [2] = "Buy"
 }
-
+while wait() do
+if _G.Auto_Farm_Bone4 then
 game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("CommF_"):InvokeServer(unpack(args))
-            end
-end 
-end)  
+end
+end
+until  game.Players.LocalPlayer.Character.Humanoid.Health <= 0
 end)
+end)
+end
+end)
+
+
+
+
+
+
+
+
+
+
+
+
 Race:Button("Dịch Chuyển Đến Npc Mua Train",function()
     Game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(28286.35546875, 14895.3017578125, 102.62469482421875)
   Game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(28286.35546875, 14895.3017578125, 102.62469482421875)
@@ -12837,7 +12674,6 @@ spawn(function()
         end)
     end
 end)
-
 
 
 
