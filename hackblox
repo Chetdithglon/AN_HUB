@@ -613,7 +613,7 @@ DiscordLib:Notification("Thông Báo" , "Nhận Cày Thuê" , 10 ,11816162894 
  end
  _G.BGColor_1 = Color3.fromRGB(30,30,30)
  _G.BGColor_2 = Color3.fromRGB(20, 20, 20)
- _G.Color = Color3.fromRGB(74,224,224)
+ _G.Color = Color3.fromRGB(255, 49, 52)
  _G.WindowBackgroundColor = Color3.fromRGB(12,12,12)
  _G.BackgroundItemColor = Color3.fromRGB(20, 20, 20)
  _G.TabWindowColor = Color3.fromRGB(30, 30, 30)
@@ -833,20 +833,20 @@ DiscordLib:Notification("Thông Báo" , "Nhận Cày Thuê" , 10 ,11816162894 
  Name.Font = Enum.Font.Code
  Name.Text = text
  Name.TextColor3 = Color3.fromRGB(255, 11, 84)
- Name.TextSize = 14.000
+ Name.TextSize = 16.000
  
  local Hub = Instance.new("TextLabel")
  Hub.Name = "Hub"
  Hub.Parent = Top
  Hub.BackgroundColor3 = Color3.fromRGB(224,224,224)
  Hub.BackgroundTransparency = 1.000
- Hub.Position = UDim2.new(0, 110, 0, 0)
+ Hub.Position = UDim2.new(0, 78, 0, 0)
  Hub.Size = UDim2.new(0, 81, 0, 27)
  Hub.Font = Enum.Font.Code
  Hub.Text = "Hub"
- Hub.TextColor3 = Color3.fromRGB(93, 255, 223)
+ Hub.TextColor3 = Color3.fromRGB(255, 47, 172)
  Hub.TextSize = 16.000
- Hub.TextXAlignment = Enum.TextXAlignment.Left
+
  
  
  local MainImage = Instance.new("ImageLabel")
@@ -12841,7 +12841,6 @@ spawn(function()
         end)
     end
 end)
-
 
 
 
