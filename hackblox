@@ -11141,6 +11141,12 @@ spawn(function()
 	end
 end)
 
+
+
+Dungeon:Button("Check Thức Tỉnh",function()
+       pcall(function()
+           game.Players.LocalPlayer.PlayerGui.Main.AwakeningToggler.Visible = true
+           end)
   
   Dungeon:Button("Qua Đảo Tiếp Theo",function()
    pcall(function()
@@ -12835,7 +12841,6 @@ spawn(function()
         end)
     end
 end)
-
 
 
 
