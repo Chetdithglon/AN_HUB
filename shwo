@@ -3620,7 +3620,7 @@ getgenv().ToTargets = function(p)
 
 
 
-local Library = Update:Window("Min Gaming","",Enum.KeyCode.RightControl);
+local Library = Update:Window("Master Hub","",Enum.KeyCode.RightControl);
 
 local Main = Library:AddTab("Main")
 local M = Library:AddTab("Weapon")
@@ -5321,53 +5321,62 @@ spawn(function()
         end
     end)
     
-    M:AddToggle("Auto Farm Magma Ore",_G.Makori_gay,function(value)
+    if World2 then
+    M:AddToggle("Auto Farm Magma Ore 2",_G.Makori_gay,function(value)
 _G.Umm = value
 StopTween(_G.Umm)
 end)
+end
 
-local MaterialsPos3 = CFrame.new(-5850.2802734375, 77.28675079345703, 8848.6748046875)
+ if World1 then
+    M:AddToggle("Quặng Tham Thạch",_G.Makori_gay,function(value)
+_G.Umm = value
+StopTween(_G.Umm)
+end)
+end
+
+local MaterialsPos3 = CFrame.new(-5495.0542, 58.0893402, 8596.33887, -0.759505928, 0.333770722, 0.558343887, 0.140493497, 0.922238529, -0.360191256, -0.635147512, -0.195123702, -0.747338176)
 spawn(function()
-        while wait() do
-            if _G.Umm and World1 then
-                pcall(function()
-                    if game:GetService("Workspace").Enemies:FindFirstChild("Military Spy [Lv. 325]") then
-                        for i,v in pairs(game:GetService("Workspace").Enemies:GetChildren()) do
-                            if v.Name == "Military Spy [Lv. 325]" then
-                                if v:FindFirstChild("Humanoid") and v:FindFirstChild("HumanoidRootPart") and v.Humanoid.Health > 0 then
-                                    repeat task.wait()
-                                        AutoHaki()
-                                        EquipWeapon(_G.SelectWeapon)
-                                        v.HumanoidRootPart.CanCollide = false
-                                        v.Humanoid.WalkSpeed = 0
-                                        v.Head.CanCollide = false 
-                                        MakoriGayMag = true
-                                        PosGay = v.HumanoidRootPart.CFrame
-                                        topos(v.HumanoidRootPart.CFrame * CFrame.new(PosX,PosY,PosZ))
-                                        game:GetService("VirtualUser"):CaptureController()
-                                        game:GetService("VirtualUser"):Button1Down(Vector2.new(1280,672))
-                                    until not _G.Umm or not v.Parent or v.Humanoid.Health <= 0
-                                    MakoriGayMag = false
-                                end
-                            end
-                        end
-                    else
-                  
-						topos(MaterialsPos3)
-					
-                    topos(CFrame.new(-5850.2802734375, 77.28675079345703, 8848.6748046875))
-                        if game:GetService("ReplicatedStorage"):FindFirstChild("Military Spy [Lv. 325]") then
-                            topos(game:GetService("ReplicatedStorage"):FindFirstChild("Military Spy [Lv. 325]").HumanoidRootPart.CFrame * CFrame.new(2,20,2))
-                        else
-                            if _G.StardHop then
-                                Hop()
+    while wait() do 
+        if _G.Umm and World1 then
+            pcall(function()
+                if game:GetService("Workspace").Enemies:FindFirstChild("Military Spy [Lv. 325]") or game:GetService("Workspace").Enemies:FindFirstChild("Military Soldier [Lv. 300]") then
+                    for i,v in pairs(game:GetService("Workspace").Enemies:GetChildren()) do
+                        if v.Name == "Military Spy [Lv. 325]" or v.Name == "Military Soldier [Lv. 300]" then
+                           if v:FindFirstChild("Humanoid") and v:FindFirstChild("HumanoidRootPart") and v.Humanoid.Health > 0 then
+                               repeat task.wait()
+                                    AutoHaki()
+                                    EquipWeapon(_G.SelectWeapon)
+                                    v.HumanoidRootPart.CanCollide = false
+                                    v.Humanoid.WalkSpeed = 0
+                                    v.Head.CanCollide = false 
+                                    StartMagnetBoneMon = true
+                                    PosMonBone = v.HumanoidRootPart.CFrame
+                                    topos(v.HumanoidRootPart.CFrame * CFrame.new(PosX,PosY,PosZ))
+                                    game:GetService("VirtualUser"):CaptureController()
+                                    game:GetService("VirtualUser"):Button1Down(Vector2.new(1280,672))
+                                until not _G.Umm or not v.Parent or v.Humanoid.Health <= 0
                             end
                         end
                     end
-                end)
-            end
+                else
+             
+                    topos(BonePos)
+            
+                    StartMagnetBoneMon = false
+                    topos(CFrame.new(-5495.0542, 58.0893402, 8596.33887, -0.759505928, 0.333770722, 0.558343887, 0.140493497, 0.922238529, -0.360191256, -0.635147512, -0.195123702, -0.747338176))
+                    for i,v in pairs(game:GetService("ReplicatedStorage"):GetChildren()) do 
+                        if v.Name == "Military Spy [Lv. 325]" then
+                            topos(v.HumanoidRootPart.CFrame * CFrame.new(2,20,2))
+                        elseif v.Name == "Military Soldier [Lv. 300]" then
+                            topos(v.HumanoidRootPart.CFrame * CFrame.new(2,20,2))
+                        end
+                    end
+                end
+            end)
         end
-    end)
+    end
+end)    
    
 local MaterialsPos4 = CFrame.new(-5234.60595703125, 51.953372955322266, -4732.27880859375)
 spawn(function()
@@ -5594,54 +5603,53 @@ spawn(function()
         end
     end)
     
-    M:AddToggle("Auto Farm Scrap Metal",false,function(value)
-Scrap = value
-StopTween(Scrap)
+    M:AddToggle("Sắt Vụn + Da",false,function(value)
+_G.Scrap = value
+StopTween(_G.Scrap)
 end)
 
 local MaterialsPos9 = CFrame.new(-1132.4202880859375, 14.844913482666016, 4293.30517578125)
 spawn(function()
-        while wait() do
-            if Scrap and World1 then
-                pcall(function()
-                    if game:GetService("Workspace").Enemies:FindFirstChild("Brute [Lv. 45]") then
-                        for i,v in pairs(game:GetService("Workspace").Enemies:GetChildren()) do
-                            if v.Name == "Brute [Lv. 45]" then
-                                if v:FindFirstChild("Humanoid") and v:FindFirstChild("HumanoidRootPart") and v.Humanoid.Health > 0 then
-                                    repeat task.wait()
-                                        AutoHaki()
-                                        EquipWeapon(_G.SelectWeapon)
-                                        v.HumanoidRootPart.CanCollide = false
-                                        v.Humanoid.WalkSpeed = 0
-                                        v.Head.CanCollide = false 
-                                        MakoriGayMag = true
-                                        PosGay = v.HumanoidRootPart.CFrame
-                                        topos(v.HumanoidRootPart.CFrame * CFrame.new(PosX,PosY,PosZ))
-                                        game:GetService("VirtualUser"):CaptureController()
-                                        game:GetService("VirtualUser"):Button1Down(Vector2.new(1280,672))
-                                    until not Scrap or not v.Parent or v.Humanoid.Health <= 0
-                                    MakoriGayMag = false
-                                end
-                            end
-                        end
-                    else
-          
-						topos(MaterialsPos9)
-			
-                    topos(CFrame.new(-1132.4202880859375, 14.844913482666016, 4293.30517578125))
-                        if game:GetService("ReplicatedStorage"):FindFirstChild("Brute [Lv. 45]") then
-                            topos(game:GetService("ReplicatedStorage"):FindFirstChild("Brute [Lv. 45]").HumanoidRootPart.CFrame * CFrame.new(2,20,2))
-                        else
-                            if _G.StardHop then
-                                Hop()
+    while wait() do 
+        if _G.Scrap and World1 then
+            pcall(function()
+                if game:GetService("Workspace").Enemies:FindFirstChild("Brute [Lv. 45]") or game:GetService("Workspace").Enemies:FindFirstChild("Pirate [Lv. 35]") then
+                    for i,v in pairs(game:GetService("Workspace").Enemies:GetChildren()) do
+                        if v.Name == "Brute [Lv. 45]" or v.Name == "Pirate [Lv. 35]" then
+                           if v:FindFirstChild("Humanoid") and v:FindFirstChild("HumanoidRootPart") and v.Humanoid.Health > 0 then
+                               repeat task.wait()
+                                    AutoHaki()
+                                    EquipWeapon(_G.SelectWeapon)
+                                    v.HumanoidRootPart.CanCollide = false
+                                    v.Humanoid.WalkSpeed = 0
+                                    v.Head.CanCollide = false 
+                                    StartMagnetBoneMon = true
+                                    PosMonBone = v.HumanoidRootPart.CFrame
+                                    topos(v.HumanoidRootPart.CFrame * CFrame.new(PosX,PosY,PosZ))
+                                    game:GetService("VirtualUser"):CaptureController()
+                                    game:GetService("VirtualUser"):Button1Down(Vector2.new(1280,672))
+                                until not _G.Scrap or not v.Parent or v.Humanoid.Health <= 0
                             end
                         end
                     end
-                end)
-            end
+                else
+             
+                    topos(BonePos)
+            
+                    StartMagnetBoneMon = false
+                    topos(CFrame.new(-1132.4202880859375, 14.844913482666016, 4293.30517578125))
+                    for i,v in pairs(game:GetService("ReplicatedStorage"):GetChildren()) do 
+                        if v.Name == "Brute [Lv. 45]" then
+                            topos(v.HumanoidRootPart.CFrame * CFrame.new(2,20,2))
+                        elseif v.Name == "Pirate [Lv. 35]" then
+                            topos(v.HumanoidRootPart.CFrame * CFrame.new(2,20,2))
+                        end
+                    end
+                end
+            end)
         end
-    end)
-    
+    end
+end)
     local MaterialsPos10 = CFrame.new(-972.307373046875, 73.04473876953125, 1419.2901611328125)
     spawn(function()
         while wait() do
@@ -5870,12 +5878,72 @@ spawn(function()
                 end)
             end
         end
-    end)
-    
-    M:AddToggle("Auto Farm Fish Tail World 3",false,function(value)
+end)
+
+
+
+    if World1 then
+    M:AddToggle("Đuôi Cá ",false,function(value)
+_G.Fish = value
+game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("requestEntrance",Vector3.new(61163.8515625, 11.6796875, 1819.7841796875))
+StopTween(_G.Fish)
+end)
+end
+spawn(function()
+    while wait() do 
+        if _G.Fish and World1 then
+            pcall(function()
+                if game:GetService("Workspace").Enemies:FindFirstChild("Fishman Warrior [Lv. 375]") then
+                    for i,v in pairs(game:GetService("Workspace").Enemies:GetChildren()) do
+                        if v.Name == "Fishman Warrior [Lv. 375]"  then
+                           if v:FindFirstChild("Humanoid") and v:FindFirstChild("HumanoidRootPart") and v.Humanoid.Health > 0 then
+                               repeat task.wait()
+                                    AutoHaki()
+                                    EquipWeapon(_G.SelectWeapon)
+                                    v.HumanoidRootPart.CanCollide = false
+                                    v.Humanoid.WalkSpeed = 0
+                                    v.Head.CanCollide = false 
+                                    StartMagnetBoneMon = true
+                                    PosMonBone = v.HumanoidRootPart.CFrame
+                                    topos(v.HumanoidRootPart.CFrame * CFrame.new(PosX,PosY,PosZ))
+                                    game:GetService("VirtualUser"):CaptureController()
+                                    game:GetService("VirtualUser"):Button1Down(Vector2.new(1280,672))
+                                until not _G.Fish or not v.Parent or v.Humanoid.Health <= 0
+                            end
+                        end
+                    end
+                    
+                else
+             
+                    topos(BonePos)
+            
+                    StartMagnetBoneMon = false
+                    topos(CFrame.new(61358.3945, 20.5610256, 1485.12671, 0.926529765, -0.0146074081, -0.375937819, -1.40222255e-07, 0.999246001, -0.0388269499, 0.376221508, 0.0359743834, 0.925831199))
+                    for i,v in pairs(game:GetService("ReplicatedStorage"):GetChildren()) do 
+                        if v.Name == "Fishman Warrior [Lv. 375]" then
+                            topos(v.HumanoidRootPart.CFrame * CFrame.new(2,20,2))
+                        end
+                    end
+                end
+            end)
+        end
+    end
+end)
+
+
+
+
+
+
+
+
+
+    if World3 then
+    M:AddToggle("Auto Farm Fish Tail ",false,function(value)
 Fish = value
 StopTween(Fish)
 end)
+end
 
 local MaterialsPos15 = CFrame.new(-10961.0126953125, 331.7977600097656, -8914.29296875)
 spawn(function()
@@ -5920,7 +5988,7 @@ spawn(function()
         end
     end)
     
-    M:AddToggle("Auto Farm Mini Tusk",false,function(value)
+    M:AddToggle("Auto Farm Mini Tusk ",false,function(value)
 MiniHee = value
 StopTween(MiniHee)
 end)
@@ -6369,7 +6437,7 @@ spawn(function()
             end
         end
     end)
-    
+    if World3 then
     M:AddSeperator("Soul Guitar")
     
     local FM = M:AddLabel('Third World')
@@ -7381,7 +7449,7 @@ M:AddToggle("Auto Tushita", _G.Autotushita,function(value)
             end
         end
     end)
-    
+    if World3 then
     M:AddSeperator("Dark Dagger")
     
     M:AddToggle("Auto Kill Admin Boss",_G.AutoDarkDagger,function(value)
@@ -7434,7 +7502,8 @@ M:AddToggle("Auto Tushita", _G.Autotushita,function(value)
             end
         end)
     end)
-    
+    end
+    end
     M:AddSeperator(" Sea baeat  ")
  
     M:AddToggle('Auto Sea baeat', false, function(value)
@@ -8586,12 +8655,12 @@ M:AddToggle('Auto Sea baeat Hop', false, function(value)
             end
         end)
     end)
-    
+    if World2 then
     M:AddToggle("Auto Farm Ectoplasm",_G.AutoEctoplasm,function(value)
         _G.AutoEctoplasm = value
         StopTween(_G.AutoEctoplasm)
     end)
-    
+    end
     spawn(function()
         pcall(function()
             while wait() do
