@@ -4418,6 +4418,49 @@ game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("CommF
 end 
 end)  
 end)
+
+
+
+Main:Toggle("lắp Gear 3",_G.gear3,function(value)
+    
+spawn(function()
+    pcall(function()
+        while wait(0.1) do
+            if _G.gear3 then
+                local args = {
+[1] = "TeampleClock",
+[2] = "SpendPoint",
+[3] = "Gear2",
+[4] = "Alpha"
+}
+game:GetService("ReplicatedStorage"):WaitForchild("Remotes"):WaitForChild("CommF_"):InvokeServer(unpack(args))
+            end
+            end
+end )
+end)  
+end)
+
+Main:Toggle("lắp Gear 4",_G.gear4,function(value)
+    
+spawn(function()
+    pcall(function()
+        while wait(0.1) do
+            if _G.gear4 then
+local args = {
+[1] = "TeampleClock",
+[2] = "SpendPoint",
+[3] = "Gear3",
+[4] = "Omega"
+}
+game:GetService("ReplicatedStorage"):WaitForchild("Remotes"):WaitForChild("CommF_"):InvokeServer(unpack(args))
+
+            end
+end 
+end)
+end)  
+end)
+
+
 Main:Button("Dịch Chuyển Đến Npc Mua Train",function()
     Game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(28286.35546875, 14895.3017578125, 102.62469482421875)
   Game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(28286.35546875, 14895.3017578125, 102.62469482421875)
