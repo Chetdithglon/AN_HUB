@@ -4427,16 +4427,17 @@ spawn(function()
     pcall(function()
         while wait(0.1) do
             if _G.gear3 then
-                local args = {
-[1] = "TeampleClock",
-[2] = "SpendPoint",
-[3] = "Gear2",
-[4] = "Alpha"
+local args = {
+    [1] = "TempleClock",
+    [2] = "SpendPoint",
+    [3] = "Gear2",
+    [4] = "Omega"
 }
-game:GetService("ReplicatedStorage"):WaitForchild("Remotes"):WaitForChild("CommF_"):InvokeServer(unpack(args))
-            end
-            end
-end )
+
+game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("CommF_"):InvokeServer(unpack(args))
+end
+end
+end)
 end)  
 end)
 
@@ -4447,15 +4448,15 @@ spawn(function()
         while wait(0.1) do
             if _G.gear4 then
 local args = {
-[1] = "TeampleClock",
-[2] = "SpendPoint",
-[3] = "Gear3",
-[4] = "Omega"
+    [1] = "TempleClock",
+    [2] = "SpendPoint",
+    [3] = "Gear3",
+    [4] = "Omega"
 }
-game:GetService("ReplicatedStorage"):WaitForchild("Remotes"):WaitForChild("CommF_"):InvokeServer(unpack(args))
 
-            end
-end 
+game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("CommF_"):InvokeServer(unpack(args))
+end
+end
 end)
 end)  
 end)
