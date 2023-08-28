@@ -1,7 +1,180 @@
+
 -- Gui to Lua
--- Version: 3.5
+-- Version: 3.6
 
 -- Instances:
+
+local click = Instance.new("ScreenGui")
+local TextButton = Instance.new("TextButton")
+local UIStroke = Instance.new("UIStroke")
+local UIGradient = Instance.new("UIGradient")
+local UIAspectRatioConstraint = Instance.new("UIAspectRatioConstraint")
+
+--Properties:
+
+click.Name = "click"
+click.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+click.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+TextButton.Parent = click
+TextButton.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextButton.BackgroundTransparency = 1.000
+TextButton.BorderColor3 = Color3.fromRGB(255, 255, 255)
+TextButton.BorderSizePixel = 0
+TextButton.ClipsDescendants = true
+TextButton.Position = UDim2.new(0.387922704, 0, 0.712606788, 0)
+TextButton.Size = UDim2.new(0, 85, 0, 33)
+TextButton.ZIndex = 3
+TextButton.Font = Enum.Font.SourceSans
+TextButton.LineHeight = 1.090
+TextButton.Text = "Click Nếu Có Mảnh Gương"
+TextButton.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextButton.TextScaled = true
+TextButton.TextSize = 19.000
+TextButton.TextWrapped = true
+
+UIStroke.Color = Color3.fromRGB(255, 255, 255)
+UIStroke.Thickness = 0.5
+UIStroke.Parent = TextButton
+
+UIGradient.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(255, 255, 73)), ColorSequenceKeypoint.new(0.42, Color3.fromRGB(58, 255, 140)), ColorSequenceKeypoint.new(0.63, Color3.fromRGB(57, 245, 255)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(255, 255, 255))}
+UIGradient.Parent = UIStroke
+
+UIAspectRatioConstraint.Parent = click
+UIAspectRatioConstraint.AspectRatio = 1.633
+
+-- Scripts:
+
+local function JKTFJ_fake_script() -- UIGradient.LocalScript 
+	local script = Instance.new('LocalScript', UIGradient)
+
+	local TweenService = game:GetService("TweenService")
+	local tweeninfo = TweenInfo.new(4, Enum.EasingStyle.Linear, Enum.EasingDirection.In, -1)
+	local tween = TweenService:Create(script.Parent, tweeninfo, {Rotation = 360})
+	tween:Play()
+end
+coroutine.wrap(JKTFJ_fake_script)()
+local function HYGOR_fake_script() -- TextButton.LocalScript 
+	local script = Instance.new('LocalScript', TextButton)
+
+	script.Parent.MouseButton1Click:Connect(function()
+		-- Gui to Lua
+-- Version: 3.6
+
+-- Instances:
+
+local ScreenGui = Instance.new("ScreenGui")
+local ImageLabel = Instance.new("ImageLabel")
+local UICorner = Instance.new("UICorner")
+local ImageButton = Instance.new("ImageButton")
+local UICorner_2 = Instance.new("UICorner")
+local UIAspectRatioConstraint = Instance.new("UIAspectRatioConstraint")
+
+--Properties:
+
+ScreenGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+ImageLabel.Parent = ScreenGui
+ImageLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+ImageLabel.BackgroundTransparency = 1.000
+ImageLabel.BorderColor3 = Color3.fromRGB(0, 0, 0)
+ImageLabel.BorderSizePixel = 0
+ImageLabel.Position = UDim2.new(0.407806009, 0, 0.589529932, 0)
+ImageLabel.Size = UDim2.new(0.0588928163, 0, 0.103846155, 0)
+ImageLabel.Image = "http://www.roblox.com/asset/?id=14487530170"
+ImageLabel.ScaleType = Enum.ScaleType.Fit
+
+UICorner.CornerRadius = UDim.new(0, 15)
+UICorner.Parent = ImageLabel
+
+ImageButton.Parent = ImageLabel
+ImageButton.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+ImageButton.BackgroundTransparency = 1.000
+ImageButton.BorderColor3 = Color3.fromRGB(0, 0, 0)
+ImageButton.BorderSizePixel = 0
+ImageButton.Position = UDim2.new(0.423419267, 0, 0, 0)
+ImageButton.Size = UDim2.new(0, 26, 0, 25)
+ImageButton.Image = "rbxassetid://9545003266"
+
+UICorner_2.Parent = ImageButton
+
+UIAspectRatioConstraint.Parent = ScreenGui
+UIAspectRatioConstraint.AspectRatio = 1.633
+
+-- Scripts:
+
+local function ZOAG_fake_script() -- ImageButton.LocalScript 
+	local script = Instance.new('LocalScript', ImageButton)
+
+	script.Parent.MouseButton1Click:Connect(function()
+		script.Parent.Parent.Parent:Destroy()
+	end)
+end
+coroutine.wrap(ZOAG_fake_script)()
+local function NRODGK_fake_script() -- ImageLabel.LocalScript 
+	local script = Instance.new('LocalScript', ImageLabel)
+
+	local UIS = game:GetService('UserInputService')
+	local frame = script.Parent
+	local dragToggle = nil
+	local dragSpeed = 0.25
+	local dragStart = nil
+	local startPos = nil
+	
+	local function updateInput(input)
+		local delta = input.Position - dragStart
+		local position = UDim2.new(startPos.X.Scale, startPos.X.Offset + delta.X,
+			startPos.Y.Scale, startPos.Y.Offset + delta.Y)
+		game:GetService('TweenService'):Create(frame, TweenInfo.new(dragSpeed), {Position = position}):Play()
+	end
+	
+	frame.InputBegan:Connect(function(input)
+		if (input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch) then 
+			dragToggle = true
+			dragStart = input.Position
+			startPos = frame.Position
+			input.Changed:Connect(function()
+				if input.UserInputState == Enum.UserInputState.End then
+					dragToggle = false
+				end
+			end)
+		end
+	end)
+	
+	UIS.InputChanged:Connect(function(input)
+		if input.UserInputType == Enum.UserInputType.MouseMovement or input.UserInputType == Enum.UserInputType.Touch then
+			if dragToggle then
+				updateInput(input)
+			end
+		end
+	end)
+end
+coroutine.wrap(NRODGK_fake_script)()
+
+		wait(1)
+		script.Parent:Destroy()
+	end)
+end
+coroutine.wrap(HYGOR_fake_script)()
+
+
+game:GetService("Players").LocalPlayer.PlayerGui.Main.SafeZone:Destroy()
+game:GetService("Players").LocalPlayer.PlayerGui.Main.MenuButton:Destroy()
+ game:GetService("Players").LocalPlayer.PlayerGui.Main.HP:Destroy()
+ game:GetService("Players").LocalPlayer.PlayerGui.Main.Energy:Destroy()
+ 
+game:GetService("Players").LocalPlayer.PlayerGui.Main.Level.Position = UDim2.new(0, 10, 0.90299999, 0)
+game:GetService("Players").LocalPlayer.PlayerGui.Main.RaceEnergy.Position = UDim2.new(0, 10, 0.97299999, 0)
+game:GetService("Players").LocalPlayer.PlayerGui.Main.Beli.Position = UDim2.new(0.00999999978, 0, 0.79400003, 0)
+game:GetService("Players").LocalPlayer.PlayerGui.Main.Fragments.Position = UDim2.new(0.00999999999, 0,0.846, 0)
+local fragment = game:GetService("Players").LocalPlayer.Data.Fragments.Value
+game:GetService("Players").LocalPlayer.PlayerGui.Main.Fragments.Text = "ƒ"..fragment
+
+
+game:GetService("Players").LocalPlayer.PlayerGui.Main.Level.Black:Destroy()
+ game:GetService("Players").LocalPlayer.PlayerGui.Main.Level.Bar:Destroy()
+ game:GetService("Players").LocalPlayer.PlayerGui.Main.Level.Exp:Destroy()
 
 local ScreenGui = Instance.new("ScreenGui")
 local TextLabel = Instance.new("TextLabel")
@@ -21,7 +194,7 @@ TextLabel.BackgroundTransparency = 1.000
 TextLabel.Position = UDim2.new(0.787, 0,-0.03, 0)
 TextLabel.Size = UDim2.new(0.258796811, 0, 0.0200803205, 0)
 TextLabel.Font = Enum.Font.SourceSans
-TextLabel.Text = "凸(｡･ω･｡)凸"
+TextLabel.Text = "Master Hub"
 TextLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
 TextLabel.TextSize = 29.000
 TextLabel.TextTransparency = 0.030
@@ -276,7 +449,6 @@ end
 pcall(function() 
     game:GetService("Players").LocalPlayer.PlayerGui.Main.Compass:Destroy()
 end)
-
 
 
 
