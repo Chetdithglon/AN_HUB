@@ -4268,8 +4268,14 @@ local FullMoon = Race:Label("Check Moon")
         end)
 
 Race:Button("Dịch Chuyển Đến Cổng Tộc Của Bản Thân",function()
-    Game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(28286.35546875, 14895.3017578125, 102.62469482421875)
-    wait()
+     Game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(28286.35546875, 14895.3017578125, 102.62469482421875) 
+    wait(0.1)
+       Game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(28286.35546875, 14895.3017578125, 102.62469482421875) 
+       wait(0.1)
+          Game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(28286.35546875, 14895.3017578125, 102.62469482421875) 
+          wait(0.1)
+             Game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(28286.35546875, 14895.3017578125, 102.62469482421875) 
+        wait(0.5)
 				if game:GetService("Players").LocalPlayer.Data.Race.Value == "Human" then
                 two(CFrame.new(29221.822265625, 14890.9755859375, -205.99114990234375))
 				elseif game:GetService("Players").LocalPlayer.Data.Race.Value == "Skypiea" then
