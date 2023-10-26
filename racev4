@@ -2399,249 +2399,249 @@ end
 function CheckQuest() 
 	local MyLevel = game.Players.LocalPlayer.Data.Level.Value
     if World3 then
-		if MyLevel == 1500 or MyLevel <= 1524 or SelectMonster == "Pirate Millionaire [Lv. 1500]" then
-			Mon = "Pirate Millionaire [Lv. 1500]"
+		if MyLevel == 1500 or MyLevel <= 1524 or SelectMonster == "Pirate Millionaire" then
+			Mon = "Pirate Millionaire"
 			--NameQuest = "PiratePortQuest"
 			LevelQuest = 1
 			NameMon = "Pirate Millionaire"
 			--CFrameQuest = CFrame.new(-290.074677, 42.9034653, 5581.58984, 0.965929627, -0, -0.258804798, 0, 1, -0, 0.258804798, 0, 0.965929627)
 			CFrameMon = CFrame.new(81.164993286133, 43.755737304688, 5724.7021484375)
 			--Spawn = "Default"
-		elseif MyLevel == 1525 or MyLevel <= 1574 or SelectMonster == "Pistol Billionaire [Lv. 1525]" then
-			Mon = "Pistol Billionaire [Lv. 1525]"
+		elseif MyLevel == 1525 or MyLevel <= 1574 or SelectMonster == "Pistol Billionaire" then
+			Mon = "Pistol Billionaire"
 			--NameQuest = "PiratePortQuest"
 			LevelQuest = 2
 			NameMon = "Pistol Billionaire"
 			--CFrameQuest = CFrame.new(-290.074677, 42.9034653, 5581.58984, 0.965929627, -0, -0.258804798, 0, 1, -0, 0.258804798, 0, 0.965929627)
 			CFrameMon = CFrame.new(81.164993286133, 43.755737304688, 5724.7021484375)
 			--Spawn = "Default"
-		elseif MyLevel == 1575 or MyLevel <= 1599 or SelectMonster == "Dragon Crew Warrior [Lv. 1575]" then
-			Mon = "Dragon Crew Warrior [Lv. 1575]"
+		elseif MyLevel == 1575 or MyLevel <= 1599 or SelectMonster == "Dragon Crew Warrior" then
+			Mon = "Dragon Crew Warrior"
 			--NameQuest = "AmazonQuest"
 			LevelQuest = 1
 			NameMon = "Dragon Crew Warrior"
 			--CFrameQuest = CFrame.new(5832.83594, 51.6806107, -1101.51563, 0.898790359, -0, -0.438378751, 0, 1, -0, 0.438378751, 0, 0.898790359)
 			CFrameMon = CFrame.new(6241.9951171875, 51.522083282471, -1243.9771728516)
 			--Spawn = "Hydra3"
-		elseif MyLevel == 1600 or MyLevel <= 1624 or SelectMonster == "Dragon Crew Archer [Lv. 1600]" then
-			Mon = "Dragon Crew Archer [Lv. 1600]"
+		elseif MyLevel == 1600 or MyLevel <= 1624 or SelectMonster == "Dragon Crew Archer" then
+			Mon = "Dragon Crew Archer"
 			--NameQuest = "AmazonQuest"
 			LevelQuest = 2
 			NameMon = "Dragon Crew Archer"
 			--CFrameQuest = CFrame.new(5832.83594, 51.6806107, -1101.51563, 0.898790359, -0, -0.438378751, 0, 1, -0, 0.438378751, 0, 0.898790359)
 			CFrameMon = CFrame.new(6488.9155273438, 383.38375854492, -110.66246032715)
 			--Spawn = "Hydra3"
-		elseif MyLevel == 1625 or MyLevel <= 1649 or SelectMonster == "Female Islander [Lv. 1625]" then
-			Mon = "Female Islander [Lv. 1625]"
+		elseif MyLevel == 1625 or MyLevel <= 1649 or SelectMonster == "Female Islander" then
+			Mon = "Female Islander"
 			--NameQuest = "AmazonQuest2"
 			LevelQuest = 1
 			NameMon = "Female Islander"
 			--CFrameQuest = CFrame.new(5448.86133, 601.516174, 751.130676, 0, 0, 1, 0, 1, -0, -1, 0, 0)
 			CFrameMon = CFrame.new(4770.4990234375, 758.95520019531, 1069.8680419922)
 			--Spawn = "Hydra1"
-		elseif MyLevel == 1650 or MyLevel <= 1699 or SelectMonster == "Giant Islander [Lv. 1650]" then
-			Mon = "Giant Islander [Lv. 1650]"
+		elseif MyLevel == 1650 or MyLevel <= 1699 or SelectMonster == "Giant Islander" then
+			Mon = "Giant Islander"
 			--NameQuest = "AmazonQuest2"
 			LevelQuest = 2
 			NameMon = "Giant Islander"
 			--CFrameQuest = CFrame.new(5448.86133, 601.516174, 751.130676, 0, 0, 1, 0, 1, -0, -1, 0, 0)
 			CFrameMon = CFrame.new(4530.3540039063, 656.75695800781, -131.60952758789)
 			--Spawn = "Hydra1"
-		elseif MyLevel == 1700 or MyLevel <= 1724 or SelectMonster == "Marine Commodore [Lv. 1700]" then
-			Mon = "Marine Commodore [Lv. 1700]"
+		elseif MyLevel == 1700 or MyLevel <= 1724 or SelectMonster == "Marine Commodore" then
+			Mon = "Marine Commodore"
 			--NameQuest = "MarineTreeIsland"
 			LevelQuest = 1
 			NameMon = "Marine Commodore"
 			--CFrameQuest = CFrame.new(2180.54126, 27.8156815, -6741.5498, -0.965929747, 0, 0.258804798, 0, 1, 0, -0.258804798, 0, -0.965929747)
 			CFrameMon = CFrame.new(2490.0844726563, 190.4232635498, -7160.0502929688)
 			--Spawn = "GreatTree"
-		elseif MyLevel == 1725 or MyLevel <= 1774 or SelectMonster == "Marine Rear Admiral [Lv. 1725]" then
-			Mon = "Marine Rear Admiral [Lv. 1725]"
+		elseif MyLevel == 1725 or MyLevel <= 1774 or SelectMonster == "Marine Rear Admiral" then
+			Mon = "Marine Rear Admiral"
 			--NameQuest = "MarineTreeIsland"
 			LevelQuest = 2
 			NameMon = "Marine Rear Admiral"
 			--CFrameQuest = CFrame.new(2180.54126, 27.8156815, -6741.5498, -0.965929747, 0, 0.258804798, 0, 1, 0, -0.258804798, 0, -0.965929747)
 			CFrameMon = CFrame.new(3951.3903808594, 229.11549377441, -6912.81640625)
 			--Spawn = "GreatTree"
-		elseif MyLevel == 1775 or MyLevel <= 1799 or SelectMonster == "Fishman Raider [Lv. 1775]" then
-			Mon = "Fishman Raider [Lv. 1775]"
+		elseif MyLevel == 1775 or MyLevel <= 1799 or SelectMonster == "Fishman Raider" then
+			Mon = "Fishman Raider"
 			--NameQuest = "DeepForestIsland3"
 			LevelQuest = 1
 			NameMon = "Fishman Raider"
 			--CFrameQuest = CFrame.new(-10581.6563, 330.872955, -8761.18652, -0.882952213, 0, 0.469463557, 0, 1, 0, -0.469463557, 0, -0.882952213)
 			CFrameMon = CFrame.new(-10322.400390625, 390.94473266602, -8580.0908203125)
 			--Spawn = "PineappleTown"
-		elseif MyLevel == 1800 or MyLevel <= 1824 or SelectMonster == "Fishman Captain [Lv. 1800]" then
-			Mon = "Fishman Captain [Lv. 1800]"
+		elseif MyLevel == 1800 or MyLevel <= 1824 or SelectMonster == "Fishman Captain" then
+			Mon = "Fishman Captain"
 			--NameQuest = "DeepForestIsland3"
 			LevelQuest = 2
 			NameMon = "Fishman Captain"
 			--CFrameQuest = CFrame.new(-10581.6563, 330.872955, -8761.18652, -0.882952213, 0, 0.469463557, 0, 1, 0, -0.469463557, 0, -0.882952213)
 			CFrameMon = CFrame.new(-11194.541992188, 442.02795410156, -8608.806640625)
 			--Spawn = "PineappleTown"
-		elseif MyLevel == 1825 or MyLevel <= 1849 or SelectMonster == "Forest Pirate [Lv. 1825]" then
-			Mon = "Forest Pirate [Lv. 1825]"
+		elseif MyLevel == 1825 or MyLevel <= 1849 or SelectMonster == "Forest Pirate" then
+			Mon = "Forest Pirate"
 			--NameQuest = "DeepForestIsland"
 			LevelQuest = 1
 			NameMon = "Forest Pirate"
 			--CFrameQuest = CFrame.new(-13234.04, 331.488495, -7625.40137, 0.707134247, -0, -0.707079291, 0, 1, -0, 0.707079291, 0, 0.707134247)
 			CFrameMon = CFrame.new(-13225.809570313, 428.19387817383, -7753.1245117188)
 			--Spawn = "BigMansion"
-		elseif MyLevel == 1850 or MyLevel <= 1899 or SelectMonster == "Mythological Pirate [Lv. 1850]" then
-			Mon = "Mythological Pirate [Lv. 1850]"
+		elseif MyLevel == 1850 or MyLevel <= 1899 or SelectMonster == "Mythological Pirate" then
+			Mon = "Mythological Pirate"
 			--NameQuest = "DeepForestIsland"
 			LevelQuest = 2
 			NameMon = "Mythological Pirate"
 			--CFrameQuest = CFrame.new(-13234.04, 331.488495, -7625.40137, 0.707134247, -0, -0.707079291, 0, 1, -0, 0.707079291, 0, 0.707134247)
 			CFrameMon = CFrame.new(-13869.172851563, 564.95251464844, -7084.4135742188)
 			--Spawn = "BigMansion"
-		elseif MyLevel == 1900 or MyLevel <= 1924 or SelectMonster == "Jungle Pirate [Lv. 1900]" then
-			Mon = "Jungle Pirate [Lv. 1900]"
+		elseif MyLevel == 1900 or MyLevel <= 1924 or SelectMonster == "Jungle Pirate" then
+			Mon = "Jungle Pirate"
 			--NameQuest = "DeepForestIsland2"
 			LevelQuest = 1
 			NameMon = "Jungle Pirate"
 			--CFrameQuest = CFrame.new(-12680.3818, 389.971039, -9902.01953, -0.0871315002, 0, 0.996196866, 0, 1, 0, -0.996196866, 0, -0.0871315002)
 			CFrameMon = CFrame.new(-11982.221679688, 376.32522583008, -10451.415039063)
 			--Spawn = "PineappleTown"
-		elseif MyLevel == 1925 or MyLevel <= 1974 or SelectMonster == "Musketeer Pirate [Lv. 1925]" then
-			Mon = "Musketeer Pirate [Lv. 1925]"
+		elseif MyLevel == 1925 or MyLevel <= 1974 or SelectMonster == "Musketeer Pirate" then
+			Mon = "Musketeer Pirate"
 			--NameQuest = "DeepForestIsland2"
 			LevelQuest = 2
 			NameMon = "Musketeer Pirate"
 			--CFrameQuest = CFrame.new(-12680.3818, 389.971039, -9902.01953, -0.0871315002, 0, 0.996196866, 0, 1, 0, -0.996196866, 0, -0.0871315002)
 			CFrameMon = CFrame.new(-13282.3046875, 496.23684692383, -9565.150390625)
 			--Spawn = "PineappleTown"
-		elseif MyLevel == 1975 or MyLevel <= 1999 or SelectMonster == "Reborn Skeleton [Lv. 1975]" then
-			Mon = "Reborn Skeleton [Lv. 1975]"
+		elseif MyLevel == 1975 or MyLevel <= 1999 or SelectMonster == "Reborn Skeleton" then
+			Mon = "Reborn Skeleton"
 			--NameQuest = "HauntedQuest1"
 			LevelQuest = 1
 			NameMon = "Reborn Skeleton"
 			--CFrameQuest = CFrame.new(-9479.2168, 141.215088, 5566.09277, 0, 0, 1, 0, 1, -0, -1, 0, 0)
 			CFrameMon = CFrame.new(-8761.3154296875, 164.85829162598, 6161.1567382813)
 			--Spawn = "HauntedCastle"
-		elseif MyLevel == 2000 or MyLevel <= 2024 or SelectMonster == "Living Zombie [Lv. 2000]" then
-			Mon = "Living Zombie [Lv. 2000]"
+		elseif MyLevel == 2000 or MyLevel <= 2024 or SelectMonster == "Living Zombie" then
+			Mon = "Living Zombie"
 			--NameQuest = "HauntedQuest1"
 			LevelQuest = 2
 			NameMon = "Living Zombie"
 			--CFrameQuest = CFrame.new(-9479.2168, 141.215088, 5566.09277, 0, 0, 1, 0, 1, -0, -1, 0, 0)
 			CFrameMon = CFrame.new(-10093.930664063, 237.38233947754, 6180.5654296875)
 			--Spawn = "HauntedCastle"
-		elseif MyLevel == 2025 or MyLevel <= 2049 or SelectMonster == "Demonic Soul [Lv. 2025]" then
-			Mon = "Demonic Soul [Lv. 2025]"
+		elseif MyLevel == 2025 or MyLevel <= 2049 or SelectMonster == "Demonic Soul" then
+			Mon = "Demonic Soul"
 			--NameQuest = "HauntedQuest2"
 			LevelQuest = 1
 			NameMon = "Demonic Soul"
 			--CFrameQuest = CFrame.new(-9514.78027, 171.162918, 6078.82373, 0.301918149, 7.4535027e-09, 0.953333855, -3.22802141e-09, 1, -6.79604995e-09, -0.953333855, -1.02553133e-09, 0.301918149)
 			CFrameMon = CFrame.new(-9466.72949, 171.162918, 6132.01514)
 			--Spawn = "HauntedCastle"
-		elseif MyLevel == 2050 or MyLevel <= 2074 or SelectMonster == "Posessed Mummy [Lv. 2050]" then
-			Mon = "Posessed Mummy [Lv. 2050]" 
+		elseif MyLevel == 2050 or MyLevel <= 2074 or SelectMonster == "Posessed Mummy" then
+			Mon = "Posessed Mummy" 
 			--NameQuest = "HauntedQuest2"
 			LevelQuest = 2
 			NameMon = "Posessed Mummy"
 			--CFrameQuest = CFrame.new(-9514.78027, 171.162918, 6078.82373, 0.301918149, 7.4535027e-09, 0.953333855, -3.22802141e-09, 1, -6.79604995e-09, -0.953333855, -1.02553133e-09, 0.301918149)
 			CFrameMon = CFrame.new(-9589.93848, 4.85058546, 6190.27197)
 			--Spawn = "HauntedCastle"
-		elseif MyLevel == 2075 or MyLevel <= 2099 or SelectMonster == "Peanut Scout [Lv. 2075]" then
-            Mon = "Peanut Scout [Lv. 2075]"
+		elseif MyLevel == 2075 or MyLevel <= 2099 or SelectMonster == "Peanut Scout" then
+            Mon = "Peanut Scout"
             --NameQuest = "NutsIslandQuest"
             LevelQuest = 1
             NameMon = "Peanut Scout"
             --CFrameQuest = CFrame.new(-2103.9375, 38.139019012451, -10192.702148438)
             CFrameMon = CFrame.new(-2150.587890625, 122.49767303467, -10358.994140625)
 			--Spawn = "Peanut"
-		elseif MyLevel == 2100 or MyLevel <= 2124 or SelectMonster == "Peanut President [Lv. 2100]" then
-            Mon = "Peanut President [Lv. 2100]"
+		elseif MyLevel == 2100 or MyLevel <= 2124 or SelectMonster == "Peanut President" then
+            Mon = "Peanut President"
             --NameQuest = "NutsIslandQuest"
             LevelQuest = 2
             NameMon = "Peanut President"
             --CFrameQuest = CFrame.new(-2103.9375, 38.139019012451, -10192.702148438)
             CFrameMon = CFrame.new(-2150.587890625, 122.49767303467, -10358.994140625)
 			--Spawn = "Peanut"
-		elseif MyLevel == 2125 or MyLevel <= 2149 or SelectMonster == "Ice Cream Chef [Lv. 2125]" then
-            Mon = "Ice Cream Chef [Lv. 2125]"
+		elseif MyLevel == 2125 or MyLevel <= 2149 or SelectMonster == "Ice Cream Chef" then
+            Mon = "Ice Cream Chef"
             --NameQuest = "IceCreamIslandQuest"
             LevelQuest = 1
             NameMon = "Ice Cream Chef"
             --CFrameQuest = CFrame.new(-819.84533691406, 65.845329284668, -10965.487304688)
             CFrameMon = CFrame.new(-890.55895996094, 186.34135437012, -11127.306640625)
 			--Spawn = "IceCream"
-		elseif MyLevel == 2150 or MyLevel <= 2199 or SelectMonster == "Ice Cream Commander [Lv. 2150]" then
-            Mon = "Ice Cream Commander [Lv. 2150]"
+		elseif MyLevel == 2150 or MyLevel <= 2199 or SelectMonster == "Ice Cream Commander" then
+            Mon = "Ice Cream Commander"
             --NameQuest = "IceCreamIslandQuest"
             LevelQuest = 2
             NameMon = "Ice Cream Commander"
             --CFrameQuest = CFrame.new(-819.84533691406, 65.845329284668, -10965.487304688)
             CFrameMon = CFrame.new(-890.55895996094, 186.34135437012, -11127.306640625)
 			--Spawn = "IceCream"
-		elseif MyLevel == 2200 or MyLevel <= 2224 or SelectMonster == "Cookie Crafter [Lv. 2200]" then
-            Mon = "Cookie Crafter [Lv. 2200]"
+		elseif MyLevel == 2200 or MyLevel <= 2224 or SelectMonster == "Cookie Crafter" then
+            Mon = "Cookie Crafter"
             --NameQuest = "CakeQuest1"
             LevelQuest = 1
             NameMon = "Cookie Crafter"
             --CFrameQuest = CFrame.new(-2021.5509033203125, 37.798221588134766, -12028.103515625)
             CFrameMon = CFrame.new(-2273.00244140625, 90.22590637207031, -12151.62109375)
 			--Spawn = "Loaf"
-		elseif MyLevel == 2225 or MyLevel <= 2249 or SelectMonster == "Cake Guard [Lv. 2225]" then
-            Mon = "Cake Guard [Lv. 2225]"
+		elseif MyLevel == 2225 or MyLevel <= 2249 or SelectMonster == "Cake Guard" then
+            Mon = "Cake Guard"
             --NameQuest = "CakeQuest1"
             LevelQuest = 2
             NameMon = "Cake Guard"
             --CFrameQuest = CFrame.new(-2021.5509033203125, 37.798221588134766, -12028.103515625)
             CFrameMon = CFrame.new(-1442.373046875, 158.14111328125, -12277.37109375)
 			--Spawn = "Loaf"
-		elseif MyLevel == 2250 or MyLevel <= 2274 or SelectMonster == "Baking Staff [Lv. 2250]" then
-            Mon = "Baking Staff [Lv. 2250]"
+		elseif MyLevel == 2250 or MyLevel <= 2274 or SelectMonster == "Baking Staff" then
+            Mon = "Baking Staff"
             --NameQuest = "CakeQuest2"
             LevelQuest = 1
             NameMon = "Baking Staff"
             --CFrameQuest = CFrame.new(-1927.9107666015625, 37.79813003540039, -12843.78515625)
             CFrameMon = CFrame.new(-1837.2803955078125, 129.0594482421875, -12934.5498046875)
 			--Spawn = "Loaf"
-		elseif MyLevel == 2275 or MyLevel <= 2299 or SelectMonster == "Head Baker [Lv. 2275]" then
-            Mon = "Head Baker [Lv. 2275]"
+		elseif MyLevel == 2275 or MyLevel <= 2299 or SelectMonster == "Head Baker" then
+            Mon = "Head Baker"
             --NameQuest = "CakeQuest2"
             LevelQuest = 2
             NameMon = "Head Baker"
             --CFrameQuest = CFrame.new(-1927.9107666015625, 37.79813003540039, -12843.78515625)
             CFrameMon = CFrame.new(-2203.302490234375, 109.90937042236328, -12788.7333984375)
 			--Spawn = "Loaf"
-		elseif MyLevel == 2300 or MyLevel <= 2324 or SelectMonster == "Cocoa Warrior [Lv. 2300]" then
-            Mon = "Cocoa Warrior [Lv. 2300]"
+		elseif MyLevel == 2300 or MyLevel <= 2324 or SelectMonster == "Cocoa Warrior" then
+            Mon = "Cocoa Warrior"
             --NameQuest = "ChocQuest1"
             LevelQuest = 1
             NameMon = "Cocoa Warrior"
             --CFrameQuest = CFrame.new(231.13571166992188, 24.734268188476562, -12195.1162109375)
             CFrameMon = CFrame.new(231.13571166992188, 24.734268188476562, -12195.1162109375)
 			--Spawn = "Chocolate"
-		elseif MyLevel == 2325 or MyLevel <= 2349 or SelectMonster == "Chocolate Bar Battler [Lv. 2325]" then
-            Mon = "Chocolate Bar Battler [Lv. 2325]"
+		elseif MyLevel == 2325 or MyLevel <= 2349 or SelectMonster == "Chocolate Bar Battler" then
+            Mon = "Chocolate Bar Battler"
             --NameQuest = "ChocQuest1"
             LevelQuest = 2
             NameMon = "Chocolate Bar Battler"
             --CFrameQuest = CFrame.new(231.13571166992188, 24.734268188476562, -12195.1162109375)
             CFrameMon = CFrame.new(231.13571166992188, 24.734268188476562, -12195.1162109375)
 			--Spawn = "Chocolate"
-		elseif MyLevel == 2350 or MyLevel <= 2374 or SelectMonster == "Sweet Thief [Lv. 2350]" then
-            Mon = "Sweet Thief [Lv. 2350]"
+		elseif MyLevel == 2350 or MyLevel <= 2374 or SelectMonster == "Sweet Thief" then
+            Mon = "Sweet Thief"
             --NameQuest = "ChocQuest2"
             LevelQuest = 1
             NameMon = "Sweet Thief"
             --CFrameQuest = CFrame.new(147.52256774902344, 24.793832778930664, -12775.3583984375)
             CFrameMon = CFrame.new(147.52256774902344, 24.793832778930664, -12775.3583984375)
 			--Spawn = "Chocolate"
-		elseif MyLevel == 2375 or MyLevel <= 2400 or SelectMonster == "Candy Rebel [Lv. 2375]" then
-            Mon = "Candy Rebel [Lv. 2375]"
+		elseif MyLevel == 2375 or MyLevel <= 2400 or SelectMonster == "Candy Rebel" then
+            Mon = "Candy Rebel"
             --NameQuest = "ChocQuest2"
             LevelQuest = 2
             NameMon = "Candy Rebel"
             --CFrameQuest = CFrame.new(147.52256774902344, 24.793832778930664, -12775.3583984375)
             CFrameMon = CFrame.new(147.52256774902344, 24.793832778930664, -12775.3583984375)
 			--Spawn = "Chocolate"
-elseif MyLevel == 2400 or MyLevel <= 2424 or SelectMonster == "Candy Pirate [Lv. 2400]" then
+elseif MyLevel == 2400 or MyLevel <= 2424 or SelectMonster == "Candy Pirate" then
 
-            Mon = "Candy Pirate [Lv. 2400]"
+            Mon = "Candy Pirate"
             QuestName = "CandyQuest1"
 
             LevelQuest = 1
@@ -2652,10 +2652,10 @@ elseif MyLevel == 2400 or MyLevel <= 2424 or SelectMonster == "Candy Pirate [Lv.
 
             CFrameQuest = CFrame.new(-1149, 13, -14445)
             VectorQuest = Vector3.new(-1149, 13, -14445)
-        elseif MyLevel >= 2425 or SelectMonster == "Snow Demon [Lv. 2425]" then
+        elseif MyLevel >= 2425 or SelectMonster == "Snow Demon" then
 
 
-            Mon = "Snow Demon [Lv. 2425]"
+            Mon = "Snow Demon"
             QuestName = "CandyQuest1"
 
             LevelQuest = 2
@@ -3125,7 +3125,7 @@ spawn(function()
  game:GetService("RunService").Heartbeat:Connect(function()
   pcall(function()
    for i,v in pairs(game:GetService("Workspace").Enemies:GetChildren()) do
-   if _G.Auto_Farm_Bone and StartMagnetBoneMon and (v.Name == "Reborn Skeleton [Lv. 1975]" or v.Name == "Living Zombie [Lv. 2000]" or v.Name == "Demonic Soul [Lv. 2025]" or v.Name == "Posessed Mummy [Lv. 2050]") and (v.HumanoidRootPart.Position - PosMonBone.Position).magnitude <= 350 then
+   if _G.Auto_Farm_Bone and StartMagnetBoneMon and (v.Name == "Reborn Skeleton" or v.Name == "Living Zombie" or v.Name == "Demonic Soul" or v.Name == "Posessed Mummy") and (v.HumanoidRootPart.Position - PosMonBone.Position).magnitude <= 350 then
    v.HumanoidRootPart.CFrame = PosMonBone
    v.HumanoidRootPart.CanCollide = false
    v.HumanoidRootPart.Size = Vector3.new(50,50,50)
@@ -3150,9 +3150,9 @@ spawn(function()
  while wait() do
  if _G.Auto_Farm_Bone and World3 then
  pcall(function()
-  if game:GetService("Workspace").Enemies:FindFirstChild("Reborn Skeleton [Lv. 1975]") or game:GetService("Workspace").Enemies:FindFirstChild("Living Zombie [Lv. 2000]") or game:GetService("Workspace").Enemies:FindFirstChild("Domenic Soul [Lv. 2025]") or game:GetService("Workspace").Enemies:FindFirstChild("Posessed Mummy [Lv. 2050]") then
+  if game:GetService("Workspace").Enemies:FindFirstChild("Reborn Skeleton") or game:GetService("Workspace").Enemies:FindFirstChild("Living Zombie") or game:GetService("Workspace").Enemies:FindFirstChild("Domenic Soul") or game:GetService("Workspace").Enemies:FindFirstChild("Posessed Mummy") then
   for i,v in pairs(game:GetService("Workspace").Enemies:GetChildren()) do
-  if v.Name == "Reborn Skeleton [Lv. 1975]" or v.Name == "Living Zombie [Lv. 2000]" or v.Name == "Demonic Soul [Lv. 2025]" or v.Name == "Posessed Mummy [Lv. 2050]" then
+  if v.Name == "Reborn Skeleton" or v.Name == "Living Zombie" or v.Name == "Demonic Soul" or v.Name == "Posessed Mummy" then
   if v.Humanoid.Health > 0 then
   repeat wait()
   AutoHaki()
@@ -3171,13 +3171,13 @@ spawn(function()
   else
    StartMagnetBoneMon = false
   for i,v in pairs(game:GetService("ReplicatedStorage"):GetChildren()) do
-  if v.Name == "Reborn Skeleton [Lv. 1975]" then
+  if v.Name == "Reborn Skeleton" then
   topos(v.HumanoidRootPart.CFrame * MethodFarm)
-  elseif v.Name == "Living Zombie [Lv. 2000]" then
+  elseif v.Name == "Living Zombie" then
   topos(v.HumanoidRootPart.CFrame * MethodFarm)
-  elseif v.Name == "Demonic Soul [Lv. 2025]" then
+  elseif v.Name == "Demonic Soul" then
   topos(v.HumanoidRootPart.CFrame * MethodFarm)
-  elseif v.Name == "Posessed Mummy [Lv. 2050]" then
+  elseif v.Name == "Posessed Mummy" then
   topos(v.HumanoidRootPart.CFrame * MethodFarm)
   end
   end
@@ -3383,7 +3383,7 @@ spawn(function()
   pcall(function()
    if _G.BringExtra then
    for i,v in pairs(game:GetService("Workspace").Enemies:GetChildren()) do
-   if _G.Auto_Farm_Level and StartMagnet and v.Name ~= "Ice Admiral [Lv. 700] [Boss]" and v.Name ~= "Don Swan [Lv. 3000] [Boss]" and v.Name ~= "Saber Expert [Lv. 200] [Boss]" and v.Name ~= "Longma [Lv. 2000] [Boss]" and (v.HumanoidRootPart.Position - PosMon.Position).magnitude <= 350 then
+   if _G.Auto_Farm_Level and StartMagnet and v.Name ~= "Ice Admiral [Lv. 700] [Boss]" and v.Name ~= "Don Swan [Lv. 3000] [Boss]" and v.Name ~= "Saber Expert [Lv. 200] [Boss]" and v.Name ~= "Longma [Boss]" and (v.HumanoidRootPart.Position - PosMon.Position).magnitude <= 350 then
    v.HumanoidRootPart.CFrame = PosMon
    v.HumanoidRootPart.CanCollide = false
    v.HumanoidRootPart.Size = Vector3.new(60,60,60)
@@ -3864,7 +3864,7 @@ end)
 	game:GetService("RunService").Heartbeat:Connect(function()
 			pcall(function()
 				for i,v in pairs(game:GetService("Workspace").Enemies:GetChildren()) do
-					if _G.Auto_Open_Dough_Dungeon and StartCakeStartMagnet and (v.Name == "Cookie Crafter [Lv. 2200]" or v.Name == "Cake Guard [Lv. 2225]" or v.Name == "Baking Staff [Lv. 2250]" or v.Name == "Head Baker [Lv. 2275]") and (v.HumanoidRootPart.Position - POSCAKE.Position).magnitude <= 300 then
+					if _G.Auto_Open_Dough_Dungeon and StartCakeStartMagnet and (v.Name == "Cookie Crafter" or v.Name == "Cake Guard" or v.Name == "Baking Staff" or v.Name == "Head Baker") and (v.HumanoidRootPart.Position - POSCAKE.Position).magnitude <= 300 then
 						v.HumanoidRootPart.CFrame = POSCAKE
 						v.HumanoidRootPart.CanCollide = false
 						v.HumanoidRootPart.Size = Vector3.new(50,50,50)
@@ -3882,7 +3882,7 @@ end)
 		game:GetService("RunService").Heartbeat:Connect(function()
 			pcall(function()
 				for i,v in pairs(game:GetService("Workspace").Enemies:GetChildren()) do
-					if _G.Auto_Cake_Prince and StartCakeStartMagnet and (v.Name == "Cookie Crafter [Lv. 2200]" or v.Name == "Cake Guard [Lv. 2225]" or v.Name == "Baking Staff [Lv. 2250]" or v.Name == "Head Baker [Lv. 2275]") and (v.HumanoidRootPart.Position - POSCAKE.Position).magnitude <= 300 then
+					if _G.Auto_Cake_Prince and StartCakeStartMagnet and (v.Name == "Cookie Crafter" or v.Name == "Cake Guard" or v.Name == "Baking Staff" or v.Name == "Head Baker") and (v.HumanoidRootPart.Position - POSCAKE.Position).magnitude <= 300 then
 						v.HumanoidRootPart.CFrame = POSCAKE
 						v.HumanoidRootPart.CanCollide = false
 						v.HumanoidRootPart.Size = Vector3.new(50,50,50)
@@ -3900,10 +3900,10 @@ end)
 		while wait() do
 			if _G.Auto_Cake_Prince then
 				pcall(function()
-					if game.ReplicatedStorage:FindFirstChild("Cake Prince [Lv. 2300] [Raid Boss]") or game:GetService("Workspace").Enemies:FindFirstChild("Cake Prince [Lv. 2300] [Raid Boss]") then   
-						if game:GetService("Workspace").Enemies:FindFirstChild("Cake Prince [Lv. 2300] [Raid Boss]") then
+					if game.ReplicatedStorage:FindFirstChild("Cake Prince [Raid Boss]") or game:GetService("Workspace").Enemies:FindFirstChild("Cake Prince [Raid Boss]") then   
+						if game:GetService("Workspace").Enemies:FindFirstChild("Cake Prince [Raid Boss]") then
 							for i,v in pairs(game:GetService("Workspace").Enemies:GetChildren()) do 
-								if v.Name == "Cake Prince [Lv. 2300] [Raid Boss]" then
+								if v.Name == "Cake Prince [Raid Boss]" then
 									repeat wait()
 										AutoHaki()
 										EquipWeapon(_G.Select_Weapon)
@@ -3919,9 +3919,9 @@ end)
 							topos(CFrame.new(-2009.2802734375, 4532.97216796875, -14937.3076171875)) 
 						end
 					else
-						if game.Workspace.Enemies:FindFirstChild("Baking Staff [Lv. 2250]") or game.Workspace.Enemies:FindFirstChild("Head Baker [Lv. 2275]") or game.Workspace.Enemies:FindFirstChild("Cake Guard [Lv. 2225]") or game.Workspace.Enemies:FindFirstChild("Cookie Crafter [Lv. 2200]")  then
+						if game.Workspace.Enemies:FindFirstChild("Baking Staff") or game.Workspace.Enemies:FindFirstChild("Head Baker") or game.Workspace.Enemies:FindFirstChild("Cake Guard") or game.Workspace.Enemies:FindFirstChild("Cookie Crafter")  then
 							for i,v in pairs(game:GetService("Workspace").Enemies:GetChildren()) do  
-								if (v.Name == "Baking Staff [Lv. 2250]" or v.Name == "Head Baker [Lv. 2275]" or v.Name == "Cake Guard [Lv. 2225]" or v.Name == "Cookie Crafter [Lv. 2200]") and v.Humanoid.Health > 0 then
+								if (v.Name == "Baking Staff" or v.Name == "Head Baker" or v.Name == "Cake Guard" or v.Name == "Cookie Crafter") and v.Humanoid.Health > 0 then
 									repeat wait()
 										AutoHaki()
 										EquipWeapon(_G.Select_Weapon)
@@ -3931,7 +3931,7 @@ end)
 										topos(v.HumanoidRootPart.CFrame * MethodFarm)
 										game:GetService'VirtualUser':CaptureController()
 										game:GetService'VirtualUser':Button1Down(Vector2.new(1280, 672))
-									until _G.Auto_Cake_Prince == false or game:GetService("ReplicatedStorage"):FindFirstChild("Cake Prince [Lv. 2300] [Raid Boss]") or not v.Parent or v.Humanoid.Health <= 0
+									until _G.Auto_Cake_Prince == false or game:GetService("ReplicatedStorage"):FindFirstChild("Cake Prince [Raid Boss]") or not v.Parent or v.Humanoid.Health <= 0
 								end
 							end
 						else
@@ -3954,7 +3954,7 @@ Main:Toggle("Bãi 3 ( 2400-2425 ) Tạm Đc",_G.farm3,function(value)
  game:GetService("RunService").Heartbeat:Connect(function()
   pcall(function()
    for i,v in pairs(game:GetService("Workspace").Enemies:GetChildren()) do
-   if _G.farm3 and StartMagnetBoneMon and (v.Name == "Candy Pirate [Lv. 2400]" or v.Name == "Snow Demon [Lv. 2425]") and (v.HumanoidRootPart.Position - PosMonBone.Position).magnitude <= 300 then
+   if _G.farm3 and StartMagnetBoneMon and (v.Name == "Candy Pirate" or v.Name == "Snow Demon") and (v.HumanoidRootPart.Position - PosMonBone.Position).magnitude <= 300 then
    v.HumanoidRootPart.CFrame = PosMonBone
    v.HumanoidRootPart.CanCollide = false
    v.HumanoidRootPart.Size = Vector3.new(50,50,50)
@@ -3979,9 +3979,9 @@ spawn(function()
  while wait() do
  if _G.farm3 and World3 then
  pcall(function()
-  if game:GetService("Workspace").Enemies:FindFirstChild("Candy Pirate [Lv. 2400]") or game:GetService("Workspace").Enemies:FindFirstChild("Snow Demon [Lv. 2425]")  then
+  if game:GetService("Workspace").Enemies:FindFirstChild("Candy Pirate") or game:GetService("Workspace").Enemies:FindFirstChild("Snow Demon")  then
   for i,v in pairs(game:GetService("Workspace").Enemies:GetChildren()) do
-  if v.Name == "Candy Pirate [Lv. 2400]" or v.Name == "Snow Demon [Lv. 2425]"  then
+  if v.Name == "Candy Pirate" or v.Name == "Snow Demon"  then
   if v.Humanoid.Health > 0 then
   repeat wait()
   AutoHaki()
@@ -4000,9 +4000,9 @@ spawn(function()
   else
    StartMagnetBoneMon = false
   for i,v in pairs(game:GetService("ReplicatedStorage"):GetChildren()) do
-  if v.Name == "Candy Pirate [Lv. 2400]" then
+  if v.Name == "Candy Pirate" then
   topos(v.HumanoidRootPart.CFrame * MethodFarm)
-  elseif v.Name == "Snow Demon [Lv. 2425]" then
+  elseif v.Name == "Snow Demon" then
   topos(v.HumanoidRootPart.CFrame * MethodFarm)
   end
   end
@@ -4030,7 +4030,7 @@ Main:Toggle("Bãi 4 ( 2300-2375 ) Tạm Đc",_G.farm4,function(value)
  game:GetService("RunService").Heartbeat:Connect(function()
   pcall(function()
    for i,v in pairs(game:GetService("Workspace").Enemies:GetChildren()) do
-   if _G.farm4 and StartMagnetBoneMon and (v.Name == "Cocoa Warrior [Lv. 2300]" or v.Name == "Candy Rebel [Lv. 2375]") and (v.HumanoidRootPart.Position - PosMonBone.Position).magnitude <= 300 then
+   if _G.farm4 and StartMagnetBoneMon and (v.Name == "Cocoa Warrior" or v.Name == "Candy Rebel") and (v.HumanoidRootPart.Position - PosMonBone.Position).magnitude <= 300 then
    v.HumanoidRootPart.CFrame = PosMonBone
    v.HumanoidRootPart.CanCollide = false
    v.HumanoidRootPart.Size = Vector3.new(50,50,50)
@@ -4055,9 +4055,9 @@ spawn(function()
  while wait() do
  if _G.farm4 and World3 then
  pcall(function()
-  if game:GetService("Workspace").Enemies:FindFirstChild("Candy Rebel [Lv. 2375]") or game:GetService("Workspace").Enemies:FindFirstChild("Cocoa Warrior [Lv. 2300]")  then
+  if game:GetService("Workspace").Enemies:FindFirstChild("Candy Rebel") or game:GetService("Workspace").Enemies:FindFirstChild("Cocoa Warrior")  then
   for i,v in pairs(game:GetService("Workspace").Enemies:GetChildren()) do
-  if v.Name == "Candy Rebel [Lv. 2375]" or v.Name == "Cocoa Warrior [Lv. 2300]"  then
+  if v.Name == "Candy Rebel" or v.Name == "Cocoa Warrior"  then
   if v.Humanoid.Health > 0 then
   repeat wait()
   AutoHaki()
@@ -4076,9 +4076,9 @@ spawn(function()
   else
    StartMagnetBoneMon = false
   for i,v in pairs(game:GetService("ReplicatedStorage"):GetChildren()) do
-  if v.Name == "Cocoa Warrior [Lv. 2300]" then
+  if v.Name == "Cocoa Warrior" then
   topos(v.HumanoidRootPart.CFrame * MethodFarm)
-  elseif v.Name == "Candy Rebel [Lv. 2375]" then
+  elseif v.Name == "Candy Rebel" then
   topos(v.HumanoidRootPart.CFrame * MethodFarm)
   end
   end
@@ -4102,7 +4102,7 @@ Main:Toggle("Bãi 5 ( 2125-2150 )  Tạm Đc",_G.farm5,function(value)
  game:GetService("RunService").Heartbeat:Connect(function()
   pcall(function()
    for i,v in pairs(game:GetService("Workspace").Enemies:GetChildren()) do
-   if _G.farm5 and StartMagnetBoneMon and (v.Name == "Ice Cream Chef [Lv. 2125]" or v.Name == "Ice Cream Commander [Lv. 2150]") and (v.HumanoidRootPart.Position - PosMonBone.Position).magnitude <= 300 then
+   if _G.farm5 and StartMagnetBoneMon and (v.Name == "Ice Cream Chef" or v.Name == "Ice Cream Commander") and (v.HumanoidRootPart.Position - PosMonBone.Position).magnitude <= 300 then
    v.HumanoidRootPart.CFrame = PosMonBone
    v.HumanoidRootPart.CanCollide = false
    v.HumanoidRootPart.Size = Vector3.new(50,50,50)
@@ -4127,9 +4127,9 @@ spawn(function()
  while wait() do
  if _G.farm5 and World3 then
  pcall(function()
-  if game:GetService("Workspace").Enemies:FindFirstChild("Ice Cream Commander [Lv. 2150]") or game:GetService("Workspace").Enemies:FindFirstChild("Ice Cream Chef [Lv. 2125]")  then
+  if game:GetService("Workspace").Enemies:FindFirstChild("Ice Cream Commander") or game:GetService("Workspace").Enemies:FindFirstChild("Ice Cream Chef")  then
   for i,v in pairs(game:GetService("Workspace").Enemies:GetChildren()) do
-  if v.Name == "Ice Cream Commander [Lv. 2150]" or v.Name == "Ice Cream Chef [Lv. 2125]"  then
+  if v.Name == "Ice Cream Commander" or v.Name == "Ice Cream Chef"  then
   if v.Humanoid.Health > 0 then
   repeat wait()
   AutoHaki()
@@ -4148,9 +4148,9 @@ spawn(function()
   else
    StartMagnetBoneMon = false
   for i,v in pairs(game:GetService("ReplicatedStorage"):GetChildren()) do
-  if v.Name == "Ice Cream Commander [Lv. 2150]" then
+  if v.Name == "Ice Cream Commander" then
   topos(v.HumanoidRootPart.CFrame * MethodFarm)
-  elseif v.Name == "Ice Cream Chef [Lv. 2125]" then
+  elseif v.Name == "Ice Cream Chef" then
   topos(v.HumanoidRootPart.CFrame * MethodFarm)
   end
   end
@@ -4176,7 +4176,7 @@ Main:Toggle("Bãi 6 ( 2075-2100 )  Tạm Đc",_G.farm6,function(value)
  game:GetService("RunService").Heartbeat:Connect(function()
   pcall(function()
    for i,v in pairs(game:GetService("Workspace").Enemies:GetChildren()) do
-   if _G.farm6 and StartMagnetBoneMon and (v.Name == "Peanut Scout [Lv. 2075]" or v.Name == "Peanut President [Lv. 2100]") and (v.HumanoidRootPart.Position - PosMonBone.Position).magnitude <= 300 then
+   if _G.farm6 and StartMagnetBoneMon and (v.Name == "Peanut Scout" or v.Name == "Peanut President") and (v.HumanoidRootPart.Position - PosMonBone.Position).magnitude <= 300 then
    v.HumanoidRootPart.CFrame = PosMonBone
    v.HumanoidRootPart.CanCollide = false
    v.HumanoidRootPart.Size = Vector3.new(50,50,50)
@@ -4201,9 +4201,9 @@ spawn(function()
  while wait() do
  if _G.farm6 and World3 then
  pcall(function()
-  if game:GetService("Workspace").Enemies:FindFirstChild("Peanut Scout [Lv. 2075]") or game:GetService("Workspace").Enemies:FindFirstChild("Peanut President [Lv. 2100]")  then
+  if game:GetService("Workspace").Enemies:FindFirstChild("Peanut Scout") or game:GetService("Workspace").Enemies:FindFirstChild("Peanut President")  then
   for i,v in pairs(game:GetService("Workspace").Enemies:GetChildren()) do
-  if v.Name == "Peanut Scout [Lv. 2075]" or v.Name == "Peanut President [Lv. 2100]"  then
+  if v.Name == "Peanut Scout" or v.Name == "Peanut President"  then
   if v.Humanoid.Health > 0 then
   repeat wait()
   AutoHaki()
@@ -4222,9 +4222,9 @@ spawn(function()
   else
    StartMagnetBoneMon = false
   for i,v in pairs(game:GetService("ReplicatedStorage"):GetChildren()) do
-  if v.Name == "Peanut President [Lv. 2100]" then
+  if v.Name == "Peanut President" then
   topos(v.HumanoidRootPart.CFrame * MethodFarm)
-  elseif v.Name == "Peanut Scout [Lv. 2075]" then
+  elseif v.Name == "Peanut Scout" then
   topos(v.HumanoidRootPart.CFrame * MethodFarm)
   end
   end
