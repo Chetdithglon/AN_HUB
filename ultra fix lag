@@ -3395,61 +3395,62 @@ end)
         end
     end)
 end
-
 local boss = Tabs.Main:AddSection("Boss Farm")
 
-local tableBoss
-if First_Sea then
-    tableBoss = {"The Gorilla King", "Bobby", "Yeti", "Mob Leader", "Vice Admiral", "Warden", "Chief Warden", "Swan", "Magma Admiral", "Fishman Lord", "Wysper", "Thunder God", "Cyborg", "Saber Expert"}
-elseif Second_Sea then
-    tableBoss = {"Diamond", "Jeremy", "Fajita", "Don Swan", "Smoke Admiral", "Cursed Captain", "Darkbeard", "Order", "Awakened Ice Admiral", "Tide Keeper"}
-elseif Third_Sea then
-    tableBoss = {"Stone", "Island Empress", "Kilo Admiral", "Captain Elephant", "Beautiful Pirate", "rip_indra True Form", "Longma", "Soul Reaper", "Cake Queen"}
-end
+    local bossList = {
+        "Saber Expert",
+        "The Saw",
+        "Greybeard",
+        "The Gorilla King",
+        "Bobby",
+        "Yeti",
+        "Mob Leader",
+        "Vice Admiral",
+        "Warden",
+        "Chief Warden",
+        "Swan",
+        "Magma Admiral",
+        "Fishman Lord",
+        "Wysper",
+        "Thunder God",
+        "Cyborg",
+        "Tide Keeper", "Awakened Ice Admiral", "Order", "Darkbeard", "Cursed Captain", "Smoke Admiral", "Don Swan", "Fajita", "Jeremy", "Diamond" , "Saber Expert","The Saw","Greybeard","The Gorilla King", "Bobby","Yeti","Mob Leader",   "Vice Admiral",    "Warden",    "Chief Warden",    "Swan",   "Magma Admiral",   "Fishman Lord",    "Wysper",   "Thunder God",    "Cyborg"
+    }
 
-local DropdownBoss = Tabs.Main:AddDropdown("DropdownBoss", {
-    Title = "Dropdown",
-    Description = "Chọn Boss",
-    Values = tableBoss,
-    Multi = false,
-    Default = 1,
-})
-
-local function CheckBoss(bossName)
-    local boss = game:GetService("ReplicatedStorage"):FindFirstChild(bossName)
-    if boss then
-        DiscordLib:Notification("Thông Báo", "Spawn Boss " .. bossName, 6, 11816162894)
-    else
-        DiscordLib:Notification("Thông Báo", "Không có boss được chọn", 6, 11816162894)
-    end
-end
-
-DropdownBoss:SetCallback(function(value)
-    -- Add your logic here based on the selected boss
-    if value then
-        CheckBoss(value)
-    else
-        DiscordLib:Notification("Thông Báo", "Không có boss được chọn", 6, 11816162894)
-    end
-end)
-
-
+    local DropdownBoss = Tabs.Main:AddDropdown("DropdownBoss", {
+        Title = "Dropdown",
+        Description = "Chọn Boss",
+        Values = bossList,
+        Multi = false,
+        Default = 1,
+    })
 
     DropdownBoss:SetValue("")
     DropdownBoss:OnChanged(function(Value)
-		_G.SelectBoss = Value
+        _G.SelectBoss = Value
     end)
 
-	local ToggleAutoFarmBoss = Tabs.Main:AddToggle("ToggleAutoFarmBoss", {
-        Title = "Kill Boss",
-        Description = "Đánh Boss", 
-        Default = false })
+    -- Kiểm tra xem boss nào có sẵn và thêm vào danh sách
+    for _, bossName in ipairs(bossList) do
+        local boss = game:GetService("ReplicatedStorage"):FindFirstChild(bossName)
+        if boss then
+            DropdownBoss:Add(bossName)
+        end
+    end
+end
 
-    ToggleAutoFarmBoss:OnChanged(function(Value)
-		_G.AutoBoss = Value
-    end)
+local ToggleAutoFarmBoss = Tabs.Main:AddToggle("ToggleAutoFarmBoss", {
+    Title = "Kill Boss",
+    Description = "Đánh Boss", 
+    Default = false
+})
 
-    Options.ToggleAutoFarmBoss:SetValue(false)
+ToggleAutoFarmBoss:OnChanged(function(Value)
+    _G.AutoBoss = Value
+end)
+
+Options.ToggleAutoFarmBoss:SetValue(false)
+
 
     spawn(function()
         while wait() do
