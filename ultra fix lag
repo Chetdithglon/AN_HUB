@@ -51,6 +51,20 @@ function AntiBan()
     end
     AntiBan()
 --------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+--------------------------------------------------------------------------------------------------------------------------------------------
 --Anti AFK
 game:GetService("Players").LocalPlayer.Idled:connect(function()
 	game:GetService("VirtualUser"):Button2Down(Vector2.new(0,0),workspace.CurrentCamera.CFrame)
@@ -2650,7 +2664,7 @@ end)
 
 
 
-        local ToggleCandy = Tabs.Main:AddToggle("ToggleCandy", {Title = "Auto Farm Candy ( Only Max Level )",Description = "Cày Kẹo ( Chỉ Cấp Độ Tối Đa )", Default = false })
+    --    local ToggleCandy = Tabs.Main:AddToggle("ToggleCandy", {Title = "Auto Farm Candy ( Only Max Level )",Description = "Cày Kẹo ( Chỉ Cấp Độ Tối Đa )", Default = false })
         ToggleCandy:OnChanged(function(Value)
            _G.AutoCandy = Value
            if Value == false then
@@ -3398,38 +3412,22 @@ end
 
 local boss = Tabs.Main:AddSection("Boss Farm")
 
-local tableBoss
-if First_Sea then
-    tableBoss = {"The Gorilla King", "Bobby", "Yeti", "Mob Leader", "Vice Admiral", "Warden", "Chief Warden", "Swan", "Magma Admiral", "Fishman Lord", "Wysper", "Thunder God", "Cyborg", "Saber Expert"}
-elseif Second_Sea then
-    tableBoss = {"Diamond", "Jeremy", "Fajita", "Don Swan", "Smoke Admiral", "Cursed Captain", "Darkbeard", "Order", "Awakened Ice Admiral", "Tide Keeper"}
-elseif Third_Sea then
-    tableBoss = {"Stone", "Island Empress", "Kilo Admiral", "Captain Elephant", "Beautiful Pirate", "rip_indra True Form", "Longma", "Soul Reaper", "Cake Queen"}
-end
+    if First_Sea then
+		tableBoss = {"The Gorilla King","Bobby","Yeti","Mob Leader","Vice Admiral","Warden","Chief Warden","Swan","Magma Admiral","Fishman Lord","Wysper","Thunder God","Cyborg","Saber Expert"}
+	elseif Second_Sea then
+		tableBoss = {"Diamond","Jeremy","Fajita","Don Swan","Smoke Admiral","Cursed Captain","Darkbeard","Order","Awakened Ice Admiral","Tide Keeper"}
+	elseif Third_Sea then
+		tableBoss = {"Stone","Island Empress","Kilo Admiral","Captain Elephant","Beautiful Pirate","rip_indra True Form","Longma","Soul Reaper","Cake Queen"}
+	end
 
-local DropdownBoss = Tabs.Main:AddDropdown("DropdownBoss", {
-    Title = "Dropdown",
-    Description = "Chọn Boss",
-    Values = tableBoss,
-    Multi = false,
-    Default = 1,
-})
 
-local function CheckBoss(bossName)
-    local boss = game:GetService("ReplicatedStorage"):FindFirstChild(bossName)
-    if boss then
-        DiscordLib:Notification("Thông Báo", "Spawn Boss " .. bossName, 6, 11816162894)
-    else
-        DiscordLib:Notification("Thông Báo", "Không có boss được chọn", 6, 11816162894)
-    end
-end
-
-DropdownBoss:SetCallback(function(value)
-    print("Selected boss:", value)
-    -- Add your logic here based on the selected boss
-    CheckBoss(value)
-end)
-
+    local DropdownBoss = Tabs.Main:AddDropdown("DropdownBoss", {
+        Title = "Dropdown",
+        Description = "Chọn Boss",
+        Values = tableBoss,
+        Multi = false,
+        Default = 1,
+    })
 
     DropdownBoss:SetValue("")
     DropdownBoss:OnChanged(function(Value)
@@ -3444,6 +3442,32 @@ end)
     ToggleAutoFarmBoss:OnChanged(function(Value)
 		_G.AutoBoss = Value
     end)
+
+
+    
+Tabs.Main:AddButton({
+    Title = "Check Boss",
+    Description = "Kiểm Tra Boss",
+    Callback = function()
+        local bossLists = {
+            {"Stone", "Island Empress", "Kilo Admiral", "Captain Elephant", "Beautiful Pirate", "Cake Queen", "rip_indra True Form", "Longma", "Soul Reaper"},
+            {"Tide Keeper", "Awakened Ice Admiral", "Order", "Darkbeard", "Cursed Captain", "Smoke Admiral", "Don Swan", "Fajita", "Jeremy", "Diamond"},
+            {"Saber Expert", "The Saw", "Greybeard", "The Gorilla King", "Bobby", "Yeti", "Mob Leader", "Vice Admiral", "Warden", "Chief Warden", "Swan", "Magma Admiral", "Fishman Lord", "Wysper", "Thunder God", "Cyborg"}
+        }
+
+        for _, bossList in ipairs(bossLists) do
+            for _, bossName in ipairs(bossList) do
+                local boss = game:GetService("ReplicatedStorage"):FindFirstChild(bossName)
+                if boss then
+                    DiscordLib:Notification("Thông Báo", "Spawn Boss " .. bossName, 6, 11816162894)
+                    return
+                end
+            end
+        end
+    end
+})
+
+
 
     Options.ToggleAutoFarmBoss:SetValue(false)
 
@@ -7262,7 +7286,7 @@ spawn(function()
         elseif game:GetService("Lighting").Sky.MoonTextureId=="http://www.roblox.com/asset/?id=9709143733" then
             Hop()
             Fluent:Notify({
-                Title = "Trum Skid Hub",
+                Title = "Master Hub",
                 Content = "Turn Off Find Full Moon...",
                 SubContent = "", -- Optional
                 Duration = 5 -- Set to nil to make the notification not disappear
@@ -7270,7 +7294,7 @@ spawn(function()
         elseif game:GetService("Lighting").Sky.MoonTextureId=="http://www.roblox.com/asset/?id=9709150401" then
             Hop()
             Fluent:Notify({
-                Title = "Trum Skid Hub",
+                Title = "Master Hub",
                 Content = "Hop...",
                 SubContent = "", -- Optional
                 Duration = 5 -- Set to nil to make the notification not disappear
@@ -7278,7 +7302,7 @@ spawn(function()
         elseif game:GetService("Lighting").Sky.MoonTextureId=="http://www.roblox.com/asset/?id=9709149680" then
             Hop()
             Fluent:Notify({
-                Title = "Trum Skid Hub",
+                Title = "Master Hub",
                 Content = "Hop...",
                 SubContent = "", -- Optional
                 Duration = 5 -- Set to nil to make the notification not disappear
@@ -7316,8 +7340,8 @@ InterfaceManager:SetFolder("FaiFaoScriptHub")
 SaveManager:SetFolder("FaiFaoScriptHub/specific-game")
 Window:SelectTab(1)
 Fluent:Notify({
-    Title = "Trum Skid Hub",
-    Content = "The script has been loaded.",
+    Title = "Master Hub",
+    Content = "Đã Load Script",
     Duration = 8
 })
 SaveManager:LoadAutoloadConfig()
