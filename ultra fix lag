@@ -3002,12 +3002,12 @@ local Mastery = Tabs.Main:AddSection("Mastery Farm")
     local DropdownMastery = Tabs.Main:AddDropdown("DropdownMastery", {
         Title = "Mastery Mode",
         Description = "Chọn Chế Độ Thông Thạo",
-        Values = {"Level","Near Mobs","Katakuri","Bone"},
+        Values = {"Level","Near Mobs",},
         Multi = false,
         Default = 1,
     })
-
-
+ 
+   DropdownMastery:SetValue("Near Mobs")
     DropdownMastery:OnChanged(function(Value)
         TypeMastery = Value
     end)
@@ -3178,7 +3178,7 @@ spawn(function()
     pcall(function()
       for i,v in pairs (game.Workspace.Enemies:GetChildren()) do
       if v.Name and v:FindFirstChild("Humanoid") and v:FindFirstChild("HumanoidRootPart") then
-      if (game.Players.LocalPlayer.Character.HumanoidRootPart.Position - v:FindFirstChild("HumanoidRootPart").Position).Magnitude <= 5000 then
+      if (game.Players.LocalPlayer.Character.HumanoidRootPart.Position - v:FindFirstChild("HumanoidRootPart").Position).Magnitude <= 2000 then
         repeat wait(_G.Fast_Delay)
       if v.Humanoid.Health <= v.Humanoid.MaxHealth * KillPercent / 100 then
       _G.UseSkill = true
