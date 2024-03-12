@@ -5,7 +5,7 @@ local InterfaceManager = loadstring(game:HttpGet("https://raw.githubusercontent.
 ----------------------------------------------------------------------------------------------------------------------------------------------
 local Window = Fluent:CreateWindow({
     Title = "Master Hub",
-    SubTitle = "New",
+    SubTitle = "Version Beta",
     TabWidth = 160,
     Size = UDim2.fromOffset(530, 350),
     Acrylic = true,
@@ -19,7 +19,7 @@ local Tabs = {
     Player = Window:AddTab({ Title = "Player", Icon = "box" }),
     Teleport = Window:AddTab({ Title = "Island", Icon = "palmtree" }),
     Fruit = Window:AddTab({ Title = "Fruit", Icon = "cherry" }),
-    Raid = Window:AddTab({ Title = "Sea Event", Icon = "swords" }),
+    Raid = Window:AddTab({ Title = "Raid", Icon = "swords" }),
     Race = Window:AddTab({ Title = "Race V4", Icon = "chevrons-right" }),
     Shop = Window:AddTab({ Title = "Shop", Icon = "shopping-cart" }),
 	Misc = Window:AddTab({ Title = "Misc", Icon = "list-plus" }),
@@ -2650,7 +2650,7 @@ end)
 
 
 
-   --     local ToggleCandy = Tabs.Main:AddToggle("ToggleCandy", {Title = "Auto Farm Candy ( Only Max Level )",Description = "Cày Kẹo ( Chỉ Cấp Độ Tối Đa )", Default = false })
+        local ToggleCandy = Tabs.Main:AddToggle("ToggleCandy", {Title = "Auto Farm Candy ( Only Max Level )",Description = "Cày Kẹo ( Chỉ Cấp Độ Tối Đa )", Default = false })
         ToggleCandy:OnChanged(function(Value)
            _G.AutoCandy = Value
            if Value == false then
@@ -2863,7 +2863,7 @@ function TPchest(P1)
 if Third_Sea then
 local ToggleChest = Tabs.Main:AddToggle("ToggleChest", {
     Title = "Auto Chest Stop If Has Items [Tp]",
-    Description = "Nhặt Rương dừng Khi Có Cup [Tp]", 
+    Description = "Nhặt Rương dừng Khi Có Vật Phẩm [Tp]", 
     Default = false })
 ToggleChest:OnChanged(function(Value)
     _G.chestsea3 = Value
@@ -2874,7 +2874,7 @@ end
 if Second_Sea then
 local ToggleChest = Tabs.Main:AddToggle("ToggleChest", {
     Title = "Auto Chest Stop If Has Items [Tp]",
-    Description = "Nhặt Rương dừng Khi Có Key [Tp]", 
+    Description = "Nhặt Rương dừng Khi Có Vật Phẩm [Tp]", 
     Default = false })
 ToggleChest:OnChanged(function(Value)
     _G.chestsea2 = Value
@@ -3398,31 +3398,22 @@ end
 
 local boss = Tabs.Main:AddSection("Boss Farm")
 
-    local tableBoss = {}
+    if First_Sea then
+		tableBoss = {"The Gorilla King","Bobby","Yeti","Mob Leader","Vice Admiral","Warden","Chief Warden","Swan","Magma Admiral","Fishman Lord","Wysper","Thunder God","Cyborg","Saber Expert"}
+	elseif Second_Sea then
+		tableBoss = {"Diamond","Jeremy","Fajita","Don Swan","Smoke Admiral","Cursed Captain","Darkbeard","Order","Awakened Ice Admiral","Tide Keeper"}
+	elseif Third_Sea then
+		tableBoss = {"Stone","Island Empress","Kilo Admiral","Captain Elephant","Beautiful Pirate","rip_indra True Form","Longma","Soul Reaper","Cake Queen"}
+	end
 
-if First_Sea then
-    tableBoss = {"The Gorilla King","Bobby","Yeti","Mob Leader","Vice Admiral","Warden","Chief Warden","Swan","Magma Admiral","Fishman Lord","Wysper","Thunder God","Cyborg","Saber Expert"}
-elseif Second_Sea then
-    tableBoss = {"Diamond","Jeremy","Fajita","Don Swan","Smoke Admiral","Cursed Captain","Darkbeard","Order","Awakened Ice Admiral","Tide Keeper"}
-elseif Third_Sea then
-    tableBoss = {"Stone","Island Empress","Kilo Admiral","Captain Elephant","Beautiful Pirate","rip_indra True Form","Longma","Soul Reaper","Cake Queen"}
-end
 
-local DropdownBoss = Tabs.Main:AddDropdown("DropdownBoss", {
-    Title = "Dropdown",
-    Description = "Chọn Boss",
-    Values = tableBoss,  -- Sử dụng tableBoss thay vì bossName
-    Multi = false,
-    Default = 1,
-})
-
-for _, bossName in ipairs(tableBoss) do
-    local boss = game:GetService("ReplicatedStorage"):FindFirstChild(bossName)
-    if boss then
-        DropdownBoss:AddOption(bossName)  -- Thêm các tùy chọn vào dropdown
-    end
-end
-
+    local DropdownBoss = Tabs.Main:AddDropdown("DropdownBoss", {
+        Title = "Dropdown",
+        Description = "Chọn Boss",
+        Values = tableBoss,
+        Multi = false,
+        Default = 1,
+    })
 
     DropdownBoss:SetValue("")
     DropdownBoss:OnChanged(function(Value)
@@ -7263,7 +7254,7 @@ spawn(function()
         elseif game:GetService("Lighting").Sky.MoonTextureId=="http://www.roblox.com/asset/?id=9709150401" then
             Hop()
             Fluent:Notify({
-                Title = "TMaster Hub",
+                Title = "Master Hub",
                 Content = "Hop...",
                 SubContent = "", -- Optional
                 Duration = 5 -- Set to nil to make the notification not disappear
@@ -7305,12 +7296,12 @@ spawn(function()
 end)
 end
 ----------------------------------------------------------------------------------------------------------------------------------------------
-InterfaceManager:SetFolder("Master Hub")
-SaveManager:SetFolder("Master Hub/specific-game")
+InterfaceManager:SetFolder("FaiFaoScriptHub")
+SaveManager:SetFolder("FaiFaoScriptHub/specific-game")
 Window:SelectTab(1)
 Fluent:Notify({
     Title = "Master Hub",
-    Content = "Đã Load Script",
+    Content = "The script has been loaded.",
     Duration = 8
 })
 SaveManager:LoadAutoloadConfig()
