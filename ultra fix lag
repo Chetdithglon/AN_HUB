@@ -3007,7 +3007,6 @@ local Mastery = Tabs.Main:AddSection("Mastery Farm")
         Default = 1,
     })
 
-    DropdownMastery:SetValue("Level")
 
     DropdownMastery:OnChanged(function(Value)
         TypeMastery = Value
