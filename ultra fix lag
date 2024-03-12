@@ -6407,7 +6407,7 @@ Speed:OnChanged(function(Value)
     _G.SpeedBoat = Value
 end)
 Options.Speed:SetValue(false)
-sgame:GetService("RunService").RenderStepped:Connect(function()
+game:GetService("RunService").RenderStepped:Connect(function()
     if _G.SpeedBoat then
         for i, v in pairs(game:GetService("Workspace").Boats:GetChildren()) do
             if game:GetService("Players").LocalPlayer.Character.Humanoid.Sit then
