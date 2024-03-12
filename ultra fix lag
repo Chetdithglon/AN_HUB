@@ -6402,38 +6402,50 @@ spawn(function()
 
 
 
-local speed = Tabs.Raid:AddToggle("ToggleRandomBone", {Title = "Boat Speed",Description = "Tăng Tốc Độ Thuyền", Default = false })
-speed:OnChanged(function(Value)  
-		_G.speedboat = Value
-end)
-Options.speed:SetValue(false)
+local speed = Tabs.Raid:AddToggle("ToggleRandomBone", {
+    Title = "Boat Speed",
+    Description = "Tăng Tốc Độ Thuyền",
+    Default = false 
+})
 
+speed:OnChanged(function(Value)  
+    _G.speedboat = Value
+end)
+
+-- Đặt giá trị mặc định cho toggle button
+speed:SetValue(false)
 
 game:GetService("RunService").RenderStepped:Connect(function()
     if _G.speedboat then
-        for i, v in pairs(game:GetService("Workspace").Boats:GetChildren()) do
-            if game:GetService("Players").LocalPlayer.Character.Humanoid.Sit then
-                v:FindFirstChild("VehicleSeat").MaxSpeed = 350
+        local player = game:GetService("Players").LocalPlayer
+        local character = player.Character
+        if character and character:FindFirstChild("Humanoid") and character.Humanoid.Seat then
+            local seat = character.Humanoid.Seat
+            if seat:FindFirstChild("VehicleSeat") then
+                seat.VehicleSeat.MaxSpeed = 350
             end
         end
     end
 end)
 
 
+
 Tabs.Raid:AddButton({
-        Title = "Remove Fog",
-        Description = "Xóa Sương Mù",
-        Callback = function()
-            game:GetService("Lighting").BaseAtmosphere:Destroy()
-    game:GetService("Lighting").SeaTerrorCC:Destroy()
-    game.Lighting.LightingLayers.Atmosphere:Destroy()
-wait()
-game.Lighting.LightingLayers.DarkFog:Destroy()
-wait()
-game.Lighting.FogEnd = 100000
+	Title = "Remove Fog",
+	Description = "Xóa xương mù",
+	Callback = function()
+        NoFog()
+    end
+})
+function NoFog()
+    local c = game.Lighting
+    c.FogEnd = 100000
+    for r, v in pairs(c:GetDescendants()) do
+        if v:IsA("Atmosphere") then
+            v:Destroy()
         end
-        })
- 
+    end
+end
       local RoughSea = Tabs.Raid:AddSection("🦊 Kitsune 🦊")
 
 
