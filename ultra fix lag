@@ -5738,6 +5738,108 @@ Tabs.Teleport:AddButton({
         end
     })
 
+
+local Mastery = Tabs.Teleport:AddSection("Team")
+
+
+Tabs.Teleport:AddButton({
+	Title = "Join Pirates Team",
+	Description = "Vào hải tặc",
+	Callback = function()
+        game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("SetTeam","Pirates") 
+	end
+})
+
+
+Tabs.Teleport:AddButton({
+	Title = "Join Marines Team",
+	Description = "Vào hải quân",
+	Callback = function()
+        game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("SetTeam","Marines") 
+	end
+})
+
+Tabs.Teleport:AddButton({
+	Title = "Rejoin Server",
+	Description = "tham gia lại máy chủ",
+	Callback = function()
+		game:GetService("TeleportService"):Teleport(game.PlaceId, game:GetService("Players").LocalPlayer)
+	end
+})
+
+
+Tabs.Teleport:AddButton({
+	Title = "Hop Server",
+	Description = "Đổi máy chủ",
+	Callback = function()
+		Hop()
+	end
+})
+
+function Hop()
+	local PlaceID = game.PlaceId
+	local AllIDs = {}
+	local foundAnything = ""
+	local actualHour = os.date("!*t").hour
+	local Deleted = false
+	function TPReturner()
+		local Site;
+		if foundAnything == "" then
+			Site = game.HttpService:JSONDecode(game:HttpGet('https://games.roblox.com/v1/games/' .. PlaceID .. '/servers/Public?sortOrder=Asc&limit=100'))
+		else
+			Site = game.HttpService:JSONDecode(game:HttpGet('https://games.roblox.com/v1/games/' .. PlaceID .. '/servers/Public?sortOrder=Asc&limit=100&cursor=' .. foundAnything))
+		end
+		local ID = ""
+		if Site.nextPageCursor and Site.nextPageCursor ~= "null" and Site.nextPageCursor ~= nil then
+			foundAnything = Site.nextPageCursor
+		end
+		local num = 0;
+		for i,v in pairs(Site.data) do
+			local Possible = true
+			ID = tostring(v.id)
+			if tonumber(v.maxPlayers) > tonumber(v.playing) then
+				for _,Existing in pairs(AllIDs) do
+					if num ~= 0 then
+						if ID == tostring(Existing) then
+							Possible = false
+						end
+					else
+						if tonumber(actualHour) ~= tonumber(Existing) then
+							local delFile = pcall(function()
+								AllIDs = {}
+								table.insert(AllIDs, actualHour)
+							end)
+						end
+					end
+					num = num + 1
+				end
+				if Possible == true then
+					table.insert(AllIDs, ID)
+					wait()
+					pcall(function()
+						wait()
+						game:GetService("TeleportService"):TeleportToPlaceInstance(PlaceID, ID, game.Players.LocalPlayer)
+					end)
+					wait(4)
+				end
+			end
+		end
+	end
+	function Teleport() 
+		while wait() do
+			pcall(function()
+				TPReturner()
+				if foundAnything ~= "" then
+					TPReturner()
+				end
+			end)
+		end
+	end
+	Teleport()
+end      
+
+
+
 local Teleport = Tabs.Teleport:AddSection("Teleport World")
 
 Tabs.Teleport:AddButton({
@@ -6834,105 +6936,10 @@ Tabs.Shop:AddButton({
 --------------------------------------------------------------------------------------------------------------------------------------------
 --misc
 
-Tabs.Misc:AddButton({
-	Title = "Rejoin Server",
-	Description = "tham gia lại máy chủ",
-	Callback = function()
-		game:GetService("TeleportService"):Teleport(game.PlaceId, game:GetService("Players").LocalPlayer)
-	end
-})
 
 
-Tabs.Misc:AddButton({
-	Title = "Hop Server",
-	Description = "Đổi máy chủ",
-	Callback = function()
-		Hop()
-	end
-})
-
-function Hop()
-	local PlaceID = game.PlaceId
-	local AllIDs = {}
-	local foundAnything = ""
-	local actualHour = os.date("!*t").hour
-	local Deleted = false
-	function TPReturner()
-		local Site;
-		if foundAnything == "" then
-			Site = game.HttpService:JSONDecode(game:HttpGet('https://games.roblox.com/v1/games/' .. PlaceID .. '/servers/Public?sortOrder=Asc&limit=100'))
-		else
-			Site = game.HttpService:JSONDecode(game:HttpGet('https://games.roblox.com/v1/games/' .. PlaceID .. '/servers/Public?sortOrder=Asc&limit=100&cursor=' .. foundAnything))
-		end
-		local ID = ""
-		if Site.nextPageCursor and Site.nextPageCursor ~= "null" and Site.nextPageCursor ~= nil then
-			foundAnything = Site.nextPageCursor
-		end
-		local num = 0;
-		for i,v in pairs(Site.data) do
-			local Possible = true
-			ID = tostring(v.id)
-			if tonumber(v.maxPlayers) > tonumber(v.playing) then
-				for _,Existing in pairs(AllIDs) do
-					if num ~= 0 then
-						if ID == tostring(Existing) then
-							Possible = false
-						end
-					else
-						if tonumber(actualHour) ~= tonumber(Existing) then
-							local delFile = pcall(function()
-								AllIDs = {}
-								table.insert(AllIDs, actualHour)
-							end)
-						end
-					end
-					num = num + 1
-				end
-				if Possible == true then
-					table.insert(AllIDs, ID)
-					wait()
-					pcall(function()
-						wait()
-						game:GetService("TeleportService"):TeleportToPlaceInstance(PlaceID, ID, game.Players.LocalPlayer)
-					end)
-					wait(4)
-				end
-			end
-		end
-	end
-	function Teleport() 
-		while wait() do
-			pcall(function()
-				TPReturner()
-				if foundAnything ~= "" then
-					TPReturner()
-				end
-			end)
-		end
-	end
-	Teleport()
-end      
 
 
-local Mastery = Tabs.Misc:AddSection("Team")
-
-
-Tabs.Misc:AddButton({
-	Title = "Join Pirates Team",
-	Description = "Vào hải tặc",
-	Callback = function()
-        game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("SetTeam","Pirates") 
-	end
-})
-
-
-Tabs.Misc:AddButton({
-	Title = "Join Marines Team",
-	Description = "Vào hải quân",
-	Callback = function()
-        game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("SetTeam","Marines") 
-	end
-})
 
 local Mastery = Tabs.Misc:AddSection("Open Ui")
 
