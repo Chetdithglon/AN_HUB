@@ -3002,7 +3002,7 @@ local Mastery = Tabs.Main:AddSection("Mastery Farm")
     local DropdownMastery = Tabs.Main:AddDropdown("DropdownMastery", {
         Title = "Mastery Mode",
         Description = "Chọn Chế Độ Thông Thạo",
-        Values = {"Level","Near Mobs",},
+        Values = {"Level","Near Mobs","Katakuri","Bone"},
         Multi = false,
         Default = 1,
     })
