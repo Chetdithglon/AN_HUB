@@ -2896,6 +2896,7 @@ spawn(function()
 		if AutoFarmChest then
 			for i,v in pairs(game:GetService("Workspace"):GetChildren()) do 
 				if v.Name:find("Chest") then
+				     game:GetService("VirtualInputManager"):SendKeyEvent(true,"W",false,game)
 					if game:GetService("Workspace"):FindFirstChild(v.Name) then
 						if (v.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude <= 5000+_G.MagnitudeAdd then
 							repeat wait()
@@ -3021,7 +3022,38 @@ local Mastery = Tabs.Main:AddSection("Mastery Farm")
     end)
     Options.ToggleMasteryFruit:SetValue(false)
 
- 
+ if Third_Sea then
+ local ToggleBone = Tabs.Main:AddToggle("ToggleBone", {
+    Title = "Farm Mastery Bone island",
+    Description = "Farm Mastery ở Đảo Xương", 
+    Default = false })
+ToggleBone:OnChanged(function(Value)
+    _G.AutoBone = Value
+    AutoFarmMasDevilFruit = Value
+    if Value == false then
+        wait()
+        Tween(game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame)
+        wait()
+    end
+end)
+
+local ToggleCake = Tabs.Main:AddToggle("ToggleCake", {
+    Title = "Farm Mastery Katakuri",
+    Description = "Farm Mastery ở Katakuri", 
+    Default = false })
+ToggleCake:OnChanged(function(Value)
+ _G.CakePrince = Value
+ AutoFarmMasDevilFruit = Value
+ if Value == false then
+    wait()
+    Tween(game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame)
+    wait()
+end
+end)
+
+
+end
+
 
     local SliderHealt = Tabs.Main:AddSlider("SliderHealt", {
         Title = "Health (%) Mob",
