@@ -5783,9 +5783,11 @@ DropdownRaid:OnChanged(function(Value)
     SelectChip = Value
 end)
 
-local ToggleBuy = Tabs.Fruit:AddToggle("ToggleBuy", {Title = "Buy Chip", Description = "Mua Chip",Default = false })
+local ToggleBuy = Tabs.Fruit:AddToggle("ToggleBuy", {Title = "Buy Chip", Description = "Mua Chip + Giết Quái + Qua Đảo",Default = false })
 ToggleBuy:OnChanged(function(Value)
     _G.Auto_Buy_Chips_Dungeon = Value
+     KillAura = Value
+     AutoNextIsland = Value
 end)
 Options.ToggleBuy:SetValue(false)
 spawn(function()
@@ -5804,7 +5806,7 @@ spawn(function()
 end)
 
 
-    local ToggleStart = Tabs.Fruit:AddToggle("ToggleStart", {Title = "Start Raid",Description = "Vào Tập Kích", Default = false })
+    local ToggleStart = Tabs.Fruit:AddToggle("ToggleStart", {Title = "Start Raid",Description = "Vào Raid", Default = false })
     ToggleStart:OnChanged(function(Value)
         _G.Auto_StartRaid = Value
 end)
@@ -5829,11 +5831,7 @@ spawn(function()
 end)
 
 
-local ToggleKillAura = Tabs.Fruit:AddToggle("ToggleKillAura", {Title = "Kill Aura",Description = "Giết Quái", Default = false })
-ToggleKillAura:OnChanged(function(Value)
-    KillAura = Value
-end)
-Options.ToggleKillAura:SetValue(false)
+
 spawn(function()
     while wait() do
         if KillAura then
@@ -5853,11 +5851,6 @@ spawn(function()
 end)
 
 
-local ToggleNextIsland = Tabs.Fruit:AddToggle("ToggleNextIsland", {Title = "Next Island",Description = "Qua Đảo", Default = false })
-ToggleNextIsland:OnChanged(function(Value)
-    AutoNextIsland = Value
-end)
-Options.ToggleNextIsland:SetValue(false)
 spawn(function()
     while task.wait() do
         if AutoNextIsland then
