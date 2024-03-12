@@ -6402,17 +6402,13 @@ spawn(function()
 
 
 
-local speed = Tabs.Raid:AddToggle("ToggleRandomBone", {
-    Title = "Boat Speed",
-    Description = "Tăng Tốc Độ Thuyền",
-    Default = false 
-})
-
- Tabs.Raid:AddToggle("Tăng Tốc Độ cho thuyền", false, function(vSpeedBot)
-     	SpeedBoat = vSpeedBoat
+local Speed = Tabs.Raid.AddToggle("Speed", {Title = "Speed Boat", Description = "Tăng Tốc Độ Thuyền",Default = false })
+Speed:OnChanged(function(Value)
+    _G.SpeedBoat = Value
 end)
-game:GetService("RunService").RenderStepped:Connect(function()
-    if SpeedBoat then
+Options.Speed:SetValue(false)
+sgame:GetService("RunService").RenderStepped:Connect(function()
+    if _G.SpeedBoat then
         for i, v in pairs(game:GetService("Workspace").Boats:GetChildren()) do
             if game:GetService("Players").LocalPlayer.Character.Humanoid.Sit then
                 v:FindFirstChild("VehicleSeat").MaxSpeed = 350
@@ -6420,6 +6416,7 @@ game:GetService("RunService").RenderStepped:Connect(function()
         end
     end
 end)
+
 
 
 
