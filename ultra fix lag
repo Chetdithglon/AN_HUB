@@ -6408,21 +6408,14 @@ local speed = Tabs.Raid:AddToggle("ToggleRandomBone", {
     Default = false 
 })
 
-speed:OnChanged(function(Value)  
-    _G.speedboat = Value
+ Tabs.Raid:AddToggle("Tăng Tốc Độ cho thuyền", false, function(vSpeedBot)
+     	SpeedBoat = vSpeedBoat
 end)
-
--- Đặt giá trị mặc định cho toggle button
-speed:SetValue(false)
-
 game:GetService("RunService").RenderStepped:Connect(function()
-    if _G.speedboat then
-        local player = game:GetService("Players").LocalPlayer
-        local character = player.Character
-        if character and character:FindFirstChild("Humanoid") and character.Humanoid.Seat then
-            local seat = character.Humanoid.Seat
-            if seat:FindFirstChild("VehicleSeat") then
-                seat.VehicleSeat.MaxSpeed = 350
+    if SpeedBoat then
+        for i, v in pairs(game:GetService("Workspace").Boats:GetChildren()) do
+            if game:GetService("Players").LocalPlayer.Character.Humanoid.Sit then
+                v:FindFirstChild("VehicleSeat").MaxSpeed = 350
             end
         end
     end
