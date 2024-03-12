@@ -6403,9 +6403,9 @@ spawn(function()
 
 
 
- local Speed = Tabs.Raid:AddToggle("Speed", {Title = "1",Description = "2",Default = false })
+ local Speed = Tabs.Raid:AddToggle("Speed", {Title = "Speed Boat",Description = "Tăng Tốc Thuyền",Default = false })
     Speed:OnChanged(function(Value)
-        _G.speedboat = Value
+        SpeedBoat = Value
        end)
        Options.Speed:SetValue(false)
  game:GetService("RunService").RenderStepped:Connect(function()
