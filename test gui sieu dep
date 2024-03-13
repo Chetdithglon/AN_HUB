@@ -1,70 +1,177 @@
+-- Gui to Lua
+-- Version: 3.6
 
-local Players = game:GetService("Players")
-    local playerCount = #game:GetService("Players"):GetPlayers()
-                    local HttpService = game:GetService("HttpService")
-local Data =
-{
-    ["embeds"] = {
-        {
-            ["title"] = "Boss" ,
-            ["color"] = tonumber(0x7269da),
-            ["fields"] = {
-                {
-                    ["name"] = "Thời Gian",
-                    ["value"] = "```".. CheckTime999.. "```",
-                    ["inline"] = true
-                },
+-- Instances:
 
-                {
-                    ["name"] = "Người Trong Sever",
-                    ["value"] = "```" .. playerCount .. "/6```",
-                    ["inline"] = true
-                },
-                {
-                    ["name"] = "lệnh teleport sever",
-                    ["value"] = 'game:GetService("TeleportService"):TeleportToPlaceInstance(' .. game.PlaceId .. ', "' .. game.JobId .. '", game.Players.LocalPlayer)',
-                    ["inline"] = true
-                },
-            }
-        }
-    }
-}
-local Headers = { ["Content-Type"] = "application/json" }
-local Encoded = HttpService:JSONEncode(Data)
+local ScreenGui = Instance.new("ScreenGui")
+local ImageLabel = Instance.new("ImageLabel")
+local UICorner = Instance.new("UICorner")
+local Masterbeta = Instance.new("TextButton")
+local UIGradient = Instance.new("UIGradient")
+local UICorner_2 = Instance.new("UICorner")
+local MasterHubSubVersion = Instance.new("TextButton")
+local UIGradient_2 = Instance.new("UIGradient")
+local UICorner_3 = Instance.new("UICorner")
+local TextLabel = Instance.new("TextLabel")
 
-local Request = http_request or request or HttpPost or syn.request
-local Final1 = { Url ="https://discord.com/api/webhooks/1177921578248454144/xUmmRBgxNxAVvZ0YQ15XXKAUmizKPuUWhJTgtHPK7xYWpiRQScEA_z_hSJTBXxb6HTYa", Body = Encoded, Method = "POST", Headers = Headers }
+--Properties:
 
-Request(Final1)
+ScreenGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 
-  
+ImageLabel.Parent = ScreenGui
+ImageLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+ImageLabel.BorderColor3 = Color3.fromRGB(0, 0, 0)
+ImageLabel.BorderSizePixel = 0
+ImageLabel.ClipsDescendants = true
+ImageLabel.Position = UDim2.new(-0.437759727, 0, 0.0671123192, 0)
+ImageLabel.Size = UDim2.new(0, 291, 0, 261)
+ImageLabel.Image = "http://www.roblox.com/asset/?id=11816162894"
 
+UICorner.CornerRadius = UDim.new(0, 10)
+UICorner.Parent = ImageLabel
 
+Masterbeta.Name = "Master beta"
+Masterbeta.Parent = ImageLabel
+Masterbeta.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Masterbeta.BackgroundTransparency = 1.000
+Masterbeta.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Masterbeta.Position = UDim2.new(0.192439869, 0, 0.53639847, 0)
+Masterbeta.Size = UDim2.new(0, 172, 0, 50)
+Masterbeta.Font = Enum.Font.Unknown
+Masterbeta.LineHeight = 1.440
+Masterbeta.Text = "Master beta"
+Masterbeta.TextColor3 = Color3.fromRGB(0, 0, 0)
+Masterbeta.TextScaled = true
+Masterbeta.TextSize = 1.000
+Masterbeta.TextStrokeColor3 = Color3.fromRGB(103, 247, 255)
+Masterbeta.TextStrokeTransparency = 0.000
+Masterbeta.TextWrapped = true
 
+UIGradient.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(133, 255, 137)), ColorSequenceKeypoint.new(0.44, Color3.fromRGB(253, 255, 125)), ColorSequenceKeypoint.new(0.75, Color3.fromRGB(74, 255, 234)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(133, 255, 137))}
+UIGradient.Parent = Masterbeta
 
+UICorner_2.Parent = Masterbeta
 
+MasterHubSubVersion.Name = "Master Hub Sub Version"
+MasterHubSubVersion.Parent = ImageLabel
+MasterHubSubVersion.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+MasterHubSubVersion.BackgroundTransparency = 1.000
+MasterHubSubVersion.BorderColor3 = Color3.fromRGB(0, 0, 0)
+MasterHubSubVersion.Position = UDim2.new(0.120274916, 0, 0.785440624, 0)
+MasterHubSubVersion.Size = UDim2.new(0, 220, 0, 50)
+MasterHubSubVersion.Font = Enum.Font.Unknown
+MasterHubSubVersion.LineHeight = 1.440
+MasterHubSubVersion.Text = "Master Hub Sub Version"
+MasterHubSubVersion.TextColor3 = Color3.fromRGB(0, 0, 0)
+MasterHubSubVersion.TextScaled = true
+MasterHubSubVersion.TextSize = 1.000
+MasterHubSubVersion.TextStrokeColor3 = Color3.fromRGB(103, 247, 255)
+MasterHubSubVersion.TextStrokeTransparency = 0.000
+MasterHubSubVersion.TextWrapped = true
 
+UIGradient_2.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(133, 255, 137)), ColorSequenceKeypoint.new(0.44, Color3.fromRGB(253, 255, 125)), ColorSequenceKeypoint.new(0.75, Color3.fromRGB(74, 255, 234)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(133, 255, 137))}
+UIGradient_2.Parent = MasterHubSubVersion
 
+UICorner_3.Parent = MasterHubSubVersion
 
+TextLabel.Parent = ImageLabel
+TextLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel.BackgroundTransparency = 1.000
+TextLabel.BorderColor3 = Color3.fromRGB(98, 247, 242)
+TextLabel.BorderSizePixel = 0
+TextLabel.Position = UDim2.new(-0.0025741735, 0, -0.000791001599, 0)
+TextLabel.Size = UDim2.new(0, 291, 0, 25)
+TextLabel.Font = Enum.Font.Cartoon
+TextLabel.LineHeight = 0.000
+TextLabel.Text = "Vui Lòng Chọn Phiên Bản"
+TextLabel.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel.TextScaled = true
+TextLabel.TextSize = 1.000
+TextLabel.TextStrokeColor3 = Color3.fromRGB(2, 249, 233)
+TextLabel.TextStrokeTransparency = 0.000
+TextLabel.TextWrapped = true
 
+-- Scripts:
 
+local function TLWFXLZ_fake_script() -- UIGradient.LocalScript 
+	local script = Instance.new('LocalScript', UIGradient)
 
+	local TweenService = game:GetService("TweenService")
+	local tweeninfo = TweenInfo.new(4, Enum.EasingStyle.Linear, Enum.EasingDirection.In, -1)
+	local tween = TweenService:Create(script.Parent, tweeninfo, {Rotation = 360})
+	tween:Play()
+end
+coroutine.wrap(TLWFXLZ_fake_script)()
+local function MIHZWH_fake_script() -- Masterbeta.LocalScript 
+	local script = Instance.new('LocalScript', Masterbeta)
 
+	script.Parent.MouseButton1Click:Connect(function()
+		script.Parent.Parent.Parent:Destroy()
+		--Master beta
+		loadstring(game:HttpGet("https://bitbucket.org/master98/1/raw/b4d988057c0bd76053bdb1b846d883af7e1656d3/1"))()
+	end)
+end
+coroutine.wrap(MIHZWH_fake_script)()
+local function NQSZ_fake_script() -- UIGradient_2.LocalScript 
+	local script = Instance.new('LocalScript', UIGradient_2)
 
+	local TweenService = game:GetService("TweenService")
+	local tweeninfo = TweenInfo.new(4, Enum.EasingStyle.Linear, Enum.EasingDirection.In, -1)
+	local tween = TweenService:Create(script.Parent, tweeninfo, {Rotation = 360})
+	tween:Play()
+end
+coroutine.wrap(NQSZ_fake_script)()
+local function WGSU_fake_script() -- MasterHubSubVersion.LocalScript 
+	local script = Instance.new('LocalScript', MasterHubSubVersion)
 
+	script.Parent.MouseButton1Click:Connect(function()
+		script.Parent.Parent.Parent:Destroy()
+		--Master Hub Sub Version
+	loadstring(game:HttpGet("https://bitbucket.org/master98/1/raw/a3f52e48e50362a76b1023fba942d011bafc7343/tes1"))()
+	end)
+end
+coroutine.wrap(WGSU_fake_script)()
+local function OANUJ_fake_script() -- ImageLabel.LocalScript 
+	local script = Instance.new('LocalScript', ImageLabel)
 
-
-
-
-
-
-
-
-
-            
-            
-            
-            
-            
-            
-            
+	local Frame = script.Parent
+	
+	Frame:TweenPosition(UDim2.new(0.302, 0,0.075, 0), Enum.EasingDirection.Out, Enum.EasingStyle.Linear, 2, true)
+		
+	local UIS = game:GetService('UserInputService')
+	local frame = script.Parent
+	local dragToggle = nil
+	local dragSpeed = 0.25
+	local dragStart = nil
+	local startPos = nil
+	
+	local function updateInput(input)
+		local delta = input.Position - dragStart
+		local position = UDim2.new(startPos.X.Scale, startPos.X.Offset + delta.X,
+			startPos.Y.Scale, startPos.Y.Offset + delta.Y)
+		game:GetService('TweenService'):Create(frame, TweenInfo.new(dragSpeed), {Position = position}):Play()
+	end
+	
+	frame.InputBegan:Connect(function(input)
+		if (input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch) then 
+			dragToggle = true
+			dragStart = input.Position
+			startPos = frame.Position
+			input.Changed:Connect(function()
+				if input.UserInputState == Enum.UserInputState.End then
+					dragToggle = false
+				end
+			end)
+		end
+	end)
+	
+	UIS.InputChanged:Connect(function(input)
+		if input.UserInputType == Enum.UserInputType.MouseMovement or input.UserInputType == Enum.UserInputType.Touch then
+			if dragToggle then
+				updateInput(input)
+			end
+		end
+	end)
+end
+coroutine.wrap(OANUJ_fake_script)()
