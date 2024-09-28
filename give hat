@@ -3990,91 +3990,81 @@ spawn(function()
 
 
 
-
-
-
--- Khởi tạo giá trị cho farm4 là true
 _G.farm4 = true
 
-main:Toggle("Bãi 4 (2300-2375) Tạm Đc", _G.farm4, function(value)
-    _G.farm4 = value
-    _G.click = value
-    StopTween(_G.farm4)
-end)
+
+Main:Toggle("Bãi 4 ( 2300-2375 ) Tạm Đc",_G.farm4,function(value)
+ _G.farm4 = value
+ _G.click = value
+ StopTween(_G.farm4)
+ end)
 
 spawn(function()
-    game:GetService("RunService").Heartbeat:Connect(function()
-        pcall(function()
-            for i, v in pairs(game:GetService("Workspace").Enemies:GetChildren()) do
-                if _G.farm4 and StartMagnetBoneMon and 
-                   (v.Name == "Cocoa Warrior" or v.Name == "Chocolate Bar Battler" or 
-                    v.Name == "Sweet Thief" or v.Name == "Candy Rebel") and 
-                   (v.HumanoidRootPart.Position - PosMonBone.Position).magnitude <= 350 then
-                    
-                    v.HumanoidRootPart.CFrame = PosMonBone
-                    v.HumanoidRootPart.CanCollide = false
-                    v.HumanoidRootPart.Size = Vector3.new(50, 50, 50)
-                    
-                    if v.Humanoid:FindFirstChild("Animator") then
-                        v.Humanoid.Animator:Destroy()
-                    end
-                    
-                    sethiddenproperty(game.Players.LocalPlayer, "SimulationRadius", math.huge)
-                end
-            end
-        end)
-    end)
+ game:GetService("RunService").Heartbeat:Connect(function()
+  pcall(function()
+   for i,v in pairs(game:GetService("Workspace").Enemies:GetChildren()) do
+   if _G.farm4 and StartMagnetBoneMon and (v.Name == "Cocoa Warrior" or v.Name == "Chocolate Bar Battler" or "Sweet Thief" or "Candy Rebel")  and (v.HumanoidRootPart.Position - PosMonBone.Position).magnitude <= 350 then
+   v.HumanoidRootPart.CFrame = PosMonBone
+   v.HumanoidRootPart.CanCollide = false
+   v.HumanoidRootPart.Size = Vector3.new(50,50,50)
+   if v.Humanoid:FindFirstChild("Animator") then
+   v.Humanoid.Animator:Destroy()
+   end
+   sethiddenproperty(game.Players.LocalPlayer, "SimulationRadius", math.huge)
+   end
+   end
+   end)
+  end)
 end)
+
+
+
+
+
+
+
 
 spawn(function()
-    while wait() do
-        if _G.farm4 then
-            pcall(function()
-                if game:GetService("Workspace").Enemies:FindFirstChild("Cocoa Warrior") or
-                   game:GetService("Workspace").Enemies:FindFirstChild("Chocolate Bar Battler") or
-                   game:GetService("Workspace").Enemies:FindFirstChild("Sweet Thief") or
-                   game:GetService("Workspace").Enemies:FindFirstChild("Candy Rebel") then
-                    
-                    for i, v in pairs(game:GetService("Workspace").Enemies:GetChildren()) do
-                        if v.Name == "Cocoa Warrior" or v.Name == "Chocolate Bar Battler" or
-                           v.Name == "Sweet Thief" or v.Name == "Candy Rebel" then
-                            
-                            if v.Humanoid.Health > 0 then
-                                repeat
-                                    wait()
-                                    AutoHaki()
-                                    EquipWeapon(_G.Select_Weapon)
-                                    StartMagnetBoneMon = true
-                                    v.HumanoidRootPart.CanCollide = false
-                                    v.HumanoidRootPart.Size = Vector3.new(60, 60, 60)
-                                    PosMonBone = v.HumanoidRootPart.CFrame
-                                    topos(v.HumanoidRootPart.CFrame * MethodFarm)
-                                    game:GetService('VirtualUser'):CaptureController()
-                                    game:GetService('VirtualUser'):Button1Down(Vector2.new(1280, 672))
-                                until _G.farm4 == false or not v.Parent or v.Humanoid.Health <= 0
-                            end
-                        end
-                    end
-                else
-                    StartMagnetBoneMon = false
-                    for i, v in pairs(game:GetService("ReplicatedStorage"):GetChildren()) do
-                        if v.Name == "Cocoa Warrior" then
-                            topos(v.HumanoidRootPart.CFrame * MethodFarm)
-                        elseif v.Name == "Chocolate Bar Battler" then
-                            topos(v.HumanoidRootPart.CFrame * MethodFarm)
-                        elseif v.Name == "Sweet Thief" then
-                            topos(v.HumanoidRootPart.CFrame * MethodFarm)
-                        elseif v.Name == "Candy Rebel" then
-                            topos(v.HumanoidRootPart.CFrame * MethodFarm)
-                        end
-                    end
-                    topos(CFrame.new(378.500763, 78.9238205, -12511.4004, -0.980175495, -0.00775680691, -0.197979629, -7.71833584e-08, 0.999233365, -0.0391495228, 0.198131591, -0.0383733809, -0.97942394))
-                end
-            end)
-        end
-    end
-end)
-
+ while wait() do
+ if _G.farm4  then
+ pcall(function()
+  if game:GetService("Workspace").Enemies:FindFirstChild("Cocoa Warrior") or game:GetService("Workspace").Enemies:FindFirstChild("Chocolate Bar Battler") or game:GetService("Workspace").Enemies:FindFirstChild("Sweet Thief") or game:GetService("Workspace").Enemies:FindFirstChild("Candy Rebel") then
+  for i,v in pairs(game:GetService("Workspace").Enemies:GetChildren()) do
+  if v.Name == "Cocoa Warrior" or v.Name == "Chocolate Bar Battler" or v.Name == "Sweet Thief" or v.Name == "Candy Rebel" then
+  if v.Humanoid.Health > 0 then
+  repeat wait()
+  AutoHaki()
+  EquipWeapon(_G.Select_Weapon)
+  StartMagnetBoneMon = true
+  v.HumanoidRootPart.CanCollide = false
+  v.HumanoidRootPart.Size = Vector3.new(60, 60, 60)
+  PosMonBone = v.HumanoidRootPart.CFrame
+  topos(v.HumanoidRootPart.CFrame * MethodFarm)
+  game:GetService'VirtualUser':CaptureController()
+  game:GetService'VirtualUser':Button1Down(Vector2.new(1280, 672))
+  until _G.farm4 == false or not v.Parent or v.Humanoid.Health <= 0
+  end
+  end
+  end
+  else
+   StartMagnetBoneMon = false
+  for i,v in pairs(game:GetService("ReplicatedStorage"):GetChildren()) do
+  if v.Name == "Cocoa Warrior" then
+  topos(v.HumanoidRootPart.CFrame * MethodFarm)
+  elseif v.Name == "Chocolate Bar Battler" then
+  topos(v.HumanoidRootPart.CFrame * MethodFarm)
+  elseif v.Name == "Sweet Thief" then
+  topos(v.HumanoidRootPart.CFrame * MethodFarm)
+  elseif v.Name == "Candy Rebel" then
+  topos(v.HumanoidRootPart.CFrame * MethodFarm)
+  end
+  end
+  topos(CFrame.new(378.500763, 78.9238205, -12511.4004, -0.980175495, -0.00775680691, -0.197979629, -7.71833584e-08, 0.999233365, -0.0391495228, 0.198131591, -0.0383733809, -0.97942394))
+  end
+  end)
+ end
+ end
+ end)
 
 
 
@@ -5506,17 +5496,16 @@ end)
  
    Main:Seperator("Buy + Bật Tộc")
   
- -- Khởi tạo giá trị cho Auto_Farm_Bone3 là true
-_G.Auto_Farm_Bone3 = true
-
-Main:Toggle("Tự Động Bật V4", _G.Auto_Farm_Bone3, function(value)
-    _G.Auto_Farm_Bone3 = value
-    StopTween(_G.Auto_Farm_Bone3)
-    
+  _G.Auto_Farm_Bone3 = true
+  
+  Main:Toggle("Tự Động Bật V4",_G.Auto_Farm_Bone3,function(value)
+ _G.Auto_Farm_Bone3 = value
+ StopTween(_G.Auto_Farm_Bone3)
+ end)
 spawn(function()
     while wait() do
         pcall(function()
-            if _G.Auto_Farm_Bone3 then
+            if _G.V4 then
                 game:GetService("VirtualInputManager"):SendKeyEvent(true,"Y",false,game)
                 wait(0.1)
                 game:GetService("VirtualInputManager"):SendKeyEvent(false,"Y",false,game)
@@ -5524,32 +5513,31 @@ spawn(function()
         end)
     end
 end)
-end)
-
   
+ _G.Auto_Farm_Bone4 = true
 
--- Khởi tạo giá trị cho Auto_Farm_Bone4 là true
-_G.Auto_Farm_Bone4 = true
-
-Main:Toggle("Tự Động Mua Train", _G.Auto_Farm_Bone4, function(value)
-    _G.Auto_Farm_Bone4 = value
-    StopTween(_G.Auto_Farm_Bone4)
+Main:Toggle("Tự Động Mua Train",_G.Auto_Farm_Bone4,function(value)
+ _G.Auto_Farm_Bone4 = value
+ StopTween(_G.Auto_Farm_Bone4)
 end)
-
 spawn(function()
     pcall(function()
-        while wait(0.1) do
+        while wait() do
             if _G.Auto_Farm_Bone4 then
-                local args = {
-                    [1] = "UpgradeRace",
-                    [2] = "Buy"
-                }
-                game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("CommF_"):InvokeServer(unpack(args))
-            end
-        end
-    end)
-end)
+    local args = {
+    [1] = true
+}
 
+local args = {
+    [1] = "UpgradeRace",
+    [2] = "Buy"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("CommF_"):InvokeServer(unpack(args))
+            end
+end 
+end)  
+end)
 
 
 
@@ -5863,51 +5851,8 @@ end)
 end)
 
 
- Setting:Toggle("Fix lag nhẹ",true,function(value)
-    _G.DeleteAttackFx = value
-    if _G.DeleteAttackFx == true then
-    while _G.DeleteAttackFx do wait()
-        for i, v in pairs(game.Workspace["_WorldOrigin"]:GetChildren()) do
-            if v.Name == "CurvedRing" or v.Name == "DamageCounter" or v.Name == "SwordSlash" or v.Name == "Damage" or v.Name == "Mon" or v.Name == "Sounds" then
-                v:Destroy() 
-            end
-        end
-    end
-    end
-end)
 
-spawn(function()
-      while wait() do
-      if _G.DeleteAttackFx then
-        for i, v in pairs(game.Workspace["_WorldOrigin"]:GetChildren()) do
-            if v.Name == "CurvedRing" or v.Name == "SlashHit" or v.Name == "DamageCounter" or v.Name == "SwordSlash" or v.Name == "SlashTail" or v.Name == "Sounds" then
-                v:Destroy() 
-            end
-        end
-    end
-    end
-end)    
-
-
-Setting:Toggle("Remove Hiệu Ứng chết",true,function(value)
-     _G.Remove_EffectDeath = value
-    end)
-
-
-spawn(function()
-    game:GetService('RunService').Stepped:Connect(function()
-        if _G.Remove_EffectDeath  then
-            for i, v in pairs(game:GetService("ReplicatedStorage").Effect.Container:GetChildren()) do
-                if v.Name == "Death" then
-                    v:Destroy() 
-                end
-            end
-        end
-    end)
-end)
-
-
-Setting:Toggle("Tàn Hình Quái",true,function(value)
+Setting:Toggle("Tàn Hình Quái " ,true,function(value)
     _G.inv = value
     while _G.inv do wait()
         pcall(function()
@@ -5934,6 +5879,53 @@ end
 end)
 end
 end)
+
+Setting:Toggle("Remove Hiệu Ứng chết",true,function(value)
+     _G.Remove_EffectDeath = value
+    end)
+
+spawn(function()
+    game:GetService('RunService').Stepped:Connect(function()
+        if _G.Remove_EffectDeath  then
+            for i, v in pairs(game:GetService("ReplicatedStorage").Effect.Container:GetChildren()) do
+                if v.Name == "Death" then
+                    v:Destroy() 
+                end
+            end
+        end
+    end)
+end)
+
+
+
+ Setting:Toggle("Fix lag nhẹ",true,function(value)
+    _G.DeleteAttackFx = value
+    if _G.DeleteAttackFx == true then
+    while _G.DeleteAttackFx do wait()
+        for i, v in pairs(game.Workspace["_WorldOrigin"]:GetChildren()) do
+            if v.Name == "CurvedRing" or v.Name == "DamageCounter" or v.Name == "SwordSlash" or v.Name == "Damage" or v.Name == "Mon" or v.Name == "Sounds" then
+                v:Destroy() 
+            end
+        end
+    end
+    end
+end)
+    
+    spawn(function()
+      while wait() do
+      if _G.DeleteAttackFx then
+        for i, v in pairs(game.Workspace["_WorldOrigin"]:GetChildren()) do
+            if v.Name == "CurvedRing" or v.Name == "SlashHit" or v.Name == "DamageCounter" or v.Name == "SwordSlash" or v.Name == "SlashTail" or v.Name == "Sounds" then
+                v:Destroy() 
+            end
+        end
+    end
+    end
+end)    
+
+
+
+
 
 
 end
